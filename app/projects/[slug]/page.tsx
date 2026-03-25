@@ -37,82 +37,35 @@ export default async function ProjectPage({
         ✕
       </Link>
 
-      {/* ─── Header ─── */}
-      <div className="mb-6">
-        <h1 className="font-arimo text-5xl font-bold mb-1 capitalize">
-          {slug.replace(/-/g, " ")}
-        </h1>
-        <p className="text-white/50 text-sm mb-3">Рекламный Ролик \ 30 Сек</p>
-        <div className="flex gap-2 flex-wrap">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="border border-white/30 rounded-full px-3 py-0.5 text-sm text-white/70"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ─── Main content ─── */}
-      <div className="flex gap-8">
-        {/* ─── Left column ─── */}
-        <div className="flex-1 flex flex-col gap-6">
+      <div className="flex gap-6 items-center mb-6">
+        <div className="flex flex-col flex-1 gap-6">
+          {/* ─── Title ─── */}
+          <h1 className="font-arimo text-5xl font-bold capitalize">
+            {slug.replace(/-/g, " ")}
+          </h1>
+          <div className="flex justify-between items-center">
+            {/* ─── Description ─── */}
+            <p className="text-white/50 text-sm">Рекламный Ролик \ 30 Сек</p>
+            {/* ─── Tags ─── */}
+            <div className="flex gap-2 flex-wrap">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="border border-white/30 rounded-full px-3 py-0.5 text-sm text-white/70"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
           {/* Main video */}
           <VimeoPlayer videoId="1073893317" />
-
-          {/* Description */}
+          {/* Some text */}
           <p className="text-white/80 leading-7">{loremText}</p>
           <p className="text-white/80 leading-7">{loremText2}</p>
-
-          {/* Image grid */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="col-span-1 row-span-2 rounded-xl overflow-hidden">
-              <Image
-                src={cats[1]}
-                alt="project image"
-                width={400}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src={cats[2]}
-                alt="project image"
-                width={400}
-                height={300}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src={cats[3]}
-                alt="project image"
-                width={400}
-                height={300}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Bottom images */}
-          <div className="rounded-xl overflow-hidden">
-            <Image
-              src={cats[4]}
-              alt="project image"
-              width={800}
-              height={500}
-              className="w-full object-cover"
-            />
-          </div>
-
-          <p className="text-white/80 leading-7">{loremText2}</p>
         </div>
-
         {/* ─── Right column ─── */}
-        <div className="w-40 shrink-0 flex flex-col gap-4 pt-2">
+        <div className="w-40 shrink-0 flex flex-col gap-6 pt-2">
           <div>
             <p className="text-white/40 text-xs mb-1">Клиент</p>
             <p className="font-bold">Сбер</p>
@@ -120,6 +73,59 @@ export default async function ProjectPage({
           <div>
             <p className="text-white/40 text-xs mb-1">Агентство</p>
             <p className="font-bold">Mosaic</p>
+          </div>
+        </div>
+      </div>
+
+      {/* ─── Bottom content ─── */}
+      <div className="flex-1 flex flex-col gap-6">
+        {/* Image grid */}
+        <div className="grid grid-cols-2 gap-6">
+          <div className="col-span-1 row-span-2 rounded-xl overflow-hidden">
+            <Image
+              src={cats[1]}
+              alt="project image"
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+            <Image
+              src={cats[2]}
+              alt="project image"
+              width={400}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+            <Image
+              src={cats[3]}
+              alt="project image"
+              width={400}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden">
+            <Image
+              src={cats[4]}
+              alt="project image"
+              width={400}
+              height={300}
+              className="w-full object-cover"
+            />
+          </div>
+          <p className="text-white/80 leading-7 p-6">{loremText2}</p>
+          <div className="rounded-xl overflow-hidden">
+            <Image
+              src={cats[0]}
+              alt="project image"
+              width={400}
+              height={300}
+              className="w-full object-cover"
+            />
           </div>
         </div>
       </div>
