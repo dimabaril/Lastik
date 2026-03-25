@@ -40,9 +40,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${arimo.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <head>
+      {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
-      </head>
+      </head> */}
       <body className="min-h-full flex flex-col bg-black font-arimo max-w-screen-2xl mx-auto">
         <Header />
         {children}
