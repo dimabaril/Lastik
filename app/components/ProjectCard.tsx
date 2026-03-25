@@ -1,17 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { useRef } from "react";
 
 interface ProjectCardProps {
   title: string;
   span: string;
   thumbVideo: string;
+  slug: string;
 }
 
 export default function ProjectCard({
   title,
   span,
   thumbVideo,
+  slug,
 }: ProjectCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -27,9 +30,9 @@ export default function ProjectCard({
   };
 
   return (
-    <div
-      className={`${span} relative rounded-2xl p-[10_10_48_10] border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer hover:scale-105 transition-transform ease-in-out duration-500`}
-      //   style={{ aspectRatio: "16 / 9" }}
+    <Link
+      href={`/projects/${slug}`}
+      className={`${span} relative rounded-2xl p-[10_10_48_10] border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer hover:scale-105 transition-transform ease-in-out duration-500 block`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}
@@ -47,6 +50,6 @@ export default function ProjectCard({
       <span className="absolute bottom-3 left-3 text-white/90 underline underline-offset-4">
         {title}
       </span>
-    </div>
+    </Link>
   );
 }

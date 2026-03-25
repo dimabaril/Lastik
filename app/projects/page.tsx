@@ -214,6 +214,9 @@ export default function Projects() {
                 title={project.title}
                 span={project.span}
                 thumbVideo={project.thumbVideo}
+                slug={
+                  new URL(project.thumbVideo, "http://x").pathname.split("/")[2]
+                }
               />
             ))}
           </div>
