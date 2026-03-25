@@ -1,20 +1,34 @@
 import Image from "next/image";
 import Aside from "../components/Aside";
+import ProjectCard from "../components/ProjectCard";
 
 const projects = [
-  { title: "LOVE generation", span: "col-span-1 row-span-1" },
-  { title: "НЕО", span: "col-span-1 row-span-2", featured: true },
-  { title: "СБЕР. терминал", span: "col-span-1 row-span-1" },
-  { title: "Уралсиб", span: "col-span-1 row-span-1" },
-  { title: "ЕАПТЕКА", span: "col-span-1 row-span-1" },
-  { title: "СБЕР. звук", span: "col-span-1 row-span-1" },
-  { title: "ВТБ", span: "col-span-1 row-span-1" },
-  { title: "СБЕР. звук", span: "col-span-1 row-span-1" },
-  { title: "Делимобиль", span: "col-span-1 row-span-1" },
-  { title: "СБЕР", span: "col-span-1 row-span-1" },
-  { title: "МТС", span: "col-span-1 row-span-1" },
-  { title: "СБЕР. звук", span: "col-span-1 row-span-1" },
-  { title: "Волчок", span: "col-span-1 row-span-1" },
+  {
+    title: "LOVE generation",
+    span: "col-span-1 row-span-1",
+    videoId: "926255997",
+  },
+  {
+    title: "НЕО",
+    span: "col-span-1 row-span-2",
+    videoId: "926255997",
+    featured: true,
+  },
+  {
+    title: "СБЕР. терминал",
+    span: "col-span-1 row-span-1",
+    videoId: "926255997",
+  },
+  { title: "Уралсиб", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "ЕАПТЕКА", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "СБЕР1. звук", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "ВТБ", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "СБЕР2. звук", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "Делимобиль", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "СБЕР3", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "МТС", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "СБЕР4. звук", span: "col-span-1 row-span-1", videoId: "926255997" },
+  { title: "Волчок", span: "col-span-1 row-span-1", videoId: "926255997" },
 ];
 
 export default function Projects() {
@@ -64,17 +78,14 @@ export default function Projects() {
         </section>
         {/* ─── Projects grid ─── */}
         <section className="px-6 pb-24 pr-32">
-          <div className="grid grid-cols-3 gap-3 auto-rows-[180px]">
+          <div className="grid grid-cols-3 gap-3">
             {projects.map((project, i) => (
-              <div
-                key={i}
-                className={`${project.span} relative group rounded-xl bg-zinc-900 overflow-hidden cursor-pointer`}
-              >
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
-                <span className="absolute bottom-3 left-3 text-white/90">
-                  {project.title}
-                </span>
-              </div>
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                span={project.span}
+                videoId={project.videoId}
+              />
             ))}
           </div>
         </section>

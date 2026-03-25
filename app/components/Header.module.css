@@ -13,6 +13,7 @@
 
 .gradientMask {
   mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
+
   -webkit-mask-image: linear-gradient(
     to top,
     transparent 0%,

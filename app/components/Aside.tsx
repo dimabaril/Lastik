@@ -11,11 +11,13 @@ const asideItems = [
   "bg-pink-300",
   "bg-zinc-700",
   "bg-green-300",
+  "bg-purple-400",
+  "bg-yellow-400",
 ];
 
 export default function Aside() {
   return (
-    <aside className="w-32 fixed z-20 right-0 top-0 h-full flex flex-col gap-2 py-6 px-6 bg-black overflow-y-auto">
+    <aside className="w-32 fixed z-20 right-0 top-0 flex flex-col gap-2 p-6">
       {asideItems.map((color, i) => (
         <div
           key={i}

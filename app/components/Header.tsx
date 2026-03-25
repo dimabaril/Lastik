@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -13,8 +16,10 @@ const navColors = ["var(--nav-color-1)", "var(--nav-color-2)"];
 const navColorsBorder = ["rgba(255, 68, 122, 0.7)", "rgba(221, 255, 0, 0.7)"];
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="pl-37.5 sticky top-0 z-10">
+    <header className=" sticky top-0 z-10">
       <Link href="/">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"
@@ -25,7 +30,7 @@ export default function Header() {
         />
       </Link>
       <nav
-        className={`${styles.gradientMask} flex flex-1 items-center gap-2 p-6 flex-wrap backdrop-blur`}
+        className={`${styles.gradientMask} pl-43.5 flex flex-1 items-center gap-2 p-6 flex-wrap backdrop-blur`}
       >
         {navLinks.map((link, i) => (
           <Link
@@ -34,8 +39,12 @@ export default function Header() {
             style={{
               color: navColors[i % 2],
               borderColor: navColorsBorder[i % 2],
+              boxShadow:
+                pathname === link.href
+                  ? "var(--nav-color-1) 1px 1px 10px, var(--nav-color-1) -1px -1px 10px"
+                  : "none",
             }}
-            className="px-8 py-2 rounded-full bg-black/70 border text-2xl transition-all hover:border-dashed hover:shadow-[var(--nav-color-1)_1px_1px_10px,var(--nav-color-1)_-1px_-1px_10px]"
+            className="px-8 py-2 rounded-full text-2xl bg-black/70 border hover:border-dashed  transition-all duration-300"
           >
             {link.label}
           </Link>
