@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import VimeoPlayer from "@/app/components/VimeoPlayer";
 
 const loremText = `Раньше у меня не возникало желания давать интервью. Интервью всегда
 становится комментарием. Написанное должно уметь обходиться без авторских пояснений.
@@ -58,16 +59,8 @@ export default async function ProjectPage({
       <div className="flex gap-8">
         {/* ─── Left column ─── */}
         <div className="flex-1 flex flex-col gap-6">
-          {/* Main image */}
-          <div className="relative rounded-xl overflow-hidden">
-            <Image
-              src={cats[0]}
-              alt="project main"
-              width={600}
-              height={400}
-              className="w-full object-cover"
-            />
-          </div>
+          {/* Main video */}
+          <VimeoPlayer videoId="1073893317" />
 
           {/* Description */}
           <p className="text-white/80 leading-7">{loremText}</p>
