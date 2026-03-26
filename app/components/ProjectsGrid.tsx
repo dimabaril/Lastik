@@ -22,11 +22,11 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
   }
 
   return (
-    <div className="flex flex-col gap-3" style={{ height: "160vh" }}>
+    <div className="flex flex-col gap-0">
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex gap-3 min-h-0"
+          className="flex gap-0 min-h-0"
           style={{
             flex: hovered?.row === rowIndex ? 3 : 1,
             transition: "flex 0.5s ease",
