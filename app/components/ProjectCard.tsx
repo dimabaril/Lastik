@@ -30,7 +30,7 @@ export default function ProjectCard({
   return (
     <Link
       href={`/projects/${slug}`}
-      className="w-full h-full relative rounded-2xl border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer block p-[12_12_40_12]"
+      className="flex flex-col rounded-2xl border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer p-3"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}
@@ -42,10 +42,10 @@ export default function ProjectCard({
         loop
         muted
         playsInline
-        className="w-full h-full rounded-lg"
+        className="rounded-lg"
       />
 
-      <span className="absolute bottom-3 left-3 text-white/90 underline underline-offset-4">
+      <span className="text-white/90 underline underline-offset-4 pt-2">
         {title}
       </span>
     </Link>
