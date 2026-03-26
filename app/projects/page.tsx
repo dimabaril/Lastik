@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Aside from "../components/Aside";
-import ProjectCard from "../components/ProjectCard";
+import ProjectsGrid from "../components/ProjectsGrid";
 
 const projects = [
   {
@@ -207,19 +207,13 @@ export default function Projects() {
         </section>
         {/* ─── Projects grid ─── */}
         <section className="px-6 pb-24 pr-32">
-          <div className="grid grid-cols-3 gap-3">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                span={project.span}
-                thumbVideo={project.thumbVideo}
-                slug={
-                  new URL(project.thumbVideo, "http://x").pathname.split("/")[2]
-                }
-              />
-            ))}
-          </div>
+          <ProjectsGrid
+            projects={projects.map((p) => ({
+              title: p.title,
+              thumbVideo: p.thumbVideo,
+              slug: new URL(p.thumbVideo, "http://x").pathname.split("/")[2],
+            }))}
+          />
         </section>
       </div>
       {/* ─── Right aside ─── */}

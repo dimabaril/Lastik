@@ -5,14 +5,12 @@ import { useRef } from "react";
 
 interface ProjectCardProps {
   title: string;
-  span: string;
   thumbVideo: string;
   slug: string;
 }
 
 export default function ProjectCard({
   title,
-  span,
   thumbVideo,
   slug,
 }: ProjectCardProps) {
@@ -32,7 +30,7 @@ export default function ProjectCard({
   return (
     <Link
       href={`/projects/${slug}`}
-      className={`${span} relative rounded-2xl p-[10_10_48_10] border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer hover:scale-105 transition-transform ease-in-out duration-500 block`}
+      className="w-full h-full relative rounded-2xl border border-dashed border-transparent hover:border-white/70 overflow-hidden cursor-pointer block"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}
