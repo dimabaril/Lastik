@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
-const NUM_COLS = 5;
+const NUM_COLS = 3;
 
 interface Project {
   title: string;
