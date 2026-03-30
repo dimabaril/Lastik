@@ -7,7 +7,8 @@ interface ProjectCardProps {
   title: string;
   thumbVideo: string;
   slug: string;
-  tags?: string[];
+  tags?: readonly string[];
+  size?: number;
 }
 
 export default function ProjectCard({
@@ -15,6 +16,7 @@ export default function ProjectCard({
   thumbVideo,
   slug,
   tags = [],
+  size,
 }: ProjectCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -48,7 +50,10 @@ export default function ProjectCard({
       />
 
       <div className="flex items-center justify-between pt-2">
-        <div className="shrink-0">{title}</div>
+        <div className="shrink-0 flex items-center gap-2">
+          {title}
+          {size && <span className="text-xs text-white/40">{size}</span>}
+        </div>
         <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {tags.map((tag) => (
             <span

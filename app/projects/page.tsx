@@ -1,187 +1,186 @@
 import Image from "next/image";
 import Aside from "../components/Aside";
-import ProjectsGrid from "../components/ProjectsGrid";
+import ProjectsGridFlexBasis from "../components/ProjectsGridFlexBasis";
 
 const projects = [
   {
     title: "Love Generation",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/love-generation/thumb/love_generation-thumb.webm",
     tags: ["2d", "реклама"],
+    size: 8,
   },
   {
     title: "VK NEO",
-    span: "col-span-1 row-span-2",
     videoId: "926255997",
     thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
-    featured: true,
     tags: ["3d", "motion"],
+    size: 3,
   },
   {
     title: "Уралсиб",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/uralsib/thumb/uralsib-thumb.webm",
     tags: ["2d", "реклама"],
+    size: 4,
   },
   {
     title: "Делимобиль",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/delimobil/thumb/delimobil-thumb.webm",
     tags: ["2d", "реклама"],
+    size: 3,
   },
   {
     title: "МТС",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/mts/thumb/mts-thumb.webm",
     tags: ["3d", "реклама"],
+    size: 6,
   },
   {
     title: "Звук",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/zvuk/thumb/zvuk-thumb.webm",
     tags: ["2d", "motion"],
+    size: 4,
   },
   {
     title: "Звук 2",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
     tags: ["2d", "motion"],
+    size: 3,
   },
   {
     title: "ВТБ",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
     tags: ["3d", "реклама"],
+    size: 4,
   },
   {
     title: "Музей Москвы",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
     tags: ["2d", "арт"],
+    size: 3,
   },
   {
     title: "Green Idea",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/green-idea/thumb/green-idea-thumb.webm",
     tags: ["2d", "motion"],
+    size: 6,
   },
   {
     title: "Mail.ru",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/mail-ru/thumb/mail-thumb.webm",
     tags: ["3d", "реклама"],
+    size: 4,
   },
   {
     title: "Яндекс",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
     tags: ["2d", "motion"],
+    size: 7,
   },
   {
     title: "Волчок",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/volchok/thumb/volchok-thumb.webm",
     tags: ["2d", "авторское"],
+    size: 3,
   },
   {
     title: "Такси",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
     tags: ["2d", "реклама"],
+    size: 3,
   },
   {
     title: "Манси",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/mansi/thumb/mansi-thumb.webm",
     tags: ["2d", "арт"],
+    size: 3,
   },
   {
     title: "Странейшие",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo:
       "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb.webm",
     tags: ["2d", "авторское"],
+    size: 3,
   },
   {
     title: "Hospitality",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/hospitality/thumb/hospitality-thumb.webm",
     tags: ["3d", "motion"],
+    size: 4,
   },
   {
     title: "I want to know",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo:
       "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb.webm",
     tags: ["2d", "авторское"],
+    size: 6,
   },
   {
     title: "Presents Fest",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo:
       "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
     tags: ["2d", "ивент"],
+    size: 6,
   },
   {
     title: "Saint Spring",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
     tags: ["3d", "реклама"],
+    size: 4,
   },
   {
     title: "SBER High Res",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
     tags: ["3d", "реклама"],
+    size: 6,
   },
   {
     title: "Собчак",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/sobchak/thumb/sobchak_thumb.webm",
     tags: ["2d", "motion"],
+    size: 4,
   },
   {
     title: "Supermarket",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo:
       "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
     tags: ["3d", "авторское"],
+    size: 5,
   },
   {
     title: "The Skin",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
     tags: ["2d", "авторское"],
+    size: 5,
   },
   {
     title: "Unprincipled",
-    span: "col-span-1 row-span-1",
     videoId: "926255997",
     thumbVideo: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
     tags: ["2d", "авторское"],
+    size: 3,
   },
 ];
 
@@ -232,12 +231,13 @@ export default function Projects() {
         </section>
         {/* ─── Projects grid ─── */}
         <section className="px-6 pb-24 pr-32">
-          <ProjectsGrid
+          <ProjectsGridFlexBasis
             projects={projects.map((p) => ({
               title: p.title,
               thumbVideo: p.thumbVideo,
               slug: new URL(p.thumbVideo, "http://x").pathname.split("/")[2],
               tags: p.tags,
+              size: p.size,
             }))}
           />
         </section>
