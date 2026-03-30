@@ -41,10 +41,10 @@ export default function Header() {
               borderColor: navColorsBorder[i % 2],
               boxShadow:
                 pathname === link.href
-                  ? "var(--nav-color-1) 1px 1px 10px, var(--nav-color-1) -1px -1px 10px"
+                  ? `${navColors[(i + 1) % 2]} 1px 1px 10px, ${navColors[(i + 1) % 2]} -1px -1px 10px`
                   : "none",
             }}
-            className="px-8 py-2 rounded-full text-2xl bg-black/70 border hover:border-dashed  transition-all duration-300"
+            className="px-8 py-2 rounded-full text-2xl bg-black/70 border hover:border-dashed transition-all duration-300"
           >
             {link.label}
           </Link>

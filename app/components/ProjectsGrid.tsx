@@ -9,6 +9,7 @@ interface Project {
   title: string;
   thumbVideo: string;
   slug: string;
+  tags?: string[];
 }
 
 export default function ProjectsGrid({ projects }: { projects: Project[] }) {
@@ -50,6 +51,7 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
                 title={project.title}
                 thumbVideo={project.thumbVideo}
                 slug={project.slug}
+                tags={project.tags}
               />
             </div>
           ))}
