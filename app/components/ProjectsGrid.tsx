@@ -25,14 +25,7 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
   return (
     <div className="flex flex-col">
       {rows.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className="flex"
-          style={{
-            flex: hovered?.row === rowIndex ? 3 : 1,
-            transition: "flex 0.5s ease",
-          }}
-        >
+        <div key={rowIndex} className="flex">
           {row.map((project, colIndex) => (
             <div
               key={project.title}
@@ -40,7 +33,7 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
               style={{
                 flex:
                   hovered?.row === rowIndex && hovered?.col === colIndex
-                    ? 3
+                    ? 2
                     : 1,
                 transition: "flex 0.5s ease",
               }}
