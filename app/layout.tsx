@@ -43,7 +43,7 @@ export default function RootLayout({
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
-      <body className="min-h-full flex flex-col bg-black font-arimo max-w-screen-2xl mx-auto">
+      <body className="min-h-full flex flex-col bg-black font-arimo max-w-screen-xl">
         <Header />
         {children}
 

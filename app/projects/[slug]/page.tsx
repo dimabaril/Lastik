@@ -28,7 +28,7 @@ export default async function ProjectPage({
   const { slug } = await params;
 
   return (
-    <div className="min-h-screen bg-black text-white px-8 py-10 max-w-4xl mx-auto">
+    <div className="min-h-screen bg-black text-white px-8 py-10">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"

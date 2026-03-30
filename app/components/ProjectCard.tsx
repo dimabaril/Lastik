@@ -52,7 +52,12 @@ export default function ProjectCard({
       <div className="flex items-center justify-between pt-2">
         <div className="shrink-0 flex items-center gap-2">
           {title}
-          {size && <span className="text-xs text-white/40">{size}</span>}
+          {/* size for debug */}
+          {size && (
+            <span className="text-xs text-white/40">
+              debug preview card wide: {size}
+            </span>
+          )}
         </div>
         <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {tags.map((tag) => (
