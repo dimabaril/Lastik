@@ -19,7 +19,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className=" sticky top-0 z-10">
+    <header className="font-arimo sticky top-0 z-10">
       <Link href="/">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"

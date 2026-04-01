@@ -5,19 +5,19 @@ html {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
   --nav-color-1: #ff447a;
   --nav-color-2: #ddff00;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --color-background: var(--background);
+  --color-foreground: var(--foreground); */
+
   --font-arimo: var(--font-arimo);
-  --font-space-grotesk: var(--font-space-grotesk);
+  --font-manrope: var(--font-manrope);
+  --font-victor-mono: var(--font-victor-mono);
 }
 
 @media (prefers-color-scheme: dark) {

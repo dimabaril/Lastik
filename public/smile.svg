@@ -1,0 +1,14 @@
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.08 84.08"><defs><style>
+      .cls-1 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+        stroke-width: 2.47px;
+      }
+      .cls-2 {
+        fill: #010101;
+      }
+      .cls-3 {
+        fill: #dae120;
+      }
+    </style></defs><circle class="cls-3" cx="42.04" cy="42.04" r="42.04"></circle><g><ellipse class="cls-2" cx="50.8" cy="36.42" rx="3.56" ry="8.71"></ellipse><ellipse class="cls-2" cx="33.28" cy="36.42" rx="3.56" ry="8.71"></ellipse><path class="cls-1" d="M15.31,50.04c4.08,10.8,14.51,18.48,26.74,18.48s22.36-7.47,26.56-18.03"></path></g></svg>

@@ -28,7 +28,7 @@ export default async function ProjectPage({
   const { slug } = await params;
 
   return (
-    <div className="min-h-screen bg-black text-white px-8 py-10">
+    <div className="font-manrope min-h-screen bg-black text-white px-8 py-10">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"
@@ -40,10 +40,10 @@ export default async function ProjectPage({
       <div className="flex gap-6 items-center mb-6">
         <div className="flex flex-col flex-1 gap-6">
           {/* ─── Title ─── */}
-          <h1 className="font-arimo text-5xl font-bold capitalize">
+          <h1 className="text-5xl font-bold capitalize">
             {slug.replace(/-/g, " ")}
           </h1>
-          <div className="flex justify-between items-center">
+          <div className="font-victor-mono flex justify-between items-center">
             {/* ─── Description ─── */}
             <p className="text-white/50 text-sm">Рекламный Ролик \ 30 Сек</p>
             {/* ─── Tags ─── */}

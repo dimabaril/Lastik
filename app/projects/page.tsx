@@ -198,9 +198,9 @@ export default function Projects() {
 
             {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff,0_0_20px_#ff00de]"> */}
             <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff]">
-              Design thats
+              Суперская
               <br />
-              crazy good
+              Анимация
             </h1>
             <Image
               src="/cat.png"
@@ -224,7 +224,7 @@ export default function Projects() {
               className="absolute -bottom-2 right-29"
             />
           </div>
-          <p className="max-w-2xl text-2xl leading-8">
+          <p className="font-manrope max-w-2xl text-2xl leading-8">
             Мы создаём визуальное счастье в любой технике анимационную графику
             для компаний по всему миру
           </p>

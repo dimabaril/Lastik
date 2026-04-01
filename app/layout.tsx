@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Arimo, Space_Grotesk } from "next/font/google";
+import { Arimo, Manrope, Victor_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const arimo = Arimo({
   variable: "--font-arimo",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
+  // weight: ["400", "500", "600", "700"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "cyrillic"],
+});
+
+const victorMono = Victor_Mono({
+  variable: "--font-victor-mono",
+  subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -38,12 +32,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${arimo.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} antialiased`}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
-      <body className="min-h-full flex flex-col bg-black font-arimo max-w-screen-xl mx-auto">
+      <body className="min-h-full flex flex-col bg-black max-w-screen-xl mx-auto">
         <Header />
         {children}
 
