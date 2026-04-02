@@ -45,8 +45,8 @@ export const projects = [
       "/projects/love-generation/photo_2026-03-09_15-08-25.jpg",
     ],
     texts: [
-      "Для Сбера мы сделали короткий 3D-ролик про терминал оплаты улыбкой.",
-      `Персонаж
+      "Для **Сбера** мы сделали короткий 3D-ролик про терминал оплаты улыбкой.",
+      `**Персонаж**
 
         Клиент хотел оживить терминал и превратить его в эмоционального персонажа: все-таки оплата – улыбкой :)
 
@@ -56,7 +56,7 @@ export const projects = [
       "Проект был реализован всего за две недели — от раскадровки до финального рендера.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 0, cols: 4, colStart: 9 }],
       [
         { type: "image", index: 0, cols: 4 },
         { type: "image", index: 1, cols: 4 },
@@ -75,7 +75,7 @@ export const projects = [
         { type: "image", index: 9, cols: 3 },
         { type: "image", index: 10, cols: 3 },
       ],
-      [{ type: "text", index: 2, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 2, cols: 5, colStart: 8 }],
     ] satisfies LayoutItem[][],
   },
   {

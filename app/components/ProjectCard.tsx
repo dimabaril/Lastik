@@ -34,7 +34,7 @@ export default function ProjectCard({
   return (
     <Link
       href={`/projects/${slug}`}
-      className="group flex flex-col rounded-2xl border border-dashed border-transparent hover:border-white/70 overflow-hidden p-3 cursor-pointer"
+      className="group flex flex-col rounded-2xl border border-dashed border-transparent hover:border-(--fade-color) overflow-hidden p-3 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}
@@ -50,16 +50,14 @@ export default function ProjectCard({
       />
 
       <div className="flex items-center justify-between pt-2">
-        <div className="shrink-0 flex items-center gap-2">
+        <div className="shrink-0 font-manrope text-xl flex items-center gap-2">
           {title}
           {/* size for debug */}
           {size && (
-            <span className="text-xs text-white/40">
-              debug preview card wide: {size}
-            </span>
+            <span className="text-(--fade-color)">debug wide: {size}</span>
           )}
         </div>
-        <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <div className="flex gap-1 font-victor-mono text-lg text-(--fade-color) opacity-0 group-hover:opacity-100 transition-all duration-300">
           {tags.map((tag) => (
             <span
               key={tag}

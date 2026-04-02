@@ -19,7 +19,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="uppercase font-arimo sticky top-0 z-10">
+    <header className="uppercase font-arimo text-2xl sticky top-0 z-10">
       <Link href="/">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"
@@ -45,7 +45,7 @@ export default function Header() {
                     ? `inset ${navColors[i % 2]} 1px 1px 10px, inset ${navColors[i % 2]} -1px -1px 10px`
                     : "none",
               }}
-              className={`${navGlowStyles[i % 2]} px-8 py-2 rounded-full text-2xl bg-black/70 border transition-all duration-300`}
+              className={`${navGlowStyles[i % 2]} px-8 py-2 rounded-full bg-black/70 border transition-all duration-300`}
             >
               {link.label}
             </Link>
