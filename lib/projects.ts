@@ -76,7 +76,7 @@ export const projects = [
         { type: "image", index: 10, cols: 3 },
       ],
       [{ type: "text", index: 2, cols: 6, colStart: 7 }],
-    ],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "vk-neo",

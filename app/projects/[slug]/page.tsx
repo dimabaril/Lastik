@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
-import { projects } from "@/lib/projects";
+import { projects, type Project } from "@/lib/projects";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -15,7 +15,7 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project: Project | undefined = projects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (
