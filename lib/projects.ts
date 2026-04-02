@@ -1,3 +1,10 @@
+export type LayoutItem = {
+  type: "text" | "image";
+  index: number;
+  cols: number;
+  colStart?: number;
+};
+
 export type Project = {
   slug: string;
   size: number;
@@ -10,6 +17,7 @@ export type Project = {
   agency: string;
   images: string[];
   texts: string[];
+  layout?: LayoutItem[][];
 };
 
 export const projects = [
@@ -46,6 +54,28 @@ export const projects = [
 
         Добавили отсылку к культовой лампе из известной заставки (было сложно удержаться).`,
       "Проект был реализован всего за две недели — от раскадровки до финального рендера.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [
+        { type: "image", index: 0, cols: 4 },
+        { type: "image", index: 1, cols: 4 },
+        { type: "image", index: 2, cols: 4 },
+      ],
+      [{ type: "text", index: 1, cols: 6 }],
+      [
+        { type: "image", index: 3, cols: 3 },
+        { type: "image", index: 4, cols: 3 },
+        { type: "image", index: 5, cols: 3 },
+        { type: "image", index: 6, cols: 3 },
+      ],
+      [
+        { type: "image", index: 7, cols: 3 },
+        { type: "image", index: 8, cols: 3 },
+        { type: "image", index: 9, cols: 3 },
+        { type: "image", index: 10, cols: 3 },
+      ],
+      [{ type: "text", index: 2, cols: 6, colStart: 7 }],
     ],
   },
   {
