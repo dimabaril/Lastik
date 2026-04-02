@@ -33,12 +33,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} min-h-screen antialiased`}
+      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} antialiased`}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
-      <body className="min-h-full flex flex-col bg-black ">
+      <body className="min-h-screen flex flex-col bg-black ">
         <Header />
         {children}
 
