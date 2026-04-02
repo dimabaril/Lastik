@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} antialiased`}
+      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} min-h-screen antialiased`}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
