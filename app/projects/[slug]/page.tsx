@@ -68,7 +68,7 @@ export default async function ProjectPage({
 
       {/* Texts */}
       {project.texts.map((text, i) => (
-        <p key={i} className="text-white/80 leading-7">
+        <p key={i} className="text-white/80 leading-7 whitespace-pre-line">
           {text}
         </p>
       ))}
