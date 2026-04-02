@@ -1,10 +1,13 @@
 import FooterClock from "./FooterClock";
 import FitText from "./FitText";
 
+const EMAIL = "hello@130studio.com";
+const TELEGRAM = "https://t.me/lastikstudio";
+
 const SOCIAL_LINKS = [
-  { label: "behance", href: "https://behance.net" },
+  { label: "behance", href: "https://behance.net/lastik" },
   { label: "vimeo", href: "https://vimeo.com/lastik" },
-  { label: "instagram*", href: "https://instagram.com" },
+  { label: "instagram*", href: "https://instagram.com/lastik.studio" },
   { label: "facebook*", href: "https://facebook.com" },
 ];
 
@@ -27,13 +30,13 @@ export default function Footer() {
           </span>
           <div className="flex flex-col gap-1 font-arimo text-2xl">
             <a
-              href="mailto:hello@130studio.com"
+              href={`mailto:${EMAIL}`}
               className="hover:text-(--contact-color) transition-colors"
             >
-              hello@130studio.com
+              {EMAIL}
             </a>
             <a
-              href="https://t.me/lastikstudio"
+              href={TELEGRAM}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-(--contact-color) transition-colors"

@@ -28,7 +28,7 @@ export default function Header() {
           className={`${styles.rotate} absolute top-6 left-6 z-10`}
         />
       </Link>
-      <nav className={`${styles.gradientMask} backdrop-blur flex`}>
+      <nav className={`${styles.gradientMask} backdrop-blur-md flex`}>
         {/* Symmetrical to logo */}
         <div className="w-36"></div>
         <div className="flex flex-1 items-center gap-2 flex-wrap  max-w-screen-xl mx-auto p-6">
@@ -41,10 +41,10 @@ export default function Header() {
                 borderColor: navColorsBorder[i % 2],
                 boxShadow:
                   pathname === link.href
-                    ? `${navColors[(i + 1) % 2]} 1px 1px 10px, ${navColors[(i + 1) % 2]} -1px -1px 10px`
+                    ? `inset ${navColors[i % 2]} 1px 1px 10px, inset ${navColors[i % 2]} -1px -1px 10px`
                     : "none",
               }}
-              className="px-8 py-2 rounded-full text-2xl bg-black/70 border hover:border-dashed transition-all duration-300"
+              className="px-8 py-2 rounded-full text-2xl bg-black/70 border transition-all duration-300"
             >
               {link.label}
             </Link>
