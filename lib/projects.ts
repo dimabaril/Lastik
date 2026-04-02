@@ -21,11 +21,17 @@ export const projects = [
     description: "Рекламный ролик \\ 30 Сек",
     tags: ["2d", "реклама"],
     videoId: 926255997,
-    client: "Love Generation",
-    agency: "",
+    client: "Сбер",
+    agency: "Mosaic",
     images: [
-      "/projects/love-generation/1.jpg",
-      "/projects/love-generation/2.jpg",
+      //   "/projects/love-generation/1.jpg",
+      //   "/projects/love-generation/2.jpg",
+
+      "https://placecats.com/600/400",
+      "https://placecats.com/400/400",
+      "https://placecats.com/400/300",
+      "https://placecats.com/800/500",
+      "https://placecats.com/500/400",
     ],
     texts: [
       "Раньше у меня не возникало желания давать интервью. Интервью всегда становится комментарием. Написанное должно уметь обходиться без авторских пояснений. Я мог бы перефразировать Ибсена и сказать: писать, не говорить — моё призванье.",
