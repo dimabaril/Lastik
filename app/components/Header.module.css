@@ -21,3 +21,15 @@
     black 100%
   );
 }
+
+.navLink1:hover {
+  text-shadow:
+    0 0 10px var(--nav-color-1),
+    0 0 30px var(--nav-color-1);
+}
+
+.navLink2:hover {
+  text-shadow:
+    0 0 10px var(--nav-color-2),
+    0 0 30px var(--nav-color-2);
+}

@@ -13,6 +13,7 @@ const navLinks = [
 
 const navColors = ["var(--nav-color-1)", "var(--nav-color-2)"];
 const navColorsBorder = ["rgba(255, 68, 122, 0.7)", "rgba(221, 255, 0, 0.7)"];
+const navGlowStyles = [styles.navLink1, styles.navLink2];
 
 export default function Header() {
   const pathname = usePathname();
@@ -44,7 +45,7 @@ export default function Header() {
                     ? `inset ${navColors[i % 2]} 1px 1px 10px, inset ${navColors[i % 2]} -1px -1px 10px`
                     : "none",
               }}
-              className="px-8 py-2 rounded-full text-2xl bg-black/70 border transition-all duration-300"
+              className={`${navGlowStyles[i % 2]} px-8 py-2 rounded-full text-2xl bg-black/70 border transition-all duration-300`}
             >
               {link.label}
             </Link>
