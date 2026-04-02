@@ -17,7 +17,7 @@ const asideItems = [
 
 export default function Aside() {
   return (
-    <aside className="w-32 fixed z-20 right-0 top-0 flex flex-col gap-2 p-6">
+    <aside className="w-32 fixed z-20 right-0 top-0 flex flex-col gap-2">
       {asideItems.map((color, i) => (
         <div
           key={i}

@@ -186,11 +186,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto px-3 py-6">
       {/* ─── Main column ─── */}
       <div className="flex flex-1 flex-col min-h-screen bg-black text-white">
         {/* ─── Hero ─── */}
-        <section className="flex flex-col gap-10 items-center px-6 pt-16 pb-12 text-center">
+        <section className="flex flex-col gap-10 items-center text-center">
           <div className="relative ">
             {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter drop-shadow-[0_0_5px_#fff]"> */}
             {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter drop-shadow-[0_0_20px_#3b82f6]"> */}
@@ -203,25 +203,25 @@ export default function Projects() {
               Анимация
             </h1>
             <Image
-              src="/cat.png"
+              src="/cat.svg"
               alt="cat"
-              width={100}
-              height={100}
-              className="absolute top-0 -left-20"
+              width={60}
+              height={60}
+              className="absolute top-1 -left-11"
             />
             <Image
-              src="/heart.png"
+              src="/heart.svg"
               alt="heart"
-              width={80}
-              height={80}
-              className="absolute -top-7 -right-15"
+              width={60}
+              height={60}
+              className="absolute -top-5 right-22"
             />
             <Image
-              src="/smile.png"
+              src="/smile.svg"
               alt="smile"
-              width={65}
-              height={65}
-              className="absolute -bottom-2 right-29"
+              width={60}
+              height={60}
+              className="absolute -bottom-3 -right-11"
             />
           </div>
           <p className="font-manrope max-w-2xl text-2xl leading-8">
@@ -230,7 +230,7 @@ export default function Projects() {
           </p>
         </section>
         {/* ─── Projects grid ─── */}
-        <section className="px-6 pb-24 pr-32">
+        <section className="">
           <ProjectsGridFlexBasis
             projects={projects.map((p) => ({
               title: p.title,
@@ -243,7 +243,7 @@ export default function Projects() {
         </section>
       </div>
       {/* ─── Right aside ─── */}
-      <Aside />
+      {/* <Aside /> */}
     </div>
   );
 }

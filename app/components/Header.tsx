@@ -8,7 +8,6 @@ import styles from "./Header.module.css";
 const navLinks = [
   { label: "проекты", href: "/projects" },
   { label: "студия", href: "/studio" },
-  { label: "что-то", href: "/chto-to" },
   { label: "арт-дирекшен курс", href: "/kurs" },
 ];
 
@@ -19,7 +18,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="font-arimo sticky top-0 z-10">
+    <header className="uppercase font-arimo sticky top-0 z-10">
       <Link href="/">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"
@@ -30,8 +29,10 @@ export default function Header() {
         />
       </Link>
       <nav
-        className={`${styles.gradientMask} pl-43.5 flex flex-1 items-center gap-2 p-6 flex-wrap backdrop-blur`}
+        className={`${styles.gradientMask} flex flex-1 items-center gap-2 flex-wrap backdrop-blur max-w-screen-xl mx-auto p-6`}
       >
+        {/* Symmetrical to logo */}
+        {/* <div className="w-[144px]"></div> */}
         {navLinks.map((link, i) => (
           <Link
             key={link.href}
@@ -49,6 +50,8 @@ export default function Header() {
             {link.label}
           </Link>
         ))}
+        {/* Symmetrical to logo */}
+        {/* <div className="w-[144px]"></div> */}
       </nav>
     </header>
   );

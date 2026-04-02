@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Arimo, Manrope, Victor_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -37,14 +38,12 @@ export default function RootLayout({
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
-      <body className="min-h-full flex flex-col bg-black max-w-screen-xl mx-auto">
+      <body className="min-h-full flex flex-col bg-black ">
         <Header />
         {children}
 
         {/* Footer */}
-        <footer className="px-6 py-16 text-center">
-          <p className="text-8xl text-pink-500">Ластик</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

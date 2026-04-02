@@ -28,7 +28,7 @@ export default async function ProjectPage({
   const { slug } = await params;
 
   return (
-    <div className="font-manrope min-h-screen bg-black text-white px-8 py-10">
+    <div className="font-manrope min-h-screen bg-black text-white max-w-screen-xl mx-auto p-6">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"
@@ -117,7 +117,7 @@ export default async function ProjectPage({
               className="w-full object-cover"
             />
           </div>
-          <p className="text-white/80 leading-7 p-6">{loremText2}</p>
+          <p className="text-white/80 leading-7">{loremText2}</p>
           <div className="rounded-xl overflow-hidden">
             <Image
               src={cats[0]}
