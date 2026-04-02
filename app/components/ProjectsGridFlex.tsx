@@ -33,7 +33,7 @@ function buildRows(projects: Project[]): Project[][] {
   return rows;
 }
 
-export default function ProjectsGridFlexBasis({
+export default function ProjectsGridFlex({
   projects,
 }: {
   projects: Project[];
