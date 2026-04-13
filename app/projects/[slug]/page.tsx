@@ -43,7 +43,9 @@ export default async function ProjectPage({
       <div className="flex gap-6 items-center mb-6">
         <div className="flex flex-col flex-1 gap-6">
           {/* ─── Title ─── */}
-          <h1 className="text-5xl font-bold capitalize">{project.title}</h1>
+          <h1 className="text-6xl font-bold italic tracking-tighter capitalize">
+            {project.title}
+          </h1>
           <div className="font-victor-mono text-xl text-(--fade-color) flex justify-between items-center">
             {/* ─── Description ─── */}
             <p className="">{project.description}</p>
@@ -63,17 +65,29 @@ export default async function ProjectPage({
           <VimeoPlayer videoId={String(project.videoId)} />
         </div>
         {/* ─── Right column ─── */}
-        <div className="w-40 shrink-0 text-xl flex flex-col gap-6 pt-2">
-          {project.client && (
+        <div className="w-40 shrink-0 flex flex-col gap-6 pt-2">
+          {project.brand && (
             <div>
-              <p className="text-(--fade-color) mb-1">Клиент</p>
-              <p className="font-bold">{project.client}</p>
+              <p className="text-(--fade-color) text-lg mb-1">Бренд</p>
+              <p className="font-bold text-2xl">{project.brand}</p>
             </div>
           )}
           {project.agency && (
             <div>
-              <p className="text-(--fade-color) mb-1">Агентство</p>
-              <p className="font-bold">{project.agency}</p>
+              <p className="text-(--fade-color) text-lg mb-1">Агентство</p>
+              <p className="font-bold text-2xl">{project.agency}</p>
+            </div>
+          )}
+          {project.production && (
+            <div>
+              <p className="text-(--fade-color) text-lg mb-1">Продакшн</p>
+              <p className="font-bold text-2xl">{project.production}</p>
+            </div>
+          )}
+          {project.project && (
+            <div>
+              <p className="text-(--fade-color) text-lg mb-1">Проект</p>
+              <p className="font-bold text-2xl">{project.project}</p>
             </div>
           )}
         </div>
@@ -83,7 +97,7 @@ export default async function ProjectPage({
       {project.layout ? (
         <div className="flex flex-col gap-6 mt-6">
           {project.layout.map((row, rowIndex) => (
-            <div key={rowIndex} className="grid grid-cols-12 gap-6">
+            <div key={rowIndex} className="grid grid-cols-12 gap-6 items-start">
               {row.map((item, i) => {
                 const style: React.CSSProperties = {
                   gridColumn: item.colStart
@@ -98,6 +112,21 @@ export default async function ProjectPage({
                       className="text-xl leading-7 whitespace-pre-line"
                     >
                       {renderText(project.texts[item.index])}
+                    </div>
+                  );
+                }
+                if (item.type === "video") {
+                  return (
+                    <div
+                      key={i}
+                      style={style}
+                      className="rounded-xl overflow-hidden"
+                    >
+                      <video
+                        src={project.videos?.[item.index]}
+                        controls
+                        className="w-full object-cover"
+                      />
                     </div>
                   );
                 }
@@ -127,10 +156,11 @@ export default async function ProjectPage({
               {renderText(text)}
             </p>
           ))}
-          {project.images.length > 0 && (
-            <div className="grid grid-cols-2 gap-6">
+          {(project.images.length > 0 ||
+            (project.videos && project.videos.length > 0)) && (
+            <div className="grid grid-cols-2 gap-6 items-start">
               {project.images.map((src, i) => (
-                <div key={i} className="rounded-xl overflow-hidden">
+                <div key={`img-${i}`} className="rounded-xl overflow-hidden">
                   <Image
                     src={src}
                     alt={`${project.title} — ${i + 1}`}
@@ -138,6 +168,11 @@ export default async function ProjectPage({
                     height={600}
                     className="w-full object-cover"
                   />
+                </div>
+              ))}
+              {project.videos?.map((src, i) => (
+                <div key={`vid-${i}`} className="rounded-xl overflow-hidden">
+                  <video src={src} controls className="w-full object-cover" />
                 </div>
               ))}
             </div>
