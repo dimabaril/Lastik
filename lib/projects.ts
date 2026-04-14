@@ -1,5 +1,5 @@
 export type LayoutItem = {
-  type: "text" | "image" | "video";
+  type: "text" | "image" | "video" | "vimeo";
   index: number;
   cols: number;
   colStart?: number;
@@ -8,17 +8,23 @@ export type LayoutItem = {
 export type Project = {
   slug: string;
   size: number;
-  thumbVideo: string;
+  thumbVideo?: string;
+  thumbVideoPosterImage?: string;
   title: string;
   description: string;
   tags: string[];
   videoId: number;
+  videoHash?: string;
   brand: string | null;
   agency: string | null;
   production: string | null;
-  project: string | null;
+  // project: string | null;
   images: string[];
   videos?: string[];
+  vimeos?: {
+    videoId: number;
+    videoHash?: string;
+  }[];
   texts: string[];
   layout?: LayoutItem[][];
 };
@@ -35,7 +41,7 @@ export const projects = [
     brand: "Love Generation",
     agency: null,
     production: null,
-    project: "Лонч бренда косметики Love Generation",
+    // project: "Лонч бренда косметики Love Generation",
     images: [
       "/projects/love-generation/image.png",
       "/projects/love-generation/lg_sketch.png",
@@ -79,7 +85,7 @@ export const projects = [
     brand: "VK",
     agency: null,
     production: null,
-    project: "Маруся NEO",
+    // project: "Маруся NEO",
     images: [
       "/projects/vk-neo/unicorn.jpg",
       "/projects/vk-neo/rob1.png",
@@ -96,15 +102,16 @@ export const projects = [
   {
     slug: "sber-terminal",
     size: 3,
-    thumbVideo: "/projects/sber-terminal/thumb/sber_terminal-thumb.webm",
-    title: "СБЕР / Терминал",
+    thumbVideo: "/projects/sber-terminal/thumb/sber-terminal-thumb.webm",
+    thumbVideoPosterImage: "/projects/sber-terminal/sber-terminal-thumb.png",
+    title: "Оплата улыбкой",
     description: "Бла бла бла",
     tags: ["3d", "реклама"],
-    videoId: 926255997,
+    videoId: 1182969480,
     brand: "СБЕР",
     agency: "ЭMosAIc",
     production: null,
-    project: "Оплата улыбкой",
+    // project: "Оплата улыбкой",
     images: [
       "/projects/sber-terminal/term-2-1.jpg",
       "/projects/sber-terminal/term-2-2.jpg",
@@ -163,7 +170,7 @@ export const projects = [
     brand: "Уралсиб",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/uralsib/1.jpg", "/projects/uralsib/2.jpg"],
     texts: ["Надежность", "Стабильность"],
   },
@@ -178,7 +185,7 @@ export const projects = [
     brand: "Делимобиль",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/delimobil/1.jpg"],
     texts: ["Мобильность", "Свобода"],
   },
@@ -186,20 +193,63 @@ export const projects = [
     slug: "mts",
     size: 6,
     thumbVideo: "/projects/mts/thumb/mts-thumb.webm",
-    title: "МТС",
+    title: "Гёрлз бэнд Neku-sai",
     description: "Телеком реклама с динамичными 3D переходами и эффектами",
     tags: ["3d", "реклама"],
-    videoId: 926255997,
+    videoId: 1031579586,
     brand: "МТС",
     agency: null,
-    production: null,
-    project: null,
+    production: "Human",
+    // project: null,
     images: [
-      "/projects/mts/1.jpg",
-      "/projects/mts/2.jpg",
-      "/projects/mts/3.jpg",
+      "/projects/mts/Вакалоиды_Цвет.jpg",
+      "/projects/mts/Crow (1).png",
+      "/projects/mts/Вакалоиды (1).png",
+      "/projects/mts/Вакалоиды_ПБ_Черная.jpg",
+      "/projects/mts/image.png",
+      "/projects/mts/telegram-cloud-photo-size-2-5323689908914740862-y.jpg",
+      "/projects/mts/комнаты.png",
     ],
-    texts: ["Скорость", "Связь"],
+    videos: [
+      "/projects/mts/Snippet_FINAL.webm",
+      "/projects/mts/Общий_рилс_MASTER_version.webm",
+      "/projects/mts/Рилс_Черной_FINAL.webm",
+      "/projects/mts/vocaloids_001_v001.webm",
+    ],
+    texts: [
+      "Краткое описание: Клип и серия рилсов для виртуальной группы **Neku-sai**, которую запустил **МТС Лэйбл**.",
+      "Наша задача была не просто сделать анимацию, а создать убедительных персонажей. Мы детально продумывали образы: татуировки, аксессуары, маникюр, мелкие привычки — именно такие детали делают героя живым.",
+      "За основу визуального характера взяли энергетику фронт-герлз из группы «Ранетки», а песня «О тебе» стала отправной точкой для всей истории.",
+      "Клип и короткие ролики построены на эстетике тикток-контента — будто они сняты на айфон в спальне, которую делишь с младшим братом, и смонтированы прямо на телефоне. Этот «домашний» язык помог сделать виртуальную группу ближе и понятнее аудитории.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 5, colStart: 8 }],
+      [{ type: "text", index: 1, cols: 10 }],
+
+      [
+        { type: "video", index: 0, cols: 3 },
+        { type: "video", index: 1, cols: 3 },
+        { type: "video", index: 2, cols: 3 },
+        { type: "video", index: 3, cols: 3 },
+      ],
+      [{ type: "text", index: 2, cols: 10 }],
+
+      [
+        { type: "image", index: 0, cols: 5 },
+        { type: "image", index: 1, cols: 7 },
+      ],
+      [
+        { type: "image", index: 2, cols: 7 },
+        { type: "image", index: 3, cols: 5 },
+      ],
+      [{ type: "text", index: 3, cols: 4 }],
+      [
+        { type: "image", index: 4, cols: 6 },
+        { type: "image", index: 5, cols: 6 },
+      ],
+
+      [{ type: "image", index: 6, cols: 12 }],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "zvuk",
@@ -213,7 +263,7 @@ export const projects = [
     brand: "Звук",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/zvuk/1.jpg"],
     texts: ["Гармония", "Ритм"],
   },
@@ -229,7 +279,7 @@ export const projects = [
     brand: "Звук",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/zvuk-2/1.jpg"],
     texts: ["Эволюция"],
   },
@@ -237,16 +287,53 @@ export const projects = [
     slug: "vtb-1",
     size: 4,
     thumbVideo: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
-    title: "ВТБ",
-    description: "Финансовая институция в современном объёмном исполнении",
+    title: "Переводы для бизнеса",
+    description: "Бла бла бла",
     tags: ["3d", "реклама"],
-    videoId: 926255997,
+    videoId: 1054459009,
+    videoHash: "b5699500f6",
     brand: "ВТБ",
-    agency: null,
+    agency: "MosAIc",
     production: null,
-    project: null,
-    images: ["/projects/vtb-1/1.jpg", "/projects/vtb-1/2.jpg"],
-    texts: ["Прогресс", "Инвестиции"],
+    // project: null,
+    images: [
+      "/projects/vtb-1/71DA3E3C-5D97-4B62-94A6-3E1BF4178F93.jpeg",
+      "/projects/vtb-1/2DE27646-6D42-4FE6-9A64-EF4E9C3574AB.jpeg",
+      "/projects/vtb-1/Снимок экрана 2024-05-15 в 12.36.55.png",
+      "/projects/vtb-1/92BC146A-41F6-4250-A1C0-CAA8414B2D89.jpeg",
+      "/projects/vtb-1/927D8C27-152B-4816-9E4E-C31A620354E4.jpeg",
+      "/projects/vtb-1/Снимок экрана 2024-05-15 в 12.36.50.png",
+    ],
+    videos: [
+      "/projects/vtb-1/vtb_AI textures.mp4",
+      "/projects/vtb-1/vtb_layers_1.mp4",
+    ],
+    texts: [
+      "Энергичный ролик, где наша графика плотно переплелась со съемочным материалом.",
+      "На этом проекте для ВТБ мы впервые опробовали пайплайн с ИИ-текстурированием, который сегодня позволяет нам значительно ускоряться и делать штуки, которые иначе сложно добиться.",
+      "Замешали 3D-анимацию, ИИ-текстуры, 2D-комиксные эффекты и титры.",
+      "По настроению в начале плотно ориентировались на Spider-Verse, но постепенно стиль настраивался под визуал ВТБ.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 4, colStart: 9 }],
+      [{ type: "text", index: 1, cols: 8 }],
+      [{ type: "video", index: 0, cols: 12 }],
+      [{ type: "text", index: 2, cols: 6, colStart: 7 }],
+
+      [{ type: "video", index: 1, cols: 12 }],
+
+      [{ type: "text", index: 3, cols: 6 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [
+        { type: "image", index: 1, cols: 6 },
+        { type: "image", index: 2, cols: 6 },
+      ],
+      [
+        { type: "image", index: 3, cols: 6 },
+        { type: "image", index: 4, cols: 6 },
+      ],
+      [{ type: "image", index: 5, cols: 12 }],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "mosmuseum",
@@ -259,7 +346,7 @@ export const projects = [
     brand: "Музей Москвы",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/mosmuseum/1.jpg"],
     texts: ["История", "Культура"],
   },
@@ -274,7 +361,7 @@ export const projects = [
     brand: "Green Idea",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/green-idea/1.jpg", "/projects/green-idea/2.jpg"],
     texts: ["Природа", "Устойчивость"],
   },
@@ -282,36 +369,101 @@ export const projects = [
     slug: "mail-ru",
     size: 4,
     thumbVideo: "/projects/mail-ru/thumb/mail-thumb.webm",
-    title: "Mail.ru",
-    description: "Кампания интернет-сервиса с объёмной 3D анимацией",
+    title: "Ребрендинг с маскотом Байтом",
+    description: "Бла бла бла",
     tags: ["3d", "реклама"],
-    videoId: 926255997,
-    brand: "Mail.ru",
+    videoId: 1054447127,
+    brand: "mail.ru",
     agency: null,
     production: null,
-    project: null,
-    images: ["/projects/mail-ru/1.jpg", "/projects/mail-ru/2.jpg"],
-    texts: ["Коммуникация", "Сервис"],
+    // project: null,
+    images: [
+      "/projects/mail-ru/photo_2026-03-09_13-27-02.jpg",
+      "/projects/mail-ru/photo_2026-03-09_13-27-21.jpg",
+      "/projects/mail-ru/photo_2026-03-09_13-27-15.jpg",
+      "/projects/mail-ru/photo_2026-03-09_13-33-56.jpg",
+    ],
+    videos: [
+      "/projects/mail-ru/MAIL_anim_1_v07.mp4",
+      "/projects/mail-ru/MAIL_anim_3_v02 (2).mp4",
+      "/projects/mail-ru/MAIL_anim_1_v02.mp4",
+      "/projects/mail-ru/MAIL_anim_fin_1_v02.mp4",
+    ],
+    texts: [
+      "Mail.ru провёл ребрендинг, выкатив новый дизайн и маскота — белую собаку по имени Байт.",
+      "Нас попросили создать интро об обновлённом интерфейсе.",
+      "Под легкий прозрачный дизайн, хотелось сделать плавные движения и чтобы в монтаже было как можно больше органичных мэтч-катов.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 9, colStart: 4 }],
+      [{ type: "text", index: 1, cols: 9, colStart: 4 }],
+      [
+        { type: "image", index: 0, cols: 6 },
+        { type: "image", index: 1, cols: 6 },
+      ],
+      [
+        { type: "image", index: 2, cols: 6 },
+        { type: "image", index: 3, cols: 6 },
+      ],
+      [{ type: "text", index: 2, cols: 12 }],
+
+      [
+        { type: "video", index: 0, cols: 6 },
+        { type: "video", index: 1, cols: 6 },
+      ],
+      [
+        { type: "video", index: 2, cols: 6 },
+        { type: "video", index: 3, cols: 6 },
+      ],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "yandex-incl",
     size: 7,
     thumbVideo: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
-    title: "Яндекс",
+    title: "Инклюзивные сервисы Яндекс",
     description:
       "Технологичный проект поисковой системы с абстрактными элементами",
     tags: ["2d", "motion"],
-    videoId: 926255997,
+    videoId: 1054472202,
     brand: "Яндекс",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
-      "/projects/yandex-incl/1.jpg",
-      "/projects/yandex-incl/2.jpg",
-      "/projects/yandex-incl/3.jpg",
+      "/projects/yandex-incl/bask_sketch2.jpg",
+      "/projects/yandex-incl/girl_sketch_pw.jpg",
+      "/projects/yandex-incl/bask1.gif",
+      "/projects/yandex-incl/sb_gorovka.jpg",
+      "/projects/yandex-incl/gotov1.gif",
     ],
-    texts: ["Поиск", "Находки"],
+    // videos: ["https://vimeo.com/1054472284/1e4e3262aa"],
+    vimeos: [
+      {
+        videoId: 1054472284,
+        videoHash: "1e4e3262aa",
+      },
+    ],
+    texts: [
+      "Про инклюзию для Яндекса. Каждая история — о человеке с инвалидностью и том, как технологии помогают жить обычной жизнью в большом городе.",
+      "Первый ролик — о сервисе такси для людей с ограниченными возможностями.",
+      "Героиня — молодая девушка в инвалидной коляске, которая едет на баскетбол, выбрав в приложении специальную опцию.",
+      "Вторая история — про дедушку, который уже почти не видит, но очень любит готовить. Он собирается испечь пирог для внуков, но не может сам прочитать надписи на упаковках.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 6 }],
+      [{ type: "text", index: 2, cols: 6 }],
+      [
+        { type: "image", index: 0, cols: 6 },
+        { type: "image", index: 1, cols: 6 },
+      ],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "vimeo", index: 0, cols: 12 }],
+      [{ type: "text", index: 3, cols: 6, colStart: 7 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "volchok",
@@ -324,7 +476,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/volchok/1.jpg"],
     texts: ["Игра", "Движение"],
   },
@@ -339,7 +491,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/taxi-v2/1.jpg"],
     texts: ["Скорость", "Удобство"],
   },
@@ -354,7 +506,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/mansi/1.jpg"],
     texts: ["Традиция"],
   },
@@ -370,7 +522,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/stranneyshie-horiz/1.jpg"],
     texts: ["Фантазия"],
   },
@@ -385,7 +537,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/hospitality/1.jpg", "/projects/hospitality/2.jpg"],
     texts: ["Приём", "Комфорт"],
   },
@@ -401,7 +553,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
       "/projects/i-want-to-know-everything/1.jpg",
       "/projects/i-want-to-know-everything/2.jpg",
@@ -420,7 +572,7 @@ export const projects = [
     brand: "Presents Fest",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
       "/projects/presents-fest-2024/1.jpg",
       "/projects/presents-fest-2024/2.jpg",
@@ -438,7 +590,7 @@ export const projects = [
     brand: "Saint Spring",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
       "/projects/saint-spring-v3/1.jpg",
       "/projects/saint-spring-v3/2.jpg",
@@ -456,7 +608,7 @@ export const projects = [
     brand: "Сбер",
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
       "/projects/love-generation/term-2-1.jpg",
       "/projects/love-generation/term-2-2.jpg",
@@ -494,7 +646,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/sobchak/1.jpg"],
     texts: ["Политика"],
   },
@@ -510,7 +662,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: [
       "/projects/supermarket-trollys-dream-v1/1.jpg",
       "/projects/supermarket-trollys-dream-v1/2.jpg",
@@ -528,7 +680,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/the-skin-v1/1.jpg"],
     texts: ["Биология", "Текстура"],
   },
@@ -543,7 +695,7 @@ export const projects = [
     brand: null,
     agency: null,
     production: null,
-    project: null,
+    // project: null,
     images: ["/projects/unprincipled/1.jpg"],
     texts: ["Авангард"],
   },

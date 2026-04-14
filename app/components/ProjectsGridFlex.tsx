@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectPreviewCard from "./ProjectPreviewCard";
 
 const ROW_CAPACITY = 10;
 
 interface Project {
   title: string;
   thumbVideo: string;
+  thumbVideoPosterImage?: string;
   slug: string;
   tags?: readonly string[];
   size?: number;
@@ -66,9 +67,10 @@ export default function ProjectsGridFlex({
                 }
                 onMouseLeave={() => setHovered(null)}
               >
-                <ProjectCard
+                <ProjectPreviewCard
                   title={project.title}
                   thumbVideo={project.thumbVideo}
+                  thumbVideoPosterImage={project.thumbVideoPosterImage}
                   slug={project.slug}
                   tags={project.tags}
                   size={size}

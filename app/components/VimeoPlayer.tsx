@@ -13,7 +13,13 @@
 //   }
 // }
 
-export default function VimeoPlayer({ videoId }: { videoId: string }) {
+export default function VimeoPlayer({
+  videoId,
+  videoHash,
+}: {
+  videoId: number;
+  videoHash?: string;
+}) {
   //   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   //   useEffect(() => {
@@ -48,7 +54,7 @@ export default function VimeoPlayer({ videoId }: { videoId: string }) {
     >
       <iframe
         // ref={iframeRef}
-        src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=1&muted=0&player_id=0&app_id=58479`}
+        src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=1&muted=0&player_id=0&app_id=58479${videoHash ? `&h=${videoHash}` : ""}`}
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerPolicy="strict-origin-when-cross-origin"

@@ -54,6 +54,7 @@ export default function Projects() {
             projects={projects.map((project) => ({
               title: project.title,
               thumbVideo: project.thumbVideo,
+              thumbVideoPosterImage: project.thumbVideoPosterImage,
               slug: project.slug,
               tags: project.tags,
               size: project.size,

@@ -43,7 +43,7 @@ export default async function ProjectPage({
       <div className="flex gap-6 items-center mb-6">
         <div className="flex flex-col flex-1 gap-6">
           {/* ─── Title ─── */}
-          <h1 className="text-6xl font-bold italic tracking-tighter capitalize">
+          <h1 className="text-6xl font-bold italic tracking-tighter">
             {project.title}
           </h1>
           <div className="font-victor-mono text-xl text-(--fade-color) flex justify-between items-center">
@@ -62,7 +62,10 @@ export default async function ProjectPage({
             </div>
           </div>
           {/* Main video */}
-          <VimeoPlayer videoId={String(project.videoId)} />
+          <VimeoPlayer
+            videoId={project.videoId}
+            videoHash={project.videoHash}
+          />
         </div>
         {/* ─── Right column ─── */}
         <div className="w-40 shrink-0 flex flex-col gap-6 pt-2">
@@ -84,12 +87,12 @@ export default async function ProjectPage({
               <p className="font-bold text-2xl">{project.production}</p>
             </div>
           )}
-          {project.project && (
+          {/* {project.project && (
             <div>
               <p className="text-(--fade-color) text-lg mb-1">Проект</p>
               <p className="font-bold text-2xl">{project.project}</p>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
@@ -104,47 +107,67 @@ export default async function ProjectPage({
                     ? `${item.colStart} / span ${item.cols}`
                     : `span ${item.cols}`,
                 };
-                if (item.type === "text") {
-                  return (
-                    <div
-                      key={i}
-                      style={style}
-                      className="text-xl leading-7 whitespace-pre-line"
-                    >
-                      {renderText(project.texts[item.index])}
-                    </div>
-                  );
+                switch (item.type) {
+                  case "text":
+                    return (
+                      <div
+                        key={i}
+                        style={style}
+                        className="text-xl leading-7 whitespace-pre-line"
+                      >
+                        {renderText(project.texts[item.index])}
+                      </div>
+                    );
+                  case "video":
+                    return (
+                      <div
+                        key={i}
+                        style={style}
+                        className="rounded-xl overflow-hidden"
+                      >
+                        <video
+                          src={project.videos?.[item.index]}
+                          controls
+                          className="w-full object-cover"
+                        />
+                      </div>
+                    );
+                  case "vimeo": {
+                    const vimeo = project.vimeos?.[item.index];
+                    if (!vimeo) return null;
+                    return (
+                      <div
+                        key={i}
+                        style={style}
+                        className="rounded-xl overflow-hidden"
+                      >
+                        <VimeoPlayer
+                          videoId={vimeo.videoId}
+                          videoHash={vimeo.videoHash}
+                        />
+                      </div>
+                    );
+                  }
+                  case "image":
+                    return (
+                      <div
+                        key={i}
+                        style={style}
+                        className="rounded-xl overflow-hidden"
+                      >
+                        <Image
+                          src={project.images[item.index]}
+                          alt={`${project.title} — ${item.index + 1}`}
+                          width={800}
+                          height={600}
+                          className="w-full object-cover"
+                          priority={rowIndex === 0}
+                        />
+                      </div>
+                    );
+                  default:
+                    return null;
                 }
-                if (item.type === "video") {
-                  return (
-                    <div
-                      key={i}
-                      style={style}
-                      className="rounded-xl overflow-hidden"
-                    >
-                      <video
-                        src={project.videos?.[item.index]}
-                        controls
-                        className="w-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-                return (
-                  <div
-                    key={i}
-                    style={style}
-                    className="rounded-xl overflow-hidden"
-                  >
-                    <Image
-                      src={project.images[item.index]}
-                      alt={`${project.title} — ${item.index + 1}`}
-                      width={800}
-                      height={600}
-                      className="w-full object-cover"
-                    />
-                  </div>
-                );
               })}
             </div>
           ))}
