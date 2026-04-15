@@ -56,22 +56,20 @@ export const projects = [
         Мы оживили палетку теней, лак для ногтей и тональный крем, сделав их главными героями трёх коротких роликов.`,
       `**ГОЛОСА**
         Каждый персонаж получил свой характер — вдохновлённый образами инста-селебрити Машмилаш и Романа Каграманова, которые также озвучили героев.`,
-      "Вся история крутится вокруг self-care, лёгкой самоиронии и уверенности в себе.",
+      // "Вся история крутится вокруг self-care, лёгкой самоиронии и уверенности в себе.",
     ],
     layout: [
       [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      [{ type: "text", index: 1, cols: 12 }],
       [
-        { type: "image", index: 0, cols: 5 },
-        { type: "image", index: 1, cols: 7 },
+        // { type: "image", index: 0, cols: 5 },
+        { type: "image", index: 1, cols: 12 },
       ],
-      [{ type: "text", index: 1, cols: 7 }],
-      [
-        { type: "video", index: 0, cols: 6 },
-        { type: "video", index: 1, cols: 6 },
-      ],
+      [{ type: "text", index: 2, cols: 12 }],
+      [{ type: "video", index: 0, cols: 12 }],
+      [{ type: "video", index: 1, cols: 12 }],
 
-      [{ type: "text", index: 2, cols: 7, colStart: 6 }],
-      [{ type: "text", index: 3, cols: 6, colStart: 0 }],
+      // [{ type: "text", index: 3, cols: 6, colStart: 0 }],
     ] satisfies LayoutItem[][],
   },
   {
@@ -79,7 +77,7 @@ export const projects = [
     size: 4,
     thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
     title: "Маруся NEO",
-    description: "Современный дизайн интерфейса VK с объёмными 3D элементами",
+    description: "Бла бла бла",
     tags: ["3d", "motion"],
     videoId: 889904948,
     brand: "VK",
@@ -87,18 +85,32 @@ export const projects = [
     production: null,
     // project: "Маруся NEO",
     images: [
-      "/projects/vk-neo/unicorn.jpg",
+      // "/projects/vk-neo/unicorn.jpg",
       "/projects/vk-neo/rob1.png",
       "/projects/vk-neo/rob2.jpeg",
       "/projects/vk-neo/rob3.jpeg",
       "/projects/vk-neo/dragon1.jpeg",
     ],
+    videos: ["/projects/vk-neo/neo_animatic.mp4"],
     texts: [
-      "Бодрый хип-хоп трек стал мотором истории о детской колонке Neo.",
+      "Бодрый хип-хоп трек стал мотором истории о детской колонке **Neo**.",
       "Умная колонка рассказывает фантастические сюжеты, и в кадре появляются единороги, роботы и дракон — символ Года Дракона.",
       "Ролик начался с покадрового аниматика, чтобы выстроить ритм, а затем превратился в детализированную 3D-анимацию.",
     ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 12 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [
+        { type: "image", index: 1, cols: 6 },
+        { type: "image", index: 2, cols: 6 },
+      ],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "video", index: 0, cols: 12 }],
+      [{ type: "text", index: 2, cols: 12 }],
+    ] satisfies LayoutItem[][],
   },
+
   {
     slug: "sber-terminal",
     size: 3,
@@ -698,6 +710,171 @@ export const projects = [
     // project: null,
     images: ["/projects/unprincipled/1.jpg"],
     texts: ["Авангард"],
+  },
+
+  {
+    slug: "vk-mini-app",
+    size: 4,
+    thumbVideo: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
+    thumbVideoPosterImage: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
+    title: "Mini app",
+    description: "Бла бла бла",
+    tags: ["3d", "реклама"],
+    videoId: 814924190,
+    // videoHash: "b5699500f6",
+    brand: "VK",
+    agency: null,
+    production: null,
+    // project: null,
+    images: [
+      "/projects/vk-mini-app/1.png",
+      "/projects/vk-mini-app/2.png",
+      "/projects/vk-mini-app/3.png",
+      "/projects/vk-mini-app/4.png",
+      "/projects/vk-mini-app/5.png",
+      "/projects/vk-mini-app/6.png",
+      "/projects/vk-mini-app/7.png",
+      "/projects/vk-mini-app/8.png",
+      "/projects/vk-mini-app/9.png",
+      "/projects/vk-mini-app/10.png",
+      "/projects/vk-mini-app/11.png",
+      "/projects/vk-mini-app/12.png",
+
+      "/projects/vk-mini-app/c0.png",
+      "/projects/vk-mini-app/c1-2.gif",
+      "/projects/vk-mini-app/c1-1.gif",
+      "/projects/vk-mini-app/c1-3.gif",
+      "/projects/vk-mini-app/c2-1.png",
+      "/projects/vk-mini-app/c2-2.gif",
+      "/projects/vk-mini-app/c3-1.png",
+      "/projects/vk-mini-app/c3-2.gif",
+      "/projects/vk-mini-app/cloud1.png",
+      "/projects/vk-mini-app/cloud3.gif",
+      "/projects/vk-mini-app/cloud2.png",
+
+      "/projects/vk-mini-app/sketch1.png",
+      "/projects/vk-mini-app/sketch3.png",
+      "/projects/vk-mini-app/sketch2.png",
+      "/projects/vk-mini-app/girl1.png",
+      "/projects/vk-mini-app/girl2.png",
+      "/projects/vk-mini-app/girl3.png",
+
+      "/projects/vk-mini-app/zip1.gif",
+      "/projects/vk-mini-app/zip2.gif",
+      "/projects/vk-mini-app/dance1.gif",
+      "/projects/vk-mini-app/dance2.gif",
+      "/projects/vk-mini-app/1222.png",
+      "/projects/vk-mini-app/12.png",
+      "/projects/vk-mini-app/backstage1.gif",
+      "/projects/vk-mini-app/backstage2.gif",
+      "/projects/vk-mini-app/backstage3.gif",
+    ],
+
+    texts: [
+      "Промо для мини-приложений VK.",
+
+      `**Сцены**
+      Чтобы сделать проект динамичным и модным, решили объединить  3D с живой покадровой 2D-анимацией.`,
+
+      `**Персонажи**
+
+      Придумывали персонажей, чтобы они выражали суть мини-приложений – прогноз погоды, трекер фитнеса/шагов, приложение для знакомств.
+
+      Любимый персонаж — непредсказуемое облачко, которое меняет погоду вместе с настроением.`,
+
+      `**Фоны и эффекты**
+
+      3D-сцены вначале рисовали, искали классные сочетания форм и паттернов. Получилось клевое изогнутое пространство.
+
+      Для каждой сцены мы рисовали и анимировали 2д эффекты, хотелось добавить энергии!`,
+
+      `**Анимация**
+
+      Перед переходом к финальной графике сделали покадровый аниматик, чтобы точно выстроить ритм и движения для 3D-анимации.
+
+      Для танцевальных сцен мы использовали видео-референсы, ну и наши любимые видео аниматики с собою в главных ролях.`,
+
+      "В результате получился яркий, бодрый ролик, который мы прям очень любим.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 12 }],
+      [
+        { type: "image", index: 0, cols: 3 },
+        { type: "image", index: 1, cols: 3 },
+        { type: "image", index: 2, cols: 3 },
+        { type: "image", index: 3, cols: 3 },
+      ],
+      [
+        { type: "image", index: 4, cols: 3 },
+        { type: "image", index: 5, cols: 3 },
+        { type: "image", index: 6, cols: 3 },
+        { type: "image", index: 7, cols: 3 },
+      ],
+      [
+        { type: "image", index: 8, cols: 3 },
+        { type: "image", index: 9, cols: 3 },
+        { type: "image", index: 10, cols: 3 },
+        { type: "image", index: 11, cols: 3 },
+      ],
+      [{ type: "text", index: 2, cols: 12 }],
+
+      [
+        { type: "image", index: 12, cols: 8 },
+        { type: "image", index: 13, cols: 4 },
+      ],
+      [
+        { type: "image", index: 14, cols: 8 },
+        { type: "image", index: 15, cols: 4 },
+      ],
+      [
+        { type: "image", index: 16, cols: 7 },
+        { type: "image", index: 17, cols: 5 },
+      ],
+      [
+        { type: "image", index: 18, cols: 6 },
+        { type: "image", index: 19, cols: 6 },
+      ],
+      [
+        { type: "image", index: 20, cols: 4 },
+        { type: "image", index: 21, cols: 4 },
+        { type: "image", index: 22, cols: 4 },
+      ],
+      [{ type: "text", index: 3, cols: 12 }],
+
+      [{ type: "image", index: 23, cols: 12 }],
+      [
+        { type: "image", index: 24, cols: 6 },
+        { type: "image", index: 25, cols: 6 },
+      ],
+      [
+        { type: "image", index: 26, cols: 4 },
+        { type: "image", index: 27, cols: 4 },
+        { type: "image", index: 28, cols: 4 },
+      ],
+      [{ type: "text", index: 4, cols: 12 }],
+
+      [
+        { type: "image", index: 29, cols: 5 },
+        { type: "image", index: 30, cols: 7 },
+      ],
+      [
+        { type: "image", index: 31, cols: 6 },
+        { type: "image", index: 32, cols: 6 },
+      ],
+      [
+        { type: "image", index: 33, cols: 6 },
+        { type: "image", index: 34, cols: 6 },
+      ],
+
+      [
+        { type: "image", index: 35, cols: 3 },
+        { type: "image", index: 36, cols: 6 },
+        { type: "image", index: 37, cols: 3 },
+      ],
+
+      [{ type: "text", index: 5, cols: 12 }],
+    ] satisfies LayoutItem[][],
   },
 ] satisfies Project[];
 
