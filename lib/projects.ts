@@ -34,7 +34,7 @@ export const projects = [
     slug: "love-generation",
     size: 3,
     thumbVideo: "/projects/love-generation/thumb/love_generation-thumb.webm",
-    title: "Love Generation",
+    title: "Лонч бренда косметики Love Generation",
     description: "Рекламный ролик \\ 30 Сек",
     tags: ["2d", "реклама"],
     videoId: 926255997,
@@ -53,9 +53,11 @@ export const projects = [
     texts: [
       "Бренду косметики **LOVE GENERATION** нужны были ролики для соцсетей. Клиент хотел привлечь топ-инфлюенсеров, но при этом сохранить фокус на самих продуктах.",
       `**Персонажи**
-        Мы оживили палетку теней, лак для ногтей и тональный крем, сделав их главными героями трёх коротких роликов.`,
+
+      Мы оживили палетку теней, лак для ногтей и тональный крем, сделав их главными героями трёх коротких роликов.`,
       `**ГОЛОСА**
-        Каждый персонаж получил свой характер — вдохновлённый образами инста-селебрити Машмилаш и Романа Каграманова, которые также озвучили героев.`,
+
+      Каждый персонаж получил свой характер — вдохновлённый образами инста-селебрити Машмилаш и Романа Каграманова, которые также озвучили героев.`,
       // "Вся история крутится вокруг self-care, лёгкой самоиронии и уверенности в себе.",
     ],
     layout: [
@@ -141,11 +143,11 @@ export const projects = [
       "Для **Сбера** мы сделали короткий 3D-ролик про терминал оплаты улыбкой.",
       `**Персонаж**
 
-        Клиент хотел оживить терминал и превратить его в эмоционального персонажа: все-таки оплата – улыбкой :)
+      Клиент хотел оживить терминал и превратить его в эмоционального персонажа: все-таки оплата – улыбкой :)
 
-        Мы показали характер через пластику, точный ритм (подстроились под уже готовый трек) и работу со светом.
+      Мы показали характер через пластику, точный ритм (подстроились под уже готовый трек) и работу со светом.
 
-        Добавили отсылку к культовой лампе из известной заставки (было сложно удержаться).`,
+      Добавили отсылку к культовой лампе из известной заставки (было сложно удержаться).`,
       "Проект был реализован всего за две недели — от раскадровки до финального рендера.",
     ],
     layout: [
@@ -719,38 +721,122 @@ export const projects = [
     slug: "sber-high-res",
     size: 6,
     thumbVideo: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
-    title: "SBER High Res",
-    description: "Высокодетальный проект банковской системы в 3D",
+    title: "5%",
+    description: "Бла бла бла",
     tags: ["3d", "реклама"],
-    videoId: 926255997,
+    videoId: 838986118,
     brand: "Сбер",
     agency: null,
-    production: null,
+    production: "Hype ???",
     // project: null,
     images: [
-      "/projects/love-generation/term-2-1.jpg",
-      "/projects/love-generation/term-2-2.jpg",
-      "/projects/love-generation/term-2-3.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-06.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-17.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-20.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-22.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-23.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-25.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-05-27.jpg",
-      "/projects/love-generation/photo_2026-03-09_15-08-25.jpg",
+      "/projects/sber-high-res/1.png",
+      "/projects/sber-high-res/2.png",
+      "/projects/sber-high-res/3.png",
+      "/projects/sber-high-res/4.png",
+      "/projects/sber-high-res/5.png",
+      "/projects/sber-high-res/6.png",
+      "/projects/sber-high-res/7.png",
+      "/projects/sber-high-res/8.png",
+      "/projects/sber-high-res/9.gif",
+      "/projects/sber-high-res/10.gif",
+      "/projects/sber-high-res/11.gif",
+      "/projects/sber-high-res/12.png",
+      "/projects/sber-high-res/13.png",
+      "/projects/sber-high-res/14.png",
+      "/projects/sber-high-res/15.png",
+      "/projects/sber-high-res/16.png",
+      "/projects/sber-high-res/17.gif",
+      "/projects/sber-high-res/18.gif",
+      "/projects/sber-high-res/19.gif",
+      "/projects/sber-high-res/20.gif",
+      "/projects/sber-high-res/21.gif",
+      "/projects/sber-high-res/22.gif",
     ],
     texts: [
-      "Для **Сбера** мы сделали короткий 3D-ролик про терминал оплаты улыбкой.",
-      `**Персонаж**
+      `Анимационные сцены для съемочного ролика Сбера про кредит на учёбу.
 
-        Клиент хотел оживить терминал и превратить его в эмоционального персонажа: все-таки оплата – улыбкой :)
+      Главные герои видео — студенты разных специальностей, которые чувствуют себя не на своем месте. Анимация показывает их переход от скучной учёбы к настоящим  интересам.`,
 
-        Мы показали характер через пластику, точный ритм (подстроились под уже готовый трек) и работу со светом.
+      `**РЕСЕРЧ СТИЛЯ**
 
-        Добавили отсылку к культовой лампе из известной заставки (было сложно удержаться).`,
-      "Проект был реализован всего за две недели — от раскадровки до финального рендера.",
+      Нам было интересно попробовать новый графический стиль, поэкспериментировать с угловатыми формами, и это классно вписалось в инди-формат видео.
+      
+      **ПЕРСОНАЖ-ДЕВУШКА**
+
+      Стилизованный анимированный персонаж должна была иметь явное сходство с актрисой из видео.`,
+
+      `**СТИЛЫ И КАДРЫ ОКРУЖАЮЩЕЙ СРЕДЫ**
+
+      Мы сохранили геометрию лекционной аудитории, но преобразовали его в абстрактную фантастическую среду.`,
+
+      "По сюжету, девушка преодолевает «потолок своих возможностей» и монотонную реальность, вылетая навстречу своей мечте — стать аниматором :)",
+
+      `**АНИМАЦИЯ**
+      Анимация сочетает в себе несколько слоев и техник.Покадровая анимация персонажа на 3D-фоне, в которой объекты и эффекты анимируются покадрово, плюс моушн.`,
+
+      "Сцена включала в себя несколько пространств и разборку комнаты, что было проще реализовать в 3D.",
+
+      `**ПЕРСОНАЖ «ПОДВОДНЫЙ ПАРЕНЬ»**
+      Этот персонаж, подобно Францу Кафке, пребывает в апатии в мире законов и юриспруденции, он чувствует себя на самом дне.`,
+
+      `**АНИМАЦИЯ**
+      Для этого эпизода все элементы были нарисованы вручную. Мы пробовали разные варианты финального превращения персонажа, наш любимый — с гигантской пиджаком :)`,
     ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 12 }],
+
+      [
+        { type: "image", index: 0, cols: 12 },
+        { type: "image", index: 1, cols: 12 },
+      ],
+      [{ type: "text", index: 2, cols: 12 }],
+
+      [
+        { type: "image", index: 2, cols: 6 },
+        { type: "image", index: 3, cols: 6 },
+      ],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "text", index: 3, cols: 12 }],
+
+      [
+        { type: "image", index: 5, cols: 4 },
+        { type: "image", index: 6, cols: 4 },
+        { type: "image", index: 7, cols: 4 },
+      ],
+      [{ type: "text", index: 4, cols: 12 }],
+
+      [
+        { type: "image", index: 8, cols: 6 },
+        { type: "image", index: 9, cols: 6 },
+      ],
+      [
+        { type: "text", index: 5, cols: 6 },
+        { type: "image", index: 10, cols: 6 },
+      ],
+      [{ type: "text", index: 6, cols: 6 }],
+      [
+        { type: "image", index: 11, cols: 4 },
+        { type: "image", index: 12, cols: 4 },
+        { type: "image", index: 13, cols: 4 },
+      ],
+      [
+        { type: "image", index: 14, cols: 6 },
+        { type: "image", index: 15, cols: 6 },
+      ],
+      [{ type: "text", index: 7, cols: 6 }],
+      [{ type: "image", index: 16, cols: 12 }],
+      [
+        { type: "image", index: 17, cols: 6 },
+        { type: "image", index: 18, cols: 3 },
+        { type: "image", index: 19, cols: 3 },
+      ],
+      [
+        { type: "image", index: 20, cols: 6 },
+        { type: "image", index: 21, cols: 6 },
+      ],
+    ] satisfies LayoutItem[][],
   },
   {
     slug: "sobchak",
@@ -880,6 +966,7 @@ export const projects = [
       "Промо для мини-приложений VK.",
 
       `**Сцены**
+
       Чтобы сделать проект динамичным и модным, решили объединить  3D с живой покадровой 2D-анимацией.`,
 
       `**Персонажи**
@@ -980,6 +1067,54 @@ export const projects = [
       ],
 
       [{ type: "text", index: 5, cols: 12 }],
+    ] satisfies LayoutItem[][],
+  },
+
+  {
+    slug: "eapteka",
+    size: 3,
+    thumbVideo: "/projects/eapteka/thumb/eapteka-thumb.webm",
+    thumbVideoPosterImage: "/projects/eapteka/thumb/eapteka-thumb.png",
+    title: "Eapteka",
+    description: "Бла бла бла",
+    tags: ["3d", "реклама"],
+    videoId: 676229349,
+
+    brand: "ЕАПТЕКА",
+    agency: null,
+    production: "Zebra Hero",
+    // project: null,
+    images: [
+      // "/projects/eapteka/Screenshot 2026-03-18 at 14.30.24.png",
+      // "/projects/eapteka/000000.png",
+      // "/projects/eapteka/000000 (1).png",
+    ],
+    videos: [
+      "/projects/eapteka/faces.webm",
+      "/projects/eapteka/gif1.webm",
+      "/projects/eapteka/gif2.webm",
+    ],
+    texts: [
+      "Для EApteka мы придумали серию визуальных героев — таблетки со своим характером и портреты людей, которым они предназначены.",
+
+      `**Лица**
+      Мы курировали съёмку, выбирали выразительные лица, это был классный опыт общения и взаимодействия с кучей таких разных людей.`,
+
+      `**Таблетки**
+      Дальше мы с каждой таблеткой мы работали как с персонажем: искали форму, настроение и ритм, чтобы она точно попадала в своего «человека».`,
+
+      `Отдельным слоем стал саунд-дизайн. Мы добавили ASMR-звучание — хруст, щелчки, мягкие касания — чтобы визуал буквально ощущался кожей.
+
+      В результате получился ролик, который говорит на языке фарм-категории, но звучит и выглядит совсем иначе.`,
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 12 }],
+      [{ type: "video", index: 0, cols: 12 }],
+      [{ type: "text", index: 2, cols: 12 }],
+      [{ type: "video", index: 1, cols: 8, colStart: 3 }],
+      [{ type: "video", index: 2, cols: 8, colStart: 3 }],
+      [{ type: "text", index: 3, cols: 12 }],
     ] satisfies LayoutItem[][],
   },
 ] satisfies Project[];
