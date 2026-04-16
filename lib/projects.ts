@@ -1142,8 +1142,8 @@ export const projects = [
   {
     slug: "eapteka",
     size: 3,
-    thumbVideo: "/projects/eapteka/thumb/eapteka-thumb.webm",
-    thumbVideoPosterImage: "/projects/eapteka/thumb/eapteka-thumb.png",
+    thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
+    // thumbVideoPosterImage: "/projects/eapteka/thumb/eapteka-thumb.png",
     title: "Eapteka",
     description: "Бла бла бла",
     tags: ["3d", "реклама"],
