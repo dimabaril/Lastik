@@ -15,6 +15,8 @@ export default function VimeoPlayer({
     const iframe = iframeRef.current;
     if (!iframe) return;
 
+    let inView = false;
+
     const send = (method: string, value?: unknown) => {
       iframe.contentWindow?.postMessage(
         JSON.stringify({ method, value }),
@@ -28,7 +30,7 @@ export default function VimeoPlayer({
         const data = JSON.parse(e.data as string);
         if (data.event === "ready") {
           send("setVolume", 1);
-          send("play");
+          if (inView) send("play");
         }
       } catch {}
     };
@@ -37,7 +39,8 @@ export default function VimeoPlayer({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        send(entry.isIntersecting ? "play" : "pause");
+        inView = entry.isIntersecting;
+        send(inView ? "play" : "pause");
       },
       { threshold: 0.3 },
     );
