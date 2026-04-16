@@ -29,7 +29,7 @@ export type Project = {
   layout?: LayoutItem[][];
 };
 
-export const projects = [
+export const projects: Project[] = [
   {
     slug: "love-generation",
     size: 3,
@@ -72,7 +72,7 @@ export const projects = [
       [{ type: "video", index: 1, cols: 12 }],
 
       // [{ type: "text", index: 3, cols: 6, colStart: 0 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "vk-neo",
@@ -110,7 +110,7 @@ export const projects = [
       [{ type: "image", index: 3, cols: 12 }],
       [{ type: "video", index: 0, cols: 12 }],
       [{ type: "text", index: 2, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
 
   {
@@ -172,7 +172,7 @@ export const projects = [
         { type: "image", index: 10, cols: 3 },
       ],
       [{ type: "text", index: 2, cols: 5, colStart: 8 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "uralsib",
@@ -264,7 +264,7 @@ export const projects = [
       ],
 
       [{ type: "image", index: 6, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "zvuk",
@@ -454,7 +454,7 @@ export const projects = [
         { type: "image", index: 4, cols: 6 },
       ],
       [{ type: "image", index: 5, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "mosmuseum",
@@ -536,7 +536,7 @@ export const projects = [
         { type: "video", index: 2, cols: 6 },
         { type: "video", index: 3, cols: 6 },
       ],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "yandex-incl",
@@ -584,7 +584,7 @@ export const projects = [
       [{ type: "text", index: 3, cols: 6, colStart: 7 }],
       [{ type: "image", index: 3, cols: 12 }],
       [{ type: "image", index: 4, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "volchok",
@@ -837,7 +837,7 @@ export const projects = [
         { type: "image", index: 20, cols: 6 },
         { type: "image", index: 21, cols: 6 },
       ],
-    ] satisfies LayoutItem[][],
+    ],
   },
   {
     slug: "sobchak",
@@ -1137,7 +1137,7 @@ export const projects = [
       ],
 
       [{ type: "text", index: 5, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
 
   {
@@ -1185,7 +1185,7 @@ export const projects = [
       [{ type: "video", index: 1, cols: 8, colStart: 3 }],
       [{ type: "video", index: 2, cols: 8, colStart: 3 }],
       [{ type: "text", index: 3, cols: 12 }],
-    ] satisfies LayoutItem[][],
+    ],
   },
 
   {
@@ -1203,6 +1203,6 @@ export const projects = [
     images: ["/projects/rocs/1.jpg"],
     texts: ["rocs1", "rocs2", "rocs3", "rocs4", "rocs5"],
   },
-] satisfies Project[];
+];
 
 export type ProjectSlug = (typeof projects)[number]["slug"];

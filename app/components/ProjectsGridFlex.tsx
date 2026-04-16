@@ -7,7 +7,7 @@ const ROW_CAPACITY = 10;
 
 interface Project {
   title: string;
-  thumbVideo: string;
+  thumbVideo?: string;
   thumbVideoPosterImage?: string;
   slug: string;
   tags?: readonly string[];
