@@ -842,17 +842,86 @@ export const projects = [
     slug: "sobchak",
     size: 4,
     thumbVideo: "/projects/sobchak/thumb/sobchak_thumb.webm",
-    title: "Собчак",
-    description:
-      "Motion графика для политического проекта с модными переходами",
+    title: "Осторожно, Собчак!",
+    description: "Бла бла бла",
     tags: ["2d", "motion"],
-    videoId: 926255997,
+    videoId: 404077121,
     brand: null,
     agency: null,
     production: null,
     // project: null,
-    images: ["/projects/sobchak/1.jpg"],
-    texts: ["Политика"],
+    images: [
+      "/projects/sobchak/1 gif1.gif",
+      "/projects/sobchak/2 storyboard.png",
+      "/projects/sobchak/3 characters.jpg",
+      "/projects/sobchak/4 dog.jpg",
+      "/projects/sobchak/5 dog.jpg",
+      "/projects/sobchak/5 gif2.gif",
+      "/projects/sobchak/6 gif3.gif",
+      "/projects/sobchak/7 anim.gif",
+      "/projects/sobchak/8 pic1.jpg",
+      "/projects/sobchak/9 pic3.jpg",
+      "/projects/sobchak/8 pic2.jpg",
+      "/projects/sobchak/9 pic5.jpg",
+      "/projects/sobchak/9 pic4.jpeg",
+      "/projects/sobchak/11 pic10.jpg",
+      "/projects/sobchak/12 gif4.gif",
+    ],
+    texts: [
+      `Заставка для Youtube-шоу "Осторожно, Собчак"`,
+
+      `**История**
+
+      Мы подхватили ироничную игру слов из названия шоу и предложили собаку в качестве главного героя заставки. Получился сюрреалистический трип альтер-эго женщины-собаки по её собственному подсознанию.`,
+
+      `**Собака**
+
+      Чтобы найти идеальную собаку, мы много скетчили.Каждый в студии должен был придумать свой вариант и получилась куча рисунков.
+
+      Был найден персонаж — женщина-собака, беспокойная дворняга, собаченция, которая, высунув язык, прыгает и несётся неизвестно куда.`,
+
+      `**Вдохновения**
+      
+      Походка и поза были взяты у нашей любимой норвежской наездницы Айлы Кирстен. Мебель подсказало интервью с Цукербергом — эти стулья нас просто покорили.`,
+
+      `**Персонажи**
+
+      Вся история пронизана группой странных персонажей. Эти монстры, дьяволы, гоблины — безумные спутники беспринципной журналистки в мире скандалов и разоблачений.`,
+
+      `**Фоны**
+
+      Сюрреалистические локации отсылают к символическим слоям личности Ксении. Она попросила лишь немного безрассудства. Несмотря на её первоначальные возражения, мы не смогли устоять и добавили больше психоделического дизайна. Цветовую палитру несколько раз приглушили для достижения желаемого уровня потусторонности и мрачности.`,
+    ],
+
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "text", index: 1, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "text", index: 2, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "text", index: 3, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+      [{ type: "image", index: 6, cols: 12 }],
+      [{ type: "text", index: 4, cols: 12 }],
+      [{ type: "image", index: 7, cols: 12 }],
+
+      [{ type: "text", index: 5, cols: 12 }],
+
+      [
+        { type: "image", index: 8, cols: 6 },
+        { type: "image", index: 9, cols: 6 },
+      ],
+      [
+        { type: "image", index: 10, cols: 6 },
+        { type: "image", index: 11, cols: 6 },
+      ],
+      [{ type: "image", index: 12, cols: 12 }],
+      [{ type: "image", index: 13, cols: 12 }],
+      [{ type: "image", index: 14, cols: 12 }],
+    ],
   },
   {
     slug: "supermarket-trollys-dream-v1",
