@@ -34,7 +34,7 @@ export const projects = [
     slug: "love-generation",
     size: 3,
     thumbVideo: "/projects/love-generation/thumb/love_generation-thumb.webm",
-    title: "Лонч бренда косметики Love Generation",
+    title: "Love Generation",
     description: "Рекламный ролик \\ 30 Сек",
     tags: ["2d", "реклама"],
     videoId: 926255997,
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     slug: "vk-neo",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
     title: "Маруся NEO",
     description: "Бла бла бла",
@@ -115,9 +115,10 @@ export const projects = [
 
   {
     slug: "sber-terminal",
-    size: 3,
-    thumbVideo: "/projects/sber-terminal/thumb/sber-terminal-thumb.webm",
-    thumbVideoPosterImage: "/projects/sber-terminal/sber-terminal-thumb.png",
+    size: 2,
+    thumbVideo: "/projects/sber-terminal/thumb/SBER_terminal.webm",
+    // thumbVideoPosterImage:
+    //   "/projects/sber-terminal/thumb/sber-terminal-thumb.png",
     title: "Оплата улыбкой",
     description: "Бла бла бла",
     tags: ["3d", "реклама"],
@@ -191,7 +192,7 @@ export const projects = [
   {
     slug: "delimobil",
     size: 3,
-    thumbVideo: "/projects/delimobil/thumb/delimobil-thumb.webm",
+    thumbVideo: "/projects/delimobil/thumb/delimobil.webm",
     title: "Делимобиль",
     description: "Смешная и оригинальная реклама сервиса каршеринга",
     tags: ["2d", "реклама"],
@@ -976,8 +977,8 @@ export const projects = [
   {
     slug: "vk-mini-app",
     size: 4,
-    thumbVideo: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
-    thumbVideoPosterImage: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
+    thumbVideo: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
+    // thumbVideoPosterImage: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
     title: "Mini app",
     description: "Бла бла бла",
     tags: ["3d", "реклама"],
@@ -1185,6 +1186,22 @@ export const projects = [
       [{ type: "video", index: 2, cols: 8, colStart: 3 }],
       [{ type: "text", index: 3, cols: 12 }],
     ] satisfies LayoutItem[][],
+  },
+
+  {
+    slug: "rocs",
+    size: 3,
+    thumbVideo: "/projects/rocs/thumb/rocs.webm",
+    title: "rocs",
+    description: "Бла бла бла",
+    tags: ["3d", "бла бла"],
+    videoId: 926255997,
+    brand: null,
+    agency: null,
+    production: null,
+    // project: null,
+    images: ["/projects/rocs/1.jpg"],
+    texts: ["rocs1", "rocs2", "rocs3", "rocs4", "rocs5"],
   },
 ] satisfies Project[];
 
