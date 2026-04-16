@@ -30,7 +30,7 @@ export default function ProjectPreviewCard({
     const video = videoRef.current;
     if (!video) return;
     video.pause();
-    video.currentTime = 0;
+    // video.currentTime = 0;
   };
 
   return (

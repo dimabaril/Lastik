@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function VimeoPlayer({
   videoId,
@@ -9,44 +9,68 @@ export default function VimeoPlayer({
   videoId: number;
   videoHash?: string;
 }) {
-  const [visible, setVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const send = (method: string, value?: unknown) => {
+      iframe.contentWindow?.postMessage(
+        JSON.stringify({ method, value }),
+        "https://player.vimeo.com",
+      );
+    };
+
+    const handleMessage = (e: MessageEvent) => {
+      if (e.origin !== "https://player.vimeo.com") return;
+      try {
+        const data = JSON.parse(e.data as string);
+        if (data.event === "ready") {
+          send("setVolume", 1);
+          send("play");
+        }
+      } catch {}
+    };
+
+    window.addEventListener("message", handleMessage);
+
     const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
+      ([entry]) => {
+        send(entry.isIntersecting ? "play" : "pause");
+      },
       { threshold: 0.3 },
     );
-    observer.observe(el);
-    return () => observer.disconnect();
+
+    observer.observe(iframe);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("message", handleMessage);
+    };
   }, []);
 
-  const src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=1&autoplay=1&muted=0&player_id=0&app_id=58479${videoHash ? `&h=${videoHash}` : ""}`;
+  const src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=0&muted=1&player_id=0&app_id=58479&api=1${videoHash ? `&h=${videoHash}` : ""}`;
 
   return (
     <div
-      ref={ref}
       style={{ paddingBottom: "56.25%", position: "relative" }}
       className="rounded-xl overflow-hidden"
     >
-      {visible && (
-        <iframe
-          src={src}
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}
-          title="Vimeo video"
-        />
-      )}
+      <iframe
+        ref={iframeRef}
+        src={src}
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+        title="Vimeo video"
+      />
     </div>
   );
 }
