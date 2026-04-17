@@ -88,12 +88,12 @@ export default async function ProjectPage({
               <p className="font-bold text-2xl">{project.production}</p>
             </div>
           )}
-          {/* {project.project && (
+          {project.client && (
             <div>
-              <p className="text-(--fade-color) text-lg mb-1">Проект</p>
-              <p className="font-bold text-2xl">{project.project}</p>
+              <p className="text-(--fade-color) text-lg mb-1">Клиент</p>
+              <p className="font-bold text-2xl">{project.client}</p>
             </div>
-          )} */}
+          )}
         </div>
       </div>
 

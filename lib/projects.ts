@@ -15,10 +15,10 @@ export type Project = {
   tags: string[];
   videoId: number;
   videoHash?: string;
-  brand: string | null;
-  agency: string | null;
-  production: string | null;
-  // project: string | null;
+  brand?: string;
+  agency?: string;
+  production?: string;
+  client?: string;
   images: string[];
   videos?: string[];
   vimeos?: {
@@ -39,9 +39,6 @@ export const projects: Project[] = [
     tags: ["2d", "реклама"],
     videoId: 926255997,
     brand: "Love Generation",
-    agency: null,
-    production: null,
-    // project: "Лонч бренда косметики Love Generation",
     images: [
       "/projects/love-generation/image.png",
       "/projects/love-generation/lg_sketch.png",
@@ -83,9 +80,6 @@ export const projects: Project[] = [
     tags: ["3d", "motion"],
     videoId: 889904948,
     brand: "VK",
-    agency: null,
-    production: null,
-    // project: "Маруся NEO",
     images: [
       // "/projects/vk-neo/unicorn.jpg",
       "/projects/vk-neo/rob1.png",
@@ -125,8 +119,6 @@ export const projects: Project[] = [
     videoId: 1182969480,
     brand: "СБЕР",
     agency: "ЭMosAIc",
-    production: null,
-    // project: "Оплата улыбкой",
     images: [
       "/projects/sber-terminal/term-2-1.jpg",
       "/projects/sber-terminal/term-2-2.jpg",
@@ -179,15 +171,48 @@ export const projects: Project[] = [
     size: 4,
     thumbVideo: "/projects/uralsib/thumb/uralsib-thumb.webm",
     title: "Уралсиб",
-    description: "Финансовая услуга в привлекательном визуальном исполнении",
+    description: "Бла бла бла",
     tags: ["2d", "реклама"],
-    videoId: 926255997,
+    videoId: 831559447,
     brand: "Уралсиб",
-    agency: null,
-    production: null,
-    // project: null,
-    images: ["/projects/uralsib/1.jpg", "/projects/uralsib/2.jpg"],
-    texts: ["Надежность", "Стабильность"],
+    images: [
+      "/projects/uralsib/pers1-1.jpg",
+      "/projects/uralsib/pers1-2.jpg",
+      "/projects/uralsib/pers1-3.jpg",
+      "/projects/uralsib/pers2-1.jpg",
+      "/projects/uralsib/pers2-2.jpg",
+      "/projects/uralsib/pers2-3.png",
+      "/projects/uralsib/pers3-1.jpg",
+      "/projects/uralsib/pers3-2.jpg",
+      "/projects/uralsib/pers3-3.jpg",
+      "/projects/uralsib/pers4.jpg",
+      "/projects/uralsib/image.png",
+    ],
+    texts: [
+      "Промо HR-отдела Уралсиба для молодых специалистов.",
+      "Использовали покадровую 2D-анимацию, чтобы превратить актеров в метафорические воплощения своих карьерных стремлений.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 4, colStart: 9 }],
+      [{ type: "text", index: 1, cols: 6 }],
+      [
+        { type: "image", index: 0, cols: 4 },
+        { type: "image", index: 1, cols: 4 },
+        { type: "image", index: 2, cols: 4 },
+      ],
+      [
+        { type: "image", index: 3, cols: 4 },
+        { type: "image", index: 4, cols: 4 },
+        { type: "image", index: 5, cols: 4 },
+      ],
+      [
+        { type: "image", index: 6, cols: 4 },
+        { type: "image", index: 7, cols: 4 },
+        { type: "image", index: 8, cols: 4 },
+      ],
+      [{ type: "image", index: 9, cols: 12 }],
+      [{ type: "image", index: 10, cols: 12 }],
+    ],
   },
   {
     slug: "delimobil",
@@ -198,9 +223,6 @@ export const projects: Project[] = [
     tags: ["2d", "реклама"],
     videoId: 926255997,
     brand: "Делимобиль",
-    agency: null,
-    production: null,
-    // project: null,
     images: ["/projects/delimobil/1.jpg"],
     texts: ["Мобильность", "Свобода"],
   },
@@ -213,9 +235,7 @@ export const projects: Project[] = [
     tags: ["3d", "реклама"],
     videoId: 1031579586,
     brand: "МТС",
-    agency: null,
     production: "Human",
-    // project: null,
     images: [
       "/projects/mts/Вакалоиды_Цвет.jpg",
       "/projects/mts/Crow (1).png",
@@ -275,9 +295,6 @@ export const projects: Project[] = [
     tags: ["2d", "motion"],
     videoId: 718359494,
     brand: "СБЕР звук",
-    agency: null,
-    production: null,
-    // project: null,
     images: [
       "/projects/zvuk/zvuk_1.png",
 
@@ -398,9 +415,6 @@ export const projects: Project[] = [
     tags: ["2d", "motion"],
     videoId: 926255997,
     brand: "Звук",
-    agency: null,
-    production: null,
-    // project: null,
     images: ["/projects/zvuk-2/1.jpg"],
     texts: ["Эволюция"],
   },
@@ -415,8 +429,6 @@ export const projects: Project[] = [
     videoHash: "b5699500f6",
     brand: "ВТБ",
     agency: "MosAIc",
-    production: null,
-    // project: null,
     images: [
       "/projects/vtb-1/71DA3E3C-5D97-4B62-94A6-3E1BF4178F93.jpeg",
       "/projects/vtb-1/2DE27646-6D42-4FE6-9A64-EF4E9C3574AB.jpeg",
@@ -465,9 +477,6 @@ export const projects: Project[] = [
     tags: ["2d", "арт"],
     videoId: 926255997,
     brand: "Музей Москвы",
-    agency: null,
-    production: null,
-    // project: null,
     images: ["/projects/mosmuseum/1.jpg"],
     texts: ["История", "Культура"],
   },
@@ -480,9 +489,6 @@ export const projects: Project[] = [
     tags: ["2d", "motion"],
     videoId: 926255997,
     brand: "Green Idea",
-    agency: null,
-    production: null,
-    // project: null,
     images: ["/projects/green-idea/1.jpg", "/projects/green-idea/2.jpg"],
     texts: ["Природа", "Устойчивость"],
   },
@@ -495,9 +501,6 @@ export const projects: Project[] = [
     tags: ["3d", "реклама"],
     videoId: 1054447127,
     brand: "mail.ru",
-    agency: null,
-    production: null,
-    // project: null,
     images: [
       "/projects/mail-ru/photo_2026-03-09_13-27-02.jpg",
       "/projects/mail-ru/photo_2026-03-09_13-27-21.jpg",
@@ -548,9 +551,7 @@ export const projects: Project[] = [
     tags: ["2d", "motion"],
     videoId: 1054472202,
     brand: "Яндекс",
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/yandex-incl/bask_sketch2.jpg",
       "/projects/yandex-incl/girl_sketch_pw.jpg",
@@ -594,10 +595,7 @@ export const projects: Project[] = [
     description: "Авторское произведение с игривой и динамичной анимацией",
     tags: ["2d", "авторское"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/volchok/1.jpg"],
     texts: ["Игра", "Движение"],
   },
@@ -609,10 +607,7 @@ export const projects: Project[] = [
     description: "Реклама сервиса такси с быстрым темпом и динамикой",
     tags: ["2d", "реклама"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/taxi-v2/1.jpg"],
     texts: ["Скорость", "Удобство"],
   },
@@ -624,10 +619,7 @@ export const projects: Project[] = [
     description: "Художественный проект о культуре и традициях",
     tags: ["2d", "арт"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/mansi/1.jpg"],
     texts: ["Традиция"],
   },
@@ -640,10 +632,7 @@ export const projects: Project[] = [
     description: "Авторский проект необычных идей и странных историй",
     tags: ["2d", "авторское"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/stranneyshie-horiz/1.jpg"],
     texts: ["Фантазия"],
   },
@@ -655,10 +644,7 @@ export const projects: Project[] = [
     description: "Проект гостеприимства с объёмной 3D графикой",
     tags: ["3d", "motion"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/hospitality/1.jpg", "/projects/hospitality/2.jpg"],
     texts: ["Приём", "Комфорт"],
   },
@@ -671,10 +657,7 @@ export const projects: Project[] = [
     description: "Авторский проект о любознательности и исследованиях",
     tags: ["2d", "авторское"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/i-want-to-know-everything/1.jpg",
       "/projects/i-want-to-know-everything/2.jpg",
@@ -691,9 +674,7 @@ export const projects: Project[] = [
     tags: ["2d", "ивент"],
     videoId: 926255997,
     brand: "Presents Fest",
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/presents-fest-2024/1.jpg",
       "/projects/presents-fest-2024/2.jpg",
@@ -709,9 +690,7 @@ export const projects: Project[] = [
     tags: ["3d", "реклама"],
     videoId: 926255997,
     brand: "Saint Spring",
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/saint-spring-v3/1.jpg",
       "/projects/saint-spring-v3/2.jpg",
@@ -727,9 +706,9 @@ export const projects: Project[] = [
     tags: ["3d", "реклама"],
     videoId: 838986118,
     brand: "Сбер",
-    agency: null,
+
     production: "Hype ???",
-    // project: null,
+
     images: [
       "/projects/sber-high-res/1.png",
       "/projects/sber-high-res/2.png",
@@ -847,10 +826,7 @@ export const projects: Project[] = [
     description: "Бла бла бла",
     tags: ["2d", "motion"],
     videoId: 404077121,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/sobchak/1 gif1.gif",
       "/projects/sobchak/2 storyboard.png",
@@ -933,10 +909,7 @@ export const projects: Project[] = [
     description: "Авторское произведение о мире супермаркетов и потребления",
     tags: ["3d", "авторское"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/supermarket-trollys-dream-v1/1.jpg",
       "/projects/supermarket-trollys-dream-v1/2.jpg",
@@ -947,16 +920,67 @@ export const projects: Project[] = [
     slug: "the-skin-v1",
     size: 5,
     thumbVideo: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
-    title: "The Skin",
-    description: "Авторский проект о коже и её текстурах в 2D анимации",
+    title: "Шкура",
+    description: "Бла бла бла",
     tags: ["2d", "авторское"],
-    videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
-    images: ["/projects/the-skin-v1/1.jpg"],
-    texts: ["Биология", "Текстура"],
+    videoId: 515761986,
+    client: "XScompany, ТЦ Riviera",
+    images: [
+      "/projects/the-skin-v1/thumb/28097a130993239.618bd967e9636.png",
+      "/projects/the-skin-v1/thumb/0996ee130993239.618bd967eabbd.png",
+      "/projects/the-skin-v1/thumb/61f227130993239.618c4809d9621.png",
+      "/projects/the-skin-v1/thumb/01e86c130993239.618bd967e89c5.png",
+      "/projects/the-skin-v1/thumb/66aa18130993239.618c4808bbd2a.png",
+      "/projects/the-skin-v1/thumb/4f8030130993239.618bd966cbea2.png",
+      "/projects/the-skin-v1/thumb/d6c37f130993239.618c480a38b6f.jpg",
+      "/projects/the-skin-v1/thumb/d0fad9130993239.618c480965e67.jpg",
+      "/projects/the-skin-v1/thumb/8650b4130993239.618c480966342.jpg",
+      "/projects/the-skin-v1/thumb/487df9130993239.618c480a39208.jpg",
+      "/projects/the-skin-v1/thumb/47c0b0130993239.618bd967e9bab.png",
+      "/projects/the-skin-v1/thumb/a13e8c130993239.618bd967ea173.png",
+      "/projects/the-skin-v1/thumb/07c6ad130993239.618bd966cc84a.png",
+      "/projects/the-skin-v1/thumb/959fb8130993239.618bd967e8f3c.png",
+      "/projects/the-skin-v1/thumb/1298e4130993239.618bd966cc410.png",
+      "/projects/the-skin-v1/thumb/f8c3e7130993239.618bd967ea617.png",
+    ],
+    texts: [
+      "Инсталляция из вторсырья для экофестиваля, посвящённого переработке отходов и осознанному потреблению.",
+      "Среди десяти приглашённых арт-групп мы представили работу «Шкура / The Skin» — инсталляцию 15×5 метров в форме тигриной шкуры, полностью собранную из пластикового мусора.",
+      "Проект реализовали совместно с командой под руководством Сергея «Póga» Погосяна.",
+      "Для мозаики использовали очищенное вторсырьё: стаканчики из-под йогурта, ведерки из-под мороженого, бутылки из-под бытовой химии и тд. Цвет и фактура складывались диктовались самими материалами.",
+      "Отдельным вызовом стало размещение 300-килограммовой конструкции на витрине торгового центра. Инсталляцию пришлось продумать не только как художественный объект, но и как инженерную систему.",
+      "Без морализаторства, сигнализируя о  масштабе пластиковых отходов и потенциале переработки, работа стала знаковой в городском пространстве и после окончания фестиваля осталась в ТЦ на пару лет.",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 5, colStart: 8 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "text", index: 1, cols: 7 }],
+      [{ type: "image", index: 2, cols: 10, colStart: 2 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "text", index: 2, cols: 7 }],
+      [{ type: "image", index: 5, cols: 10, colStart: 2 }],
+      [{ type: "text", index: 3, cols: 8 }],
+      [
+        { type: "image", index: 6, cols: 5 },
+        { type: "image", index: 7, cols: 7 },
+      ],
+      [{ type: "text", index: 4, cols: 7 }],
+      [
+        { type: "image", index: 8, cols: 6 },
+        { type: "image", index: 9, cols: 6 },
+      ],
+      [{ type: "image", index: 10, cols: 12 }],
+      [
+        { type: "image", index: 11, cols: 4 },
+        { type: "image", index: 12, cols: 4 },
+        { type: "image", index: 13, cols: 4 },
+      ],
+      [{ type: "text", index: 5, cols: 7 }],
+      [{ type: "image", index: 14, cols: 6, colStart: 4 }],
+      [{ type: "image", index: 15, cols: 12 }],
+    ],
   },
   {
     slug: "unprincipled",
@@ -966,10 +990,7 @@ export const projects: Project[] = [
     description: "Авторское бесцеремонное произведение с авангардным стилем",
     tags: ["2d", "авторское"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/unprincipled/1.jpg"],
     texts: ["Авангард"],
   },
@@ -985,9 +1006,7 @@ export const projects: Project[] = [
     videoId: 814924190,
     // videoHash: "b5699500f6",
     brand: "VK",
-    agency: null,
-    production: null,
-    // project: null,
+
     images: [
       "/projects/vk-mini-app/1.png",
       "/projects/vk-mini-app/2.png",
@@ -1151,9 +1170,9 @@ export const projects: Project[] = [
     videoId: 676229349,
 
     brand: "ЕАПТЕКА",
-    agency: null,
+
     production: "Zebra Hero",
-    // project: null,
+
     images: [
       // "/projects/eapteka/Screenshot 2026-03-18 at 14.30.24.png",
       // "/projects/eapteka/000000.png",
@@ -1196,12 +1215,51 @@ export const projects: Project[] = [
     description: "Бла бла бла",
     tags: ["3d", "бла бла"],
     videoId: 926255997,
-    brand: null,
-    agency: null,
-    production: null,
-    // project: null,
+
     images: ["/projects/rocs/1.jpg"],
     texts: ["rocs1", "rocs2", "rocs3", "rocs4", "rocs5"],
+  },
+
+  {
+    slug: "shedevrum",
+    size: 3,
+    // thumbVideo: "/projects/shedevrum/thumb/shedevrum-thumb.webm",
+    thumbVideoPosterImage: "/projects/shedevrum/thumb/shedevrum-thumb.png",
+    title: "Шедеврум",
+    description: "Бла бла бла",
+    tags: ["2d", "арт"],
+    videoId: 1165318329,
+    videoHash: "774fccab78",
+    brand: "Яндекс",
+
+    production: "Рабочее название",
+
+    images: [
+      "/projects/shedevrum/1.png",
+      "/projects/shedevrum/2.png",
+      "/projects/shedevrum/3.png",
+      "/projects/shedevrum/4.png",
+      "/projects/shedevrum/5.png",
+      "/projects/shedevrum/6.png",
+      "/projects/shedevrum/7.png",
+    ],
+    texts: [
+      "Генеративные ёлочные игрушки летят на ёлку под заводной трек — новогодний тизер «Шедевриум» для Яндекса.",
+      "Была задача за неделю собрать веселый новогодний клип, где поют ёлочные игрушки, сгенерированные нейронкой Яндекса, Шедевриум. От игрушек рябило в глазах..",
+      "Елки тоже не остались без внимания – подводная, ледяная, березовая, из тарелок, войлока...",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 12 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "text", index: 2, cols: 12 }],
+      [{ type: "image", index: 1, cols: 8, colStart: 3 }],
+      [{ type: "image", index: 2, cols: 8, colStart: 3 }],
+      [{ type: "image", index: 3, cols: 8, colStart: 3 }],
+      [{ type: "image", index: 4, cols: 12, colStart: 0 }],
+      [{ type: "image", index: 5, cols: 8, colStart: 3 }],
+      [{ type: "image", index: 6, cols: 8, colStart: 3 }],
+    ],
   },
 ];
 
