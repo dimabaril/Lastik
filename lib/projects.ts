@@ -247,8 +247,8 @@ export const projects: Project[] = [
     ],
     videos: [
       "/projects/mts/Snippet_FINAL.webm",
-      "/projects/mts/Общий_рилс_MASTER_version.webm",
-      "/projects/mts/Рилс_Черной_FINAL.webm",
+      "/projects/mts/Common_reel_MASTER_version.webm",
+      "/projects/mts/Reel_Black_FINAL.webm",
       "/projects/mts/vocaloids_001_v001.webm",
     ],
     texts: [
