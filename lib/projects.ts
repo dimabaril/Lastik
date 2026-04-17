@@ -30,6 +30,40 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // музей транспорта
+  {
+    slug: "museum-of-transport",
+    size: 10,
+    thumbVideo: "/projects/trans-museum/thumb/trans_museum.webm",
+    title: "Музей транспорта",
+    description: "Описание проекта",
+    tags: ["музей", "транспорт"],
+    videoId: 123456789,
+    images: [
+      "/projects/trans-museum/image1.png",
+      "/projects/trans-museum/image2.png",
+    ],
+    texts: ["Описание текста 1", "Описание текста 2"],
+    layout: [
+      [{ type: "text", index: 0, cols: 12 }],
+      [{ type: "image", index: 0, cols: 12 }],
+    ],
+  },
+  {
+    slug: "gorod-otkritiy",
+    size: 4,
+    thumbVideo: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
+    title: "Город открытий",
+    description: "Бла бла бла",
+    tags: ["3d", "реклама"],
+    videoId: 926255997,
+    brand: "Город открытий",
+    texts: ["Описание текста 1", "Описание текста 2"],
+    images: [
+      "/projects/gorod-otkritiy/image.png",
+      "/projects/gorod-otkritiy/sketch.png",
+    ],
+  },
   {
     slug: "love-generation",
     size: 3,
@@ -1223,7 +1257,7 @@ export const projects: Project[] = [
   {
     slug: "shedevrum",
     size: 3,
-    // thumbVideo: "/projects/shedevrum/thumb/shedevrum-thumb.webm",
+    thumbVideo: "/projects/shedevrum/thumb/ya_shedevrium.webm",
     thumbVideoPosterImage: "/projects/shedevrum/thumb/shedevrum-thumb.png",
     title: "Шедеврум",
     description: "Бла бла бла",
