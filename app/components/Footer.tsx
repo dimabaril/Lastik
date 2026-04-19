@@ -1,79 +1,80 @@
-import FooterClock from "./FooterClock";
-import FitText from "./FitText";
+import Image from "next/image";
 
-const EMAIL = "hello@130studio.com";
-const TELEGRAM = "https://t.me/lastikstudio";
+const EMAIL = "hello@lastik.studio";
 
 const SOCIAL_LINKS = [
-  { label: "behance", href: "https://behance.net/lastik" },
-  { label: "vimeo", href: "https://vimeo.com/lastik" },
-  { label: "instagram*", href: "https://instagram.com/lastik.studio" },
-  { label: "facebook*", href: "https://facebook.com" },
+  {
+    label: "vimeo",
+    href: "https://vimeo.com/lastik",
+    svg: "/vimeo-144-svgrepo-com.svg",
+  },
+  {
+    label: "behance",
+    href: "https://behance.net/lastik",
+    svg: "/behance-163-svgrepo-com.svg",
+  },
+  {
+    label: "instagram",
+    href: "https://instagram.com/lastik.studio",
+    svg: "/instagram-167-svgrepo-com.svg",
+  },
+  {
+    label: "telegram",
+    href: "https://t.me/kbucilina",
+    svg: "/telegram-svgrepo-com.svg",
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className="">
-      <div className="grid grid-cols-3 p-6">
-        {/* Time */}
-        <div className="flex flex-col gap-3">
-          <span className="text-xs tracking-widest text-(--fade-color) uppercase">
-            Keep track of time
-          </span>
-          <FooterClock />
-        </div>
+      {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
+      <div className="grid grid-cols-3 mx-auto py-18 px-6">
+        <div></div>
+        {/* Big name */}
+        <Image
+          src="/footer-lastik.svg"
+          alt="lastik"
+          width={399}
+          height={156}
+          unoptimized
+          className="justify-self-center"
+        />
 
-        {/* Contact */}
-        <div className="flex flex-col gap-3">
-          <span className="text-xs tracking-widest text-(--contact-color) uppercase">
-            Contact
-          </span>
-          <div className="flex flex-col gap-1 font-arimo text-2xl">
-            <a
-              href={`mailto:${EMAIL}`}
-              className="hover:text-(--contact-color) transition-colors"
-            >
-              {EMAIL}
-            </a>
-            <a
-              href={TELEGRAM}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-(--contact-color) transition-colors"
-            >
-              telegram
-            </a>
-          </div>
-        </div>
-
-        {/* Follow */}
-        <div className="flex flex-col gap-3">
-          <span className="text-xs tracking-widest text-(--follow-color) uppercase">
-            Follow
-          </span>
-          <div className="flex flex-wrap gap-x-6 gap-y-1 text-2xl">
-            {SOCIAL_LINKS.map(({ label, href }) => (
+        {/* Social links */}
+        <div className="flex flex-col justify-between justify-self-end">
+          <a
+            href={`mailto:${EMAIL}`}
+            className="bg-[#fff646] py-2 px-8 rounded-full text-2xl text-black hover:text-(--ref-color) transition-colors"
+          >
+            {EMAIL}
+          </a>
+          <div className="flex gap-6 justify-between">
+            {SOCIAL_LINKS.map(({ label, href, svg }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-(--follow-color) transition-colors"
+                className="hover:text-(--ref-color) transition-colors"
               >
-                {label}
+                {svg ? (
+                  <span
+                    className="block w-12 h-12 bg-current"
+                    style={{
+                      maskImage: `url('${svg}')`,
+                      maskSize: "contain",
+                      maskRepeat: "no-repeat",
+                      maskPosition: "center",
+                    }}
+                  />
+                ) : (
+                  label
+                )}
               </a>
             ))}
           </div>
-          <p className="text-xs text-(--fade-color)">
-            *Owned by Meta Platforms Inc., which is recognized as an extremist
-            organization and whose activities are prohibited in the territory of
-            the Russian Federation
-          </p>
         </div>
-      </div>
-      {/* Big name */}
-      <div className="max-w-screen-xl mx-auto px-6">
-        <FitText className="font-manrope select-none">1:30 STUDIO</FitText>
       </div>
     </footer>
   );
