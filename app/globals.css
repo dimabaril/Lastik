@@ -7,11 +7,11 @@ html {
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --nav-color-1: #ff447a;
-  --nav-color-2: #ddff00;
+  --nav-color-1: #ff5599;
+  --nav-color-2: #ebf400;
 
-  --ref-color: #4477ff;
-  /* --follow-color: #ff81e4; */
+  --ref-color-light: #4477ff;
+  --ref-color-dark: #0033cc;
   --fade-color: #9c9c9c;
 }
 

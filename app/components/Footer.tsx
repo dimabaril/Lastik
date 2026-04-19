@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="flex flex-col justify-between justify-self-end">
           <a
             href={`mailto:${EMAIL}`}
-            className="bg-[#fff646] py-2 px-8 rounded-full text-2xl text-black hover:text-(--ref-color) transition-colors"
+            className="bg-[#FFF546] py-2 px-8 rounded-full text-2xl text-black hover:text-(--ref-color-dark) transition-colors"
           >
             {EMAIL}
           </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-(--ref-color) transition-colors"
+                className="hover:text-(--ref-color-light) transition-colors"
               >
                 {svg ? (
                   <span
