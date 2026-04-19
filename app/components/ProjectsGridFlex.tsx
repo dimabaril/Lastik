@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ProjectPreviewCard from "./ProjectPreviewCard";
 
 const ROW_CAPACITY = 10;
@@ -42,11 +42,28 @@ export default function ProjectsGridFlex({
   const [hovered, setHovered] = useState<{ row: number; col: number } | null>(
     null,
   );
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [minHeight, setMinHeight] = useState<number>(0);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+
+    const ro = new ResizeObserver(() => {
+      setMinHeight((prev) => Math.max(prev, el.scrollHeight));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const rows = buildRows(projects);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div
+      ref={gridRef}
+      className="flex flex-col gap-3"
+      style={minHeight ? { minHeight } : undefined}
+    >
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex items-start gap-3">
           {row.map((project, colIndex) => {

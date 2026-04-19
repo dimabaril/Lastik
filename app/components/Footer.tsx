@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
-      <div className="grid grid-cols-3 mx-auto py-18 px-6">
+      <div className="grid grid-cols-3 mx-auto pb-18 px-6">
         <div></div>
         {/* Big name */}
         <Image
