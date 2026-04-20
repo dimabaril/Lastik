@@ -1,9 +1,31 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useMemo } from "react";
 // import Aside from "../components/Aside";
 import ProjectsGridFlex from "../components/ProjectsGridFlex";
 import { projects } from "@/lib/projects";
+import { tags, Tag } from "@/lib/tags";
 
 export default function Projects() {
+  const [selectedTags, setSelectedTags] = useState<Set<Tag>>(new Set());
+
+  // Filter projects
+  const filteredProjects = useMemo(() => {
+    if (selectedTags.size === 0) return projects;
+    return projects.filter((p) => p.tags.some((tag) => selectedTags.has(tag)));
+  }, [selectedTags]);
+
+  const toggleTag = (tag: Tag) => {
+    const newTags = new Set(selectedTags);
+    if (newTags.has(tag)) {
+      newTags.delete(tag);
+    } else {
+      newTags.add(tag);
+    }
+    setSelectedTags(newTags);
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto px-3 py-6">
       {/* ─── Main column ─── */}
@@ -48,10 +70,42 @@ export default function Projects() {
             для компаний по всему миру
           </p>
         </section>
+        {/* ─── Tag filter ─── */}
+        <section className="py-6">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {tags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={`border rounded-full px-4 py-2 transition-colors font-victor-mono text-base ${
+                  selectedTags.has(tag)
+                    ? "bg-white text-black border-white"
+                    : "border-(--fade-color) text-(--fade-color) hover:border-white hover:text-white"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+          {filteredProjects.length > 0 && (
+            <p className="text-center text-(--fade-color) mt-4 text-sm">
+              {filteredProjects.length}{" "}
+              {(() => {
+                const n = filteredProjects.length;
+                const mod10 = n % 10;
+                const mod100 = n % 100;
+                if (mod10 === 1 && mod100 !== 11) return "проект";
+                if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14))
+                  return "проекта";
+                return "проектов";
+              })()}
+            </p>
+          )}
+        </section>
         {/* ─── Projects grid ─── */}
         <section className="">
           <ProjectsGridFlex
-            projects={projects.map((project) => ({
+            projects={filteredProjects.map((project) => ({
               title: project.title,
               thumbVideo: project.thumbVideo,
               thumbVideoPosterImage: project.thumbVideoPosterImage,

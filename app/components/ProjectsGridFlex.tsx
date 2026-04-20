@@ -43,27 +43,27 @@ export default function ProjectsGridFlex({
     null,
   );
   const gridRef = useRef<HTMLDivElement>(null);
-  const [minHeight, setMinHeight] = useState<number>(0);
 
   useEffect(() => {
     const el = gridRef.current;
     if (!el) return;
 
+    let maxH = 0;
+
     const ro = new ResizeObserver(() => {
-      setMinHeight((prev) => Math.max(prev, el.scrollHeight));
+      el.style.minHeight = "";
+      const h = el.scrollHeight;
+      maxH = Math.max(maxH, h);
+      el.style.minHeight = `${maxH}px`;
     });
     ro.observe(el);
     return () => ro.disconnect();
-  }, []);
+  }, [projects]);
 
   const rows = buildRows(projects);
 
   return (
-    <div
-      ref={gridRef}
-      className="flex flex-col gap-3"
-      style={minHeight ? { minHeight } : undefined}
-    >
+    <div ref={gridRef} className="flex flex-col gap-3">
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex items-start gap-3">
           {row.map((project, colIndex) => {
