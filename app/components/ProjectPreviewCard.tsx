@@ -72,11 +72,9 @@ export default function ProjectPreviewCard({
           )}
         </div>
         <div className="flex gap-1 font-victor-mono text-lg text-(--fade-color) opacity-0 group-hover:opacity-100 transition-all duration-300">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="border rounded-full px-2 py-0.5 whitespace-nowrap"
-            >
+          {tags.map((tag, i) => (
+            <span key={tag} className="py-0.5 whitespace-nowrap">
+              {i === 0 ? "#" : "/"}
               {tag}
             </span>
           ))}

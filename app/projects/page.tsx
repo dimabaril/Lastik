@@ -77,7 +77,7 @@ export default function Projects() {
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`border rounded-full px-4 py-2 transition-colors font-victor-mono text-base ${
+                className={`border rounded-full px-4 py-2 transition-colors font-victor-mono text-base cursor-pointer ${
                   selectedTags.has(tag)
                     ? "bg-white text-black border-white"
                     : "border-(--fade-color) text-(--fade-color) hover:border-white hover:text-white"
