@@ -35,7 +35,7 @@ export const projects: Project[] = [
   // музей транспорта
   {
     slug: "museum-of-transport",
-    size: 10,
+    size: 12,
     thumbVideo: "/projects/trans-museum/thumb/trans_museum.webm",
     title: "Музей транспорта",
     description: "Описание проекта",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gorod-otkritiy",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
     title: "Город открытий",
     description: "Бла бла бла",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   },
   {
     slug: "love-generation",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/love-generation/thumb/love_generation-thumb.webm",
     title: "Love Generation",
     description: "Рекламный ролик \\ 30 Сек",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
   },
   {
     slug: "vk-neo",
-    size: 5,
+    size: 6,
     thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
     title: "Маруся NEO",
     description: "Бла бла бла",
@@ -204,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     slug: "uralsib",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/uralsib/thumb/uralsib-thumb.webm",
     title: "Уралсиб",
     description: "Бла бла бла",
@@ -252,7 +252,7 @@ export const projects: Project[] = [
   },
   {
     slug: "delimobil",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/delimobil/thumb/delimobil.webm",
     title: "Делимобиль",
     description: "Смешная и оригинальная реклама сервиса каршеринга",
@@ -264,7 +264,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mts",
-    size: 6,
+    size: 7,
     thumbVideo: "/projects/mts/thumb/mts-thumb.webm",
     title: "Гёрлз бэнд Neku-sai",
     description: "Телеком реклама с динамичными 3D переходами и эффектами",
@@ -324,7 +324,7 @@ export const projects: Project[] = [
   },
   {
     slug: "zvuk",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/zvuk/thumb/zvuk-thumb.webm",
     title: "Уважаю уши",
     description: "Победитель G8 Creative Awards в категории «Анимация»",
@@ -443,7 +443,7 @@ export const projects: Project[] = [
   },
   {
     slug: "zvuk-2",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
     title: "Звук 2",
     description:
@@ -506,7 +506,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mosmuseum",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
     title: "Музей Москвы",
     description: "Культурный проект о истории и искусстве столицы",
@@ -518,7 +518,7 @@ export const projects: Project[] = [
   },
   {
     slug: "green-idea",
-    size: 6,
+    size: 7,
     thumbVideo: "/projects/green-idea/thumb/green-idea-thumb.webm",
     title: "Green Idea",
     description: "Экологичный проект с зелёной эстетикой и плавными переходами",
@@ -530,7 +530,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mail-ru",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/mail-ru/thumb/mail-thumb.webm",
     title: "Ребрендинг с маскотом Байтом",
     description: "Бла бла бла",
@@ -579,7 +579,7 @@ export const projects: Project[] = [
   },
   {
     slug: "yandex-incl",
-    size: 7,
+    size: 8,
     thumbVideo: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
     title: "Инклюзивные сервисы Яндекс",
     description:
@@ -625,7 +625,7 @@ export const projects: Project[] = [
   },
   {
     slug: "volchok",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/volchok/thumb/volchok-thumb.webm",
     title: "Волчок",
     description: "Авторское произведение с игривой и динамичной анимацией",
@@ -637,7 +637,7 @@ export const projects: Project[] = [
   },
   {
     slug: "taxi-v2",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
     title: "Такси",
     description: "Реклама сервиса такси с быстрым темпом и динамикой",
@@ -649,7 +649,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mansi",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/mansi/thumb/mansi-thumb.webm",
     title: "Манси",
     description: "Художественный проект о культуре и традициях",
@@ -661,7 +661,7 @@ export const projects: Project[] = [
   },
   {
     slug: "stranneyshie-horiz",
-    size: 3,
+    size: 4,
     thumbVideo:
       "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb.webm",
     title: "Странейшие",
@@ -674,7 +674,7 @@ export const projects: Project[] = [
   },
   {
     slug: "hospitality",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/hospitality/thumb/hospitality-thumb.webm",
     title: "Hospitality",
     description: "Проект гостеприимства с объёмной 3D графикой",
@@ -686,7 +686,7 @@ export const projects: Project[] = [
   },
   {
     slug: "i-want-to-know-everything",
-    size: 6,
+    size: 7,
     thumbVideo:
       "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb.webm",
     title: "I want to know",
@@ -702,7 +702,7 @@ export const projects: Project[] = [
   },
   {
     slug: "presents-fest-2024",
-    size: 6,
+    size: 7,
     thumbVideo:
       "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
     title: "Presents Fest",
@@ -719,7 +719,7 @@ export const projects: Project[] = [
   },
   {
     slug: "saint-spring-v3",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
     title: "Saint Spring",
     description: "Весенний проект с природным 3D дизайном и мягкими цветами",
@@ -735,7 +735,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sber-high-res",
-    size: 6,
+    size: 7,
     thumbVideo: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
     title: "5%",
     description: "Бла бла бла",
@@ -856,7 +856,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sobchak",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/sobchak/thumb/sobchak_thumb.webm",
     title: "Осторожно, Собчак!",
     description: "Бла бла бла",
@@ -938,7 +938,7 @@ export const projects: Project[] = [
   },
   {
     slug: "supermarket-trollys-dream-v1",
-    size: 5,
+    size: 6,
     thumbVideo:
       "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
     title: "Supermarket",
@@ -954,7 +954,7 @@ export const projects: Project[] = [
   },
   {
     slug: "the-skin-v1",
-    size: 5,
+    size: 6,
     thumbVideo: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
     title: "Шкура",
     description: "Бла бла бла",
@@ -1020,7 +1020,7 @@ export const projects: Project[] = [
   },
   {
     slug: "unprincipled",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
     title: "Unprincipled",
     description: "Авторское бесцеремонное произведение с авангардным стилем",
@@ -1033,7 +1033,7 @@ export const projects: Project[] = [
 
   {
     slug: "vk-mini-app",
-    size: 4,
+    size: 5,
     thumbVideo: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
     // thumbVideoPosterImage: "/projects/vk-mini-app/thumb/miniapps-thumb.png",
     title: "Mini app",
@@ -1197,7 +1197,7 @@ export const projects: Project[] = [
 
   {
     slug: "eapteka",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
     // thumbVideoPosterImage: "/projects/eapteka/thumb/eapteka-thumb.png",
     title: "Eapteka",
@@ -1245,7 +1245,7 @@ export const projects: Project[] = [
 
   {
     slug: "rocs",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/rocs/thumb/rocs.webm",
     title: "rocs",
     description: "Бла бла бла",
@@ -1258,7 +1258,7 @@ export const projects: Project[] = [
 
   {
     slug: "shedevrum",
-    size: 3,
+    size: 4,
     thumbVideo: "/projects/shedevrum/thumb/ya_shedevrium.webm",
     thumbVideoPosterImage: "/projects/shedevrum/thumb/shedevrum-thumb.png",
     title: "Шедеврум",

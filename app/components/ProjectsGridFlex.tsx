@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import ProjectPreviewCard from "./ProjectPreviewCard";
 
-const ROW_CAPACITY = 10;
+const ROW_CAPACITY = 12;
+const GROW_FACTOR = 1.5;
 
 interface Project {
   title: string;
@@ -70,7 +71,7 @@ export default function ProjectsGridFlex({
             const size = project.size ?? 5;
             const isHovered =
               hovered?.row === rowIndex && hovered?.col === colIndex;
-            const grow = isHovered ? size * 2 : size;
+            const grow = isHovered ? size * GROW_FACTOR : size;
 
             return (
               <div
