@@ -27,17 +27,12 @@ export default function Projects() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-3 py-6">
+    <div className="flex-1 max-w-screen-xl mx-auto px-3 py-6">
       {/* ─── Main column ─── */}
-      <div className="flex flex-1 flex-col min-h-screen bg-black text-white">
+      <div className="flex flex-col bg-black text-white">
         {/* ─── Hero ─── */}
         <section className="flex flex-col gap-10 items-center text-center py-15">
           <div className="relative ">
-            {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter drop-shadow-[0_0_5px_#fff]"> */}
-            {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter drop-shadow-[0_0_20px_#3b82f6]"> */}
-            {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_rgba(255,255,255,0.9)]"> */}
-
-            {/* <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff,0_0_20px_#ff00de]"> */}
             <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff]">
               Суперская
               <br />
