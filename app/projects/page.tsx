@@ -33,7 +33,7 @@ export default function Projects() {
         {/* ─── Hero ─── */}
         <section className="flex flex-col gap-10 items-center text-center py-15">
           <div className="relative ">
-            <h1 className="font-arimo text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff]">
+            <h1 className="font-arimo text-6xl sm:text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff]">
               Суперская
               <br />
               Анимация

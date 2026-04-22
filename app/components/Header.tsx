@@ -42,13 +42,14 @@ export default function Header() {
 
   return (
     <header className="uppercase font-arimo text-2xl sticky top-0 z-10">
+      {/* Logo */}
       <Link href="/">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"
           alt="Logo"
           width={120}
           height={120}
-          className={`${styles.rotate} absolute top-6 left-6 z-10`}
+          className={`${styles.rotate} max-sm:w-13 absolute top-6 left-6 z-10`}
         />
       </Link>
 

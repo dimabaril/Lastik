@@ -66,7 +66,7 @@ export default function ProjectsGridFlex({
   return (
     <div ref={gridRef} className="flex flex-col gap-3">
       {rows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex items-start gap-3">
+        <div key={rowIndex} className="flex max-md:flex-col items-start gap-3">
           {row.map((project, colIndex) => {
             const size = project.size ?? 5;
             const isHovered =
