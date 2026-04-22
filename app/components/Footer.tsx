@@ -29,8 +29,8 @@ export default function Footer() {
   return (
     <footer className="">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
-      <div className="grid grid-cols-3 mx-auto pb-18 px-6">
-        <div></div>
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-6 mx-auto pb-18 px-6">
+        <div className="max-lg:hidden"></div>
         {/* Big name */}
         <Image
           src="/footer-lastik.svg"
@@ -42,7 +42,7 @@ export default function Footer() {
         />
 
         {/* Social links */}
-        <div className="flex flex-col justify-between justify-self-end">
+        <div className="flex flex-col gap-4 justify-between md:justify-self-end max-md:justify-self-center">
           <a
             href={`mailto:${EMAIL}`}
             className="bg-[#FFF546] py-2 px-8 rounded-full text-2xl text-black hover:text-(--ref-color-dark) transition-colors"
