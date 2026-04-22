@@ -725,7 +725,7 @@ export const projects: Project[] = [
     slug: "eapteka",
     size: 3,
     thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
-    // thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+    thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
     title: "Eapteka",
     description: "Бла бла бла",
     tags: [TAG["3D"], TAG.ADVERTISING],
