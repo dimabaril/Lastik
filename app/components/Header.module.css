@@ -22,6 +22,19 @@
   );
 }
 
+@media (max-width: 1024px) {
+  .gradientMask {
+    mask-image: linear-gradient(to top, transparent 0%, black 8%, black 100%);
+
+    -webkit-mask-image: linear-gradient(
+      to top,
+      transparent 0%,
+      black 8%,
+      black 100%
+    );
+  }
+}
+
 .navLink1:hover {
   text-shadow:
     0 0 10px var(--nav-color-1),
