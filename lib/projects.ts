@@ -725,7 +725,7 @@ export const projects: Project[] = [
     slug: "eapteka",
     size: 3,
     thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
-    thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+    // thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
     title: "Eapteka",
     description: "Бла бла бла",
     tags: [TAG["3D"], TAG.ADVERTISING],
@@ -900,7 +900,7 @@ export const projects: Project[] = [
     slug: "rambler",
     size: 6,
     thumbVideo: "/projects/rambler/thumb/rambler_thumb.webm",
-    // thumbVideoPosterImage: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
+    thumbVideoPosterImage: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
     title: "Рамблер",
     description: "Бла бла бла",
     tags: [TAG["3D"], TAG.ADVERTISING],
@@ -1161,7 +1161,7 @@ export const projects: Project[] = [
     slug: "bigcup",
     size: 4,
     thumbVideo: "/projects/bigcup/thumb/bigcup_thumb.webm",
-    // thumbVideoPosterImage: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
+    thumbVideoPosterImage: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
     title: "Большая кружка",
     description: "Бла бла бла",
     tags: [TAG["3D"], TAG.ADVERTISING],
@@ -1385,21 +1385,21 @@ export const projects: Project[] = [
     ],
   },
 
-  {
-    slug: "stranneyshie-horiz",
-    size: 4,
-    thumbVideo:
-      "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb-poster.jpg",
-    title: "Странейшие",
-    description: "Авторский проект необычных идей и странных историй",
-    tags: [TAG["2D"], TAG.AUTHOR],
-    videoId: 926255997,
+  // {
+  //   slug: "stranneyshie-horiz",
+  //   size: 4,
+  //   thumbVideo:
+  //     "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb.webm",
+  //   thumbVideoPosterImage:
+  //     "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb-poster.jpg",
+  //   title: "Странейшие",
+  //   description: "Авторский проект необычных идей и странных историй",
+  //   tags: [TAG["2D"], TAG.AUTHOR],
+  //   videoId: 926255997,
 
-    images: ["/projects/stranneyshie-horiz/1.jpg"],
-    texts: ["Фантазия"],
-  },
+  //   images: ["/projects/stranneyshie-horiz/1.jpg"],
+  //   texts: ["Фантазия"],
+  // },
 ];
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
