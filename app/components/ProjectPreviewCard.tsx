@@ -47,6 +47,7 @@ export default function ProjectPreviewCard({
           ref={videoRef}
           src={thumbVideo}
           poster={thumbVideoPosterImage}
+          preload="metadata"
           loop
           muted
           playsInline
@@ -71,7 +72,7 @@ export default function ProjectPreviewCard({
             </span>
           )}
         </div>
-        <div className="flex gap-1 font-victor-mono text-lg text-(--fade-color) opacity-0 group-hover:opacity-100 max-md:opacity-100 transition-all duration-300">
+        <div className="flex gap-1 font-victor-mono text-lg text-(--fade-color) md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
           {tags.map((tag, i) => (
             <span key={tag} className="py-0.5 whitespace-nowrap">
               {i === 0 ? "#" : "/"}
