@@ -417,7 +417,7 @@ export const projects: Project[] = [
     title: "R.O.C.S.",
     description: "Бла бла бла",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 926255997,
+    videoId: 769844526,
     brand: "R.O.C.S.",
 
     images: ["/projects/rocs/1.jpg"],
@@ -715,7 +715,7 @@ export const projects: Project[] = [
     title: "Фестиваль Дух огня / Мифы Манси",
     description: "Художественный проект о культуре и традициях",
     tags: [TAG["2D"], TAG.ART],
-    videoId: 926255997,
+    videoId: 779626942,
 
     images: ["/projects/mansi/1.jpg"],
     texts: ["Традиция"],
@@ -777,7 +777,7 @@ export const projects: Project[] = [
     title: "Делимобиль",
     description: "Смешная и оригинальная реклама сервиса каршеринга",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 926255997,
+    videoId: 872188494,
     brand: "Делимобиль",
     images: ["/projects/delimobil/1.jpg"],
     texts: ["Мобильность", "Свобода"],
@@ -876,7 +876,7 @@ export const projects: Project[] = [
     title: "Музей Москвы",
     description: "Культурный проект о истории и искусстве столицы",
     tags: [TAG["2D"], TAG.ART],
-    videoId: 926255997,
+    videoId: 677745860,
     images: ["/projects/mosmuseum/1.jpg"],
     texts: ["История", "Культура"],
   },
@@ -889,7 +889,7 @@ export const projects: Project[] = [
     title: "Волковская Пивоварня",
     description: "Авторское произведение с игривой и динамичной анимацией",
     tags: [TAG["2D"], TAG.AUTHOR],
-    videoId: 926255997,
+    videoId: 625784188,
 
     images: ["/projects/volchok/1.jpg"],
     texts: ["Игра", "Движение"],
@@ -1047,7 +1047,7 @@ export const projects: Project[] = [
     title: "Хочу всё знать!",
     description: "Авторский проект о любознательности и исследованиях",
     tags: [TAG["2D"], TAG.AUTHOR],
-    videoId: 926255997,
+    videoId: 575844837,
 
     images: [
       "/projects/i-want-to-know-everything/1.jpg",
@@ -1133,7 +1133,7 @@ export const projects: Project[] = [
     title: "Green Idea",
     description: "Экологичный проект с зелёной эстетикой и плавными переходами",
     tags: [TAG["2D"], TAG.MOTION],
-    videoId: 926255997,
+    videoId: 580000376,
     // brand: "Green Idea",
     images: ["/projects/green-idea/1.jpg", "/projects/green-idea/2.jpg"],
     texts: ["Природа", "Устойчивость"],
@@ -1148,7 +1148,7 @@ export const projects: Project[] = [
     title: "Беспринципные / Титры",
     description: "Авторское бесцеремонное произведение с авангардным стилем",
     tags: [TAG["2D"], TAG.AUTHOR],
-    videoId: 926255997,
+    videoId: 476301197,
 
     images: ["/projects/unprincipled/1.jpg"],
     texts: ["Авангард"],
@@ -1182,7 +1182,7 @@ export const projects: Project[] = [
     title: "Мостуризм / 6 историй",
     description: "Проект гостеприимства с объёмной 3D графикой",
     tags: [TAG["3D"], TAG.MOTION],
-    videoId: 926255997,
+    videoId: 644262497,
 
     images: ["/projects/hospitality/1.jpg", "/projects/hospitality/2.jpg"],
     texts: ["Приём", "Комфорт"],
@@ -1240,7 +1240,8 @@ export const projects: Project[] = [
     title: "VK / Фестиваль подарков",
     description: "Фестиваль подарков с праздничной и яркой атмосферой",
     tags: [TAG["2D"], TAG.EVENT],
-    videoId: 926255997,
+    videoId: 1091235348,
+    videoHash: "4a6c52f315",
     brand: "VK",
 
     images: [
@@ -1273,7 +1274,7 @@ export const projects: Project[] = [
     title: "Такси под прикрытием / Титры",
     description: "Реклама сервиса такси с быстрым темпом и динамикой",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 926255997,
+    videoId: 807825908,
 
     images: ["/projects/taxi-v2/1.jpg"],
     texts: ["Скорость", "Удобство"],
@@ -1287,7 +1288,7 @@ export const projects: Project[] = [
     title: "Святой Источник",
     description: "Весенний проект с природным 3D дизайном и мягкими цветами",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 926255997,
+    videoId: 681815409,
 
     images: [
       "/projects/saint-spring-v3/1.jpg",
@@ -1306,7 +1307,7 @@ export const projects: Project[] = [
     title: "Перекрёсток / Тележкин сон",
     description: "Авторское произведение о мире супермаркетов и потребления",
     tags: [TAG["3D"], TAG.AUTHOR],
-    videoId: 926255997,
+    videoId: 641474779,
     brand: "Перекрёсток",
     client: "X5 Retail Group",
 
