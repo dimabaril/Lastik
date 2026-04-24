@@ -51,14 +51,14 @@ export default function ProjectPreviewCard({
           loop
           muted
           playsInline
-          className="rounded-lg"
+          className="rounded-lg w-full"
         />
       ) : thumbVideoPosterImage ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={thumbVideoPosterImage}
           alt={title}
-          className="rounded-lg w-full object-cover"
+          className="rounded-lg w-full"
         />
       ) : null}
 

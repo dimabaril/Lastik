@@ -42,7 +42,7 @@ export default function Header() {
   ));
 
   return (
-    <header className="font-unbounded text-2xl sticky top-0 z-10">
+    <header className="font-unbounded text-2xl whitespace-nowrap sticky top-0 z-10">
       {/* Logo */}
       <Link href="/">
         <Image
