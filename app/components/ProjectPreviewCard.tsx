@@ -36,7 +36,7 @@ export default function ProjectPreviewCard({
   return (
     <Link
       href={`/projects/${slug}`}
-      className="relative group flex flex-col rounded-2xl border border-dashed border-transparent hover:border-(--fade-color) overflow-hidden p-3 cursor-pointer"
+      className="relative group flex flex-col rounded-2xl border border-dashed border-transparent sm:hover:border-(--fade-color) overflow-hidden p-0 sm:p-3 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}

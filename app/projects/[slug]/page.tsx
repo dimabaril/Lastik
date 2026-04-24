@@ -41,69 +41,75 @@ export default async function ProjectPage({
         ✕
       </Link>
 
-      <div className="flex gap-6 items-center mb-6">
-        <div className="flex flex-col flex-1 gap-6">
-          {/* ─── Title ─── */}
-          <h1 className="text-6xl font-druk-cyr-bold-italic">
-            {project.title}
-          </h1>
-          <div className="text-xl text-(--fade-color) flex justify-between items-center">
-            {/* ─── Description ─── */}
-            <p className="font-victor-mono">{project.description}</p>
-            {/* ─── Tags ─── */}
-            <div className="flex gap-2 flex-wrap font-victor-mono">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="border border-(--fade-color) rounded-full px-3 py-0.5"
-                >
-                  {tag}
-                </span>
-              ))}
+      {/* Upper block */}
+      <div className="flex flex-col gap-6 mb-6">
+        {/* ─── Title ─── */}
+        <h1 className="text-6xl font-druk-cyr-bold-italic">{project.title}</h1>
+        <div className="flex gap-6">
+          {/* Main content */}
+          <div className="flex flex-col flex-1 gap-6">
+            <div className="text-xl text-(--fade-color) flex flex-wrap gap-3 justify-between items-center">
+              {/* ─── Description ─── */}
+              <p className="font-victor-mono">{project.description}</p>
+              {/* ─── Tags ─── */}
+              <div className="flex gap-2 font-victor-mono">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-(--fade-color) rounded-full px-3 py-0.5"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
+            {/* Main video */}
+            <VimeoPlayer
+              videoId={project.videoId}
+              videoHash={project.videoHash}
+            />
           </div>
-          {/* Main video */}
-          <VimeoPlayer
-            videoId={project.videoId}
-            videoHash={project.videoHash}
-          />
-        </div>
-        {/* ─── Right column ─── */}
-        <div className="w-40 shrink-0 flex flex-col gap-6 pt-2">
-          {project.brand && (
-            <div>
-              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
-                Бренд
-              </p>
-              <p className="font-arimo font-bold text-2xl">{project.brand}</p>
-            </div>
-          )}
-          {project.agency && (
-            <div>
-              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
-                Агентство
-              </p>
-              <p className="font-arimo font-bold text-2xl">{project.agency}</p>
-            </div>
-          )}
-          {project.production && (
-            <div>
-              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
-                Продакшн
-              </p>
-              <p className="font-arimo font-bold text-2xl">
-                {project.production}
-              </p>
-            </div>
-          )}
-          {project.client && (
-            <div>
-              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
-                Клиент
-              </p>
-              <p className="font-arimo font-bold text-2xl">{project.client}</p>
-            </div>
-          )}
+          {/* ─── Right column ─── */}
+          <div className="flex flex-col gap-6 pt-2 self-end">
+            {project.brand && (
+              <div>
+                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                  Бренд
+                </p>
+                <p className="font-arimo font-bold text-2xl">{project.brand}</p>
+              </div>
+            )}
+            {project.agency && (
+              <div>
+                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                  Агентство
+                </p>
+                <p className="font-arimo font-bold text-2xl">
+                  {project.agency}
+                </p>
+              </div>
+            )}
+            {project.production && (
+              <div>
+                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                  Продакшн
+                </p>
+                <p className="font-arimo font-bold text-2xl">
+                  {project.production}
+                </p>
+              </div>
+            )}
+            {project.client && (
+              <div>
+                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                  Клиент
+                </p>
+                <p className="font-arimo font-bold text-2xl">
+                  {project.client}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
