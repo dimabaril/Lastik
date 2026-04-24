@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="z-20 bg-black">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-6 mx-auto pb-18 px-6">
+      <div className="mx-auto grid grid-cols-3 gap-y-6 px-6 pb-18 max-lg:grid-cols-2 max-md:grid-cols-1">
         <div className="max-lg:hidden"></div>
         {/* Big name */}
         <Image
@@ -42,25 +42,25 @@ export default function Footer() {
         />
 
         {/* Social links */}
-        <div className="flex flex-col gap-4 justify-between md:justify-self-end max-md:justify-self-center">
+        <div className="flex flex-col justify-between gap-4 max-md:justify-self-center md:justify-self-end">
           <a
             href={`mailto:${EMAIL}`}
-            className="bg-[#FFF546] py-2 px-8 rounded-full text-2xl text-black hover:text-(--ref-color-dark) transition-colors"
+            className="rounded-full bg-[#FFF546] px-8 py-2 text-2xl text-black transition-colors hover:text-(--ref-color-dark)"
           >
             {EMAIL}
           </a>
-          <div className="flex gap-6 justify-between">
+          <div className="flex justify-between gap-6">
             {SOCIAL_LINKS.map(({ label, href, svg }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-(--ref-color-light) transition-colors"
+                className="transition-colors hover:text-(--ref-color-light)"
               >
                 {svg ? (
                   <span
-                    className="block w-12 h-12 bg-current"
+                    className="block h-12 w-12 bg-current"
                     style={{
                       maskImage: `url('${svg}')`,
                       maskSize: "contain",

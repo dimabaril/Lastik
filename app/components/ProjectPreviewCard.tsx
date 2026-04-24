@@ -36,7 +36,7 @@ export default function ProjectPreviewCard({
   return (
     <Link
       href={`/projects/${slug}`}
-      className="relative group flex flex-col rounded-2xl border border-dashed border-transparent sm:hover:border-(--fade-color) overflow-hidden p-0 sm:p-3 cursor-pointer"
+      className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-dashed border-transparent p-0 sm:p-3 sm:hover:border-(--fade-color)"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleMouseEnter}
@@ -51,24 +51,24 @@ export default function ProjectPreviewCard({
           loop
           muted
           playsInline
-          className="rounded-lg w-full"
+          className="w-full rounded-lg"
         />
       ) : thumbVideoPosterImage ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={thumbVideoPosterImage}
           alt={title}
-          className="rounded-lg w-full"
+          className="w-full rounded-lg"
         />
       ) : null}
 
       <div className="flex flex-wrap justify-between pt-2">
-        <div className="shrink-0 font-unbounded font-light text-base  gap-2">
+        <div className="font-unbounded shrink-0 gap-2 text-base font-light">
           {title}
           {/* size for debug */}
           {size && <span className="absolute top-4 right-5">{size}</span>}
         </div>
-        <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
+        <div className="font-unbounded flex gap-1 text-base font-light text-(--fade-color) transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
           {/* <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) transition-all duration-300"> */}
           {tags.map((tag, i) => (
             <span key={tag} className="py-0.5 whitespace-nowrap">

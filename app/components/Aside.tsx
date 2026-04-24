@@ -44,7 +44,7 @@ export default function Aside() {
   }, [totalHeight]);
 
   return (
-    <aside className="w-32 fixed z-20 right-0 top-0 p-3">
+    <aside className="fixed top-0 right-0 z-20 w-32 p-3">
       <div
         ref={trackRef}
         className="flex flex-col gap-5"

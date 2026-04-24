@@ -68,7 +68,7 @@ export default function ProjectsGridFlex({
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex max-[900px]:flex-col items-start gap-3"
+          className="flex items-start gap-3 max-[900px]:flex-col"
         >
           {row.map((project, colIndex) => {
             const size = project.size ?? 5;

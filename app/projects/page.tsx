@@ -27,13 +27,13 @@ export default function Projects() {
   };
 
   return (
-    <div className="flex-1 max-w-screen-xl mx-auto px-3 py-6">
+    <div className="mx-auto max-w-screen-xl flex-1 px-3 py-6">
       {/* ─── Main column ─── */}
       <div className="flex flex-col bg-black text-white">
         {/* ─── Hero ─── */}
-        <section className="flex flex-col gap-10 items-center text-center py-15">
-          <div className="relative ">
-            <h1 className="text-4xl sm:text-7xl md:text-8xl  [text-shadow:0_0_10px_#fff] relative z-1">
+        <section className="flex flex-col items-center gap-10 py-15 text-center">
+          <div className="relative">
+            <h1 className="relative z-1 text-4xl [text-shadow:0_0_10px_#fff] sm:text-7xl md:text-8xl">
               <span className="font-unbounded font-bold">Суперская</span>
               <br />
               <span className="font-arimo uppercase">Анимация</span>
@@ -57,7 +57,7 @@ export default function Projects() {
               alt="heart"
               width={70}
               height={70}
-              className="absolute -bottom-3 -right-4 max-sm:-bottom-3 max-sm:-right-11"
+              className="absolute -right-4 -bottom-3 max-sm:-right-11 max-sm:-bottom-3"
             />
           </div>
           <p className="font-arimo max-w-[730px] text-2xl leading-8">
@@ -67,14 +67,14 @@ export default function Projects() {
         </section>
         {/* ─── Tag filter ─── */}
         <section className="py-6">
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap justify-center gap-3">
             {tags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`border rounded-full px-4 py-2 transition-colors font-unbounded font-light text-base cursor-pointer ${
+                className={`font-unbounded cursor-pointer rounded-full border px-4 py-2 text-base font-light transition-colors ${
                   selectedTags.has(tag)
-                    ? "bg-white text-black border-white"
+                    ? "border-white bg-white text-black"
                     : "border-(--fade-color) text-(--fade-color) hover:border-white hover:text-white"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function Projects() {
             ))}
           </div>
           {filteredProjects.length > 0 && (
-            <p className="font-unbounded text-center text-(--fade-color) mt-4 text-sm">
+            <p className="font-unbounded mt-4 text-center text-sm text-(--fade-color)">
               {filteredProjects.length}{" "}
               {(() => {
                 const n = filteredProjects.length;

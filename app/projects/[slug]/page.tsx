@@ -32,31 +32,31 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <div className="min-h-screen bg-black text-white max-w-screen-xl mx-auto p-6">
+    <div className="mx-auto min-h-screen max-w-screen-xl bg-black p-6 text-white">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"
-        className="fixed top-6 right-8 text-white text-3xl hover:opacity-60 transition-opacity z-50"
+        className="fixed top-6 right-8 z-50 text-3xl text-white transition-opacity hover:opacity-60"
       >
         ✕
       </Link>
 
       {/* Upper block */}
-      <div className="flex flex-col gap-6 mb-6">
+      <div className="mb-6 flex flex-col gap-6">
         {/* ─── Title ─── */}
-        <h1 className="text-6xl font-druk-cyr-bold-italic">{project.title}</h1>
+        <h1 className="font-druk-cyr-bold-italic text-6xl">{project.title}</h1>
         <div className="flex gap-6">
           {/* Main content */}
-          <div className="flex flex-col flex-1 gap-6">
-            <div className="text-xl text-(--fade-color) flex flex-wrap gap-3 justify-between items-center">
+          <div className="flex flex-1 flex-col gap-6">
+            <div className="flex flex-wrap items-center justify-between gap-3 text-xl text-(--fade-color)">
               {/* ─── Description ─── */}
               <p className="font-victor-mono">{project.description}</p>
               {/* ─── Tags ─── */}
-              <div className="flex gap-2 font-victor-mono">
+              <div className="font-victor-mono flex gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="border border-(--fade-color) rounded-full px-3 py-0.5"
+                    className="rounded-full border border-(--fade-color) px-3 py-0.5"
                   >
                     {tag}
                   </span>
@@ -70,41 +70,41 @@ export default async function ProjectPage({
             />
           </div>
           {/* ─── Right column ─── */}
-          <div className="flex flex-col gap-6 pt-2 self-end">
+          <div className="flex flex-col gap-6 self-end pt-2">
             {project.brand && (
               <div>
-                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
                   Бренд
                 </p>
-                <p className="font-arimo font-bold text-2xl">{project.brand}</p>
+                <p className="font-arimo text-2xl font-bold">{project.brand}</p>
               </div>
             )}
             {project.agency && (
               <div>
-                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
                   Агентство
                 </p>
-                <p className="font-arimo font-bold text-2xl">
+                <p className="font-arimo text-2xl font-bold">
                   {project.agency}
                 </p>
               </div>
             )}
             {project.production && (
               <div>
-                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
                   Продакшн
                 </p>
-                <p className="font-arimo font-bold text-2xl">
+                <p className="font-arimo text-2xl font-bold">
                   {project.production}
                 </p>
               </div>
             )}
             {project.client && (
               <div>
-                <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
                   Клиент
                 </p>
-                <p className="font-arimo font-bold text-2xl">
+                <p className="font-arimo text-2xl font-bold">
                   {project.client}
                 </p>
               </div>
@@ -115,9 +115,9 @@ export default async function ProjectPage({
 
       {/* ─── Content grid ─── */}
       {project.layout ? (
-        <div className="flex flex-col gap-6 mt-6">
+        <div className="mt-6 flex flex-col gap-6">
           {project.layout.map((row, rowIndex) => (
-            <div key={rowIndex} className="grid grid-cols-12 gap-6 items-start">
+            <div key={rowIndex} className="grid grid-cols-12 items-start gap-6">
               {row.map((item, i) => {
                 const style: React.CSSProperties = {
                   gridColumn: item.colStart
@@ -140,7 +140,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="rounded-xl overflow-hidden"
+                        className="overflow-hidden rounded-xl"
                       >
                         <AutoplayVideo
                           src={project.videos?.[item.index]}
@@ -155,7 +155,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="rounded-xl overflow-hidden"
+                        className="overflow-hidden rounded-xl"
                       >
                         <VimeoPlayer
                           videoId={vimeo.videoId}
@@ -169,7 +169,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="rounded-xl overflow-hidden"
+                        className="overflow-hidden rounded-xl"
                       >
                         <Image
                           src={project.images[item.index]}
@@ -189,7 +189,7 @@ export default async function ProjectPage({
           ))}
         </div>
       ) : (
-        <div className="flex flex-col gap-6 mt-6">
+        <div className="mt-6 flex flex-col gap-6">
           {project.texts.map((text, i) => (
             <p
               key={i}
@@ -200,9 +200,9 @@ export default async function ProjectPage({
           ))}
           {(project.images.length > 0 ||
             (project.videos && project.videos.length > 0)) && (
-            <div className="grid grid-cols-2 gap-6 items-start">
+            <div className="grid grid-cols-2 items-start gap-6">
               {project.images.map((src, i) => (
-                <div key={`img-${i}`} className="rounded-xl overflow-hidden">
+                <div key={`img-${i}`} className="overflow-hidden rounded-xl">
                   <Image
                     src={src}
                     alt={`${project.title} — ${i + 1}`}
@@ -213,7 +213,7 @@ export default async function ProjectPage({
                 </div>
               ))}
               {project.videos?.map((src, i) => (
-                <div key={`vid-${i}`} className="rounded-xl overflow-hidden">
+                <div key={`vid-${i}`} className="overflow-hidden rounded-xl">
                   <video src={src} controls className="w-full object-cover" />
                 </div>
               ))}
