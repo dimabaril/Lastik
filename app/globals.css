@@ -35,7 +35,9 @@ body {
   -webkit-user-select: none;
 }
 
-img, a, video {
+img,
+a,
+video {
   -webkit-user-drag: none;
   user-drag: none;
 }

@@ -62,17 +62,14 @@ export default function ProjectPreviewCard({
         />
       ) : null}
 
-      <div className="flex items-center justify-between pt-2">
-        <div className="shrink-0 font-unbounded font-light text-base flex items-center gap-2">
+      <div className="flex flex-wrap justify-between pt-2">
+        <div className="shrink-0 font-unbounded font-light text-base  gap-2">
           {title}
           {/* size for debug */}
-          {size && (
-            <span className="text-(--fade-color) absolute top-4 right-5">
-              {size}
-            </span>
-          )}
+          {size && <span className="absolute top-4 right-5">{size}</span>}
         </div>
         <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
+          {/* <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) transition-all duration-300"> */}
           {tags.map((tag, i) => (
             <span key={tag} className="py-0.5 whitespace-nowrap">
               {i === 0 ? "#" : "/"}
