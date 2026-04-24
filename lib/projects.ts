@@ -1253,7 +1253,7 @@ export const projects: Project[] = [
 
   {
     slug: "zvuk-2",
-    size: 4,
+    size: 3.5,
     thumbVideo: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
     thumbVideoPosterImage: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
     title: "Звук 2",
@@ -1268,7 +1268,7 @@ export const projects: Project[] = [
 
   {
     slug: "taxi-v2",
-    size: 4,
+    size: 3.5,
     thumbVideo: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
     thumbVideoPosterImage: "/projects/taxi-v2/thumb/taxi-v2-thumb-poster.jpg",
     title: "Такси под прикрытием / Титры",
@@ -1281,7 +1281,7 @@ export const projects: Project[] = [
   },
   {
     slug: "saint-spring-v3",
-    size: 4,
+    size: 3.5,
     thumbVideo: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
     thumbVideoPosterImage:
       "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-poster.jpg",
@@ -1299,7 +1299,7 @@ export const projects: Project[] = [
 
   {
     slug: "supermarket-trollys-dream-v1",
-    size: 4,
+    size: 3.5,
     thumbVideo:
       "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
     thumbVideoPosterImage:

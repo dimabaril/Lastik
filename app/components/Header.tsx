@@ -10,7 +10,7 @@ import HamburgerButton from "./HamburgerButton";
 const navLinks = [
   { label: "проекты", href: "/projects" },
   { label: "студия", href: "/studio" },
-  { label: "арт-дирекшен курс", href: "/kurs" },
+  { label: "курс арт-дирекшен", href: "/kurs" },
 ];
 
 const navColors = ["var(--nav-color-1)", "var(--nav-color-2)"];
@@ -34,14 +34,14 @@ export default function Header() {
             ? `inset ${navColors[i % 2]} 3px 3px 15px, inset ${navColors[i % 2]} -3px -3px 15px`
             : "none",
       }}
-      className={`${navGlowStyles[i % 2]} px-8 py-2 rounded-full bg-black/70 border-2 transition-all duration-300`}
+      className={`${navGlowStyles[i % 2]} px-8 pt-1.5 pb-2.5 rounded-full bg-black/70 border-2 transition-all duration-300`}
     >
       {link.label}
     </Link>
   ));
 
   return (
-    <header className="uppercase font-arimo text-2xl sticky top-0 z-10">
+    <header className="font-unbounded text-2xl sticky top-0 z-10">
       {/* Logo */}
       <Link href="/">
         <Image
@@ -49,7 +49,7 @@ export default function Header() {
           alt="Logo"
           width={120}
           height={120}
-          className={`${styles.rotate} max-sm:w-13 absolute top-6 left-6 z-10`}
+          className={`${styles.rotate} max-2xl:w-13 absolute top-6 left-6 z-10`}
         />
       </Link>
 

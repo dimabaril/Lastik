@@ -22,14 +22,10 @@ html {
   --font-arimo: var(--font-arimo);
   --font-manrope: var(--font-manrope);
   --font-victor-mono: var(--font-victor-mono);
+  --font-unbounded: var(--font-unbounded);
+  --font-onest: var(--font-onest);
+  --font-druk-cyr-bold-italic: var(--font-druk-cyr-bold-italic);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   background: var(--background);

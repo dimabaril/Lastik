@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
-import { Arimo, Manrope, Victor_Mono } from "next/font/google";
+
+import {
+  Arimo,
+  Manrope,
+  Victor_Mono,
+  Unbounded,
+  // Space_Mono,
+  Onest,
+} from "next/font/google";
+
+import localFont from "next/font/local";
+
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -7,7 +18,6 @@ import Footer from "./components/Footer";
 const arimo = Arimo({
   variable: "--font-arimo",
   subsets: ["latin", "cyrillic"],
-  // weight: ["400", "500", "600", "700"],
 });
 
 const manrope = Manrope({
@@ -18,6 +28,34 @@ const manrope = Manrope({
 const victorMono = Victor_Mono({
   variable: "--font-victor-mono",
   subsets: ["latin", "cyrillic"],
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin", "cyrillic"],
+});
+
+// const spaceMono = Space_Mono({
+//   variable: "--font-space-mono",
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
+
+const onest = Onest({
+  variable: "--font-onest",
+  subsets: ["latin", "cyrillic"],
+});
+
+const drukCyrBoldItalic = localFont({
+  variable: "--font-druk-cyr-bold-italic",
+  display: "swap",
+  src: [
+    {
+      path: "../public/fonts/druk-cyr-bold-italic/druk-cyr-bold-italic.woff2",
+      weight: "700",
+      style: "italic",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} antialiased`}
+      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} ${unbounded.variable} ${onest.variable} ${drukCyrBoldItalic.variable} antialiased`}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />

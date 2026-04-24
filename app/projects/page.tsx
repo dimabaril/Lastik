@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useMemo } from "react";
-// import Aside from "../components/Aside";
+import Aside from "../components/Aside";
 import ProjectsGridFlex from "../components/ProjectsGridFlex";
 import { projects } from "@/lib/projects";
 import { tags, Tag } from "@/lib/tags";
@@ -33,36 +33,36 @@ export default function Projects() {
         {/* ─── Hero ─── */}
         <section className="flex flex-col gap-10 items-center text-center py-15">
           <div className="relative ">
-            <h1 className="font-arimo text-6xl sm:text-8xl leading-18 tracking-tighter [text-shadow:0_0_10px_#fff]">
-              Суперская
+            <h1 className="text-5xl sm:text-8xl  [text-shadow:0_0_10px_#fff] relative z-1">
+              <span className="font-unbounded font-bold">Суперская</span>
               <br />
-              Анимация
+              <span className="font-arimo uppercase">Анимация</span>
             </h1>
             <Image
               src="/cat.svg"
               alt="cat"
-              width={60}
-              height={60}
-              className="absolute top-1 -left-11"
-            />
-            <Image
-              src="/heart.svg"
-              alt="heart"
-              width={60}
-              height={60}
-              className="absolute -top-5 right-22"
+              width={70}
+              height={70}
+              className="absolute bottom-11 -left-4 max-sm:bottom-2 max-sm:-left-10"
             />
             <Image
               src="/smile.svg"
               alt="smile"
-              width={60}
-              height={60}
-              className="absolute -bottom-3 -right-11"
+              width={70}
+              height={70}
+              className="absolute -top-9 right-14 max-sm:-top-12 max-sm:right-22"
+            />
+            <Image
+              src="/heart.svg"
+              alt="heart"
+              width={70}
+              height={70}
+              className="absolute -bottom-3 -right-4 max-sm:-bottom-3 max-sm:-right-11"
             />
           </div>
-          <p className="font-manrope max-w-2xl text-2xl leading-8">
-            Мы создаём визуальное счастье в любой технике анимационную графику
-            для компаний по всему миру
+          <p className="font-arimo max-w-[730px] text-2xl leading-8">
+            Создаём визуальное счастье — от идеи до финального кадра, в любой
+            технике и для задач брендов по всему миру
           </p>
         </section>
         {/* ─── Tag filter ─── */}
@@ -72,7 +72,7 @@ export default function Projects() {
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`border rounded-full px-4 py-2 transition-colors font-victor-mono text-base cursor-pointer ${
+                className={`border rounded-full px-4 py-2 transition-colors font-unbounded font-light text-base cursor-pointer ${
                   selectedTags.has(tag)
                     ? "bg-white text-black border-white"
                     : "border-(--fade-color) text-(--fade-color) hover:border-white hover:text-white"
@@ -83,7 +83,7 @@ export default function Projects() {
             ))}
           </div>
           {filteredProjects.length > 0 && (
-            <p className="text-center text-(--fade-color) mt-4 text-sm">
+            <p className="font-unbounded text-center text-(--fade-color) mt-4 text-sm">
               {filteredProjects.length}{" "}
               {(() => {
                 const n = filteredProjects.length;
@@ -112,7 +112,9 @@ export default function Projects() {
         </section>
       </div>
       {/* ─── Right aside ─── */}
-      {/* <Aside /> */}
+      <div className="hidden 2xl:block">
+        <Aside />
+      </div>
     </div>
   );
 }

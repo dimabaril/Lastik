@@ -32,7 +32,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <div className="font-manrope min-h-screen bg-black text-white max-w-screen-xl mx-auto p-6">
+    <div className="min-h-screen bg-black text-white max-w-screen-xl mx-auto p-6">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"
@@ -44,14 +44,14 @@ export default async function ProjectPage({
       <div className="flex gap-6 items-center mb-6">
         <div className="flex flex-col flex-1 gap-6">
           {/* ─── Title ─── */}
-          <h1 className="text-6xl font-bold italic tracking-tighter">
+          <h1 className="text-6xl font-druk-cyr-bold-italic">
             {project.title}
           </h1>
-          <div className="font-victor-mono text-xl text-(--fade-color) flex justify-between items-center">
+          <div className="text-xl text-(--fade-color) flex justify-between items-center">
             {/* ─── Description ─── */}
-            <p className="">{project.description}</p>
+            <p className="font-victor-mono">{project.description}</p>
             {/* ─── Tags ─── */}
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-wrap font-victor-mono">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -72,26 +72,36 @@ export default async function ProjectPage({
         <div className="w-40 shrink-0 flex flex-col gap-6 pt-2">
           {project.brand && (
             <div>
-              <p className="text-(--fade-color) text-lg mb-1">Бренд</p>
-              <p className="font-bold text-2xl">{project.brand}</p>
+              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                Бренд
+              </p>
+              <p className="font-arimo font-bold text-2xl">{project.brand}</p>
             </div>
           )}
           {project.agency && (
             <div>
-              <p className="text-(--fade-color) text-lg mb-1">Агентство</p>
-              <p className="font-bold text-2xl">{project.agency}</p>
+              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                Агентство
+              </p>
+              <p className="font-arimo font-bold text-2xl">{project.agency}</p>
             </div>
           )}
           {project.production && (
             <div>
-              <p className="text-(--fade-color) text-lg mb-1">Продакшн</p>
-              <p className="font-bold text-2xl">{project.production}</p>
+              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                Продакшн
+              </p>
+              <p className="font-arimo font-bold text-2xl">
+                {project.production}
+              </p>
             </div>
           )}
           {project.client && (
             <div>
-              <p className="text-(--fade-color) text-lg mb-1">Клиент</p>
-              <p className="font-bold text-2xl">{project.client}</p>
+              <p className="font-victor-mono text-(--fade-color) text-lg mb-1">
+                Клиент
+              </p>
+              <p className="font-arimo font-bold text-2xl">{project.client}</p>
             </div>
           )}
         </div>
@@ -114,7 +124,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="text-xl leading-7 whitespace-pre-line"
+                        className="font-onest text-xl leading-7 whitespace-pre-line"
                       >
                         {renderText(project.texts[item.index])}
                       </div>
@@ -175,7 +185,10 @@ export default async function ProjectPage({
       ) : (
         <div className="flex flex-col gap-6 mt-6">
           {project.texts.map((text, i) => (
-            <p key={i} className="text-xl leading-7 whitespace-pre-line">
+            <p
+              key={i}
+              className="font-onest text-xl leading-7 whitespace-pre-line"
+            >
               {renderText(text)}
             </p>
           ))}
