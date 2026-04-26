@@ -27,7 +27,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="mx-auto max-w-screen-xl flex-1 px-3 py-6">
+    <main className="mx-auto max-w-screen-xl flex-1 px-3 py-6">
       {/* ─── Main column ─── */}
       <div className="flex flex-col bg-black text-white">
         {/* ─── Hero ─── */}
@@ -115,6 +115,6 @@ export default function Projects() {
       <div className="hidden 2xl:block">
         <Aside />
       </div>
-    </div>
+    </main>
   );
 }

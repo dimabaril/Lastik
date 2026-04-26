@@ -1,4 +1,4 @@
-import { title } from "process";
+import Image from "next/image";
 
 const WHO_CARDS = [
   {
@@ -95,82 +95,106 @@ const EXERCISES = [
   { color: "bg-[#6B93D6]", label: "Исследование стилей" },
 ];
 
+const CTA_FEATURES = [
+  { color: "bg-[#D4FF00]", label: "5 модулей интенсивного обучения" },
+  { color: "bg-[#D4FF00]", label: "Еженедельные живые сессии" },
+  { color: "bg-[#D4FF00]", label: "Личное менторство и фидбэк" },
+  { color: "bg-[#D4FF00]", label: "Доступ к материалам курса" },
+];
+
 const REVIEWS = [
   {
-    name: "Алёша Постников",
-    text: "Курс перевернул моё представление о профессии. Теперь я думаю не картинками, а концепциями.",
-    avatar: "А",
+    name: "Анна Соколова",
+    desc: "Моушн-дизайнер",
+    text: "Мастерская трансформировала мой подход к анимации. Теперь я думаю как арт-директор, а не просто исполнитель.",
+    pic: "https://placecats.com/200/200",
   },
   {
     name: "Дмитрий Волков",
-    text: "Было много практики и живого общения. Именно то, чего не хватало на других курсах.",
-    avatar: "Д",
+    desc: "Иллюстратор",
+    text: "Я наконец-то научился переводить свой стиль в моушн. Проектный подход и живой фидбэк — это то, что работает.",
+    pic: "https://placecats.com/200/200",
   },
   {
-    name: "Андрей Петухов",
-    text: "После мастерской взяла первый большой проект самостоятельно. Рекомендую всем.",
-    avatar: "А",
+    name: "Елена Петрова",
+    desc: "ДКреативный директор",
+    text: "Культура фидбэка и креативное комьюнити сделали всю разницу. Связи, которые я построила здесь, бесценны.",
+    pic: "https://placecats.com/200/200",
   },
 ];
 
 export default function ArtCourse() {
   return (
-    <main className="flex flex-col gap-20 bg-black text-white">
+    <main className="mx-auto flex max-w-screen-xl flex-1 flex-col gap-20 bg-black p-6 text-white">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
-        <h1 className="font-unbounded text-8xl font-bold">
-          Мастерская
-          <br />
-          <span className="text-[#D4FF00]">
-            арт-
+      <section className="flex items-start">
+        <Image
+          src="/kurs-hero2.png"
+          alt="Hero Image"
+          width={200}
+          height={200}
+          className="rotate-19"
+        />
+        <div className="flex flex-col gap-12">
+          <h1 className="font-unbounded text-8xl font-bold">
+            Мастерская
             <br />
-            дирекшена
-          </span>
-        </h1>
-
-        <div className="flex flex-col gap-8">
-          <p className="font-onest text-lg font-medium text-[#99A1AF]">
-            Практический курс по арт-дирекшену в анимации и вокруг.
-            <br />
-            Для дизайнеров, иллюстраторов, аниматоров и всех, кто хочет выходить
-            за рамки своих профессий, собирать сильные визуальные концепции,
-            докручивать идеи и уверенно их упаковывать.
-          </p>
-          <p className="font-onest text-lg font-medium">
-            5 онлайн-встреч по выходным
-            <br />
-            Скоро стартует 2 поток
-          </p>
-          <button className="font-onest self-start rounded-full bg-[#D4FF00] px-8 py-4 text-lg font-medium text-black">
-            Подать заявку
-          </button>
-        </div>
-
-        <div>
-          <p className="font-unbounded text-2xl font-bold">
-            Настроить арт-дирекшн пайплайн
-          </p>
-          <p className="font-onest text-4xl text-[#99A1AF]">
-            Это база, которая пригодится в любых визуальных проектах (в том
-            числе AI)
-          </p>
+            <span className="text-[#D4FF00]">
+              арт-
+              <br />
+              дирекшена
+            </span>
+          </h1>
+          <div className="flex">
+            <div className="flex flex-col gap-8 pr-8">
+              <p className="font-onest text-lg font-medium text-[#99A1AF]">
+                Практический курс по арт-дирекшену в анимации и вокруг.
+                <br />
+                Для дизайнеров, иллюстраторов, аниматоров и всех, кто хочет
+                выходить за рамки своих профессий, собирать сильные визуальные
+                концепции, докручивать идеи и уверенно их упаковывать.
+              </p>
+              <p className="font-onest text-lg font-medium">
+                5 онлайн-встреч по выходным
+                <br />
+                Скоро стартует 2 поток
+              </p>
+              <button className="font-onest self-start rounded-full bg-[#D4FF00] px-8 py-4 text-lg font-medium text-black">
+                Подать заявку
+              </button>
+            </div>
+            <div className="flex max-w-lg -rotate-7 gap-6 rounded-3xl bg-[#141414] p-8">
+              <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#FEFE1F]" />
+              <div className="flex flex-col gap-3">
+                <p className="font-unbounded text-2xl font-bold">
+                  Настроить арт-дирекшн пайплайн
+                </p>
+                <p className="font-onest text-4xl text-[#99A1AF]">
+                  Это база, которая пригодится в любых визуальных проектах (в
+                  том числе AI)
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── WHO ──────────────────────────────────────────────────────────── */}
       <section className="flex flex-col gap-12">
-        <h2 className="font-unbounded text-5xl font-bold">
+        <h2 className="font-unbounded self-center text-5xl font-bold">
           Кому подойдёт курс
         </h2>
         <div className="grid grid-cols-2 gap-6">
           {WHO_CARDS.map((c) => (
             <div
               key={c.title}
-              className="flex flex-col gap-3 rounded-2xl bg-[#141414] p-8"
+              className="flex gap-6 rounded-2xl bg-[#141414] p-8"
             >
-              <div className="h-16 w-16 rounded-2xl bg-[#FF006E]" />
-              <p className="font-unbounded text-2xl font-bold">{c.title}</p>
-              <p className="font-onest text-lg text-[#99A1AF]">{c.desc}</p>
+              <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#FF006E]" />
+              <div className="flex flex-col gap-3">
+                <p className="font-unbounded text-2xl font-bold">{c.title}</p>
+                <p className="font-onest text-lg text-[#99A1AF]">{c.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -205,7 +229,9 @@ export default function ArtCourse() {
 
       {/* ── HOW ──────────────────────────────────────────────────────────── */}
       <section className="flex flex-col gap-12">
-        <h2 className="font-unbounded text-5xl font-bold">Как проходит курс</h2>
+        <h2 className="font-unbounded self-center text-5xl font-bold">
+          Как проходит курс
+        </h2>
         <div className="grid grid-cols-4 gap-6">
           {HOW_STEPS.map((step, i) => (
             <div
@@ -268,7 +294,7 @@ export default function ArtCourse() {
           </div>
           {/* Text */}
           <div className="flex flex-col gap-12">
-            <h2 className="font-unbounded text-5xl font-bold">
+            <h2 className="font-unbounded self-end text-5xl font-bold">
               Креативные <span className="text-[#D4FF00]">упражнения</span>
             </h2>
             <p className="max-w-md text-[#99A1AF]">
@@ -324,7 +350,7 @@ export default function ArtCourse() {
       </section>
 
       {/* ── COMMUNITY ────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
+      <section className="flex flex-col gap-12 bg-[#141414]">
         <h2 className="font-unbounded text-5xl font-bold">
           Творческое <span className="text-[#FF006E]">комьюнити</span>
         </h2>
@@ -338,14 +364,14 @@ export default function ArtCourse() {
           {COMMUNITY.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 bg-[#1a1a1a80] p-8"
+              className="flex flex-col gap-3 bg-[#1A1A1A] p-8"
             >
               <div
                 className="h-12 w-12 rounded-full"
                 style={{ background: item.color }}
               />
-              <p className="text-lg font-medium">{item.title}</p>
-              <p className="text-lg text-[#99A1AF]">{item.desc}</p>
+              <p className="font-unbounded text-lg font-medium">{item.title}</p>
+              <p className="font-onest text-lg text-[#99A1AF]">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -356,8 +382,6 @@ export default function ArtCourse() {
         <h2 className="font-unbounded text-5xl font-bold">
           Мы будем вести курс <br /> анимационных студий
         </h2>
-
-        {/* <p className="font-onest text-lg text-[#99A1AF]">анимационных студий</p> */}
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {[
@@ -374,11 +398,14 @@ export default function ArtCourse() {
               img: null,
             },
           ].map((person) => (
-            <div
-              key={person.name}
-              className="overflow-hidden rounded-3xl bg-[#1A1A1A]"
-            >
-              <div className="h-72 w-full bg-neutral-800" />
+            <div key={person.name} className="rounded-3xl bg-[#1A1A1A]">
+              <Image
+                src={person.img || "https://placecats.com/400/300"}
+                alt={person.name}
+                width={400}
+                height={300}
+                className="w-full rounded-t-3xl object-cover"
+              />
               <div className="flex flex-col gap-3 p-8">
                 <p className="font-unbounded text-xl font-bold">
                   {person.name}
@@ -412,55 +439,97 @@ export default function ArtCourse() {
       </section> */}
 
       {/* ── REVIEWS ──────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
+      <section className="flex flex-col items-center gap-12 bg-[#0A0A0A]">
         <h2 className="font-unbounded text-5xl font-bold">
           Отзывы <span className="text-[#D4FF00]">участников</span>
         </h2>
-        {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {REVIEWS.map((r) => (
+        <div className="grid grid-cols-3 gap-5">
+          {REVIEWS.map((review) => (
             <div
-              key={r.name}
-              className="flex flex-col gap-4 rounded-2xl bg-[#111] p-6"
+              key={review.name}
+              className="flex flex-col gap-6 rounded-3xl bg-[#141414] p-8"
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ff5599] font-bold text-white">
-                  {r.avatar}
+              <div className="flex items-center gap-6">
+                <Image
+                  src={review.pic}
+                  alt={review.name}
+                  width={65}
+                  height={65}
+                  className="rounded-2xl"
+                />
+                <div>
+                  <p className="font-unbounded text-lg font-bold">
+                    {review.name}
+                  </p>
+                  <p className="font-onest text-lg text-[#6A7282]">
+                    {review.desc}
+                  </p>
                 </div>
-                <p className="font-semibold">{r.name}</p>
               </div>
-              <p className="text-sm text-neutral-300">{r.text}</p>
+              <p className="font-onest text-lg text-[#99A1AF]">
+                &ldquo;{review.text}&ldquo;
+              </p>
             </div>
           ))}
-        </div> */}
+        </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 pb-32">
+      <section className="bg-[#141414]">
         <div className="flex flex-col items-center gap-8 text-center">
-          <h2 className="font-unbounded text-5xl font-bold">
-            Присоединяйтесь
-            <br />к <span className="text-[#D4FF00]">мастерской</span>
-          </h2>
-          {/* <p className="font-druk-cyr-bold-italic text-6xl font-bold text-[#ebf400] italic">
-            ? 000 ₽
-          </p>
-          <a
-            href="#"
-            className="rounded-full bg-[#ebf400] px-12 py-4 text-lg font-bold text-black transition-opacity hover:opacity-80"
-          >
-            Записаться на курс
-          </a>
-          <div className="mt-4 flex gap-8 text-sm text-neutral-500">
-            <a href="#" className="hover:text-white">
-              Декларация
-            </a>
-            <a href="#" className="hover:text-white">
-              Максим
-            </a>
-            <a href="#" className="hover:text-white">
-              Страхование
-            </a>
-          </div> */}
+          <div className="flex flex-col gap-4">
+            <h2 className="font-unbounded text-5xl font-bold">
+              Присоединяйтесь
+              <br />к <span className="text-[#D4FF00]">мастерской</span>
+            </h2>
+            <p className="font-onest text-lg text-[#99A1AF]">
+              Трансформируйте свою творческую практику за 4 недели
+              <br />
+              интенсивного обучения. Организованное количество мест.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-[#1A1A1A] p-8">
+            <div className="flex flex-col gap-8">
+              <p className="font-unbounded text-6xl font-bold text-[#D4FF00]">
+                ? 000 ₽
+              </p>
+
+              <div className="flex flex-col gap-4">
+                <p className="font-onest text-lg text-[#99A1AF]">
+                  5-недельная интенсивная программа
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {CTA_FEATURES.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div
+                        className={`h-2 w-2 shrink-0 rounded-full ${feature.color}`}
+                      />
+                      <p className="font-onest text-lg text-[#D1D5DC]">
+                        {feature.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <a
+                href="#"
+                className="rounded-full bg-[#D4FF00] p-3 text-lg font-semibold text-black transition-opacity hover:opacity-80"
+              >
+                Подать заявку на мастеркую →
+              </a>
+              <div className="flex flex-col gap-2 text-base">
+                <p className="text-[#FF006E]">
+                  Организационное количество мест · Следующий поток стартует 1
+                  апреля 2026
+                </p>
+                <p className="text-[#4A5565]">
+                  Запись доступна · Закрытие в течение 30 дней
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

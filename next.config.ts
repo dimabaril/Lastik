@@ -10,14 +10,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: "https",
-  //       hostname: "placecats.com",
-  //     },
-  //   ],
-  // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placecats.com",
+      },
+    ],
+  },
 
   // for debug on local network
   allowedDevOrigins: ["192.168.1.132"],

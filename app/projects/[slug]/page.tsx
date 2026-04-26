@@ -32,7 +32,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl bg-black p-6 text-white">
+    <main className="mx-auto max-w-screen-xl flex-1 bg-black p-6 text-white">
       {/* ─── Close button ─── */}
       <Link
         href="/projects"
@@ -221,6 +221,6 @@ export default async function ProjectPage({
           )}
         </div>
       )}
-    </div>
+    </main>
   );
 }
