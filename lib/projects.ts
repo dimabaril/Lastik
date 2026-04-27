@@ -65,7 +65,7 @@ export const projects: Project[] = [
     brand: "Love Generation",
     images: [
       "/projects/love-generation/image.png",
-      "/projects/love-generation/lg_sketch.png",
+      "/projects/love-generation/ban.png",
     ],
     videos: [
       "/projects/love-generation/PALETKA_backstage.mp4",

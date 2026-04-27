@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import ProjectPreviewCard from "./ProjectPreviewCard";
 
 const ROW_CAPACITY = 12;
-const GROW_FACTOR = 1.5;
+const GROW_FACTOR = 2;
 
 interface Project {
   title: string;
