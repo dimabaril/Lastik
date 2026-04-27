@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const asidePics = [
+const asidePicksOriginal = [
   "/aside-pics/2 (3).png",
   "/aside-pics/Group 4.png",
   "/aside-pics/SBER_DRUGS_16_v02.png",
@@ -15,7 +15,15 @@ const asidePics = [
   "/aside-pics/мобильник с кубом.png",
   "/aside-pics/осьминог.png",
   "/aside-pics/робот 1.png",
+  "/aside-pics/Mask group (1).png",
+  "/aside-pics/Mask group.png",
+  "/aside-pics/Rectangle 18.png",
+  "/aside-pics/Rectangle 19.png",
+  "/aside-pics/Rectangle 32.png",
+  "/aside-pics/SBER_DRUGS_11_v01 1.png",
 ];
+
+const asidePics = asidePicksOriginal.sort(() => Math.random() - 0.5);
 
 export default function Aside() {
   const trackRef = useRef<HTMLDivElement>(null);
