@@ -42,7 +42,7 @@ export default function VimeoPlayer({
         inView = entry.isIntersecting;
         send(inView ? "play" : "pause");
       },
-      { threshold: 0.3 },
+      { threshold: 0.8 },
     );
 
     observer.observe(iframe);

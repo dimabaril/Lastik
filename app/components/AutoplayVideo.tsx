@@ -23,7 +23,7 @@ export default function AutoplayVideo({
           video.pause();
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.8 },
     );
 
     observer.observe(video);
