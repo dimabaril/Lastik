@@ -45,14 +45,10 @@ export const projects: Project[] = [
     client: "Музей Транспорта Москвы",
     agency: "Red Pepper Films",
     images: [
-      "/projects/trans-museum/image1.png",
-      "/projects/trans-museum/image2.png",
+      // "/projects/trans-museum/image1.png",
+      // "/projects/trans-museum/image2.png",
     ],
-    texts: ["Описание текста 1", "Описание текста 2"],
-    layout: [
-      [{ type: "text", index: 0, cols: 12 }],
-      [{ type: "image", index: 0, cols: 12 }],
-    ],
+    texts: ["Текст"],
   },
   {
     slug: "love-generation",
@@ -426,8 +422,10 @@ export const projects: Project[] = [
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 769844526,
     brand: "R.O.C.S.",
-    images: ["/projects/rocs/1.jpg"],
-    texts: ["rocs1", "rocs2", "rocs3", "rocs4", "rocs5"],
+    images: [
+      // "/projects/rocs/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -723,8 +721,10 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG["3D"], TAG.FILM],
     videoId: 779626942,
 
-    images: ["/projects/mansi/1.jpg"],
-    texts: ["Tradition"],
+    images: [
+      // "/projects/mansi/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -785,8 +785,27 @@ export const projects: Project[] = [
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 872188494,
     brand: "Делимобиль",
-    images: ["/projects/delimobil/1.jpg"],
-    texts: ["Мобильность", "Свобода"],
+    images: [
+      "/projects/delimobil/telegram-cloud-photo-size-2-5433936741535960381-y.jpg",
+      "/projects/delimobil/telegram-cloud-photo-size-2-5436281162319385226-y.jpg",
+      "/projects/delimobil/5E7C4467-0BC4-4E17-A590-7AC6A5511C87.jpeg",
+    ],
+    texts: [
+      "Обычно Делимобиль придерживается строгого и выверенного стиля, но эта партнерская кампания должна была быть более игривой.",
+      "Нас попросили создать мимимишный образ для более экспериментального и бодрого ролика.",
+      "Интересный факт: музыку написал наш креативный директор Леша.",
+    ],
+
+    layout: [
+      [{ type: "text", index: 0, cols: 8 }],
+      [{ type: "text", index: 1, cols: 8 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [
+        { type: "image", index: 1, cols: 6 },
+        { type: "image", index: 2, cols: 6 },
+      ],
+      [{ type: "text", index: 2, cols: 5, colStart: 8 }],
+    ],
   },
 
   {
@@ -885,8 +904,10 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG["3D"], TAG.MUSEUM],
     videoId: 677745860,
     client: "Музей Москвы",
-    images: ["/projects/mosmuseum/1.jpg"],
-    texts: ["История", "Культура"],
+    images: [
+      // "/projects/mosmuseum/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -900,8 +921,10 @@ export const projects: Project[] = [
     videoId: 625784188,
     brand: "Волковская Пивоварня",
 
-    images: ["/projects/volchok/1.jpg"],
-    texts: ["Игра", "Движение"],
+    images: [
+      // "/projects/volchok/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -915,11 +938,9 @@ export const projects: Project[] = [
     videoId: 631969238,
     production: "Zebra Hero",
     images: [
-      "/projects/rambler/1.jpg",
-      "/projects/rambler/2.jpg",
-      "/projects/rambler/3.jpg",
+      // "/projects/rambler/1.jpg"
     ],
-    texts: ["Рамблер 1", "Рамблер 2", "Рамблер 3"],
+    texts: ["Текст"],
   },
 
   {
@@ -1060,10 +1081,9 @@ export const projects: Project[] = [
     client: "Киностудия им. Горького",
 
     images: [
-      "/projects/i-want-to-know-everything/1.jpg",
-      "/projects/i-want-to-know-everything/2.jpg",
+      // "/projects/i-want-to-know-everything/1.jpg"
     ],
-    texts: ["Познание", "Исследование"],
+    texts: ["Текст"],
   },
 
   {
@@ -1077,10 +1097,9 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG["3D_VR"], TAG.CODING, TAG.INSTALLATION],
     videoId: 926255997,
     client: "Департамент туризма Москвы",
-    texts: ["Описание текста 1", "Описание текста 2"],
+    texts: ["Текст"],
     images: [
-      "/projects/gorod-otkritiy/image.png",
-      "/projects/gorod-otkritiy/sketch.png",
+      // "/projects/gorod-otkritiy/image.png"
     ],
   },
 
@@ -1145,8 +1164,10 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 580000376,
     brand: "Green Idea",
-    images: ["/projects/green-idea/1.jpg", "/projects/green-idea/2.jpg"],
-    texts: ["Природа", "Устойчивость"],
+    images: [
+      // "/projects/green-idea/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -1160,11 +1181,11 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG["3D"], TAG.BUMPER],
     videoId: 476301197,
 
-    images: ["/projects/unprincipled/1.jpg"],
-    texts: ["Авангард"],
+    images: [
+      // "/projects/unprincipled/1.jpg"
+    ],
+    texts: ["Текст"],
   },
-
-  //  bigcup
 
   {
     slug: "bigcup",
@@ -1177,11 +1198,9 @@ export const projects: Project[] = [
     videoId: 747611807,
     brand: "Большая кружка",
     images: [
-      "/projects/bigcup/1.jpg",
-      "/projects/bigcup/2.jpg",
-      "/projects/bigcup/3.jpg",
+      // "/projects/bigcup/1.jpg"
     ],
-    texts: ["Большая кружка 1", "Большая кружка 2", "Большая кружка 3"],
+    texts: ["Текст"],
   },
 
   {
@@ -1196,8 +1215,10 @@ export const projects: Project[] = [
     videoId: 644262497,
     client: "Департамент туризма Москвы",
 
-    images: ["/projects/hospitality/1.jpg", "/projects/hospitality/2.jpg"],
-    texts: ["Приём", "Комфорт"],
+    images: [
+      // "/projects/hospitality/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -1257,10 +1278,9 @@ export const projects: Project[] = [
     brand: "VK",
 
     images: [
-      "/projects/presents-fest-2024/1.jpg",
-      "/projects/presents-fest-2024/2.jpg",
+      // "/projects/presents-fest-2024/1.jpg"
     ],
-    texts: ["Праздник", "Радость"],
+    texts: ["Текст"],
   },
 
   {
@@ -1269,13 +1289,14 @@ export const projects: Project[] = [
     thumbVideo: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
     thumbVideoPosterImage: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
     title: "Звук 2",
-    description:
-      "Продолжение музыкального проекта с новыми визуальными решениями",
+    description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 926255997,
     brand: "СБЕР Звук",
-    images: ["/projects/zvuk-2/1.jpg"],
-    texts: ["Эволюция"],
+    images: [
+      // "/projects/zvuk-2/1.jpg"
+    ],
+    texts: ["Текст"],
   },
 
   {
@@ -1288,8 +1309,17 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG.BUMPER],
     videoId: 807825908,
 
-    images: ["/projects/taxi-v2/1.jpg"],
-    texts: ["Скорость", "Удобство"],
+    images: [],
+    texts: [
+      'Открывающие титры для сериала "Такси под прикрытием".',
+      "Векторная анимация. Хотелось сделать персонажей простых, но с классной динамикой.",
+      "Много драк и всякого экшна!",
+    ],
+    layout: [
+      [{ type: "text", index: 0, cols: 6, colStart: 7 }],
+      [{ type: "text", index: 1, cols: 6 }],
+      [{ type: "text", index: 2, cols: 6 }],
+    ],
   },
   {
     slug: "saint-spring-v3",
@@ -1304,10 +1334,9 @@ export const projects: Project[] = [
     brand: "Святой Источник",
 
     images: [
-      "/projects/saint-spring-v3/1.jpg",
-      "/projects/saint-spring-v3/2.jpg",
+      // "/projects/saint-spring-v3/1.jpg"
     ],
-    texts: ["Весна", "Обновление"],
+    texts: ["Текст"],
   },
 
   {
@@ -1325,10 +1354,9 @@ export const projects: Project[] = [
     brand: "Перекрёсток",
 
     images: [
-      "/projects/supermarket-trollys-dream-v1/1.jpg",
-      "/projects/supermarket-trollys-dream-v1/2.jpg",
+      // "/projects/supermarket-trollys-dream-v1/1.jpg"
     ],
-    texts: ["Сюрреализм", "Товары"],
+    texts: ["Текст"],
   },
   {
     slug: "the-skin-v1",
