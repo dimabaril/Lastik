@@ -68,11 +68,10 @@ export default function ProjectPreviewCard({
           {/* size for debug */}
           {size && <span className="absolute top-4 right-5">{size}</span>}
         </div>
-        <div className="font-unbounded flex gap-1 text-base font-light text-(--fade-color) transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
+        <div className="font-unbounded flex divide-x text-base font-light text-(--fade-color) transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
           {/* <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) transition-all duration-300"> */}
-          {tags.map((tag, i) => (
-            <span key={tag} className="py-0.5 whitespace-nowrap">
-              {i === 0 ? "#" : "/"}
+          {tags.map((tag) => (
+            <span key={tag} className="px-1.5 whitespace-nowrap">
               {tag}
             </span>
           ))}

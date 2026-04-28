@@ -30,19 +30,8 @@ export default function Footer() {
     <footer className="z-20 bg-black">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
       <div className="mx-auto grid grid-cols-3 gap-y-6 px-6 pb-18 max-lg:grid-cols-2 max-md:grid-cols-1">
-        <div className="max-lg:hidden"></div>
-        {/* Big name */}
-        <Image
-          src="/footer-lastik.svg"
-          alt="lastik"
-          width={399}
-          height={156}
-          unoptimized
-          className="justify-self-center"
-        />
-
         {/* Social links */}
-        <div className="flex flex-col justify-between gap-4 max-md:justify-self-center md:justify-self-end">
+        <div className="flex flex-col justify-between gap-4 max-md:justify-self-center md:justify-self-start">
           <a
             href={`mailto:${EMAIL}`}
             className="rounded-full bg-[#FFF546] px-8 py-2 text-2xl text-black transition-colors hover:text-(--ref-color-dark)"
@@ -75,6 +64,18 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Big name */}
+        <Image
+          src="/footer-lastik.svg"
+          alt="lastik"
+          width={399}
+          height={156}
+          unoptimized
+          className="justify-self-center"
+        />
+
+        <div className="max-lg:hidden"></div>
       </div>
     </footer>
   );

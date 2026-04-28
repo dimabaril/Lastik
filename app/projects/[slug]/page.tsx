@@ -33,14 +33,14 @@ export default async function ProjectPage({
 
   return (
     <main className="mx-auto w-full max-w-screen-xl flex-1 bg-black p-6 text-white">
-      {/* ─── Sticky Project Header ─── */}
-      <div className="sticky top-25 z-10 flex items-center justify-between border-t-2 border-white bg-black">
+      {/* ─── Project Header ─── */}
+      <div className="flex justify-between border-t-2 border-white bg-black">
         {/* ─── Title ─── */}
-        <h1 className="font-druk-cyr-bold-italic text-6xl">{project.title}</h1>
+        <h1 className="font-druk-cyr-bold-italic text-8xl">{project.title}</h1>
         {/* ─── Close button ─── */}
         <Link
           href="/projects"
-          className="text-3xl text-white transition-opacity hover:opacity-60"
+          className="self-start text-4xl text-white transition-opacity hover:opacity-60"
         >
           ✕
         </Link>
@@ -51,16 +51,13 @@ export default async function ProjectPage({
         <div className="flex gap-6">
           {/* Main content */}
           <div className="flex flex-1 flex-col gap-6">
-            <div className="flex flex-wrap items-center justify-between gap-3 text-xl text-(--fade-color)">
+            <div className="flex flex-wrap items-center justify-end gap-3 text-xl">
               {/* ─── Description ─── */}
-              <p className="font-victor-mono">{project.description}</p>
+              {/* <p className="font-victor-mono">{project.description}</p> */}
               {/* ─── Tags ─── */}
-              <div className="font-victor-mono flex gap-2">
+              <div className="font-victor-mono flex divide-x">
                 {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-(--fade-color) px-3 py-0.5"
-                  >
+                  <span key={tag} className="px-3 py-0.5 whitespace-nowrap">
                     {tag}
                   </span>
                 ))}

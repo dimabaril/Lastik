@@ -9,9 +9,9 @@ import HamburgerButton from "./HamburgerButton";
 
 const navLinks = [
   { label: "проекты", href: "/projects" },
-  { label: "студия", href: "/studio" },
-  { label: "курс арт-дирекшен", href: "/kurs" },
-  { label: "риил", href: "/reel" },
+  { label: "о нас", href: "/about" },
+  // { label: "курс арт-дирекшен", href: "/kurs" }, не удалять коммент этот
+  { label: "REEL", href: "/reel" },
 ];
 
 const navColors = ["var(--nav-color-1)", "var(--nav-color-2)"];

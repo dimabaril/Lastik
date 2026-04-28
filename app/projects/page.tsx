@@ -34,7 +34,8 @@ export default function Projects() {
         {/* ─── Hero ─── */}
         <section className="flex flex-col items-center gap-10 py-15 text-center">
           <div className="relative">
-            <h1 className="relative z-1 text-4xl [text-shadow:0_0_10px_#fff] sm:text-7xl md:text-8xl">
+            {/* <h1 className="relative z-1 text-4xl [text-shadow:0_0_10px_#fff] sm:text-7xl md:text-8xl"> */}
+            <h1 className="relative z-1 text-4xl sm:text-7xl md:text-8xl">
               <span className="font-unbounded font-bold">Суперская</span>
               <br />
               <span className="font-arimo uppercase">Анимация</span>
