@@ -69,7 +69,7 @@ export default function Header() {
 
         {/* Nav links — row on desktop, column dropdown on mobile */}
         <div
-          className={`flex max-w-screen-xl flex-1 items-end gap-2 p-6 transition-all duration-300 max-lg:flex-col lg:mx-auto ${isOpen ? "max-lg:max-h-64" : "max-lg:max-h-0 max-lg:p-[0_24_0_24]"}`}
+          className={`flex max-w-screen-xl flex-1 items-end gap-2 p-6 transition-all duration-500 max-lg:flex-col lg:mx-auto ${isOpen ? "max-lg:max-h-64" : "max-lg:max-h-0 max-lg:p-[0_24_0_24]"}`}
         >
           {links}
         </div>

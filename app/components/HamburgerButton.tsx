@@ -12,13 +12,19 @@ export default function HamburgerButton({
       aria-label="Toggle menu"
     >
       <span
-        className={`block h-0.5 w-full origin-center bg-white transition-[transform,box-shadow] duration-300 group-hover:[box-shadow:0_0_6px_2px_rgba(255,255,255,0.8)] ${isOpen ? "translate-y-2.5 rotate-45" : ""}`}
+        className="block h-0.5 w-full origin-center bg-white transition-[transform,box-shadow] duration-300 ease-in-out group-hover:[box-shadow:0_0_6px_2px_rgba(255,255,255,0.8)]"
+        style={{
+          transform: isOpen ? "translateY(10px) rotate(45deg)" : "none",
+        }}
       />
       <span
         className={`block h-0.5 w-full bg-white transition-[opacity,box-shadow] duration-300 group-hover:[box-shadow:0_0_6px_2px_rgba(255,255,255,0.8)] ${isOpen ? "opacity-0" : ""}`}
       />
       <span
-        className={`block h-0.5 w-full origin-center bg-white transition-[transform,box-shadow] duration-300 group-hover:[box-shadow:0_0_6px_2px_rgba(255,255,255,0.8)] ${isOpen ? "-translate-y-2.5 -rotate-45" : ""}`}
+        className="block h-0.5 w-full origin-center bg-white transition-[transform,box-shadow] duration-300 ease-in-out group-hover:[box-shadow:0_0_6px_2px_rgba(255,255,255,0.8)]"
+        style={{
+          transform: isOpen ? "translateY(-10px) rotate(-45deg)" : "none",
+        }}
       />
     </button>
   );
