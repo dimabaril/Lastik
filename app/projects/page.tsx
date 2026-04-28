@@ -1,30 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useMemo } from "react";
+// import { useState, useMemo } from "react";
 import Aside from "../components/Aside";
 import ProjectsGridFlex from "../components/ProjectsGridFlex";
 import { projects } from "@/lib/projects";
-import { tags, Tag } from "@/lib/tags";
+// import { tags, Tag } from "@/lib/tags";
 
 export default function Projects() {
-  const [selectedTags, setSelectedTags] = useState<Set<Tag>>(new Set());
+  // const [selectedTags, setSelectedTags] = useState<Set<Tag>>(new Set());
 
   // Filter projects
-  const filteredProjects = useMemo(() => {
-    if (selectedTags.size === 0) return projects;
-    return projects.filter((p) => p.tags.some((tag) => selectedTags.has(tag)));
-  }, [selectedTags]);
+  // const filteredProjects = useMemo(() => {
+  //   if (selectedTags.size === 0) return projects;
+  //   return projects.filter((p) => p.tags.some((tag) => selectedTags.has(tag)));
+  // }, [selectedTags]);
 
-  const toggleTag = (tag: Tag) => {
-    const newTags = new Set(selectedTags);
-    if (newTags.has(tag)) {
-      newTags.delete(tag);
-    } else {
-      newTags.add(tag);
-    }
-    setSelectedTags(newTags);
-  };
+  // const toggleTag = (tag: Tag) => {
+  //   const newTags = new Set(selectedTags);
+  //   if (newTags.has(tag)) {
+  //     newTags.delete(tag);
+  //   } else {
+  //     newTags.add(tag);
+  //   }
+  //   setSelectedTags(newTags);
+  // };
 
   return (
     <main className="mx-auto max-w-screen-xl flex-1 px-3 py-6">
@@ -65,8 +65,9 @@ export default function Projects() {
             технике и для задач брендов по всему миру
           </p>
         </section>
+
         {/* ─── Tag filter ─── */}
-        <section className="py-6">
+        {/* <section className="py-6">
           <div className="flex flex-wrap justify-center gap-3">
             {tags.map((tag) => (
               <button
@@ -96,11 +97,13 @@ export default function Projects() {
               })()}
             </p>
           )}
-        </section>
+        </section> */}
+
         {/* ─── Projects grid ─── */}
         <section className="">
           <ProjectsGridFlex
-            projects={filteredProjects.map((project) => ({
+            // projects={filteredProjects.map((project) => ({
+            projects={projects.map((project) => ({
               title: project.title,
               thumbVideo: project.thumbVideo,
               thumbVideoPosterImage: project.thumbVideoPosterImage,
