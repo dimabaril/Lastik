@@ -109,7 +109,7 @@ export const projects: Project[] = [
       // "/projects/vk-neo/rob1.png",
       "/projects/vk-neo/rob3.jpeg",
       "/projects/vk-neo/rob2.jpeg",
-      "/projects/vk-neo/unicorn.jpg",
+      "/projects/vk-neo/unicorn.png",
       "/projects/vk-neo/dragon.png",
       "/projects/vk-neo/ccc 1.png",
     ],
