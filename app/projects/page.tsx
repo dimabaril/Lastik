@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 // import { useState, useMemo } from "react";
-import Aside from "../components/Aside";
+import dynamic from "next/dynamic";
+const Aside = dynamic(() => import("../components/Aside"), { ssr: false });
 import ProjectsGridFlex from "../components/ProjectsGridFlex";
 import { projects } from "@/lib/projects";
 // import { tags, Tag } from "@/lib/tags";
