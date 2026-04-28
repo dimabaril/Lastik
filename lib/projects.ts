@@ -1,5 +1,142 @@
 import { Tag, TAG } from "./tags";
 
+// Title: Музей Транспорта Москвы
+// Tags: 2D / 3D / AI / музей
+// Client: Музей Транспорта Москвы
+// Agency: Red Pepper Films
+
+// Title: СБЕР / Оплата улыбкой
+// Tags: 3D / реклама
+// Brand: СБЕР
+// Agency: MosAIc
+
+// Title: ВТБ / Переводы
+// Tags: 3D / 2D эффекты / реклама
+// Brand: ВТБ
+// Agency: MosAIc
+
+// Title: МТС / Neku-sai
+// Tags: 2D / клип
+// Brand: МТС
+// Production: Human
+
+// Title: Яндекс / Инклюзия
+// Tags: 2D / имидж
+// Brand: Яндекс
+
+// Title: MAIL.RU / Ребрендинг
+// Tags: 3D / реклама
+// Brand: mail.ru
+
+// Title: Яндекс / Шедеврум
+// Tags: AI / клип
+// Brand: Яндекс
+// Production: Рабочее название
+
+// Title: VK / Маруся x NEO
+// Tags: 2D / 3D / реклама
+// Brand: VK
+
+// Title: Делимобиль
+// Tags: 3D / реклама
+// Brand: Делимобиль
+
+// Title: Love Generation
+// Tags: 3D / реклама
+// Brand: Love Generation
+
+// Title: VK / Mini Apps
+// Tags: 3D / 2D эффекты / реклама
+// Brand: VK
+
+// Title: СБЕР / Кредит 5%
+// Tags: 2D / моушн / реклама
+// Brand: СБЕР
+// Production: Hype
+
+// Title: СБЕР / Звук
+// Tags: 2D / 3D / реклама / клип
+// Brand: СБЕР Звук
+
+// Title: Такси под прикрытием / Титры
+// Tags: 2D / заставка
+
+// Title: Волковская Пивоварня
+// Tags: 2D / реклама
+// Brand: Волковская Пивоварня
+
+// Title: Уралсиб / HR
+// Tags: 2D / реклама
+// Brand: Уралсиб
+
+// Title: R.O.C.S.
+// Tags: 3D / реклама
+// Brand: R.O.C.S.
+
+// Title: Фестиваль Дух огня / Мифы Манси
+// Tags: 2D / 3D / фильм
+
+// Title: СБЕР / Еаптека
+// Tags: 3D / реклама
+// Brand: ЕАПТЕКА
+// Production: Zebra Hero
+
+// Title: Green Idea
+// Tags: 2D / реклама
+// Brand: Green Idea
+
+// Title: Осторожно, Собчак!
+// Tags: 2D / заставка
+// Client: Осторожно, Собчак!
+
+// Title: Хочу всё знать!
+// Tags: 2D / заставка
+// Client: Киностудия им. Горького
+
+// Title: Рамблер
+// Tags: 3D / реклама
+// Production: Zebra Hero
+
+// Title: Музей Москвы
+// Tags: 2D / 3D / музей
+// Client: Музей Москвы
+
+// Title: Мостуризм / 6 историй
+// Tags: 2D / фильм
+// Client: Департамент туризма Москвы
+
+// Title: VK / Фестиваль подарков
+// Tags: 3D / реклама
+// Brand: VK
+
+// Title: Большая Кружка
+// Tags: 3D / 2D эффекты / реклама
+// Brand: Большая кружка
+
+// Title: Беспринципные / Титры
+// Tags: 2D / 3D / заставка
+
+// Title: Святой Источник
+// Tags: stopmotion / реклама
+// Brand: Святой Источник
+
+// Title: ТЦ Ривьера / Шкура
+// Tags: инсталляция
+// Client: XScompany, ТЦ Riviera
+
+// Title: Перекрёсток / Тележкин сон
+// Tags: инсталляция
+// Client: X5 Retail Group
+// Brand: Перекрёсток
+
+// Title: Город открытий
+// Tags: 2D / 3D-VR / кодинг / инсталляция
+// Client: Департамент туризма Москвы
+
+// Title: Звук-2
+// Tags: 2D / реклама
+// Brand: Сбер Звук
+
 export type LayoutItem = {
   type: "text" | "image" | "video" | "vimeo";
   index: number;
@@ -39,9 +176,11 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/trans-museum/thumb/trans_museum-poster.jpg",
     title: "Музей Транспорта Москвы",
-    description: "Описание проекта",
-    tags: [TAG.MUSEUM, TAG.TRANSPORT],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.AI, TAG.MUSEUM],
     videoId: 123456789,
+    client: "Музей Транспорта Москвы",
+    agency: "Red Pepper Films",
     images: [
       "/projects/trans-museum/image1.png",
       "/projects/trans-museum/image2.png",
@@ -59,8 +198,8 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/love-generation/thumb/love_generation-thumb-poster.jpg",
     title: "Love Generation",
-    description: "Рекламный ролик \\ 30 Сек",
-    tags: [TAG["2D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 926255997,
     brand: "Love Generation",
     images: [
@@ -102,8 +241,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
     thumbVideoPosterImage: "/projects/vk-neo/thumb/NEO_pw-poster.jpg",
     title: "VK / Маруся x NEO",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.MOTION],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING],
     videoId: 889904948,
     brand: "VK",
     images: [
@@ -144,11 +283,11 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
     title: "СБЕР / Оплата улыбкой",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 1182969480,
     brand: "СБЕР",
-    agency: "ЭMosAIc",
+    agency: "MosAIc",
     images: [
       "/projects/sber-terminal/term-2-1.jpg",
       "/projects/sber-terminal/term-2-3.jpg",
@@ -203,8 +342,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
     thumbVideoPosterImage: "/projects/vtb-1/thumb/vtb-1-thumb-poster.jpg",
     title: "ВТБ / Переводы",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     videoId: 1054459009,
     videoHash: "b5699500f6",
     brand: "ВТБ",
@@ -256,8 +395,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
     thumbVideoPosterImage: "/projects/vk-mini-app/thumb/VK_MiniApps-poster.jpg",
     title: "VK / Mini Apps",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     videoId: 814924190,
     // videoHash: "b5699500f6",
     brand: "VK",
@@ -420,11 +559,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/rocs/thumb/rocs.webm",
     thumbVideoPosterImage: "/projects/rocs/thumb/rocs-poster.jpg",
     title: "R.O.C.S.",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 769844526,
     brand: "R.O.C.S.",
-
     images: ["/projects/rocs/1.jpg"],
     texts: ["rocs1", "rocs2", "rocs3", "rocs4", "rocs5"],
   },
@@ -435,10 +573,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/zvuk/thumb/zvuk-thumb.webm",
     thumbVideoPosterImage: "/projects/zvuk/thumb/zvuk-thumb-poster.jpg",
     title: "СБЕР / Звук",
-    description: "Победитель G8 Creative Awards в категории «Анимация»",
-    tags: [TAG["2D"], TAG.MOTION],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING, TAG.CLIP],
     videoId: 718359494,
-    brand: "СБЕР",
+    brand: "СБЕР Звук",
     images: [
       "/projects/zvuk/zvuk_1.png",
 
@@ -556,8 +694,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/mts/thumb/mts-thumb.webm",
     thumbVideoPosterImage: "/projects/mts/thumb/mts-thumb-poster.jpg",
     title: "МТС / Neku-sai",
-    description: "Телеком реклама с динамичными 3D переходами и эффектами",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["2D"], TAG.CLIP],
     videoId: 1031579586,
     brand: "МТС",
     production: "Human",
@@ -621,7 +759,7 @@ export const projects: Project[] = [
     title: "Яндекс / Инклюзия",
     description:
       "Технологичный проект поисковой системы с абстрактными элементами",
-    tags: [TAG["2D"], TAG.MOTION],
+    tags: [TAG["2D"], TAG.IMAGE],
     videoId: 1054472202,
     brand: "Яндекс",
 
@@ -667,7 +805,7 @@ export const projects: Project[] = [
     thumbVideo: "/projects/mail-ru/thumb/mail-thumb.webm",
     thumbVideoPosterImage: "/projects/mail-ru/thumb/mail-thumb-poster.jpg",
     title: "MAIL.RU / Ребрендинг ",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 1054447127,
     brand: "mail.ru",
@@ -718,12 +856,12 @@ export const projects: Project[] = [
     thumbVideo: "/projects/mansi/thumb/mansi-thumb.webm",
     thumbVideoPosterImage: "/projects/mansi/thumb/mansi-thumb-poster.jpg",
     title: "Фестиваль Дух огня / Мифы Манси",
-    description: "Художественный проект о культуре и традициях",
-    tags: [TAG["2D"], TAG.ART],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.FILM],
     videoId: 779626942,
 
     images: ["/projects/mansi/1.jpg"],
-    texts: ["Традиция"],
+    texts: ["Tradition"],
   },
 
   {
@@ -732,7 +870,7 @@ export const projects: Project[] = [
     thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
     thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
     title: "СБЕР / Еаптека",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 676229349,
 
@@ -780,8 +918,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/delimobil/thumb/delimobil.webm",
     thumbVideoPosterImage: "/projects/delimobil/thumb/delimobil-poster.jpg",
     title: "Делимобиль",
-    description: "Смешная и оригинальная реклама сервиса каршеринга",
-    tags: [TAG["2D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 872188494,
     brand: "Делимобиль",
     images: ["/projects/delimobil/1.jpg"],
@@ -794,9 +932,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/sobchak/thumb/sobchak_thumb.webm",
     thumbVideoPosterImage: "/projects/sobchak/thumb/sobchak_thumb-poster.jpg",
     title: "Осторожно, Собчак!",
-    description: "Бла бла бла",
-    tags: [TAG["2D"], TAG.MOTION],
+    description: "Description",
+    tags: [TAG["2D"], TAG.BUMPER],
     videoId: 404077121,
+    client: "Осторожно, Собчак!",
 
     images: [
       "/projects/sobchak/1 gif1.gif",
@@ -879,9 +1018,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/mosmuseum/thumb/mosmuseum-thumb-poster.jpg",
     title: "Музей Москвы",
-    description: "Культурный проект о истории и искусстве столицы",
-    tags: [TAG["2D"], TAG.ART],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.MUSEUM],
     videoId: 677745860,
+    client: "Музей Москвы",
     images: ["/projects/mosmuseum/1.jpg"],
     texts: ["История", "Культура"],
   },
@@ -892,9 +1032,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/volchok/thumb/volchok-thumb.webm",
     thumbVideoPosterImage: "/projects/volchok/thumb/volchok-thumb-poster.jpg",
     title: "Волковская Пивоварня",
-    description: "Авторское произведение с игривой и динамичной анимацией",
-    tags: [TAG["2D"], TAG.AUTHOR],
+    description: "Description",
+    tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 625784188,
+    brand: "Волковская Пивоварня",
 
     images: ["/projects/volchok/1.jpg"],
     texts: ["Игра", "Движение"],
@@ -906,10 +1047,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/rambler/thumb/rambler_thumb.webm",
     thumbVideoPosterImage: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
     title: "Рамблер",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 631969238,
-    brand: "Рамблер",
+    production: "Zebra Hero",
     images: [
       "/projects/rambler/1.jpg",
       "/projects/rambler/2.jpg",
@@ -925,12 +1066,12 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/sber-high-res/thumb/sber-high-res-thumb-poster.jpg",
     title: "СБЕР / Кредит 5%",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["2D"], TAG.MOTION, TAG.ADVERTISING],
     videoId: 838986118,
-    brand: "Сбер",
+    brand: "СБЕР",
 
-    production: "Hype ???",
+    production: "Hype",
 
     images: [
       "/projects/sber-high-res/1.png",
@@ -1050,9 +1191,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb-poster.jpg",
     title: "Хочу всё знать!",
-    description: "Авторский проект о любознательности и исследованиях",
-    tags: [TAG["2D"], TAG.AUTHOR],
+    description: "Description",
+    tags: [TAG["2D"], TAG.BUMPER],
     videoId: 575844837,
+    client: "Киностудия им. Горького",
 
     images: [
       "/projects/i-want-to-know-everything/1.jpg",
@@ -1068,10 +1210,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/gorod-otkritiy/thumb/gorod_otkritiy-poster.jpg",
     title: "Город открытий",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D_VR"], TAG.CODING, TAG.INSTALLATION],
     videoId: 926255997,
-
+    client: "Департамент туризма Москвы",
     texts: ["Описание текста 1", "Описание текста 2"],
     images: [
       "/projects/gorod-otkritiy/image.png",
@@ -1085,7 +1227,7 @@ export const projects: Project[] = [
     thumbVideo: "/projects/uralsib/thumb/uralsib-thumb.webm",
     thumbVideoPosterImage: "/projects/uralsib/thumb/uralsib-thumb-poster.jpg",
     title: "Уралсиб / HR",
-    description: "Бла бла бла",
+    description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 831559447,
     brand: "Уралсиб",
@@ -1136,10 +1278,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/green-idea/thumb/green-idea-thumb-poster.jpg",
     title: "Green Idea",
-    description: "Экологичный проект с зелёной эстетикой и плавными переходами",
-    tags: [TAG["2D"], TAG.MOTION],
+    description: "Description",
+    tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 580000376,
-    // brand: "Green Idea",
+    brand: "Green Idea",
     images: ["/projects/green-idea/1.jpg", "/projects/green-idea/2.jpg"],
     texts: ["Природа", "Устойчивость"],
   },
@@ -1151,8 +1293,8 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/unprincipled/thumb/unprincipled-thumb-poster.jpg",
     title: "Беспринципные / Титры",
-    description: "Авторское бесцеремонное произведение с авангардным стилем",
-    tags: [TAG["2D"], TAG.AUTHOR],
+    description: "Description",
+    tags: [TAG["2D"], TAG["3D"], TAG.BUMPER],
     videoId: 476301197,
 
     images: ["/projects/unprincipled/1.jpg"],
@@ -1167,9 +1309,10 @@ export const projects: Project[] = [
     thumbVideo: "/projects/bigcup/thumb/bigcup_thumb.webm",
     thumbVideoPosterImage: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
     title: "Большая кружка",
-    description: "Бла бла бла",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     videoId: 747611807,
+    brand: "Большая кружка",
     images: [
       "/projects/bigcup/1.jpg",
       "/projects/bigcup/2.jpg",
@@ -1185,9 +1328,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/hospitality/thumb/hospitality-thumb-poster.jpg",
     title: "Мостуризм / 6 историй",
-    description: "Проект гостеприимства с объёмной 3D графикой",
-    tags: [TAG["3D"], TAG.MOTION],
+    description: "Description",
+    tags: [TAG["2D"], TAG.FILM],
     videoId: 644262497,
+    client: "Департамент туризма Москвы",
 
     images: ["/projects/hospitality/1.jpg", "/projects/hospitality/2.jpg"],
     texts: ["Приём", "Комфорт"],
@@ -1199,8 +1343,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/shedevrum/thumb/ya_shedevrium.webm",
     thumbVideoPosterImage: "/projects/shedevrum/thumb/ya_shedevrium-poster.jpg",
     title: "Яндекс / Шедеврум",
-    description: "Бла бла бла",
-    tags: [TAG["2D"], TAG.ART],
+    description: "Description",
+    tags: [TAG.AI, TAG.CLIP],
     videoId: 1165318329,
     videoHash: "774fccab78",
     brand: "Яндекс",
@@ -1243,8 +1387,8 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb-poster.jpg",
     title: "VK / Фестиваль подарков",
-    description: "Фестиваль подарков с праздничной и яркой атмосферой",
-    tags: [TAG["2D"], TAG.EVENT],
+    description: "Description",
+    tags: [TAG["3D"], TAG.ADVERTISING],
     videoId: 1091235348,
     videoHash: "4a6c52f315",
     brand: "VK",
@@ -1264,9 +1408,9 @@ export const projects: Project[] = [
     title: "Звук 2",
     description:
       "Продолжение музыкального проекта с новыми визуальными решениями",
-    tags: [TAG["2D"], TAG.MOTION],
+    tags: [TAG["2D"], TAG.ADVERTISING],
     videoId: 926255997,
-    brand: "Звук",
+    brand: "СБЕР Звук",
     images: ["/projects/zvuk-2/1.jpg"],
     texts: ["Эволюция"],
   },
@@ -1277,8 +1421,8 @@ export const projects: Project[] = [
     thumbVideo: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
     thumbVideoPosterImage: "/projects/taxi-v2/thumb/taxi-v2-thumb-poster.jpg",
     title: "Такси под прикрытием / Титры",
-    description: "Реклама сервиса такси с быстрым темпом и динамикой",
-    tags: [TAG["2D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG["2D"], TAG.BUMPER],
     videoId: 807825908,
 
     images: ["/projects/taxi-v2/1.jpg"],
@@ -1291,9 +1435,10 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-poster.jpg",
     title: "Святой Источник",
-    description: "Весенний проект с природным 3D дизайном и мягкими цветами",
-    tags: [TAG["3D"], TAG.ADVERTISING],
+    description: "Description",
+    tags: [TAG.STOPMOTION, TAG.ADVERTISING],
     videoId: 681815409,
+    brand: "Святой Источник",
 
     images: [
       "/projects/saint-spring-v3/1.jpg",
@@ -1310,11 +1455,11 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb-poster.jpg",
     title: "Перекрёсток / Тележкин сон",
-    description: "Авторское произведение о мире супермаркетов и потребления",
-    tags: [TAG["3D"], TAG.AUTHOR],
+    description: "Description",
+    tags: [TAG.INSTALLATION],
     videoId: 641474779,
-    brand: "Перекрёсток",
     client: "X5 Retail Group",
+    brand: "Перекрёсток",
 
     images: [
       "/projects/supermarket-trollys-dream-v1/1.jpg",
@@ -1329,8 +1474,8 @@ export const projects: Project[] = [
     thumbVideoPosterImage:
       "/projects/the-skin-v1/thumb/the-skin-v1-thumb-poster.jpg",
     title: "ТЦ Ривьера / Шкура",
-    description: "Бла бла бла",
-    tags: [TAG["2D"], TAG.AUTHOR],
+    description: "Description",
+    tags: [TAG.INSTALLATION],
     videoId: 515761986,
     client: "XScompany, ТЦ Riviera",
     images: [
@@ -1390,22 +1535,6 @@ export const projects: Project[] = [
       [{ type: "image", index: 15, cols: 12 }],
     ],
   },
-
-  // {
-  //   slug: "stranneyshie-horiz",
-  //   size: 4,
-  //   thumbVideo:
-  //     "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb.webm",
-  //   thumbVideoPosterImage:
-  //     "/projects/stranneyshie-horiz/thumb/stranneyshie-horiz-thumb-poster.jpg",
-  //   title: "Странейшие",
-  //   description: "Авторский проект необычных идей и странных историй",
-  //   tags: [TAG["2D"], TAG.AUTHOR],
-  //   videoId: 926255997,
-
-  //   images: ["/projects/stranneyshie-horiz/1.jpg"],
-  //   texts: ["Фантазия"],
-  // },
 ];
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
