@@ -7,8 +7,8 @@ export default function Studio() {
       <Image
         src="/about-team.png"
         alt="Lastik team"
-        width={800}
-        height={600}
+        width={1656}
+        height={1090}
         className="w-full"
       />
     </div>
