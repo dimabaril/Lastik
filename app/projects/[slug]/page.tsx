@@ -33,18 +33,21 @@ export default async function ProjectPage({
 
   return (
     <main className="mx-auto w-full max-w-screen-xl flex-1 bg-black p-6 text-white">
-      {/* ─── Close button ─── */}
-      <Link
-        href="/projects"
-        className="fixed top-6 right-8 z-50 text-3xl text-white transition-opacity hover:opacity-60"
-      >
-        ✕
-      </Link>
+      {/* ─── Sticky Project Header ─── */}
+      <div className="sticky top-25 z-10 flex items-center justify-between border-t-2 border-white bg-black">
+        {/* ─── Title ─── */}
+        <h1 className="font-druk-cyr-bold-italic text-6xl">{project.title}</h1>
+        {/* ─── Close button ─── */}
+        <Link
+          href="/projects"
+          className="text-3xl text-white transition-opacity hover:opacity-60"
+        >
+          ✕
+        </Link>
+      </div>
 
       {/* Upper block */}
       <div className="mb-6 flex flex-col gap-6">
-        {/* ─── Title ─── */}
-        <h1 className="font-druk-cyr-bold-italic text-6xl">{project.title}</h1>
         <div className="flex gap-6">
           {/* Main content */}
           <div className="flex flex-1 flex-col gap-6">
