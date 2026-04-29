@@ -77,6 +77,13 @@ export default function Footer() {
 
         <div className="max-lg:hidden"></div>
       </div>
+      <div
+        className="h-5"
+        style={{
+          background:
+            "linear-gradient(224.76deg, #CB8BFF 31.55%, #FF8D8D 110.48%)",
+        }}
+      ></div>
     </footer>
   );
 }
