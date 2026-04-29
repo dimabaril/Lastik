@@ -111,10 +111,11 @@ export default async function ProjectPage({
             )}
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           {/* svg */}
           <Image
-            src="/arrow.svg"
+            // src="/arrow.svg"
+            src="/arrow.png"
             alt="arrow"
             width={29}
             height={40}
