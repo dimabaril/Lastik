@@ -41,7 +41,8 @@ export const projects: Project[] = [
     title: "Музей Транспорта Москвы",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.AI, TAG.MUSEUM],
-    videoId: 123456789,
+    videoId: 1187717775,
+    videoHash: "7a46d91482",
     client: "Музей Транспорта Москвы",
     agency: "Red Pepper Films",
     images: [
@@ -59,7 +60,7 @@ export const projects: Project[] = [
     title: "Love Generation",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 926255997,
+    videoId: 981913828,
     brand: "Love Generation",
     images: [
       "/projects/love-generation/image.png",
@@ -653,8 +654,8 @@ export const projects: Project[] = [
         { type: "image", index: 1, cols: 6 },
       ],
       [{ type: "image", index: 2, cols: 12 }],
-      [{ type: "vimeo", index: 0, cols: 12 }],
       [{ type: "text", index: 3, cols: 7, colStart: 6 }],
+      [{ type: "vimeo", index: 0, cols: 12 }],
       [{ type: "image", index: 3, cols: 12 }],
       [{ type: "image", index: 4, cols: 12 }],
     ],

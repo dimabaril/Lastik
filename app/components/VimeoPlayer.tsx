@@ -52,7 +52,7 @@ export default function VimeoPlayer({
     };
   }, []);
 
-  const src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=0&muted=1&player_id=0&app_id=58479&api=1${videoHash ? `&h=${videoHash}` : ""}`;
+  const src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=0&muted=1&loop=1&player_id=0&app_id=58479&api=1${videoHash ? `&h=${videoHash}` : ""}`;
 
   return (
     <div
