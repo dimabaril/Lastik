@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
-import AutoplayVideo from "@/app/components/AutoplayVideo";
+import VideoPlayer from "@/app/components/VideoPlayer";
 import { projects, type Project } from "@/lib/projects";
 
 function renderText(text: string) {
@@ -157,7 +157,7 @@ export default async function ProjectPage({
                         style={style}
                         className="overflow-hidden rounded-xl"
                       >
-                        <AutoplayVideo
+                        <VideoPlayer
                           src={project.videos?.[item.index]}
                           className="w-full object-cover"
                         />
