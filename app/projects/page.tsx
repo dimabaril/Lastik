@@ -115,6 +115,20 @@ export default function Projects() {
             }))}
           />
         </section>
+
+        <section>
+          <p className="font-unbounded text-center text-5xl font-extrabold">
+            пишите нам!
+          </p>
+
+          <Image
+            src="/about-team.png"
+            alt="Lastik team"
+            width={1656}
+            height={1090}
+            className="mx-auto w-2/3"
+          />
+        </section>
       </div>
       {/* ─── Right aside ─── */}
       <div className="hidden 2xl:block">
