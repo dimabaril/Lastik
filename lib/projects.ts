@@ -80,7 +80,7 @@ export const projects: Project[] = [
       // "Вся история крутится вокруг self-care, лёгкой самоиронии и уверенности в себе.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [
         // { type: "image", index: 0, cols: 5 },
@@ -120,7 +120,7 @@ export const projects: Project[] = [
       "Ролик начался с покадрового аниматика, чтобы выстроить ритм, а затем превратился в детализированную 3D-анимацию.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "image", index: 0, cols: 12 }],
       [
@@ -172,7 +172,7 @@ export const projects: Project[] = [
       "Проект был реализован всего за две недели — от раскадровки до финального рендера.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [
         { type: "image", index: 0, cols: 4 },
         { type: "image", index: 1, cols: 4 },
@@ -227,7 +227,7 @@ export const projects: Project[] = [
       "По настроению в начале плотно ориентировались на Spider-Verse, но постепенно стиль настраивался под визуал ВТБ.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "video", index: 0, cols: 12 }],
       [{ type: "text", index: 2, cols: 7, colStart: 6 }],
@@ -332,7 +332,7 @@ export const projects: Project[] = [
       "В результате получился яркий, бодрый ролик, который мы прям очень любим.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [
         { type: "image", index: 0, cols: 3 },
@@ -486,7 +486,7 @@ export const projects: Project[] = [
       "Тема кампании «Уважай уши» вдохновила нас на формат коллаба с участием разных художников, каждый из которых по-своему высказался на тему ушей.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "image", index: 0, cols: 12 }],
       [{ type: "image", index: 1, cols: 12 }],
@@ -582,7 +582,7 @@ export const projects: Project[] = [
       "Клип и короткие ролики построены на эстетике тикток-контента — будто они сняты на айфон в спальне, которую делишь с младшим братом, и смонтированы прямо на телефоне. Этот «домашний» язык помог сделать виртуальную группу ближе и понятнее аудитории.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
 
       [
@@ -645,7 +645,7 @@ export const projects: Project[] = [
       "Вторая история — про дедушку, который уже почти не видит, но очень любит готовить. Он собирается испечь пирог для внуков, но не может сам прочитать надписи на упаковках.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "text", index: 2, cols: 7 }],
       [
@@ -688,7 +688,7 @@ export const projects: Project[] = [
       "Под легкий прозрачный дизайн, хотелось сделать плавные движения и чтобы в монтаже было как можно больше органичных мэтч-катов.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7, colStart: 6 }],
       [
         { type: "image", index: 0, cols: 6 },
@@ -765,7 +765,7 @@ export const projects: Project[] = [
       В результате получился ролик, который говорит на языке фарм-категории, но звучит и выглядит совсем иначе.`,
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "video", index: 0, cols: 12 }],
       [{ type: "text", index: 2, cols: 7 }],
@@ -797,7 +797,7 @@ export const projects: Project[] = [
     ],
 
     layout: [
-      [{ type: "text", index: 0, cols: 7 }],
+      // [{ type: "text", index: 0, cols: 7 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "image", index: 0, cols: 12 }],
       [
@@ -863,7 +863,7 @@ export const projects: Project[] = [
     ],
 
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "image", index: 0, cols: 12 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "image", index: 1, cols: 12 }],
@@ -1012,7 +1012,7 @@ export const projects: Project[] = [
       Для этого эпизода все элементы были нарисованы вручную. Мы пробовали разные варианты финального превращения персонажа, наш любимый — с гигантской пиджаком :)`,
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
 
       [
@@ -1131,7 +1131,7 @@ export const projects: Project[] = [
       "Использовали покадровую 2D-анимацию, чтобы превратить актеров в метафорические воплощения своих карьерных стремлений.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [
         { type: "image", index: 0, cols: 4 },
@@ -1250,7 +1250,7 @@ export const projects: Project[] = [
       "Елки тоже не остались без внимания – подводная, ледяная, березовая, из тарелок, войлока...",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "image", index: 0, cols: 12 }],
       [{ type: "text", index: 2, cols: 7 }],
@@ -1316,7 +1316,7 @@ export const projects: Project[] = [
       "Много драк и всякого экшна!",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "text", index: 1, cols: 7 }],
       [{ type: "text", index: 2, cols: 7 }],
     ],
@@ -1396,7 +1396,7 @@ export const projects: Project[] = [
       "Без морализаторства, сигнализируя о  масштабе пластиковых отходов и потенциале переработки, работа стала знаковой в городском пространстве и после окончания фестиваля осталась в ТЦ на пару лет.",
     ],
     layout: [
-      [{ type: "text", index: 0, cols: 7, colStart: 6 }],
+      // [{ type: "text", index: 0, cols: 7, colStart: 6 }],
       [{ type: "image", index: 0, cols: 12 }],
       [{ type: "image", index: 1, cols: 12 }],
       [{ type: "text", index: 1, cols: 7 }],
