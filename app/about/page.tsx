@@ -3,7 +3,7 @@ import VideoPlayer from "../components/VideoPlayer";
 
 export default function Studio() {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-1 flex-col items-center justify-center gap-15 bg-black p-6 pb-30 text-white">
+    <div className="mx-auto flex max-w-screen-xl flex-1 flex-col items-center justify-center gap-15 bg-black p-3 text-white max-md:gap-3 lg:p-6">
       {/* Hero */}
       <h1 className="sr-only">about</h1>
       <Image

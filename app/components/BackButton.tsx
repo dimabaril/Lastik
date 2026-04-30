@@ -13,7 +13,7 @@ export default function BackButton({
   return (
     <button
       type="button"
-      className={className}
+      className={`cursor-pointer ${className}`}
       aria-label={ariaLabel}
       onClick={() => window.history.back()}
     >

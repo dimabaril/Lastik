@@ -28,7 +28,7 @@ export default function Projects() {
   // };
 
   return (
-    <main className="mx-auto max-w-screen-xl flex-1 px-3 pt-6 pb-30">
+    <main className="mx-auto max-w-screen-xl flex-1 px-3 pt-6">
       {/* ─── Main column ─── */}
       <div className="flex flex-col bg-black text-white">
         {/* ─── Hero ─── */}

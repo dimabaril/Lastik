@@ -29,12 +29,12 @@ export default function Footer() {
   return (
     <footer className="z-20 bg-black">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
-      <div className="mx-auto grid grid-cols-3 gap-y-6 px-6 pb-18 max-lg:grid-cols-2 max-md:grid-cols-1">
+      <div className="grid-rows-reverse mx-auto grid grid-cols-1 gap-y-6 px-3 py-18 md:grid-cols-2 lg:grid-cols-3 lg:px-6">
         {/* Social links */}
-        <div className="flex flex-col justify-between gap-4 max-md:justify-self-center md:justify-self-start">
+        <div className="flex aspect-323/127 flex-col justify-between gap-4 justify-self-center md:justify-self-start">
           <a
             href={`mailto:${EMAIL}`}
-            className="rounded-full bg-[#FFF546] px-8 py-2 text-2xl text-black transition-colors hover:text-(--ref-color-dark)"
+            className="rounded-full bg-[#FFF546] p-2 text-center text-2xl text-black transition-colors hover:text-(--ref-color-dark)"
           >
             {EMAIL}
           </a>
@@ -69,10 +69,12 @@ export default function Footer() {
         <Image
           src="/footer-lastik.svg"
           alt="lastik"
-          width={399}
-          height={156}
+          // width={399}
+          // height={156}
+          width={285}
+          height={112}
           unoptimized
-          className="justify-self-center"
+          className="justify-self-center md:justify-self-end lg:justify-self-center"
         />
 
         <div className="max-lg:hidden"></div>

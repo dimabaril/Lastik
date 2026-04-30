@@ -33,7 +33,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 pb-30 text-white max-md:gap-3 lg:p-6">
+    <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 text-white max-md:gap-3 lg:p-6">
       {/* ─── Project Header ─── */}
       <div className="flex items-center justify-between border-t-2 border-white bg-black pt-3">
         {/* ─── Title ─── */}
