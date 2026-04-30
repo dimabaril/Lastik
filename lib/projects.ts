@@ -509,7 +509,6 @@ export const projects: Project[] = [
         { type: "image", index: 10, cols: 6 },
         { type: "image", index: 11, cols: 6 },
       ],
-      [],
       [
         { type: "image", index: 12, cols: 2 },
         { type: "image", index: 13, cols: 2 },

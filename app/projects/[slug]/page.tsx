@@ -32,37 +32,36 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main className="mx-auto w-full max-w-screen-xl flex-1 bg-black p-6 text-white">
+    <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 pb-30 text-white max-md:gap-3 lg:p-6">
       {/* ─── Project Header ─── */}
-      <div className="flex justify-between border-t-2 border-white bg-black">
+      <div className="flex items-center justify-between border-t-2 border-white bg-black">
         {/* ─── Title ─── */}
-        <h1 className="font-druk-cyr-bold-italic text-8xl">{project.title}</h1>
+        <h1 className="font-druk-cyr-bold-italic text-4xl sm:text-7xl lg:text-8xl">
+          {project.title}
+        </h1>
         {/* ─── Close button ─── */}
         <Link
           href="/projects"
-          className="self-start text-4xl text-white transition-opacity hover:opacity-60"
+          className="text-4xl text-white transition-opacity hover:opacity-60"
         >
           ✕
         </Link>
       </div>
 
       {/* Upper block */}
-      <div className="mb-6 flex flex-col gap-6">
-        <div className="flex gap-6">
+      <div className="flex flex-col gap-6 max-md:gap-3">
+        <div className="flex gap-6 max-md:gap-3">
           {/* Main content */}
-          <div className="flex flex-1 flex-col gap-6">
-            <div className="flex flex-wrap items-center justify-end gap-3 text-xl">
-              {/* ─── Description ─── */}
-              {/* <p className="font-victor-mono">{project.description}</p> */}
-              {/* ─── Tags ─── */}
-              <div className="font-victor-mono flex divide-x">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-0.5 whitespace-nowrap">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          <div className="flex flex-1 flex-col gap-6 max-md:gap-3">
+            {/* ─── Tags ─── */}
+            <div className="font-victor-mono flex divide-x self-end text-xl max-lg:text-lg">
+              {project.tags.map((tag) => (
+                <span key={tag} className="px-3 py-0.5 whitespace-nowrap">
+                  {tag}
+                </span>
+              ))}
             </div>
+
             {/* Main video */}
             <VimeoPlayer
               videoId={project.videoId}
@@ -70,45 +69,24 @@ export default async function ProjectPage({
             />
           </div>
           {/* ─── Right column ─── */}
-          <div className="flex flex-col gap-6 self-end pt-2">
-            {project.brand && (
-              <div>
-                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
-                  Бренд
-                </p>
-                <p className="font-arimo text-2xl font-bold">{project.brand}</p>
-              </div>
-            )}
-            {project.agency && (
-              <div>
-                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
-                  Агентство
-                </p>
-                <p className="font-arimo text-2xl font-bold">
-                  {project.agency}
-                </p>
-              </div>
-            )}
-            {project.production && (
-              <div>
-                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
-                  Продакшн
-                </p>
-                <p className="font-arimo text-2xl font-bold">
-                  {project.production}
-                </p>
-              </div>
-            )}
-            {project.client && (
-              <div>
-                <p className="font-victor-mono mb-1 text-lg text-(--fade-color)">
-                  Клиент
-                </p>
-                <p className="font-arimo text-2xl font-bold">
-                  {project.client}
-                </p>
-              </div>
-            )}
+          <div className="hidden flex-col gap-6 self-end pt-2 lg:flex">
+            {[
+              { label: "Бренд", value: project.brand },
+              { label: "Агентство", value: project.agency },
+              { label: "Продакшн", value: project.production },
+              { label: "Клиент", value: project.client },
+            ]
+              .filter((item) => item.value)
+              .map((item) => (
+                <div key={item.label}>
+                  <p className="font-victor-mono text-lg text-(--fade-color) max-lg:text-base">
+                    {item.label}
+                  </p>
+                  <p className="font-arimo text-2xl font-bold max-lg:text-xl">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -120,9 +98,10 @@ export default async function ProjectPage({
             width={29}
             height={40}
             // className="self-start pt-3"
+            className="max-md:w-5"
           />
           {/* text index 0 */}
-          <p className="font-arimo max-w-1/2 text-2xl font-semibold">
+          <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-5 lg:max-w-1/2">
             {renderText(project.texts[0])}
           </p>
         </div>
@@ -130,9 +109,12 @@ export default async function ProjectPage({
 
       {/* ─── Content grid ─── */}
       {project.layout ? (
-        <div className="mt-6 flex flex-col gap-6">
+        <div className="flex flex-col gap-6 max-md:gap-3">
           {project.layout.map((row, rowIndex) => (
-            <div key={rowIndex} className="grid grid-cols-12 items-start gap-6">
+            <div
+              key={rowIndex}
+              className="grid grid-cols-12 items-start gap-6 max-md:gap-3"
+            >
               {row.map((item, i) => {
                 const style: React.CSSProperties = {
                   gridColumn: item.colStart
@@ -144,8 +126,9 @@ export default async function ProjectPage({
                     return (
                       <div
                         key={i}
-                        style={style}
-                        className="font-onest text-xl leading-7 whitespace-pre-line"
+                        // style={style}
+                        // className="font-onest 7 text-xl leading-7 whitespace-pre-line"
+                        className={`font-onest col-span-12 text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-5 ${item.cols ? `lg:col-span-${item.cols}` : ""} ${item.colStart ? `lg:col-start-${item.colStart}` : ""}`}
                       >
                         {renderText(project.texts[item.index])}
                       </div>
@@ -204,18 +187,18 @@ export default async function ProjectPage({
           ))}
         </div>
       ) : (
-        <div className="mt-6 flex flex-col gap-6">
+        <div className="mt-6 flex flex-col gap-6 max-md:gap-3">
           {project.texts.map((text, i) => (
             <p
               key={i}
-              className="font-onest text-xl leading-7 whitespace-pre-line"
+              className="font-onest text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-5"
             >
               {renderText(text)}
             </p>
           ))}
           {(project.images.length > 0 ||
             (project.videos && project.videos.length > 0)) && (
-            <div className="grid grid-cols-2 items-start gap-6">
+            <div className="grid grid-cols-2 items-start gap-6 max-md:gap-3">
               {project.images.map((src, i) => (
                 <div key={`img-${i}`} className="overflow-hidden rounded-xl">
                   <Image

@@ -50,7 +50,7 @@ export default function Header() {
           alt="Logo"
           width={120}
           height={120}
-          className={`${styles.rotate} absolute top-6 left-6 z-10 max-2xl:w-13`}
+          className={`${styles.rotate} absolute top-6 left-6 z-10 max-2xl:w-13 max-lg:top-3 max-lg:left-3`}
         />
       </Link>
 
@@ -60,7 +60,7 @@ export default function Header() {
         <div className="hidden w-36 lg:block" />
 
         {/* Hamburger button — mobile only */}
-        <div className="flex p-6 lg:hidden">
+        <div className="flex p-3 lg:hidden">
           <HamburgerButton
             isOpen={isOpen}
             onClick={() => setIsOpen((v) => !v)}
