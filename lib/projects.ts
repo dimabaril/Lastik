@@ -1040,7 +1040,7 @@ export const projects: Project[] = [
         { type: "image", index: 9, cols: 6 },
       ],
       [
-        { type: "text", index: 5, cols: 7 },
+        { type: "text", index: 5, cols: 6 },
         { type: "image", index: 10, cols: 6 },
       ],
       [{ type: "text", index: 6, cols: 7 }],
