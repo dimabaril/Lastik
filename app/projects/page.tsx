@@ -28,11 +28,11 @@ export default function Projects() {
   // };
 
   return (
-    <main className="mx-auto max-w-screen-xl flex-1 px-3 pt-6">
+    <main className="mx-auto max-w-screen-xl flex-1 pt-6 lg:px-3">
       {/* ─── Main column ─── */}
       <div className="flex flex-col bg-black text-white">
         {/* ─── Hero ─── */}
-        <section className="flex flex-col items-center gap-10 py-15 text-center">
+        <section className="flex flex-col items-center gap-10 px-3 py-15 text-center">
           <div className="relative">
             {/* <h1 className="relative z-1 text-4xl [text-shadow:0_0_10px_#fff] sm:text-7xl md:text-8xl"> */}
             <h1 className="relative z-10 text-4xl sm:text-7xl md:text-8xl">
