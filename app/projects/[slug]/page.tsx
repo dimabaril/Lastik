@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { notFound } from "next/navigation";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import { projects, type Project } from "@/lib/projects";
+import BackButton from "@/app/components/BackButton";
 
 function renderText(text: string) {
   return text
@@ -34,18 +35,21 @@ export default async function ProjectPage({
   return (
     <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 pb-30 text-white max-md:gap-3 lg:p-6">
       {/* ─── Project Header ─── */}
-      <div className="flex items-center justify-between border-t-2 border-white bg-black">
+      <div className="flex items-center justify-between border-t-2 border-white bg-black pt-3">
         {/* ─── Title ─── */}
         <h1 className="font-druk-cyr-bold-italic text-4xl sm:text-7xl lg:text-8xl">
           {project.title}
         </h1>
         {/* ─── Close button ─── */}
-        <Link
+        {/* <Link
           href="/projects"
-          className="text-4xl text-white transition-opacity hover:opacity-60"
+          className="text-4xl text-white transition-opacity hover:opacity-60 sm:text-7xl lg:text-8xl"
         >
           ✕
-        </Link>
+        </Link> */}
+        <BackButton className="text-4xl text-white transition-opacity hover:opacity-60 sm:text-7xl lg:text-8xl">
+          ✕
+        </BackButton>
       </div>
 
       {/* Upper block */}
