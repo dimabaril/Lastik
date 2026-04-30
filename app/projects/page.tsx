@@ -116,8 +116,8 @@ export default function Projects() {
           />
         </section>
 
-        <section>
-          <p className="font-unbounded text-center text-5xl font-extrabold">
+        <section className="pt-18">
+          <p className="font-unbounded text-center text-3xl font-extrabold sm:text-4xl md:text-5xl">
             пишите нам!
           </p>
 
