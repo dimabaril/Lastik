@@ -14,12 +14,15 @@ export default function Studio() {
         className="w-2/3"
       />
 
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-4">
+        <h2 className="font-unbounded self-center self-start rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
+          НАШИ СУПЕРСИЛЫ
+        </h2>
         <div className="flex gap-6">
           <div className="flex flex-col items-start gap-6">
-            <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
-              НАШИ СУПЕРСИЛЫ
-            </h2>
+            {/* <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
+                НАШИ СУПЕРСИЛЫ
+              </h2> */}
             <ul className="font-arimo list-disc pl-6 text-2xl">
               <li>Крутой арт-дирекшн, легко переключаемся между стилями</li>
               <li>Персонажей разрабатывают лучшие иллюстраторы</li>
@@ -47,107 +50,112 @@ export default function Studio() {
         </div>
       </section>
 
-      <section className="flex justify-between gap-4">
-        <div className="flex flex-col gap-4" style={{ flex: 702 / 993 }}>
-          <Image
-            src="/about/Group 103.png"
-            alt="AI pipeline"
-            width={702}
-            height={299}
-            className=""
-            unoptimized
-          />
-          <div className="flex flex-1 flex-col items-start justify-between gap-4">
-            <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
-              не только визуал
-            </h2>
-            <p className="font-unbounded text-3xl">
-              Сторителлинг в Ластике – база
-            </p>
-            <p className="font-arimo text-2xl">
-              Мы умеем придумывать истории. Нас зовут, чтобы сделать сложную
-              тему понятной и живой.
-            </p>
+      <section className="flex flex-col gap-4">
+        <h2 className="font-unbounded self-center self-start rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
+          не только визуал
+        </h2>
+        <div className="flex justify-between gap-4">
+          <div className="flex flex-col gap-4" style={{ flex: 702 / 993 }}>
+            <Image
+              src="/about/Group 103.png"
+              alt="AI pipeline"
+              width={702}
+              height={299}
+              className=""
+              unoptimized
+            />
+            <div className="flex flex-1 flex-col gap-4">
+              {/* <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
+                не только визуал
+              </h2> */}
+              <p className="font-unbounded text-3xl">
+                Сторителлинг в Ластике – база
+              </p>
+              <p className="font-arimo text-2xl">
+                Мы умеем придумывать истории. Нас зовут, чтобы сделать сложную
+                тему понятной и живой.
+              </p>
+            </div>
+            <Image
+              src="/about/Group 104.png"
+              alt="AI pipeline"
+              width={702}
+              height={318}
+              className=""
+              unoptimized
+            />
           </div>
-          <Image
-            src="/about/Group 104.png"
-            alt="AI pipeline"
-            width={702}
-            height={318}
-            className=""
-            unoptimized
-          />
-        </div>
-        <div
-          className="gap- flex flex-col justify-between gap-4"
-          style={{ flex: 507 / 993 }}
-        >
-          <Image
-            src="/about/Group 156.png"
-            alt="AI pipeline"
-            width={507}
-            height={218}
-            className=""
-            unoptimized
-          />
-          <Image
-            src="/about/Group 157.png"
-            alt="AI pipeline"
-            width={507}
-            height={272}
-            className=""
-            unoptimized
-          />
-          <Image
-            src="/about/Group 158.png"
-            alt="AI pipeline"
-            width={507}
-            height={114}
-            className=""
-            unoptimized
-          />
-          <Image
-            src="/about/Group 160.png"
-            alt="AI pipeline"
-            width={507}
-            height={363}
-            className=""
-            unoptimized
-          />
-        </div>
-        <div
-          className="flex flex-col justify-between gap-4"
-          style={{ flex: 620 / 993 }}
-        >
-          <Image
-            src="/about/Group 164.png"
-            alt="AI pipeline"
-            width={619}
-            height={394}
-            className=""
-            unoptimized
-          />
-          <Image
-            src="/about/Group 166.png"
-            alt="AI pipeline"
-            width={620}
-            height={284}
-            className=""
-            unoptimized
-          />
-          <Image
-            src="/about/Group 165.png"
-            alt="AI pipeline"
-            width={620}
-            height={304}
-            className=""
-            unoptimized
-          />
+          <div
+            className="gap- flex flex-col justify-between gap-4"
+            style={{ flex: 507 / 993 }}
+          >
+            <Image
+              src="/about/Group 156.png"
+              alt="AI pipeline"
+              width={507}
+              height={218}
+              className=""
+              unoptimized
+            />
+            <Image
+              src="/about/Group 157.png"
+              alt="AI pipeline"
+              width={507}
+              height={272}
+              className=""
+              unoptimized
+            />
+            <Image
+              src="/about/Group 158.png"
+              alt="AI pipeline"
+              width={507}
+              height={114}
+              className=""
+              unoptimized
+            />
+            <Image
+              src="/about/Group 160.png"
+              alt="AI pipeline"
+              width={507}
+              height={363}
+              className=""
+              unoptimized
+            />
+          </div>
+          <div
+            className="flex flex-col justify-between gap-4"
+            style={{ flex: 620 / 993 }}
+          >
+            <Image
+              src="/about/Group 164.png"
+              alt="AI pipeline"
+              width={619}
+              height={394}
+              className=""
+              unoptimized
+            />
+            <Image
+              src="/about/Group 166.png"
+              alt="AI pipeline"
+              width={620}
+              height={284}
+              className=""
+              unoptimized
+            />
+            <Image
+              src="/about/Group 165.png"
+              alt="AI pipeline"
+              width={620}
+              height={304}
+              className=""
+              unoptimized
+            />
+          </div>
         </div>
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="font-unbounded self-center rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
+        <h2 className="font-unbounded self-center self-start rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
           AI в нашем пайплайне
         </h2>
         <div className="flex gap-4">
