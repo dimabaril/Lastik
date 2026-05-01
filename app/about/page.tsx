@@ -18,23 +18,19 @@ export default function Studio() {
         <h2 className="font-unbounded self-center self-start rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
           НАШИ СУПЕРСИЛЫ
         </h2>
-        <div className="flex gap-6">
-          <div className="flex flex-col items-start gap-6">
-            {/* <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
-                НАШИ СУПЕРСИЛЫ
-              </h2> */}
-            <ul className="font-arimo list-disc pl-6 text-2xl">
-              <li>Крутой арт-дирекшн, легко переключаемся между стилями</li>
-              <li>Персонажей разрабатывают лучшие иллюстраторы</li>
-              <li>Уважаем классическую 2D-анимацию</li>
-              <li>3D-анимация любой сложности</li>
-              <li>
-                AI – собственные ноухау, локальные тренированные нейросети под
-                особые задачи
-              </li>
-              <li>Модный и актуальный моушн</li>
-            </ul>
-          </div>
+        <div className="flex gap-4">
+          <ul className="font-arimo list-disc pl-6 text-2xl">
+            <li>Крутой арт-дирекшн, легко переключаемся между стилями</li>
+            <li>Персонажей разрабатывают лучшие иллюстраторы</li>
+            <li>Уважаем классическую 2D-анимацию</li>
+            <li>3D-анимация любой сложности</li>
+            <li>
+              AI – собственные ноухау, локальные тренированные нейросети под
+              особые задачи
+            </li>
+            <li>Модный и актуальный моушн</li>
+          </ul>
+
           <div>
             <VideoPlayer
               src="/about/neo (1080p) 2.mp4"
