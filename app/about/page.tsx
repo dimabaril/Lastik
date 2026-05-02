@@ -49,7 +49,7 @@ export default function Studio() {
 
       <section className="flex flex-col gap-4">
         <SectionTitle>НАШИ СУПЕРСИЛЫ</SectionTitle>
-        <div className="flex gap-4 max-md:flex-col-reverse">
+        <div className="flex gap-4 max-lg:flex-col-reverse">
           <ul className="font-arimo list-disc pl-6 text-2xl max-lg:text-xl max-lg:leading-tight">
             <li>Крутой арт-дирекшн, легко переключаемся между стилями</li>
             <li>Персонажей разрабатывают лучшие иллюстраторы</li>
@@ -79,7 +79,7 @@ export default function Studio() {
 
       <section className="flex flex-col gap-4">
         <SectionTitle>не только визуал</SectionTitle>
-        <div className="flex justify-between gap-4 max-md:flex-col">
+        <div className="flex justify-between gap-4 max-lg:flex-col">
           <div className="flex flex-col gap-4" style={{ flex: 702 / 993 }}>
             <Image
               src="/about/Group 103.png"
@@ -111,7 +111,7 @@ export default function Studio() {
             />
           </div>
           <div
-            className="gap- flex flex-col justify-between gap-4 max-md:hidden"
+            className="gap- flex flex-col justify-between gap-4 max-lg:hidden"
             style={{ flex: 507 / 993 }}
           >
             <Image
@@ -148,7 +148,7 @@ export default function Studio() {
             />
           </div>
           <div
-            className="flex flex-col justify-between gap-4 max-md:hidden"
+            className="flex flex-col justify-between gap-4 max-lg:hidden"
             style={{ flex: 620 / 993 }}
           >
             <Image
@@ -183,7 +183,7 @@ export default function Studio() {
         <SectionTitle>AI в нашем пайплайне</SectionTitle>
 
         <div className="flex gap-4">
-          <div className="flex gap-4 max-md:flex-col">
+          <div className="flex gap-4 max-lg:flex-col">
             {/* Как это рассчитать:Коэффициент для flex — это отношение ширины к высоте ($Width / Height$).Первое видео: $1117 / 279 \approx \mathbf{4}$Второе видео: $626 / 279 \approx \mathbf{2.24}$ */}
             <div style={{ flex: 1117 / 279 }}>
               <VideoPlayer
@@ -191,7 +191,7 @@ export default function Studio() {
                 className="h-full w-full rounded-3xl object-cover"
               />
             </div>
-            <div className="hidden flex-col gap-4 max-md:flex">
+            <div className="hidden flex-col gap-4 max-lg:flex">
               {aiAdvantages}
             </div>
             <div style={{ flex: 626 / 279 }}>
@@ -209,7 +209,7 @@ export default function Studio() {
               className="w-full rounded-3xl object-cover"
             />
           </div>
-          <div className="relative max-md:hidden" style={{ flex: 1083 / 609 }}>
+          <div className="relative max-lg:hidden" style={{ flex: 1083 / 609 }}>
             <VideoPlayer
               src="/about/AI textures.mp4"
               className="w-full rounded-3xl object-cover"

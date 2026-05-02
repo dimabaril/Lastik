@@ -905,6 +905,7 @@ export const projects: Project[] = [
     vimeos: [
       {
         id: 779626942,
+        aspectRatio: 2.857,
       },
     ],
 
@@ -1451,6 +1452,7 @@ export const projects: Project[] = [
     vimeos: [
       {
         id: 476301197,
+        aspectRatio: 2.35,
       },
     ],
     images: [
