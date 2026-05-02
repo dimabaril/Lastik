@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useRef } from "react";
 
+import { Thumb } from "@/lib/projects";
+
 interface ProjectPreviewCardProps {
   title: string;
-  thumbVideo?: string;
-  thumbVideoPosterImage?: string;
+  thumb: Thumb;
   slug: string;
   tags?: readonly string[];
   size?: number;
@@ -14,8 +15,7 @@ interface ProjectPreviewCardProps {
 
 export default function ProjectPreviewCard({
   title,
-  thumbVideo,
-  thumbVideoPosterImage,
+  thumb,
   slug,
   tags = [],
   size,
@@ -42,24 +42,20 @@ export default function ProjectPreviewCard({
       onTouchStart={handleMouseEnter}
       onTouchEnd={handleMouseLeave}
     >
-      {thumbVideo ? (
+      {thumb.video ? (
         <video
           ref={videoRef}
-          src={thumbVideo}
-          poster={thumbVideoPosterImage}
+          src={thumb.video}
+          poster={thumb.poster}
           preload="metadata"
           loop
           muted
           playsInline
           className="w-full rounded-lg"
         />
-      ) : thumbVideoPosterImage ? (
+      ) : thumb.poster ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={thumbVideoPosterImage}
-          alt={title}
-          className="w-full rounded-lg"
-        />
+        <img src={thumb.poster} alt={title} className="w-full rounded-lg" />
       ) : null}
 
       <div className="flex flex-wrap justify-between pt-2">

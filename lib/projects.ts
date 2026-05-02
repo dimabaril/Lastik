@@ -7,26 +7,34 @@ export type LayoutItem = {
   colStart?: number;
 };
 
-export type Project = {
-  slug: string;
-  size: number;
-  thumbVideo?: string;
-  thumbVideoPosterImage?: string;
-  title: string;
-  description: string;
-  tags: readonly Tag[];
-  videoId: number;
-  videoHash?: string;
+export type Credits = {
   brand?: string;
   agency?: string;
   production?: string;
   client?: string;
+};
+
+export type Thumb = {
+  video?: string;
+  poster?: string;
+};
+
+export type Vimeo = {
+  id: number;
+  hash?: string;
+};
+
+export type Project = {
+  slug: string;
+  size: number;
+  thumb: Thumb;
+  title: string;
+  description: string;
+  tags: readonly Tag[];
+  vimeos: Vimeo[];
+  credits?: Credits;
   images: string[];
   videos?: string[];
-  vimeos?: {
-    videoId: number;
-    videoHash?: string;
-  }[];
   texts: string[];
   layout?: LayoutItem[][];
 };
@@ -35,16 +43,23 @@ export const projects: Project[] = [
   {
     slug: "museum-of-transport",
     size: 12,
-    thumbVideo: "/projects/trans-museum/thumb/trans_museum.webm",
-    thumbVideoPosterImage:
-      "/projects/trans-museum/thumb/trans_museum-poster.jpg",
+    thumb: {
+      video: "/projects/trans-museum/thumb/trans_museum.webm",
+      poster: "/projects/trans-museum/thumb/trans_museum-poster.jpg",
+    },
     title: "Музей Транспорта Москвы",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.AI, TAG.MUSEUM],
-    videoId: 1187717775,
-    videoHash: "7a46d91482",
-    client: "Музей Транспорта Москвы",
-    agency: "Red Pepper Films",
+    vimeos: [
+      {
+        id: 1187717775,
+        hash: "7a46d91482",
+      },
+    ],
+    credits: {
+      client: "Музей Транспорта Москвы",
+      agency: "Red Pepper Films",
+    },
     images: [
       "/projects/trans-museum/Screenshot 2025-11-26 at 13.33.05.png",
       "/projects/trans-museum/Screenshot 2025-11-26 at 13.29.50.png",
@@ -139,14 +154,22 @@ export const projects: Project[] = [
   {
     slug: "love-generation",
     size: 4,
-    thumbVideo: "/projects/love-generation/thumb/love_generation-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/love-generation/thumb/love_generation-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/love-generation/thumb/love_generation-thumb.webm",
+      poster:
+        "/projects/love-generation/thumb/love_generation-thumb-poster.jpg",
+    },
     title: "Love Generation",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 981913828,
-    brand: "Love Generation",
+    vimeos: [
+      {
+        id: 981913828,
+      },
+    ],
+    credits: {
+      brand: "Love Generation",
+    },
     images: [
       "/projects/love-generation/image.png",
       "/projects/love-generation/ban.png",
@@ -183,13 +206,21 @@ export const projects: Project[] = [
   {
     slug: "vk-neo",
     size: 6,
-    thumbVideo: "/projects/vk-neo/thumb/NEO_pw.webm",
-    thumbVideoPosterImage: "/projects/vk-neo/thumb/NEO_pw-poster.jpg",
+    thumb: {
+      video: "/projects/vk-neo/thumb/NEO_pw.webm",
+      poster: "/projects/vk-neo/thumb/NEO_pw-poster.jpg",
+    },
     title: "VK / Маруся x NEO",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING],
-    videoId: 889904948,
-    brand: "VK",
+    vimeos: [
+      {
+        id: 889904948,
+      },
+    ],
+    credits: {
+      brand: "VK",
+    },
     images: [
       "/projects/vk-neo/image 21.png",
       // "/projects/vk-neo/rob1.png",
@@ -224,15 +255,22 @@ export const projects: Project[] = [
   {
     slug: "sber-terminal",
     size: 2,
-    thumbVideo: "/projects/sber-terminal/thumb/SBER_terminal.webm",
-    thumbVideoPosterImage:
-      "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
+    thumb: {
+      video: "/projects/sber-terminal/thumb/SBER_terminal.webm",
+      poster: "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
+    },
     title: "СБЕР / Оплата улыбкой",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 1182969480,
-    brand: "СБЕР",
-    agency: "MosAIc",
+    vimeos: [
+      {
+        id: 1182969480,
+      },
+    ],
+    credits: {
+      brand: "СБЕР",
+      agency: "MosAIc",
+    },
     images: [
       "/projects/sber-terminal/term-2-1.jpg",
       "/projects/sber-terminal/term-2-3.jpg",
@@ -284,15 +322,23 @@ export const projects: Project[] = [
   {
     slug: "vtb-1",
     size: 7,
-    thumbVideo: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
-    thumbVideoPosterImage: "/projects/vtb-1/thumb/vtb-1-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
+      poster: "/projects/vtb-1/thumb/vtb-1-thumb-poster.jpg",
+    },
     title: "ВТБ / Переводы",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
-    videoId: 1054459009,
-    videoHash: "b5699500f6",
-    brand: "ВТБ",
-    agency: "MosAIc",
+    vimeos: [
+      {
+        id: 1054459009,
+        hash: "b5699500f6",
+      },
+    ],
+    credits: {
+      brand: "ВТБ",
+      agency: "MosAIc",
+    },
     images: [
       "/projects/vtb-1/Remove tool edits (1).png",
       // "/projects/vtb-1/71DA3E3C-5D97-4B62-94A6-3E1BF4178F93.jpeg",
@@ -337,14 +383,21 @@ export const projects: Project[] = [
   {
     slug: "vk-mini-app",
     size: 5,
-    thumbVideo: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
-    thumbVideoPosterImage: "/projects/vk-mini-app/thumb/VK_MiniApps-poster.jpg",
+    thumb: {
+      video: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
+      poster: "/projects/vk-mini-app/thumb/VK_MiniApps-poster.jpg",
+    },
     title: "VK / Mini Apps",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
-    videoId: 814924190,
-    // videoHash: "b5699500f6",
-    brand: "VK",
+    vimeos: [
+      {
+        id: 814924190,
+      },
+    ],
+    credits: {
+      brand: "VK",
+    },
 
     images: [
       "/projects/vk-mini-app/1.png",
@@ -501,13 +554,21 @@ export const projects: Project[] = [
   {
     slug: "rocs",
     size: 2,
-    thumbVideo: "/projects/rocs/thumb/rocs.webm",
-    thumbVideoPosterImage: "/projects/rocs/thumb/rocs-poster.jpg",
+    thumb: {
+      video: "/projects/rocs/thumb/rocs.webm",
+      poster: "/projects/rocs/thumb/rocs-poster.jpg",
+    },
     title: "R.O.C.S.",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 769844526,
-    brand: "R.O.C.S.",
+    vimeos: [
+      {
+        id: 769844526,
+      },
+    ],
+    credits: {
+      brand: "R.O.C.S.",
+    },
     images: [
       // "/projects/rocs/1.jpg"
     ],
@@ -517,13 +578,21 @@ export const projects: Project[] = [
   {
     slug: "zvuk",
     size: 6,
-    thumbVideo: "/projects/zvuk/thumb/zvuk-thumb.webm",
-    thumbVideoPosterImage: "/projects/zvuk/thumb/zvuk-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/zvuk/thumb/zvuk-thumb.webm",
+      poster: "/projects/zvuk/thumb/zvuk-thumb-poster.jpg",
+    },
     title: "СБЕР / Звук",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING, TAG.CLIP],
-    videoId: 718359494,
-    brand: "СБЕР Звук",
+    vimeos: [
+      {
+        id: 718359494,
+      },
+    ],
+    credits: {
+      brand: "СБЕР Звук",
+    },
     images: [
       "/projects/zvuk/zvuk_1.png",
 
@@ -637,14 +706,22 @@ export const projects: Project[] = [
   {
     slug: "mts",
     size: 4,
-    thumbVideo: "/projects/mts/thumb/mts-thumb.webm",
-    thumbVideoPosterImage: "/projects/mts/thumb/mts-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/mts/thumb/mts-thumb.webm",
+      poster: "/projects/mts/thumb/mts-thumb-poster.jpg",
+    },
     title: "МТС / Neku-sai",
     description: "Description",
     tags: [TAG["2D"], TAG.CLIP],
-    videoId: 1031579586,
-    brand: "МТС",
-    production: "Human",
+    vimeos: [
+      {
+        id: 1031579586,
+      },
+    ],
+    credits: {
+      brand: "МТС",
+      production: "Human",
+    },
     images: [
       "/projects/mts/Вакалоиды_Цвет.jpg",
       "/projects/mts/Crow (1).png",
@@ -699,15 +776,26 @@ export const projects: Project[] = [
   {
     slug: "yandex-incl",
     size: 6,
-    thumbVideo: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/yandex-incl/thumb/ya_incl-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
+      poster: "/projects/yandex-incl/thumb/ya_incl-thumb-poster.jpg",
+    },
     title: "Яндекс / Инклюзия",
     description:
       "Технологичный проект поисковой системы с абстрактными элементами",
     tags: [TAG["2D"], TAG.IMAGE],
-    videoId: 1054472202,
-    brand: "Яндекс",
+    vimeos: [
+      {
+        id: 1054472202,
+      },
+      {
+        id: 1054472284,
+        hash: "1e4e3262aa",
+      },
+    ],
+    credits: {
+      brand: "Яндекс",
+    },
 
     images: [
       "/projects/yandex-incl/bask_sketch2.jpg",
@@ -717,12 +805,7 @@ export const projects: Project[] = [
       "/projects/yandex-incl/gotov1.gif",
     ],
     // videos: ["https://vimeo.com/1054472284/1e4e3262aa"],
-    vimeos: [
-      {
-        videoId: 1054472284,
-        videoHash: "1e4e3262aa",
-      },
-    ],
+
     texts: [
       "Про инклюзию для Яндекса. Каждая история — о человеке с инвалидностью и том, как технологии помогают жить обычной жизнью в большом городе.",
       "Первый ролик — о сервисе такси для людей с ограниченными возможностями.",
@@ -739,7 +822,7 @@ export const projects: Project[] = [
       ],
       [{ type: "image", index: 2, cols: 12 }],
       [{ type: "text", index: 3, cols: 7, colStart: 6 }],
-      [{ type: "vimeo", index: 0, cols: 12 }],
+      [{ type: "vimeo", index: 1, cols: 12 }],
       [{ type: "image", index: 3, cols: 12 }],
       [{ type: "image", index: 4, cols: 12 }],
     ],
@@ -748,13 +831,21 @@ export const projects: Project[] = [
   {
     slug: "mail-ru",
     size: 5,
-    thumbVideo: "/projects/mail-ru/thumb/mail-thumb.webm",
-    thumbVideoPosterImage: "/projects/mail-ru/thumb/mail-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/mail-ru/thumb/mail-thumb.webm",
+      poster: "/projects/mail-ru/thumb/mail-thumb-poster.jpg",
+    },
     title: "MAIL.RU / Ребрендинг ",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 1054447127,
-    brand: "mail.ru",
+    vimeos: [
+      {
+        id: 1054447127,
+      },
+    ],
+    credits: {
+      brand: "mail.ru",
+    },
     images: [
       "/projects/mail-ru/photo_2026-03-09_13-27-02.jpg",
       "/projects/mail-ru/photo_2026-03-09_13-27-21.jpg",
@@ -799,12 +890,19 @@ export const projects: Project[] = [
   {
     slug: "mansi",
     size: 8,
-    thumbVideo: "/projects/mansi/thumb/mansi-thumb.webm",
-    thumbVideoPosterImage: "/projects/mansi/thumb/mansi-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/mansi/thumb/mansi-thumb.webm",
+      poster: "/projects/mansi/thumb/mansi-thumb-poster.jpg",
+    },
     title: "Фестиваль Дух огня / Мифы Манси",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.FILM],
-    videoId: 779626942,
+    // vimeoId: 779626942,
+    vimeos: [
+      {
+        id: 779626942,
+      },
+    ],
 
     images: [
       // "/projects/mansi/1.jpg"
@@ -815,16 +913,22 @@ export const projects: Project[] = [
   {
     slug: "eapteka",
     size: 3,
-    thumbVideo: "/projects/eapteka/thumb/TAB_16_v02.webm",
-    thumbVideoPosterImage: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+    thumb: {
+      video: "/projects/eapteka/thumb/TAB_16_v02.webm",
+      poster: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+    },
     title: "СБЕР / Еаптека",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 676229349,
-
-    brand: "ЕАПТЕКА",
-
-    production: "Zebra Hero",
+    vimeos: [
+      {
+        id: 676229349,
+      },
+    ],
+    credits: {
+      brand: "ЕАПТЕКА",
+      production: "Zebra Hero",
+    },
 
     images: [
       // "/projects/eapteka/Screenshot 2026-03-18 at 14.30.24.png",
@@ -863,13 +967,21 @@ export const projects: Project[] = [
   {
     slug: "delimobil",
     size: 3,
-    thumbVideo: "/projects/delimobil/thumb/delimobil.webm",
-    thumbVideoPosterImage: "/projects/delimobil/thumb/delimobil-poster.jpg",
+    thumb: {
+      video: "/projects/delimobil/thumb/delimobil.webm",
+      poster: "/projects/delimobil/thumb/delimobil-poster.jpg",
+    },
     title: "Делимобиль",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 872188494,
-    brand: "Делимобиль",
+    vimeos: [
+      {
+        id: 872188494,
+      },
+    ],
+    credits: {
+      brand: "Делимобиль",
+    },
     images: [
       "/projects/delimobil/telegram-cloud-photo-size-2-5433936741535960381-y.jpg",
       "/projects/delimobil/telegram-cloud-photo-size-2-5436281162319385226-y.jpg",
@@ -896,13 +1008,21 @@ export const projects: Project[] = [
   {
     slug: "sobchak",
     size: 4.5,
-    thumbVideo: "/projects/sobchak/thumb/sobchak_thumb.webm",
-    thumbVideoPosterImage: "/projects/sobchak/thumb/sobchak_thumb-poster.jpg",
+    thumb: {
+      video: "/projects/sobchak/thumb/sobchak_thumb.webm",
+      poster: "/projects/sobchak/thumb/sobchak_thumb-poster.jpg",
+    },
     title: "Осторожно, Собчак!",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
-    videoId: 404077121,
-    client: "Осторожно, Собчак!",
+    vimeos: [
+      {
+        id: 404077121,
+      },
+    ],
+    credits: {
+      client: "Осторожно, Собчак!",
+    },
 
     images: [
       "/projects/sobchak/1 gif1.gif",
@@ -981,14 +1101,21 @@ export const projects: Project[] = [
   {
     slug: "mosmuseum",
     size: 4.5,
-    thumbVideo: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/mosmuseum/thumb/mosmuseum-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
+      poster: "/projects/mosmuseum/thumb/mosmuseum-thumb-poster.jpg",
+    },
     title: "Музей Москвы",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.MUSEUM],
-    videoId: 677745860,
-    client: "Музей Москвы",
+    vimeos: [
+      {
+        id: 677745860,
+      },
+    ],
+    credits: {
+      client: "Музей Москвы",
+    },
     images: [
       // "/projects/mosmuseum/1.jpg"
     ],
@@ -998,13 +1125,21 @@ export const projects: Project[] = [
   {
     slug: "volchok",
     size: 5,
-    thumbVideo: "/projects/volchok/thumb/volchok-thumb.webm",
-    thumbVideoPosterImage: "/projects/volchok/thumb/volchok-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/volchok/thumb/volchok-thumb.webm",
+      poster: "/projects/volchok/thumb/volchok-thumb-poster.jpg",
+    },
     title: "Волковская Пивоварня",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 625784188,
-    brand: "Волковская Пивоварня",
+    vimeos: [
+      {
+        id: 625784188,
+      },
+    ],
+    credits: {
+      brand: "Волковская Пивоварня",
+    },
 
     images: [
       // "/projects/volchok/1.jpg"
@@ -1015,13 +1150,21 @@ export const projects: Project[] = [
   {
     slug: "rambler",
     size: 6,
-    thumbVideo: "/projects/rambler/thumb/rambler_thumb.webm",
-    thumbVideoPosterImage: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
+    thumb: {
+      video: "/projects/rambler/thumb/rambler_thumb.webm",
+      poster: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
+    },
     title: "Рамблер",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 631969238,
-    production: "Zebra Hero",
+    vimeos: [
+      {
+        id: 631969238,
+      },
+    ],
+    credits: {
+      production: "Zebra Hero",
+    },
     images: [
       // "/projects/rambler/1.jpg"
     ],
@@ -1031,16 +1174,22 @@ export const projects: Project[] = [
   {
     slug: "sber-high-res",
     size: 7,
-    thumbVideo: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/sber-high-res/thumb/sber-high-res-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
+      poster: "/projects/sber-high-res/thumb/sber-high-res-thumb-poster.jpg",
+    },
     title: "СБЕР / Кредит 5%",
     description: "Description",
     tags: [TAG["2D"], TAG.MOTION, TAG.ADVERTISING],
-    videoId: 838986118,
-    brand: "СБЕР",
-
-    production: "Hype",
+    vimeos: [
+      {
+        id: 838986118,
+      },
+    ],
+    credits: {
+      brand: "СБЕР",
+      production: "Hype",
+    },
 
     images: [
       "/projects/sber-high-res/1.png",
@@ -1155,15 +1304,23 @@ export const projects: Project[] = [
   {
     slug: "i-want-to-know-everything",
     size: 5,
-    thumbVideo:
-      "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb-poster.jpg",
+    thumb: {
+      video:
+        "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb.webm",
+      poster:
+        "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb-poster.jpg",
+    },
     title: "Хочу всё знать!",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
-    videoId: 575844837,
-    client: "Киностудия им. Горького",
+    vimeos: [
+      {
+        id: 575844837,
+      },
+    ],
+    credits: {
+      client: "Киностудия им. Горького",
+    },
 
     images: [
       // "/projects/i-want-to-know-everything/1.jpg"
@@ -1174,14 +1331,21 @@ export const projects: Project[] = [
   {
     slug: "gorod-otkritiy",
     size: 6,
-    thumbVideo: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
-    thumbVideoPosterImage:
-      "/projects/gorod-otkritiy/thumb/gorod_otkritiy-poster.jpg",
+    thumb: {
+      video: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
+      poster: "/projects/gorod-otkritiy/thumb/gorod_otkritiy-poster.jpg",
+    },
     title: "Город открытий",
     description: "Description",
     tags: [TAG["2D"], TAG["3D_VR"], TAG.CODING, TAG.INSTALLATION],
-    videoId: 926255997,
-    client: "Департамент туризма Москвы",
+    vimeos: [
+      {
+        id: 926255997,
+      },
+    ],
+    credits: {
+      client: "Департамент туризма Москвы",
+    },
     texts: ["Текст"],
     images: [
       // "/projects/gorod-otkritiy/image.png"
@@ -1191,13 +1355,21 @@ export const projects: Project[] = [
   {
     slug: "uralsib",
     size: 5,
-    thumbVideo: "/projects/uralsib/thumb/uralsib-thumb.webm",
-    thumbVideoPosterImage: "/projects/uralsib/thumb/uralsib-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/uralsib/thumb/uralsib-thumb.webm",
+      poster: "/projects/uralsib/thumb/uralsib-thumb-poster.jpg",
+    },
     title: "Уралсиб / HR",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 831559447,
-    brand: "Уралсиб",
+    vimeos: [
+      {
+        id: 831559447,
+      },
+    ],
+    credits: {
+      brand: "Уралсиб",
+    },
     images: [
       "/projects/uralsib/pers1-1.jpg",
       "/projects/uralsib/pers1-2.jpg",
@@ -1241,14 +1413,21 @@ export const projects: Project[] = [
   {
     slug: "green-idea",
     size: 6,
-    thumbVideo: "/projects/green-idea/thumb/green-idea-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/green-idea/thumb/green-idea-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/green-idea/thumb/green-idea-thumb.webm",
+      poster: "/projects/green-idea/thumb/green-idea-thumb-poster.jpg",
+    },
     title: "Green Idea",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 580000376,
-    brand: "Green Idea",
+    vimeos: [
+      {
+        id: 580000376,
+      },
+    ],
+    credits: {
+      brand: "Green Idea",
+    },
     images: [
       // "/projects/green-idea/1.jpg"
     ],
@@ -1258,14 +1437,18 @@ export const projects: Project[] = [
   {
     slug: "unprincipled",
     size: 6,
-    thumbVideo: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/unprincipled/thumb/unprincipled-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
+      poster: "/projects/unprincipled/thumb/unprincipled-thumb-poster.jpg",
+    },
     title: "Беспринципные / Титры",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.BUMPER],
-    videoId: 476301197,
-
+    vimeos: [
+      {
+        id: 476301197,
+      },
+    ],
     images: [
       // "/projects/unprincipled/1.jpg"
     ],
@@ -1275,13 +1458,18 @@ export const projects: Project[] = [
   {
     slug: "bigcup",
     size: 4,
-    thumbVideo: "/projects/bigcup/thumb/bigcup_thumb.webm",
-    thumbVideoPosterImage: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
+    thumb: {
+      video: "/projects/bigcup/thumb/bigcup_thumb.webm",
+      poster: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
+    },
     title: "Большая кружка",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
-    videoId: 747611807,
-    brand: "Большая кружка",
+    vimeos: [
+      {
+        id: 747611807,
+      },
+    ],
     images: [
       // "/projects/bigcup/1.jpg"
     ],
@@ -1291,14 +1479,21 @@ export const projects: Project[] = [
   {
     slug: "hospitality",
     size: 3,
-    thumbVideo: "/projects/hospitality/thumb/hospitality-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/hospitality/thumb/hospitality-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/hospitality/thumb/hospitality-thumb.webm",
+      poster: "/projects/hospitality/thumb/hospitality-thumb-poster.jpg",
+    },
     title: "Мостуризм / 6 историй",
     description: "Description",
     tags: [TAG["2D"], TAG.FILM],
-    videoId: 644262497,
-    client: "Департамент туризма Москвы",
+    vimeos: [
+      {
+        id: 644262497,
+      },
+    ],
+    credits: {
+      client: "Департамент туризма Москвы",
+    },
 
     images: [
       // "/projects/hospitality/1.jpg"
@@ -1309,16 +1504,23 @@ export const projects: Project[] = [
   {
     slug: "shedevrum",
     size: 5,
-    thumbVideo: "/projects/shedevrum/thumb/ya_shedevrium.webm",
-    thumbVideoPosterImage: "/projects/shedevrum/thumb/ya_shedevrium-poster.jpg",
+    thumb: {
+      video: "/projects/shedevrum/thumb/ya_shedevrium.webm",
+      poster: "/projects/shedevrum/thumb/ya_shedevrium-poster.jpg",
+    },
     title: "Яндекс / Шедеврум",
     description: "Description",
     tags: [TAG.AI, TAG.CLIP],
-    videoId: 1165318329,
-    videoHash: "774fccab78",
-    brand: "Яндекс",
-
-    production: "Рабочее название",
+    vimeos: [
+      {
+        id: 1165318329,
+        hash: "774fccab78",
+      },
+    ],
+    credits: {
+      brand: "Яндекс",
+      production: "Рабочее название",
+    },
 
     images: [
       "/projects/shedevrum/1.png",
@@ -1351,16 +1553,23 @@ export const projects: Project[] = [
   {
     slug: "presents-fest-2024",
     size: 4,
-    thumbVideo:
-      "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
+      poster:
+        "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb-poster.jpg",
+    },
     title: "VK / Фестиваль подарков",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
-    videoId: 1091235348,
-    videoHash: "4a6c52f315",
-    brand: "VK",
+    vimeos: [
+      {
+        id: 1091235348,
+        hash: "4a6c52f315",
+      },
+    ],
+    credits: {
+      brand: "VK",
+    },
 
     images: [
       // "/projects/presents-fest-2024/1.jpg"
@@ -1371,13 +1580,21 @@ export const projects: Project[] = [
   {
     slug: "zvuk-2",
     size: 3.5,
-    thumbVideo: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
-    thumbVideoPosterImage: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
+      poster: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
+    },
     title: "Звук 2",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
-    videoId: 926255997,
-    brand: "СБЕР Звук",
+    vimeos: [
+      {
+        id: 926255997,
+      },
+    ],
+    credits: {
+      brand: "СБЕР Звук",
+    },
     images: [
       // "/projects/zvuk-2/1.jpg"
     ],
@@ -1387,13 +1604,18 @@ export const projects: Project[] = [
   {
     slug: "taxi-v2",
     size: 3.5,
-    thumbVideo: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
-    thumbVideoPosterImage: "/projects/taxi-v2/thumb/taxi-v2-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
+      poster: "/projects/taxi-v2/thumb/taxi-v2-thumb-poster.jpg",
+    },
     title: "Такси под прикрытием / Титры",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
-    videoId: 807825908,
-
+    vimeos: [
+      {
+        id: 807825908,
+      },
+    ],
     images: [],
     texts: [
       'Открывающие титры для сериала "Такси под прикрытием".',
@@ -1409,14 +1631,22 @@ export const projects: Project[] = [
   {
     slug: "saint-spring-v3",
     size: 3.5,
-    thumbVideo: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
+      poster:
+        "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-poster.jpg",
+    },
     title: "Святой Источник",
     description: "Description",
     tags: [TAG.STOPMOTION, TAG.ADVERTISING],
-    videoId: 681815409,
-    brand: "Святой Источник",
+    vimeos: [
+      {
+        id: 681815409,
+      },
+    ],
+    credits: {
+      brand: "Святой Источник",
+    },
 
     images: [
       // "/projects/saint-spring-v3/1.jpg"
@@ -1427,16 +1657,24 @@ export const projects: Project[] = [
   {
     slug: "supermarket-trollys-dream-v1",
     size: 3.5,
-    thumbVideo:
-      "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb-poster.jpg",
+    thumb: {
+      video:
+        "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
+      poster:
+        "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb-poster.jpg",
+    },
     title: "Перекрёсток / Тележкин сон",
     description: "Description",
     tags: [TAG.INSTALLATION],
-    videoId: 641474779,
-    client: "X5 Retail Group",
-    brand: "Перекрёсток",
+    vimeos: [
+      {
+        id: 641474779,
+      },
+    ],
+    credits: {
+      client: "X5 Retail Group",
+      brand: "Перекрёсток",
+    },
 
     images: [
       // "/projects/supermarket-trollys-dream-v1/1.jpg"
@@ -1446,14 +1684,21 @@ export const projects: Project[] = [
   {
     slug: "the-skin-v1",
     size: 4,
-    thumbVideo: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
-    thumbVideoPosterImage:
-      "/projects/the-skin-v1/thumb/the-skin-v1-thumb-poster.jpg",
+    thumb: {
+      video: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
+      poster: "/projects/the-skin-v1/thumb/the-skin-v1-thumb-poster.jpg",
+    },
     title: "ТЦ Ривьера / Шкура",
     description: "Description",
     tags: [TAG.INSTALLATION],
-    videoId: 515761986,
-    client: "XScompany, ТЦ Riviera",
+    vimeos: [
+      {
+        id: 515761986,
+      },
+    ],
+    credits: {
+      client: "XScompany, ТЦ Riviera",
+    },
     images: [
       "/projects/the-skin-v1/thumb/28097a130993239.618bd967e9636.png",
       "/projects/the-skin-v1/thumb/0996ee130993239.618bd967eabbd.png",

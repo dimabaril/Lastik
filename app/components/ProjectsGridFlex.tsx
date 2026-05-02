@@ -2,14 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 import ProjectPreviewCard from "./ProjectPreviewCard";
+import { Thumb } from "@/lib/projects";
 
 const ROW_CAPACITY = 12;
 const GROW_FACTOR = 2;
 
 interface Project {
   title: string;
-  thumbVideo?: string;
-  thumbVideoPosterImage?: string;
+  // thumbVideo?: string;
+  // thumbVideoPosterImage?: string;
+  thumb: Thumb;
   slug: string;
   tags?: readonly string[];
   size?: number;
@@ -87,8 +89,7 @@ export default function ProjectsGridFlex({
               >
                 <ProjectPreviewCard
                   title={project.title}
-                  thumbVideo={project.thumbVideo}
-                  thumbVideoPosterImage={project.thumbVideoPosterImage}
+                  thumb={project.thumb}
                   slug={project.slug}
                   tags={project.tags}
                   size={size}

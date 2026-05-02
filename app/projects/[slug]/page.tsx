@@ -68,17 +68,17 @@ export default async function ProjectPage({
 
             {/* Main video */}
             <VimeoPlayer
-              videoId={project.videoId}
-              videoHash={project.videoHash}
+              id={project.vimeos[0].id}
+              hash={project.vimeos[0].hash}
             />
           </div>
           {/* ─── Right column ─── */}
           <div className="hidden flex-col gap-6 self-end pt-2 lg:flex">
             {[
-              { label: "Бренд", value: project.brand },
-              { label: "Агентство", value: project.agency },
-              { label: "Продакшн", value: project.production },
-              { label: "Клиент", value: project.client },
+              { label: "Бренд", value: project.credits?.brand },
+              { label: "Агентство", value: project.credits?.agency },
+              { label: "Продакшн", value: project.credits?.production },
+              { label: "Клиент", value: project.credits?.client },
             ]
               .filter((item) => item.value)
               .map((item) => (
@@ -159,10 +159,7 @@ export default async function ProjectPage({
                         style={style}
                         className="overflow-hidden rounded-xl"
                       >
-                        <VimeoPlayer
-                          videoId={vimeo.videoId}
-                          videoHash={vimeo.videoHash}
-                        />
+                        <VimeoPlayer id={vimeo.id} hash={vimeo.hash} />
                       </div>
                     );
                   }

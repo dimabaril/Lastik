@@ -107,8 +107,7 @@ export default function Projects() {
             // projects={filteredProjects.map((project) => ({
             projects={projects.map((project) => ({
               title: project.title,
-              thumbVideo: project.thumbVideo,
-              thumbVideoPosterImage: project.thumbVideoPosterImage,
+              thumb: project.thumb,
               slug: project.slug,
               tags: project.tags,
               size: project.size,
