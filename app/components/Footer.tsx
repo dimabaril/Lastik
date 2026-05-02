@@ -29,9 +29,9 @@ export default function Footer() {
   return (
     <footer className="bg-black">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
-      <div className="grid-rows-reverse mx-auto grid grid-cols-1 gap-y-6 px-3 py-18 md:grid-cols-2 lg:grid-cols-3 lg:px-6">
+      <div className="mx-auto grid grid-cols-1 gap-y-6 px-3 py-18 md:grid-cols-2 lg:grid-cols-3 lg:px-6">
         {/* Social links */}
-        <div className="flex aspect-323/127 flex-col justify-between gap-4 justify-self-center md:justify-self-start">
+        <div className="order-1 flex aspect-323/127 flex-col justify-between gap-4 justify-self-center md:order-0 md:justify-self-start">
           <a
             href={`mailto:${EMAIL}`}
             className="rounded-full bg-[#FFF546] p-2 text-center text-2xl text-black transition-colors hover:text-(--ref-color-dark)"
@@ -74,10 +74,10 @@ export default function Footer() {
           width={285}
           height={112}
           unoptimized
-          className="justify-self-center md:justify-self-end lg:justify-self-center"
+          className="order-0 justify-self-center md:order-1 md:justify-self-end lg:justify-self-center"
         />
 
-        <div className="max-lg:hidden"></div>
+        <div className="max-lg:hidden md:order-2"></div>
       </div>
       <div
         className="h-5"
