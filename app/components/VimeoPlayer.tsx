@@ -4,7 +4,13 @@ import { useEffect, useRef } from "react";
 
 import { Vimeo } from "@/lib/projects";
 
-export default function VimeoPlayer({ id, hash }: Vimeo) {
+const ASPECT_RATIO = 16 / 9;
+
+export default function VimeoPlayer({
+  id,
+  hash,
+  aspectRatio = ASPECT_RATIO,
+}: Vimeo) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
@@ -52,7 +58,7 @@ export default function VimeoPlayer({ id, hash }: Vimeo) {
 
   return (
     <div
-      style={{ paddingBottom: "56.25%", position: "relative" }}
+      style={{ paddingBottom: `${100 / aspectRatio}%`, position: "relative" }}
       className="w-full overflow-hidden rounded-xl"
     >
       <iframe

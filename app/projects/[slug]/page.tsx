@@ -70,6 +70,7 @@ export default async function ProjectPage({
             <VimeoPlayer
               id={project.vimeos[0].id}
               hash={project.vimeos[0].hash}
+              aspectRatio={project.vimeos[0].aspectRatio}
             />
           </div>
           {/* ─── Right column ─── */}
@@ -159,7 +160,11 @@ export default async function ProjectPage({
                         style={style}
                         className="overflow-hidden rounded-xl"
                       >
-                        <VimeoPlayer id={vimeo.id} hash={vimeo.hash} />
+                        <VimeoPlayer
+                          id={vimeo.id}
+                          hash={vimeo.hash}
+                          aspectRatio={vimeo.aspectRatio}
+                        />
                       </div>
                     );
                   }
