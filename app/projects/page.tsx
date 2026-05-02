@@ -62,7 +62,7 @@ export default function Projects() {
               className="absolute -right-4 -bottom-3 max-sm:-right-11 max-sm:-bottom-3"
             />
           </div>
-          <p className="font-arimo max-w-[730px] text-2xl max-sm:text-xl max-sm:leading-6">
+          <p className="font-arimo max-w-[730px] text-2xl max-sm:text-xl max-sm:leading-tight">
             Создаём визуальное счастье — от идеи до финального кадра, в любой
             технике и для задач брендов по всему миру
           </p>

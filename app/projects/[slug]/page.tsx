@@ -110,7 +110,7 @@ export default async function ProjectPage({
             className="max-md:w-5"
           />
           {/* text index 0 */}
-          <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-6 lg:max-w-1/2">
+          <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-tight lg:max-w-1/2">
             {renderText(project.texts[0])}
           </p>
         </div>
@@ -137,7 +137,7 @@ export default async function ProjectPage({
                         key={i}
                         // style={style}
                         // className="font-onest 7 text-xl whitespace-pre-line"
-                        className={`font-onest col-span-12 text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-5 ${item.cols ? `lg:col-span-${item.cols}` : ""} ${item.colStart ? `lg:col-start-${item.colStart}` : ""}`}
+                        className={`font-onest col-span-12 text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight ${item.cols ? `lg:col-span-${item.cols}` : ""} ${item.colStart ? `lg:col-start-${item.colStart}` : ""}`}
                       >
                         {renderText(project.texts[item.index])}
                       </div>
@@ -201,7 +201,7 @@ export default async function ProjectPage({
           {project.texts.map((text, i) => (
             <p
               key={i}
-              className="font-onest text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-5"
+              className="font-onest text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight"
             >
               {renderText(text)}
             </p>
