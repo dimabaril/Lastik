@@ -23,6 +23,7 @@ export type Vimeo = {
   id: number;
   hash?: string;
   aspectRatio?: number;
+  fullWidth?: boolean;
 };
 
 export type Project = {
@@ -56,6 +57,7 @@ export const projects: Project[] = [
         id: 1187717775,
         hash: "7a46d91482",
         aspectRatio: 4,
+        fullWidth: true,
       },
     ],
     credits: {

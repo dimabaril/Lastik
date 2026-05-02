@@ -29,7 +29,9 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project: Project | undefined = projects.find((p) => p.slug === slug);
+  const project: Project | undefined = projects.find(
+    (project) => project.slug === slug,
+  );
   if (!project) notFound();
 
   return (
@@ -54,7 +56,9 @@ export default async function ProjectPage({
 
       {/* Upper block */}
       <div className="flex flex-col gap-6 max-md:gap-4">
-        <div className="flex gap-6 max-md:gap-4">
+        <div
+          className={`flex gap-6 max-md:gap-4 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
+        >
           {/* Main content */}
           <div className="flex flex-1 flex-col gap-6 max-md:gap-4">
             {/* ─── Tags ─── */}
