@@ -59,7 +59,7 @@ export default function VimeoPlayer({
   return (
     <div
       style={{ paddingBottom: `${100 / aspectRatio}%`, position: "relative" }}
-      className="w-full overflow-hidden rounded-xl"
+      className="w-full overflow-hidden lg:rounded-xl"
     >
       <iframe
         ref={iframeRef}

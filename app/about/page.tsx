@@ -65,14 +65,14 @@ export default function Studio() {
           <div>
             <VideoPlayer
               src="/about/neo (1080p) 2.mp4"
-              className="w-full rounded-3xl object-cover"
+              className="w-full object-cover lg:rounded-3xl"
             />
           </div>
         </div>
         <div>
           <VideoPlayer
             src="/about/Comp 2_3.mp4"
-            className="w-full rounded-3xl object-cover"
+            className="w-full object-cover lg:rounded-3xl"
           />
         </div>
       </section>
@@ -188,7 +188,7 @@ export default function Studio() {
             <div style={{ flex: 1117 / 279 }}>
               <VideoPlayer
                 src="/about/MASTER preview 15-04_1.mp4"
-                className="h-full w-full rounded-3xl object-cover"
+                className="h-full w-full object-cover lg:rounded-3xl"
               />
             </div>
             <div className="hidden flex-col gap-4 max-lg:flex">
@@ -197,7 +197,7 @@ export default function Studio() {
             <div style={{ flex: 626 / 279 }}>
               <VideoPlayer
                 src="/about/ya_shedevrium.mp4"
-                className="h-full w-full rounded-3xl object-cover"
+                className="h-full w-full object-cover lg:rounded-3xl"
               />
             </div>
           </div>
@@ -206,18 +206,18 @@ export default function Studio() {
           <div style={{ flex: 305 / 611 }}>
             <VideoPlayer
               src="/about/leto-luzi.mp4"
-              className="w-full rounded-3xl object-cover"
+              className="w-full object-cover lg:rounded-3xl"
             />
           </div>
           <div className="relative max-lg:hidden" style={{ flex: 1083 / 609 }}>
             <VideoPlayer
               src="/about/AI textures.mp4"
-              className="w-full rounded-3xl object-cover"
+              className="w-full object-cover lg:rounded-3xl"
             />
 
             <div
               style={{ maxWidth: "66.6667%" }}
-              className="absolute right-4 bottom-4 flex flex-col gap-4 rounded-2xl bg-slate-900/60 px-6 py-4 backdrop-blur-md"
+              className="absolute right-4 bottom-4 flex flex-col gap-4 bg-slate-900/60 px-6 py-4 backdrop-blur-md lg:rounded-2xl"
             >
               {aiAdvantages}
             </div>
@@ -225,7 +225,7 @@ export default function Studio() {
           <div style={{ flex: 343 / 609 }}>
             <VideoPlayer
               src="/about/all4.mp4"
-              className="w-full rounded-3xl object-cover"
+              className="w-full object-cover lg:rounded-3xl"
             />
           </div>
         </div>

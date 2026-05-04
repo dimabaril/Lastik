@@ -147,7 +147,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="overflow-hidden rounded-xl"
+                        className="overflow-hidden lg:rounded-xl"
                       >
                         <VideoPlayer
                           src={project.videos?.[item.index]}
@@ -162,7 +162,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="overflow-hidden rounded-xl"
+                        className="overflow-hidden lg:rounded-xl"
                       >
                         <VimeoPlayer
                           id={vimeo.id}
@@ -177,7 +177,7 @@ export default async function ProjectPage({
                       <div
                         key={i}
                         style={style}
-                        className="overflow-hidden rounded-xl"
+                        className="overflow-hidden lg:rounded-xl"
                       >
                         <Image
                           src={project.images[item.index]}
@@ -210,7 +210,7 @@ export default async function ProjectPage({
             (project.videos && project.videos.length > 0)) && (
             <div className="grid grid-cols-2 items-start gap-6 max-md:gap-4">
               {project.images.map((src, i) => (
-                <div key={`img-${i}`} className="overflow-hidden rounded-xl">
+                <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
                   <Image
                     src={src}
                     alt={`${project.title} — ${i + 1}`}
@@ -221,7 +221,7 @@ export default async function ProjectPage({
                 </div>
               ))}
               {project.videos?.map((src, i) => (
-                <div key={`vid-${i}`} className="overflow-hidden rounded-xl">
+                <div key={`vid-${i}`} className="overflow-hidden lg:rounded-xl">
                   <video src={src} controls className="w-full object-cover" />
                 </div>
               ))}
