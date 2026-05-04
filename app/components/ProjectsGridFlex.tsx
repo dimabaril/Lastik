@@ -9,8 +9,6 @@ const GROW_FACTOR = 2;
 
 interface Project {
   title: string;
-  // thumbVideo?: string;
-  // thumbVideoPosterImage?: string;
   thumb: Thumb;
   slug: string;
   tags?: readonly string[];
@@ -48,19 +46,25 @@ export default function ProjectsGridFlex({
   const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const el = gridRef.current;
-    if (!el) return;
+    const gridContainer = gridRef.current;
+    if (!gridContainer) return;
 
-    let maxH = 0;
+    let maxHight = 0;
+    let lastWidth = gridContainer.offsetWidth;
 
-    const ro = new ResizeObserver(() => {
-      el.style.minHeight = "";
-      const h = el.scrollHeight;
-      maxH = Math.max(maxH, h);
-      el.style.minHeight = `${maxH}px`;
+    const resizeObserver = new ResizeObserver(() => {
+      const currentWidth = gridContainer.offsetWidth;
+      if (currentWidth !== lastWidth) {
+        lastWidth = currentWidth;
+        maxHight = 0;
+      }
+      gridContainer.style.minHeight = "";
+      const hight = gridContainer.scrollHeight;
+      maxHight = Math.max(maxHight, hight);
+      gridContainer.style.minHeight = `${maxHight}px`;
     });
-    ro.observe(el);
-    return () => ro.disconnect();
+    resizeObserver.observe(gridContainer);
+    return () => resizeObserver.disconnect();
   }, [projects]);
 
   const rows = buildRows(projects);
