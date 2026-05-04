@@ -39,7 +39,7 @@ export default async function ProjectPage({
       {/* ─── Project Header ─── */}
       <div className="flex items-center justify-between border-t-2 border-white bg-black pt-3">
         {/* ─── Title ─── */}
-        <h1 className="font-druk-cyr-bold-italic text-4xl sm:text-7xl lg:text-8xl">
+        <h1 className="font-druk-cyr-bold-italic text-4xl font-bold italic sm:text-7xl lg:text-8xl">
           {project.title}
         </h1>
         {/* ─── Close button ─── */}
