@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 
 import {
   Arimo,
-  Manrope,
   Victor_Mono,
   Unbounded,
-  // Space_Mono,
   Onest,
+  // Manrope,
+  // Space_Mono,
 } from "next/font/google";
 
 import localFont from "next/font/local";
@@ -20,11 +20,6 @@ const arimo = Arimo({
   subsets: ["latin", "cyrillic"],
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin", "cyrillic"],
-});
-
 const victorMono = Victor_Mono({
   variable: "--font-victor-mono",
   subsets: ["latin", "cyrillic"],
@@ -34,12 +29,6 @@ const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin", "cyrillic"],
 });
-
-// const spaceMono = Space_Mono({
-//   variable: "--font-space-mono",
-//   weight: ["400", "700"],
-//   subsets: ["latin"],
-// });
 
 const onest = Onest({
   variable: "--font-onest",
@@ -76,15 +65,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arimo.variable} ${manrope.variable} ${victorMono.variable} ${unbounded.variable} ${onest.variable} ${drukCyrBoldItalic.variable} antialiased`}
+      className={`${arimo.variable} ${victorMono.variable} ${unbounded.variable} ${onest.variable} ${drukCyrBoldItalic.variable} antialiased`}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
       <body className="flex min-h-screen flex-col bg-black">
         {/* Header place holder */}
-        {/* <div className="h-19"></div> */}
+        <div className="h-19"></div>
+
         <Header />
+
         {children}
 
         {/* Footer */}
