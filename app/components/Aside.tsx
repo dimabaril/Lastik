@@ -21,6 +21,9 @@ const asidePicksOriginal = [
   "/aside-pics/Rectangle 19.png",
   "/aside-pics/Rectangle 32.png",
   "/aside-pics/SBER_DRUGS_11_v01 1.png",
+
+  "/aside-pics/zub2.webm",
+  // "/aside-pics/TAB_16_v02 (3).webm",
 ];
 
 const asidePics = asidePicksOriginal.sort(() => Math.random() - 0.5);
@@ -34,6 +37,8 @@ export default function Aside() {
     asidePics.length * itemHeight + (asidePics.length - 1) * gap;
 
   const images = [...asidePics, ...asidePics];
+
+  const isVideo = (src: string) => /\.(webm|mp4|mov)$/i.test(src);
 
   useEffect(() => {
     let offset = 0;
@@ -58,15 +63,28 @@ export default function Aside() {
         className="flex flex-col gap-5"
         style={{ willChange: "transform" }}
       >
-        {images.map((src, i) => (
-          <Image
-            key={i}
-            src={src}
-            alt={`aside-pic-${i}`}
-            width={128}
-            height={128}
-          />
-        ))}
+        {images.map((src, i) =>
+          isVideo(src) ? (
+            <video
+              key={i}
+              src={src}
+              width={128}
+              height={128}
+              autoPlay
+              loop
+              muted
+              // className="h-32 w-32 object-cover"
+            />
+          ) : (
+            <Image
+              key={i}
+              src={src}
+              alt={`aside-pic-${i}`}
+              width={128}
+              height={128}
+            />
+          ),
+        )}
       </div>
     </aside>
   );
