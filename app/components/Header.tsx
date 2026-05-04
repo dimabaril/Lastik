@@ -43,9 +43,12 @@ export default function Header() {
   ));
 
   return (
-    <header className="fixed top-0 left-0 z-20 w-full">
+    <header
+      className="sticky top-0 z-20 w-full"
+      // style={{ height: "env(safe-area-inset-top)" }}
+    >
       {/* Logo */}
-      <Link href="/">
+      <Link href="/projects">
         <Image
           src="/red-Logo_print_mm_cmyk.svg"
           alt="Logo"

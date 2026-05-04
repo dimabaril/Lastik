@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import {
   Arimo,
@@ -58,6 +58,10 @@ const drukCyrBoldItalic = localFont({
   ],
 });
 
+// export const viewport: Viewport = {
+//   viewportFit: "cover",
+// };
+
 export const metadata: Metadata = {
   title: "Ластик — визуальное счастье",
   description: "Мы создаём анимационную графику для компаний по всему миру",
@@ -78,7 +82,7 @@ export default function RootLayout({
       </head> */}
       <body className="flex min-h-screen flex-col bg-black">
         {/* Header place holder */}
-        <div className="h-19"></div>
+        {/* <div className="h-19"></div> */}
         <Header />
         {children}
 
