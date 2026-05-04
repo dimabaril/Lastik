@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const Aside = dynamic(() => import("../components/Aside"), { ssr: false });
 import ProjectsGridFlex from "../components/ProjectsGridFlex";
 import { projects } from "@/lib/projects";
+import styles from "./projects.module.css";
 // import { tags, Tag } from "@/lib/tags";
 
 export default function Projects() {
@@ -45,24 +46,24 @@ export default function Projects() {
               alt="cat"
               width={70}
               height={61}
-              style={{ width: "70px", height: "auto" }}
-              className="absolute bottom-11 -left-4 max-sm:bottom-2 max-sm:-left-10"
+              style={{ width: "70px", height: "auto", animationDelay: "0s" }}
+              className={`absolute bottom-11 -left-4 max-sm:bottom-2 max-sm:-left-10 ${styles.floatingImage}`}
             />
             <Image
               src="/smile.svg"
               alt="smile"
               width={70}
               height={70}
-              style={{ width: "70px", height: "auto" }}
-              className="absolute -top-9 right-14 max-sm:-top-12 max-sm:right-22"
+              style={{ width: "70px", height: "auto", animationDelay: "0.7s" }}
+              className={`absolute -top-9 right-14 ${styles.floatingImage} max-sm:-top-12 max-sm:right-22`}
             />
             <Image
               src="/heart.svg"
               alt="heart"
               width={70}
               height={61}
-              style={{ width: "70px", height: "auto" }}
-              className="absolute -right-4 -bottom-3 max-sm:-right-11 max-sm:-bottom-3"
+              style={{ width: "70px", height: "auto", animationDelay: "1.3s" }}
+              className={`absolute -right-4 -bottom-3 ${styles.floatingImage} max-sm:-right-11 max-sm:-bottom-3`}
             />
           </div>
           <p className="font-arimo max-w-[730px] text-2xl max-sm:text-xl max-sm:leading-tight">
