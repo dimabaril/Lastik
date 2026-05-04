@@ -44,7 +44,8 @@ export default function Projects() {
               src="/cat.svg"
               alt="cat"
               width={70}
-              height={70}
+              height={61}
+              style={{ width: "70px", height: "auto" }}
               className="absolute bottom-11 -left-4 max-sm:bottom-2 max-sm:-left-10"
             />
             <Image
@@ -52,13 +53,15 @@ export default function Projects() {
               alt="smile"
               width={70}
               height={70}
+              style={{ width: "70px", height: "auto" }}
               className="absolute -top-9 right-14 max-sm:-top-12 max-sm:right-22"
             />
             <Image
               src="/heart.svg"
               alt="heart"
               width={70}
-              height={70}
+              height={61}
+              style={{ width: "70px", height: "auto" }}
               className="absolute -right-4 -bottom-3 max-sm:-right-11 max-sm:-bottom-3"
             />
           </div>

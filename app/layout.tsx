@@ -58,6 +58,7 @@ const drukCyrBoldItalic = localFont({
   ],
 });
 
+// TODO!!! проверить на челке
 // export const viewport: Viewport = {
 //   viewportFit: "cover",
 // };
