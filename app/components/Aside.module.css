@@ -1,0 +1,13 @@
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.track {
+  animation: scroll var(--scroll-duration) linear infinite;
+  will-change: transform;
+}
