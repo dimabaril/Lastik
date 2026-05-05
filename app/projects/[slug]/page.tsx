@@ -98,22 +98,26 @@ export default async function ProjectPage({
               ))}
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          {/* svg */}
-          <Image
-            // src="/arrow.svg"
-            src="/arrow.png"
-            alt="arrow"
-            width={29}
-            height={40}
-            // className="self-start pt-3"
-            className="max-md:w-5"
-          />
-          {/* text index 0 */}
-          <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-tight lg:max-w-1/2">
-            {renderText(project.texts[0])}
-          </p>
-        </div>
+
+        {/* description */}
+        {project.texts[0] && (
+          <div className="flex items-center gap-4">
+            {/* svg */}
+            <Image
+              // src="/arrow.svg"
+              src="/arrow.png"
+              alt="arrow"
+              width={29}
+              height={40}
+              // className="self-start pt-3"
+              className="max-md:w-5"
+            />
+            {/* text index 0 */}
+            <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-tight lg:max-w-1/2">
+              {renderText(project.texts[0])}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* ─── Content grid ─── */}

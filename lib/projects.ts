@@ -571,9 +571,82 @@ export const projects: Project[] = [
       brand: "R.O.C.S.",
     },
     images: [
-      // "/projects/rocs/1.jpg"
+      "/projects/rocs/1 (2).png",
+      "/projects/rocs/2 (2).png",
+      "/projects/rocs/3 (2).png",
+      "/projects/rocs/4 (1).png",
+      "/projects/rocs/5 (2).png",
+      "/projects/rocs/6 (2).png",
+      "/projects/rocs/7 (1).png",
+      "/projects/rocs/8 (2).png",
+      "/projects/rocs/9 (2).png",
+      "/projects/rocs/10 (2).png",
+      "/projects/rocs/11 (2).png",
+      "/projects/rocs/12 (3).png",
+      "/projects/rocs/13 (1).png",
+      "/projects/rocs/14 (1).png",
+
+      "/projects/rocs/1 (3).png",
+      "/projects/rocs/2 (4).png",
+      "/projects/rocs/3 (3).png",
+      "/projects/rocs/4 (2).png",
+      "/projects/rocs/5 (3).png",
+      "/projects/rocs/6 (3).png",
+      "/projects/rocs/7 (2).png",
+      "/projects/rocs/8 (3).png",
+      "/projects/rocs/9 (3).png",
+      "/projects/rocs/10 (3).png",
     ],
-    texts: ["Текст"],
+    texts: [
+      "Абстрактное 3D про то как зубная паста действует на микро-уровне.",
+      "Была задача визуализовать пользу пасты через активные вещества, и мы создали серию «субстанций» — полупрозрачных, текучих форм и частиц, которые живут в кадре, взаимодействуют с эмалью и друг с другом.",
+    ],
+
+    layout: [
+      [
+        { type: "image", index: 0, cols: 3 },
+        { type: "image", index: 1, cols: 3 },
+        { type: "image", index: 2, cols: 3 },
+        { type: "image", index: 3, cols: 3 },
+      ],
+      [
+        { type: "image", index: 4, cols: 3 },
+        { type: "image", index: 5, cols: 3 },
+        { type: "image", index: 6, cols: 3 },
+        { type: "image", index: 7, cols: 3 },
+      ],
+      [
+        { type: "image", index: 8, cols: 3 },
+        { type: "image", index: 9, cols: 3 },
+        { type: "image", index: 10, cols: 3 },
+        { type: "image", index: 11, cols: 3 },
+      ],
+
+      [
+        { type: "image", index: 12, cols: 3 },
+        { type: "image", index: 13, cols: 3 },
+      ],
+
+      [{ type: "text", index: 1, cols: 7 }],
+      [
+        { type: "image", index: 14, cols: 4 },
+        { type: "image", index: 15, cols: 4 },
+        { type: "image", index: 16, cols: 4 },
+      ],
+      [
+        { type: "image", index: 17, cols: 4 },
+        { type: "image", index: 18, cols: 4 },
+        { type: "image", index: 19, cols: 4 },
+      ],
+      [
+        { type: "image", index: 20, cols: 6 },
+        { type: "image", index: 21, cols: 6 },
+      ],
+      [
+        { type: "image", index: 22, cols: 6 },
+        { type: "image", index: 23, cols: 6 },
+      ],
+    ],
   },
 
   {
@@ -907,9 +980,65 @@ export const projects: Project[] = [
     ],
 
     images: [
-      // "/projects/mansi/1.jpg"
+      "/projects/mansi/A382CCB0-CED1-410C-9CFB-E80FCEC10831.png",
+      "/projects/mansi/telegram-cloud-photo-size-2-5438318849423426342-y.jpg",
+      "/projects/mansi/telegram-cloud-photo-size-2-5456181257630237561-y.jpg",
+      "/projects/mansi/telegram-cloud-document-2-5453929457360314954.jpg",
+
+      "/projects/mansi/telegram-cloud-photo-size-2-5431363205722128715-y.jpg",
+      "/projects/mansi/telegram-cloud-document-2-5445080562010169447.jpg",
+      "/projects/mansi/telegram-cloud-document-2-5436140252576095848.jpg",
+      "/projects/mansi/Screenshot 2022-11-23 at 19.53.15.png",
+
+      "/projects/mansi/7CDE33E5-C4F3-4934-BB21-3EDB283A3EE8.png",
+      "/projects/mansi/telegram-cloud-photo-size-2-5438644669937467623-y.jpg",
+
+      "/projects/mansi/telegram-cloud-document-2-5456667846903866348.jpg",
+      "/projects/mansi/telegram-cloud-document-2-5456667846903866979.jpg",
+      "/projects/mansi/telegram-cloud-document-2-5449612396752543682.jpg",
+      "/projects/mansi/Screenshot 2022-11-23 at 20.06.47.png",
+      "/projects/mansi/colors (1).jpg",
+
+      "/projects/mansi/telegram-cloud-photo-size-2-5438496802803401745-y.jpg",
+      "/projects/mansi/IMAGE 2022-11-14 15_51_22.jpg",
+      "/projects/mansi/photo_2022-11-16 00.39.14.jpeg",
+      "/projects/mansi/IMAGE 2022-11-14 15_51_07.jpg",
     ],
-    texts: ["Текст"],
+    texts: [
+      'Фильм про сотворение мира по легендам сибирского народа Манси. Создан для церемонии открытия фестиваля "Дух огня".',
+    ],
+
+    layout: [
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [],
+      [],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+      [{ type: "image", index: 6, cols: 12 }],
+      [{ type: "image", index: 7, cols: 12 }],
+      [],
+      [],
+      [{ type: "image", index: 8, cols: 12 }],
+      [{ type: "image", index: 9, cols: 12 }],
+      [],
+      [],
+      [
+        { type: "image", index: 10, cols: 9 },
+        { type: "image", index: 11, cols: 3 },
+      ],
+      [{ type: "image", index: 12, cols: 12 }],
+      [{ type: "image", index: 13, cols: 12 }],
+      [{ type: "image", index: 14, cols: 12 }],
+      [],
+      [],
+      [{ type: "image", index: 15, cols: 12 }],
+      [{ type: "image", index: 16, cols: 12 }],
+      [{ type: "image", index: 17, cols: 12 }],
+      [{ type: "image", index: 18, cols: 12 }],
+    ],
   },
 
   {
@@ -1144,9 +1273,56 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/volchok/1.jpg"
+      "/projects/volchok/64fd2f130842133.6195235b144dd.gif",
+      "/projects/volchok/840b4c130842133.6195235b59732.gif",
+      "/projects/volchok/92c5dc130842133.6195235b9d5be.gif",
+      "/projects/volchok/9b45f8130842133.6195235bc4ef0.gif",
+      "/projects/volchok/e9f5c1130842133.619609fb1ade0.png",
+      "/projects/volchok/80d6b2130842133.619609fb199f2.png",
+      "/projects/volchok/248602130842133.619609fb1a235.png",
+      "/projects/volchok/5070b0130842133.619609fb1bcce.png",
+      "/projects/volchok/e4ed12130842133.619609fb1915e.jpg",
+      "/projects/volchok/9ca2a5130842133.619609fb18b71.jpg",
+      "/projects/volchok/303ab5130842133.6195235c1e3ff.gif",
+      "/projects/volchok/f124f6130842133.6195235c51e36.gif",
+      "/projects/volchok/d22576130842133.6195235ca2ce2.gif",
+      "/projects/volchok/image (28).png",
+      "/projects/volchok/cfef70130842133.6195235d0330b.gif",
+      "/projects/volchok/038fc3130842133.6195235d3d908.gif",
+      "/projects/volchok/b28c69130842133.6195235dc8081.gif",
+      "/projects/volchok/e87368130842133.6195235e8e6cb.gif",
     ],
-    texts: ["Текст"],
+    texts: [
+      // "Текст"
+    ],
+    layout: [
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+
+      [
+        { type: "image", index: 4, cols: 6 },
+        { type: "image", index: 5, cols: 6 },
+      ],
+
+      [{ type: "image", index: 6, cols: 12 }],
+      [{ type: "image", index: 7, cols: 12 }],
+
+      [
+        { type: "image", index: 8, cols: 6 },
+        { type: "image", index: 9, cols: 6 },
+      ],
+
+      [{ type: "image", index: 10, cols: 12 }],
+      [{ type: "image", index: 11, cols: 12 }],
+      [{ type: "image", index: 12, cols: 12 }],
+      [{ type: "image", index: 13, cols: 12 }],
+      [{ type: "image", index: 14, cols: 12 }],
+      [{ type: "image", index: 15, cols: 12 }],
+      [{ type: "image", index: 16, cols: 12 }],
+      [{ type: "image", index: 17, cols: 12 }],
+    ],
   },
 
   {
@@ -1156,7 +1332,7 @@ export const projects: Project[] = [
       video: "/projects/rambler/thumb/rambler_thumb.webm",
       poster: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
     },
-    title: "Рамблер",
+    title: "Агрегатор",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -1168,9 +1344,31 @@ export const projects: Project[] = [
       production: "Zebra Hero",
     },
     images: [
-      // "/projects/rambler/1.jpg"
+      "/projects/rambler/e03764124306657.6273fd163c485.png",
+      "/projects/rambler/79ae87124306657.6273fd163c9ce.png",
+      "/projects/rambler/f94071124306657.6273f52379af3.png",
+      "/projects/rambler/b16c76124306657.6273f52378c47.png",
+      "/projects/rambler/9f7009124306657.6273fd163d1a4.jpeg",
+      "/projects/rambler/47ce99124306657.6273f5237a017.png",
     ],
-    texts: ["Текст"],
+    texts: [
+      "Веселые алгоритмы на конвейере спама и кликбейта.",
+      "Одна крупная медиаплатформа готовила запуск обновлённой новостной ленты с собственной системой фильтрации спама. Нужно было наглядно объяснить работу сложного алгоритма — без технического перегруза и скучных схем.",
+      "Маршмеллоу-человечки разных форм и размеров сортируют штуки на ленте. Мы  старались сделать их эмоциональными и минималистичными одновременно.",
+      "Новостной контент мы представили в виде разных объектов – на любой вкус и цвет.",
+    ],
+
+    layout: [
+      [{ type: "text", index: 1, cols: 7 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "text", index: 2, cols: 7 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "text", index: 3, cols: 7 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+    ],
   },
 
   {
@@ -1325,9 +1523,30 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/i-want-to-know-everything/1.jpg"
+      "/projects/i-want-to-know-everything/63f74c123601575.60f184f4450e7.png",
+
+      "/projects/i-want-to-know-everything/0990a4123601575.618983a2cf905.png",
+      "/projects/i-want-to-know-everything/1194ee123601575.618983a2d0072.gif",
+      "/projects/i-want-to-know-everything/2830dc123601575.618983a2cdb5f.gif",
+      "/projects/i-want-to-know-everything/8cfb71123601575.618983a2ce96a.gif",
+      "/projects/i-want-to-know-everything/6c4164123601575.61898484b1811.png",
     ],
-    texts: ["Текст"],
+    videos: [
+      "/projects/i-want-to-know-everything/7ec1e4123601575.60f1a0a8c9a8a.webm",
+    ],
+    texts: [
+      // "Текст"
+    ],
+
+    layout: [
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "video", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+    ],
   },
 
   {
@@ -1431,9 +1650,32 @@ export const projects: Project[] = [
       brand: "Green Idea",
     },
     images: [
-      // "/projects/green-idea/1.jpg"
+      "/projects/green-idea/08d99c123100343.610060b1d2f81.gif",
+      "/projects/green-idea/0a0788123100343.610060b1d3cd4.gif",
+      "/projects/green-idea/358a6e123100343.6101347d777bc.png",
+      "/projects/green-idea/42688f123100343.6101347d77ebe.png",
+      "/projects/green-idea/748035123100343.610060b1d36cb.gif",
+      "/projects/green-idea/8598d0123100343.6101339bddd6e.png",
+      "/projects/green-idea/a2d472123100343.610060b1d5050.gif",
+      "/projects/green-idea/cdc08f123100343.6101339bdd80e.gif",
+      "/projects/green-idea/e13e83123100343.610060b1d4b23.gif",
+      "/projects/green-idea/image (29).png",
     ],
-    texts: ["Текст"],
+    texts: [
+      // "Текст"
+    ],
+    layout: [
+      [{ type: "image", index: 5, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 6, cols: 12 }],
+      [{ type: "image", index: 7, cols: 12 }],
+      [{ type: "image", index: 9, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 8, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 0, cols: 12 }],
+    ],
   },
 
   {
