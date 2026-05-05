@@ -1746,12 +1746,28 @@ export const projects: Project[] = [
       {
         id: 476301197,
         aspectRatio: 2.35,
+        fullWidth: true,
       },
     ],
     images: [
-      // "/projects/unprincipled/1.jpg"
+      "/projects/unprincipled/189026123100837.61011435d1168.gif",
+      "/projects/unprincipled/3809fa123100837.61011435d01fb.png",
+      "/projects/unprincipled/406b36123100837.61011435d16f2.gif",
+      "/projects/unprincipled/fc88ab123100837.61011435d0963.gif",
+      "/projects/unprincipled/7735fc123100837.61011435cf70d.png",
+      "/projects/unprincipled/8b383a123100837.61011435cfc80.png",
     ],
-    texts: ["Текст"],
+    texts: [
+      // "Текст"
+    ],
+    layout: [
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+    ],
   },
 
   {
