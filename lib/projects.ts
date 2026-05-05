@@ -1248,9 +1248,27 @@ export const projects: Project[] = [
       client: "Музей Москвы",
     },
     images: [
-      // "/projects/mosmuseum/1.jpg"
+      "/projects/mosmuseum/faa984142929675.6270fadb77c91.gif",
+      "/projects/mosmuseum/image (30).png",
+      "/projects/mosmuseum/215e95142929675.62711a564afeb.png",
+      "/projects/mosmuseum/1bdcdb142929675.62711a564b8d4.png",
+      "/projects/mosmuseum/091ce9142929675.6270ec8c12dd4.gif",
+      "/projects/mosmuseum/e5ca4d142929675.6270fadb7816b.png",
+      "/projects/mosmuseum/43c8e6142929675.6270fadb76a24.gif",
     ],
-    texts: ["Текст"],
+    texts: [
+      // "Текст"
+    ],
+
+    layout: [
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [{ type: "image", index: 5, cols: 12 }],
+      [{ type: "image", index: 6, cols: 12 }],
+    ],
   },
 
   {
@@ -1715,10 +1733,13 @@ export const projects: Project[] = [
         id: 747611807,
       },
     ],
-    images: [
-      // "/projects/bigcup/1.jpg"
+    images: [],
+    videos: ["/projects/bigcup/pear1.3.webm"],
+    texts: [
+      "Рекламный ролик, где бутылки ряженки, чашки и фрукты не скрывают своих чувств.",
     ],
-    texts: ["Текст"],
+
+    layout: [[{ type: "video", index: 0, cols: 12 }]],
   },
 
   {
@@ -1741,9 +1762,25 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/hospitality/1.jpg"
+      "/projects/hospitality/IMG_3182.JPG",
+      "/projects/hospitality/IMG_3181.JPG",
+      "/projects/hospitality/scene04902.png",
+      "/projects/hospitality/IMAGE 2021-08-21 22_25_31.jpg",
+      "/projects/hospitality/scene06758.png",
     ],
-    texts: ["Текст"],
+    texts: [
+      "6 эпизодов о гостеприимстве — про то как сближаются туристы и жители Москвы. Эти истории о приключениях и взаимопомощи показывают школьникам (чему мы очень рады).",
+      "Любим этот проект за сценарии и персонажей.",
+    ],
+
+    layout: [
+      [{ type: "text", index: 1, cols: 12 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 2, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+    ],
   },
 
   {
@@ -1817,9 +1854,19 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/presents-fest-2024/1.jpg"
+      "/projects/presents-fest-2024/image.png",
+      "/projects/presents-fest-2024/telegram-cloud-photo-size-2-5451940346792631033-y.jpg",
     ],
-    texts: ["Текст"],
+    texts: [
+      "Небольшое 3D-промо про полет подарка в космических просторах.",
+      "Любопытно как много вариантов перебрали, прежде чем выбрали того самого персонажа.",
+    ],
+
+    layout: [
+      [{ type: "text", index: 1, cols: 7 }],
+      [{ type: "image", index: 0, cols: 12 }],
+      [{ type: "image", index: 1, cols: 12 }],
+    ],
   },
 
   {
@@ -1894,9 +1941,29 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/saint-spring-v3/1.jpg"
+      "/projects/saint-spring-v3/image (31).png",
+      "/projects/saint-spring-v3/photo_2026-05-04_20-19-35.jpg",
+      "/projects/saint-spring-v3/image (32).png",
+      "/projects/saint-spring-v3/image (33).png",
     ],
-    texts: ["Текст"],
+    videos: ["/projects/saint-spring-v3/Si_animatic_11.mp4"],
+    texts: [
+      'Стопмоушен реклама воды "Святой источник" о бутылках разного размера.',
+      "Три сцены и три бутылки для разных ситуаций: большая — для дома, средняя — для прогулок, а маленькая — для занятий спортом.",
+      "Мы сделали каждую бутылку персонажем в своем окружении и создали разные декорации. Кровать сделана из стопки футболок, а беговая дорожка — из карандашей. Картинку настроили, используя фирменные цвета и стиль: чистый, свежий и нежный. Мы также добавили крошечные 2D-эффекты, чтобы всё задышало.",
+    ],
+
+    layout: [
+      [{ type: "text", index: 1, cols: 7 }],
+      [
+        { type: "video", index: 0, cols: 7 },
+        { type: "image", index: 0, cols: 5 },
+      ],
+      [{ type: "text", index: 2, cols: 7 }],
+      [{ type: "image", index: 1, cols: 12 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 2, cols: 5 }],
+    ],
   },
 
   {
