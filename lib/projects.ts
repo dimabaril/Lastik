@@ -1579,15 +1579,51 @@ export const projects: Project[] = [
     tags: [TAG["2D"], TAG["3D_VR"], TAG.CODING, TAG.INSTALLATION],
     vimeos: [
       {
-        id: 926255997,
+        id: 1189107509,
+        hash: "a26d7ddabd",
       },
     ],
     credits: {
       client: "Департамент туризма Москвы",
     },
-    texts: ["Текст"],
+    texts: [
+      "Большой проект – интерактивная инсталляция для школьников про выбор будущих профессий. Задача – чтобы подросток ощутил, что он уже вырос и оказался на работе своей мечты. Для этого рисовали комиксы и придумывали VR-сцены.",
+      "От сценария и стиля до программирования – всё сделано внутри студии. Клиент масштабировал инсталляцию и активно использует её по всей России.",
+    ],
     images: [
-      // "/projects/gorod-otkritiy/image.png"
+      "/projects/gorod-otkritiy/image (34).png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.42.32.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.43.11.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.43.58.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.45.08.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.37.52.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.40.04.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.38.13.png",
+      "/projects/gorod-otkritiy/Screenshot 2025-09-02 at 19.42.00.png",
+    ],
+
+    layout: [
+      [
+        { type: "text", index: 1, cols: 6 },
+        { type: "image", index: 0, cols: 6 },
+      ],
+
+      [
+        { type: "image", index: 1, cols: 6 },
+        { type: "image", index: 2, cols: 6 },
+      ],
+      [
+        { type: "image", index: 3, cols: 6 },
+        { type: "image", index: 4, cols: 6 },
+      ],
+      [
+        { type: "image", index: 5, cols: 6 },
+        { type: "image", index: 6, cols: 6 },
+      ],
+      [
+        { type: "image", index: 7, cols: 6 },
+        { type: "image", index: 8, cols: 6 },
+      ],
     ],
   },
 
@@ -1989,9 +2025,45 @@ export const projects: Project[] = [
     },
 
     images: [
-      // "/projects/supermarket-trollys-dream-v1/1.jpg"
+      "/projects/supermarket-trollys-dream-v1/hf_20260504_183405_7a56b989-b538-4e9d-8d5e-397456871cd3.png",
+      "/projects/supermarket-trollys-dream-v1/hf_20260504_183554_cb2d1413-39e2-4580-aae6-ba02effdb796.png",
+      "/projects/supermarket-trollys-dream-v1/hf_20260504_184001_4d2fd7f5-1329-47dd-aebe-de428ad24faa.png",
+      "/projects/supermarket-trollys-dream-v1/photo_2026-05-04_20-19-04.jpg",
+      "/projects/supermarket-trollys-dream-v1/photo_2026-05-04_20-19-09.jpg",
+      "/projects/supermarket-trollys-dream-v1/image 92.png",
+      "/projects/supermarket-trollys-dream-v1/image 91.png",
+      "/projects/supermarket-trollys-dream-v1/image 90.png",
+      "/projects/supermarket-trollys-dream-v1/image 96.png",
     ],
-    texts: ["Текст"],
+    texts: [
+      `62-метровый объект из переработанного пластика, установленный в витрине флагманского супермаркета «Перекрёсток» на Большой Полянке в Москве.
+      Студия Ластик х Сергей "POGA" Погосян.`,
+
+      `Перед началом сборки отсортировали около четырёх тонн очищенного вторсырья.
+      В финальной работе использовано 340 кг пластика: упаковка от продуктов, лотки для готовой еды, детские игрушки и другие повседневные предметы. Каждый фрагмент выкладывался вручную и фиксировался горячим клеем, фон покрывали прорезиненной краской.`,
+
+      "Проект получил награду за лучший дизайн на российском конкурсе POSM и in-store-коммуникаций POPAI-2021.",
+    ],
+
+    layout: [
+      [
+        { type: "image", index: 0, cols: 12 },
+        { type: "image", index: 1, cols: 12 },
+        { type: "image", index: 2, cols: 12 },
+      ],
+      [{ type: "text", index: 1, cols: 7 }],
+      [{ type: "image", index: 3, cols: 12 }],
+      [{ type: "image", index: 4, cols: 12 }],
+      [
+        { type: "image", index: 5, cols: 7 },
+        { type: "image", index: 6, cols: 4 },
+      ],
+      [
+        { type: "image", index: 7, cols: 4 },
+        { type: "image", index: 8, cols: 7 },
+      ],
+      [{ type: "text", index: 2, cols: 7, colStart: 6 }],
+    ],
   },
   {
     slug: "the-skin-v1",
