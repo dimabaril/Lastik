@@ -35,7 +35,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 text-white max-md:gap-4 lg:p-6">
+    <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 text-white max-md:gap-3 lg:p-6">
       {/* ─── Project Header ─── */}
       <div className="flex items-center justify-between border-t-2 border-white bg-black pt-3">
         {/* ─── Title ─── */}
@@ -55,12 +55,12 @@ export default async function ProjectPage({
       </div>
 
       {/* Upper block */}
-      <div className="flex flex-col gap-6 max-md:gap-4">
+      <div className="flex flex-col gap-6 max-md:gap-3">
         <div
-          className={`flex gap-6 max-md:gap-4 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
+          className={`flex gap-6 max-md:gap-3 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
         >
           {/* Main content */}
-          <div className="flex flex-1 flex-col gap-6 max-md:gap-4">
+          <div className="flex flex-1 flex-col gap-6 max-md:gap-3">
             {/* ─── Tags ─── */}
             <div className="font-victor-mono flex divide-x self-end text-xl max-lg:text-lg">
               {project.tags.map((tag) => (
@@ -122,11 +122,11 @@ export default async function ProjectPage({
 
       {/* ─── Content grid ─── */}
       {project.layout ? (
-        <div className="flex flex-col gap-6 max-md:gap-4">
+        <div className="flex flex-col gap-6 max-md:gap-3">
           {project.layout.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="grid grid-cols-12 items-start gap-6 max-md:gap-4"
+              className="grid grid-cols-12 items-start gap-6 max-md:gap-3"
             >
               {row.map((item, i) => {
                 const style: React.CSSProperties = {
@@ -201,7 +201,7 @@ export default async function ProjectPage({
           ))}
         </div>
       ) : (
-        <div className="mt-6 flex flex-col gap-6 max-md:gap-4">
+        <div className="mt-6 flex flex-col gap-6 max-md:gap-3">
           {project.texts.map((text, i) => (
             <p
               key={i}
@@ -212,7 +212,7 @@ export default async function ProjectPage({
           ))}
           {(project.images.length > 0 ||
             (project.videos && project.videos.length > 0)) && (
-            <div className="grid grid-cols-2 items-start gap-6 max-md:gap-4">
+            <div className="grid grid-cols-2 items-start gap-6 max-md:gap-3">
               {project.images.map((src, i) => (
                 <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
                   <Image
