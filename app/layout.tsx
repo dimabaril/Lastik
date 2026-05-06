@@ -73,15 +73,15 @@ export default function RootLayout({
       </head> */}
       <body className="flex min-h-screen flex-col bg-black">
         <MobileProvider>
-        {/* Header place holder */}
-        <div className="h-19"></div>
+          {/* Header place holder */}
+          <div className="h-19"></div>
 
-        <Header />
+          <Header />
 
-        {children}
+          {children}
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
         </MobileProvider>
       </body>
     </html>

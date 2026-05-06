@@ -1,18 +1,22 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useSyncExternalStore } from "react";
 
 const MobileContext = createContext(false);
 
+const subscribe = () => () => {};
+const getSnapshot = () => window.matchMedia("(hover: none)").matches;
+const getServerSnapshot = () => false;
+
 export function MobileProvider({ children }: { children: React.ReactNode }) {
-  const [isMobile] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(hover: none)").matches,
+  const isMobile = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot,
   );
 
   return (
-    <MobileContext.Provider value={isMobile}>
-      {children}
-    </MobileContext.Provider>
+    <MobileContext.Provider value={isMobile}>{children}</MobileContext.Provider>
   );
 }
 
