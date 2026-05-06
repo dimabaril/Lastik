@@ -99,7 +99,6 @@ export default function ProjectsGridFlex({
                   thumb={project.thumb}
                   slug={project.slug}
                   tags={project.tags}
-                  size={size}
                 />
               </div>
             );
