@@ -22,11 +22,11 @@ export default function ProjectPreviewCard({
 }: ProjectPreviewCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleMouseEnter = () => {
+  const handlePlay = () => {
     videoRef.current?.play().catch(() => {});
   };
 
-  const handleMouseLeave = () => {
+  const handlePause = () => {
     const video = videoRef.current;
     if (!video) return;
     video.pause();
@@ -37,10 +37,10 @@ export default function ProjectPreviewCard({
     <Link
       href={`/projects/${slug}`}
       className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-dashed border-transparent p-3 sm:hover:border-(--fade-color)"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={handleMouseEnter}
-      onTouchEnd={handleMouseLeave}
+      onMouseEnter={handlePlay}
+      onMouseLeave={handlePause}
+      // onTouchStart={handlePlay}
+      // onTouchEnd={handlePause}
     >
       {thumb.video ? (
         <video
