@@ -257,8 +257,8 @@ export const projects: Project[] = [
     slug: "sber-terminal",
     size: 2,
     thumb: {
-      video: "/projects/sber-terminal/thumb/SBER_terminal.webm",
-      poster: "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
+      video: "/projects/sber-terminal/thumb/sber_terminal_sq.webm",
+      poster: "/projects/sber-terminal/thumb/sber_terminal_sq-poster.jpg",
     },
     title: "СБЕР / Оплата улыбкой",
     description: "Description",
