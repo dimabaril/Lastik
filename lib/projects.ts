@@ -15,8 +15,10 @@ export type Credits = {
 };
 
 export type Thumb = {
+  origin?: string;
   video?: string;
   poster?: string;
+  videoSize?: { width: number; height: number };
 };
 
 export type Vimeo = {
@@ -46,8 +48,10 @@ export const projects: Project[] = [
     slug: "museum-of-transport",
     size: 12,
     thumb: {
-      video: "/projects/trans-museum/thumb/trans_museum.webm",
+      origin: "/projects/trans-museum/thumb/trans_museum.webm",
+      video: "/projects/trans-museum/thumb/trans_museum-converted.webm",
       poster: "/projects/trans-museum/thumb/trans_museum-poster.jpg",
+      videoSize: { width: 1230, height: 308 },
     },
     title: "Музей Транспорта Москвы",
     description: "Description",
@@ -156,9 +160,12 @@ export const projects: Project[] = [
     slug: "love-generation",
     size: 4,
     thumb: {
-      video: "/projects/love-generation/thumb/love_generation-thumb.webm",
+      origin: "/projects/love-generation/thumb/love_generation-thumb.webm",
+      video:
+        "/projects/love-generation/thumb/love_generation-thumb-converted.webm",
       poster:
         "/projects/love-generation/thumb/love_generation-thumb-poster.jpg",
+      videoSize: { width: 392, height: 220 },
     },
     title: "Love Generation",
     description: "Description",
@@ -208,8 +215,10 @@ export const projects: Project[] = [
     slug: "vk-neo",
     size: 6,
     thumb: {
-      video: "/projects/vk-neo/thumb/NEO_pw.webm",
+      origin: "/projects/vk-neo/thumb/NEO_pw.webm",
+      video: "/projects/vk-neo/thumb/NEO_pw-converted.webm",
       poster: "/projects/vk-neo/thumb/NEO_pw-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "VK / Маруся x NEO",
     description: "Description",
@@ -257,8 +266,10 @@ export const projects: Project[] = [
     slug: "sber-terminal",
     size: 2,
     thumb: {
-      video: "/projects/sber-terminal/thumb/SBER_terminal.webm",
+      origin: "/projects/sber-terminal/thumb/SBER_terminal.webm",
+      video: "/projects/sber-terminal/thumb/SBER_terminal-converted.webm",
       poster: "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
+      videoSize: { width: 184, height: 368 },
     },
     title: "СБЕР / Оплата улыбкой",
     description: "Description",
@@ -324,8 +335,10 @@ export const projects: Project[] = [
     slug: "vtb-1",
     size: 7,
     thumb: {
-      video: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
+      origin: "/projects/vtb-1/thumb/vtb-1-thumb.webm",
+      video: "/projects/vtb-1/thumb/vtb-1-thumb-converted.webm",
       poster: "/projects/vtb-1/thumb/vtb-1-thumb-poster.jpg",
+      videoSize: { width: 706, height: 398 },
     },
     title: "ВТБ / Переводы",
     description: "Description",
@@ -385,8 +398,10 @@ export const projects: Project[] = [
     slug: "vk-mini-app",
     size: 5,
     thumb: {
-      video: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
+      origin: "/projects/vk-mini-app/thumb/VK_MiniApps.webm",
+      video: "/projects/vk-mini-app/thumb/VK_MiniApps-converted.webm",
       poster: "/projects/vk-mini-app/thumb/VK_MiniApps-poster.jpg",
+      videoSize: { width: 498, height: 414 },
     },
     title: "VK / Mini Apps",
     description: "Description",
@@ -556,8 +571,10 @@ export const projects: Project[] = [
     slug: "rocs",
     size: 2,
     thumb: {
-      video: "/projects/rocs/thumb/rocs.webm",
+      origin: "/projects/rocs/thumb/rocs.webm",
+      video: "/projects/rocs/thumb/rocs-converted.webm",
       poster: "/projects/rocs/thumb/rocs-poster.jpg",
+      videoSize: { width: 184, height: 184 },
     },
     title: "R.O.C.S.",
     description: "Description",
@@ -653,8 +670,10 @@ export const projects: Project[] = [
     slug: "zvuk",
     size: 6,
     thumb: {
-      video: "/projects/zvuk/thumb/zvuk-thumb.webm",
+      origin: "/projects/zvuk/thumb/zvuk-thumb.webm",
+      video: "/projects/zvuk/thumb/zvuk-thumb-converted.webm",
       poster: "/projects/zvuk/thumb/zvuk-thumb-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "СБЕР / Звук",
     description: "Description",
@@ -781,8 +800,10 @@ export const projects: Project[] = [
     slug: "mts",
     size: 4,
     thumb: {
-      video: "/projects/mts/thumb/mts-thumb.webm",
+      origin: "/projects/mts/thumb/mts-thumb.webm",
+      video: "/projects/mts/thumb/mts-thumb-converted.webm",
       poster: "/projects/mts/thumb/mts-thumb-poster.jpg",
+      videoSize: { width: 392, height: 220 },
     },
     title: "МТС / Neku-sai",
     description: "Description",
@@ -851,8 +872,10 @@ export const projects: Project[] = [
     slug: "yandex-incl",
     size: 6,
     thumb: {
-      video: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
+      origin: "/projects/yandex-incl/thumb/ya_incl-thumb.webm",
+      video: "/projects/yandex-incl/thumb/ya_incl-thumb-converted.webm",
       poster: "/projects/yandex-incl/thumb/ya_incl-thumb-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "Яндекс / Инклюзия",
     description:
@@ -906,8 +929,10 @@ export const projects: Project[] = [
     slug: "mail-ru",
     size: 5,
     thumb: {
-      video: "/projects/mail-ru/thumb/mail-thumb.webm",
+      origin: "/projects/mail-ru/thumb/mail-thumb.webm",
+      video: "/projects/mail-ru/thumb/mail-thumb-converted.webm",
       poster: "/projects/mail-ru/thumb/mail-thumb-poster.jpg",
+      videoSize: { width: 498, height: 280 },
     },
     title: "MAIL.RU / Ребрендинг ",
     description: "Description",
@@ -965,8 +990,10 @@ export const projects: Project[] = [
     slug: "mansi",
     size: 8,
     thumb: {
-      video: "/projects/mansi/thumb/mansi-thumb.webm",
+      origin: "/projects/mansi/thumb/mansi-thumb.webm",
+      video: "/projects/mansi/thumb/mansi-thumb-converted.webm",
       poster: "/projects/mansi/thumb/mansi-thumb-poster.jpg",
+      videoSize: { width: 812, height: 284 },
     },
     title: "Фестиваль Дух огня / Мифы Манси",
     description: "Description",
@@ -1045,8 +1072,10 @@ export const projects: Project[] = [
     slug: "eapteka",
     size: 3,
     thumb: {
-      video: "/projects/eapteka/thumb/TAB_16_v02.webm",
+      origin: "/projects/eapteka/thumb/TAB_16_v02.webm",
+      video: "/projects/eapteka/thumb/TAB_16_v02-converted.webm",
       poster: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+      videoSize: { width: 288, height: 288 },
     },
     title: "СБЕР / Еаптека",
     description: "Description",
@@ -1099,8 +1128,10 @@ export const projects: Project[] = [
     slug: "delimobil",
     size: 3,
     thumb: {
-      video: "/projects/delimobil/thumb/delimobil.webm",
+      origin: "/projects/delimobil/thumb/delimobil.webm",
+      video: "/projects/delimobil/thumb/delimobil-converted.webm",
       poster: "/projects/delimobil/thumb/delimobil-poster.jpg",
+      videoSize: { width: 288, height: 312 },
     },
     title: "Делимобиль",
     description: "Description",
@@ -1140,8 +1171,10 @@ export const projects: Project[] = [
     slug: "sobchak",
     size: 4.5,
     thumb: {
-      video: "/projects/sobchak/thumb/sobchak_thumb.webm",
+      origin: "/projects/sobchak/thumb/sobchak_thumb.webm",
+      video: "/projects/sobchak/thumb/sobchak_thumb-converted.webm",
       poster: "/projects/sobchak/thumb/sobchak_thumb-poster.jpg",
+      videoSize: { width: 446, height: 250 },
     },
     title: "Осторожно, Собчак!",
     description: "Description",
@@ -1233,8 +1266,10 @@ export const projects: Project[] = [
     slug: "mosmuseum",
     size: 4.5,
     thumb: {
-      video: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
+      origin: "/projects/mosmuseum/thumb/mosmuseum-thumb.webm",
+      video: "/projects/mosmuseum/thumb/mosmuseum-thumb-converted.webm",
       poster: "/projects/mosmuseum/thumb/mosmuseum-thumb-poster.jpg",
+      videoSize: { width: 446, height: 250 },
     },
     title: "Музей Москвы",
     description: "Description",
@@ -1275,8 +1310,10 @@ export const projects: Project[] = [
     slug: "volchok",
     size: 5,
     thumb: {
-      video: "/projects/volchok/thumb/volchok-thumb.webm",
+      origin: "/projects/volchok/thumb/volchok-thumb.webm",
+      video: "/projects/volchok/thumb/volchok-thumb-converted.webm",
       poster: "/projects/volchok/thumb/volchok-thumb-poster.jpg",
+      videoSize: { width: 498, height: 280 },
     },
     title: "Волковская Пивоварня",
     description: "Description",
@@ -1347,8 +1384,10 @@ export const projects: Project[] = [
     slug: "rambler",
     size: 6,
     thumb: {
-      video: "/projects/rambler/thumb/rambler_thumb.webm",
+      origin: "/projects/rambler/thumb/rambler_thumb.webm",
+      video: "/projects/rambler/thumb/rambler_thumb-converted.webm",
       poster: "/projects/rambler/thumb/rambler_thumb-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "Агрегатор",
     description: "Description",
@@ -1393,8 +1432,10 @@ export const projects: Project[] = [
     slug: "sber-high-res",
     size: 7,
     thumb: {
-      video: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
+      origin: "/projects/sber-high-res/thumb/sber-high-res-thumb.webm",
+      video: "/projects/sber-high-res/thumb/sber-high-res-thumb-converted.webm",
       poster: "/projects/sber-high-res/thumb/sber-high-res-thumb-poster.jpg",
+      videoSize: { width: 706, height: 398 },
     },
     title: "СБЕР / Кредит 5%",
     description: "Description",
@@ -1523,10 +1564,13 @@ export const projects: Project[] = [
     slug: "i-want-to-know-everything",
     size: 5,
     thumb: {
-      video:
+      origin:
         "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb.webm",
+      video:
+        "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb-converted.webm",
       poster:
         "/projects/i-want-to-know-everything/thumb/i-want-to-know-everything-thumb-poster.jpg",
+      videoSize: { width: 498, height: 280 },
     },
     title: "Хочу всё знать!",
     description: "Description",
@@ -1571,8 +1615,10 @@ export const projects: Project[] = [
     slug: "gorod-otkritiy",
     size: 6,
     thumb: {
-      video: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
+      origin: "/projects/gorod-otkritiy/thumb/gorod_otkritiy.webm",
+      video: "/projects/gorod-otkritiy/thumb/gorod_otkritiy-converted.webm",
       poster: "/projects/gorod-otkritiy/thumb/gorod_otkritiy-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "Город открытий",
     description: "Description",
@@ -1631,8 +1677,10 @@ export const projects: Project[] = [
     slug: "uralsib",
     size: 5,
     thumb: {
-      video: "/projects/uralsib/thumb/uralsib-thumb.webm",
+      origin: "/projects/uralsib/thumb/uralsib-thumb.webm",
+      video: "/projects/uralsib/thumb/uralsib-thumb-converted.webm",
       poster: "/projects/uralsib/thumb/uralsib-thumb-poster.jpg",
+      videoSize: { width: 498, height: 280 },
     },
     title: "Уралсиб / HR",
     description: "Description",
@@ -1689,8 +1737,10 @@ export const projects: Project[] = [
     slug: "green-idea",
     size: 6,
     thumb: {
-      video: "/projects/green-idea/thumb/green-idea-thumb.webm",
+      origin: "/projects/green-idea/thumb/green-idea-thumb.webm",
+      video: "/projects/green-idea/thumb/green-idea-thumb-converted.webm",
       poster: "/projects/green-idea/thumb/green-idea-thumb-poster.jpg",
+      videoSize: { width: 602, height: 338 },
     },
     title: "Green Idea",
     description: "Description",
@@ -1736,8 +1786,10 @@ export const projects: Project[] = [
     slug: "unprincipled",
     size: 6,
     thumb: {
-      video: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
+      origin: "/projects/unprincipled/thumb/unprincipled-thumb.webm",
+      video: "/projects/unprincipled/thumb/unprincipled-thumb-converted.webm",
       poster: "/projects/unprincipled/thumb/unprincipled-thumb-poster.jpg",
+      videoSize: { width: 602, height: 256 },
     },
     title: "Беспринципные / Титры",
     description: "Description",
@@ -1774,8 +1826,10 @@ export const projects: Project[] = [
     slug: "bigcup",
     size: 4,
     thumb: {
-      video: "/projects/bigcup/thumb/bigcup_thumb.webm",
+      origin: "/projects/bigcup/thumb/bigcup_thumb.webm",
+      video: "/projects/bigcup/thumb/bigcup_thumb-converted.webm",
       poster: "/projects/bigcup/thumb/bigcup_thumb-poster.jpg",
+      videoSize: { width: 392, height: 220 },
     },
     title: "Большая кружка",
     description: "Description",
@@ -1798,8 +1852,10 @@ export const projects: Project[] = [
     slug: "hospitality",
     size: 3,
     thumb: {
-      video: "/projects/hospitality/thumb/hospitality-thumb.webm",
+      origin: "/projects/hospitality/thumb/hospitality-thumb.webm",
+      video: "/projects/hospitality/thumb/hospitality-thumb-converted.webm",
       poster: "/projects/hospitality/thumb/hospitality-thumb-poster.jpg",
+      videoSize: { width: 288, height: 162 },
     },
     title: "Мостуризм / 6 историй",
     description: "Description",
@@ -1839,8 +1895,10 @@ export const projects: Project[] = [
     slug: "shedevrum",
     size: 5,
     thumb: {
-      video: "/projects/shedevrum/thumb/ya_shedevrium.webm",
+      origin: "/projects/shedevrum/thumb/ya_shedevrium.webm",
+      video: "/projects/shedevrum/thumb/ya_shedevrium-converted.webm",
       poster: "/projects/shedevrum/thumb/ya_shedevrium-poster.jpg",
+      videoSize: { width: 498, height: 280 },
     },
     title: "Яндекс / Шедеврум",
     description: "Description",
@@ -1888,9 +1946,13 @@ export const projects: Project[] = [
     slug: "presents-fest-2024",
     size: 4,
     thumb: {
-      video: "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
+      origin:
+        "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb.webm",
+      video:
+        "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb-converted.webm",
       poster:
         "/projects/presents-fest-2024/thumb/presents-fest-2024-thumb-poster.jpg",
+      videoSize: { width: 392, height: 220 },
     },
     title: "VK / Фестиваль подарков",
     description: "Description",
@@ -1925,8 +1987,10 @@ export const projects: Project[] = [
     slug: "zvuk-2",
     size: 3.5,
     thumb: {
-      video: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
+      origin: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
+      video: "/projects/zvuk-2/thumb/zvuk-2-thumb-converted.webm",
       poster: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
+      videoSize: { width: 340, height: 192 },
     },
     title: "Звук 2",
     description: "Description",
@@ -1949,8 +2013,10 @@ export const projects: Project[] = [
     slug: "taxi-v2",
     size: 3.5,
     thumb: {
-      video: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
+      origin: "/projects/taxi-v2/thumb/taxi-v2-thumb.webm",
+      video: "/projects/taxi-v2/thumb/taxi-v2-thumb-converted.webm",
       poster: "/projects/taxi-v2/thumb/taxi-v2-thumb-poster.jpg",
+      videoSize: { width: 340, height: 192 },
     },
     title: "Такси под прикрытием / Титры",
     description: "Description",
@@ -1976,9 +2042,12 @@ export const projects: Project[] = [
     slug: "saint-spring-v3",
     size: 3.5,
     thumb: {
-      video: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
+      origin: "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb.webm",
+      video:
+        "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-converted.webm",
       poster:
         "/projects/saint-spring-v3/thumb/saint-spring-v3-thumb-poster.jpg",
+      videoSize: { width: 340, height: 192 },
     },
     title: "Святой Источник",
     description: "Description",
@@ -2022,10 +2091,13 @@ export const projects: Project[] = [
     slug: "supermarket-trollys-dream-v1",
     size: 3.5,
     thumb: {
-      video:
+      origin:
         "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
+      video:
+        "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb-converted.webm",
       poster:
         "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb-poster.jpg",
+      videoSize: { width: 340, height: 192 },
     },
     title: "Перекрёсток / Тележкин сон",
     description: "Description",
@@ -2085,8 +2157,10 @@ export const projects: Project[] = [
     slug: "the-skin-v1",
     size: 4,
     thumb: {
-      video: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
+      origin: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
+      video: "/projects/the-skin-v1/thumb/the-skin-v1-thumb-converted.webm",
       poster: "/projects/the-skin-v1/thumb/the-skin-v1-thumb-poster.jpg",
+      videoSize: { width: 392, height: 220 },
     },
     title: "ТЦ Ривьера / Шкура",
     description: "Description",

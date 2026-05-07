@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
   },
 
   // for debug on local network
-  allowedDevOrigins: ["192.168.1.132"],
+  allowedDevOrigins: ["192.168.1.132", "192.168.8.207"],
 };
 
 export default nextConfig;
