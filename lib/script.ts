@@ -2,6 +2,12 @@ import { projects } from "./projects";
 import { execSync } from "child_process";
 import { dirname, basename, join } from "path";
 
+// import { TAG } from "./tags";
+
+// const projects = [
+
+// ];
+
 const sizes: Record<string, { width: number; height: number }> = {};
 
 for (const project of projects) {

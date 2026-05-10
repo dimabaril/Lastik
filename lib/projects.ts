@@ -213,7 +213,7 @@ export const projects: Project[] = [
 
   {
     slug: "vk-neo",
-    size: 6,
+    size: 5.5,
     thumb: {
       origin: "/projects/vk-neo/thumb/NEO_pw.webm",
       video: "/projects/vk-neo/thumb/NEO_pw-converted.webm",
@@ -264,12 +264,12 @@ export const projects: Project[] = [
 
   {
     slug: "sber-terminal",
-    size: 2,
+    size: 2.5,
     thumb: {
-      origin: "/projects/sber-terminal/thumb/SBER_terminal.webm",
-      video: "/projects/sber-terminal/thumb/SBER_terminal-converted.webm",
-      poster: "/projects/sber-terminal/thumb/SBER_terminal-poster.jpg",
-      videoSize: { width: 184, height: 368 },
+      origin: "/projects/sber-terminal/thumb/SBER_terminal_sq.webm",
+      video: "/projects/sber-terminal/thumb/SBER_terminal_sq-converted.webm",
+      poster: "/projects/sber-terminal/thumb/SBER_terminal_sq-poster.jpg",
+      videoSize: { width: 306, height: 306 },
     },
     title: "СБЕР / Оплата улыбкой",
     description: "Description",
@@ -569,7 +569,7 @@ export const projects: Project[] = [
 
   {
     slug: "rocs",
-    size: 2,
+    size: 2.5,
     thumb: {
       origin: "/projects/rocs/thumb/rocs.webm",
       video: "/projects/rocs/thumb/rocs-converted.webm",
@@ -668,7 +668,7 @@ export const projects: Project[] = [
 
   {
     slug: "zvuk",
-    size: 6,
+    size: 5.5,
     thumb: {
       origin: "/projects/zvuk/thumb/zvuk-thumb.webm",
       video: "/projects/zvuk/thumb/zvuk-thumb-converted.webm",
