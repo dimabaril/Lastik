@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Thumb } from "@/lib/projects";
+import { useIsTouch } from "./TouchProvider";
 
 interface ProjectPreviewCardProps {
   title: string;
@@ -20,13 +21,38 @@ export default function ProjectPreviewCard({
   tags = [],
   size,
 }: ProjectPreviewCardProps) {
+  const isTouch = useIsTouch();
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Mobile: autoplay when visible
+  useEffect(() => {
+    if (!isTouch) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 1 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [isTouch]);
+
   const handleMouseEnter = () => {
+    if (isTouch) return;
     videoRef.current?.play().catch(() => {});
   };
 
   const handleMouseLeave = () => {
+    if (isTouch) return;
     const video = videoRef.current;
     if (!video) return;
     video.pause();
@@ -39,8 +65,6 @@ export default function ProjectPreviewCard({
       className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-dashed border-transparent p-3 sm:hover:border-(--fade-color)"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onTouchStart={handleMouseEnter}
-      onTouchEnd={handleMouseLeave}
     >
       {/* {thumb.video ? ( */}
       <video

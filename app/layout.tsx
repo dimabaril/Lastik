@@ -14,6 +14,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { TouchProvider } from "./components/TouchProvider";
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -71,15 +72,17 @@ export default function RootLayout({
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
       <body className="flex min-h-screen flex-col bg-black">
-        {/* Header place holder */}
-        <div className="h-19"></div>
+        <TouchProvider>
+          {/* Header place holder */}
+          <div className="h-19"></div>
 
-        <Header />
+          <Header />
 
-        {children}
+          {children}
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
+        </TouchProvider>
       </body>
     </html>
   );
