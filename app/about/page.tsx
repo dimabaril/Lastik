@@ -42,8 +42,8 @@ export default function Studio() {
       <Image
         src="/about-team.png"
         alt="Lastik team"
-        width={1656}
-        height={1090}
+        width={822}
+        height={541}
         className="w-2/3"
       />
 
@@ -64,14 +64,14 @@ export default function Studio() {
 
           <div>
             <VideoPlayer
-              src="/about/neo (1080p) 2.mp4"
+              src="/about/neo (1080p) 2-converted.webm"
               className="w-full object-cover lg:rounded-3xl"
             />
           </div>
         </div>
         <div>
           <VideoPlayer
-            src="/about/Comp 2_3.mp4"
+            src="/about/Comp 2_3-converted.webm"
             className="w-full object-cover lg:rounded-3xl"
           />
         </div>
@@ -187,7 +187,7 @@ export default function Studio() {
             {/* Как это рассчитать:Коэффициент для flex — это отношение ширины к высоте ($Width / Height$).Первое видео: $1117 / 279 \approx \mathbf{4}$Второе видео: $626 / 279 \approx \mathbf{2.24}$ */}
             <div style={{ flex: 1117 / 279 }}>
               <VideoPlayer
-                src="/about/MASTER preview 15-04_1.mp4"
+                src="/about/MASTER preview 15-04_1-converted.webm"
                 className="h-full w-full object-cover lg:rounded-3xl"
               />
             </div>
@@ -196,7 +196,7 @@ export default function Studio() {
             </div>
             <div style={{ flex: 626 / 279 }}>
               <VideoPlayer
-                src="/about/ya_shedevrium.mp4"
+                src="/about/ya_shedevrium-converted.webm"
                 className="h-full w-full object-cover lg:rounded-3xl"
               />
             </div>
@@ -205,13 +205,13 @@ export default function Studio() {
         <div className="flex gap-4">
           <div style={{ flex: 305 / 611 }}>
             <VideoPlayer
-              src="/about/leto-luzi.mp4"
+              src="/about/leto-luzi-converted.webm"
               className="w-full object-cover lg:rounded-3xl"
             />
           </div>
           <div className="relative max-lg:hidden" style={{ flex: 1083 / 609 }}>
             <VideoPlayer
-              src="/about/AI textures.mp4"
+              src="/about/AI textures-converted.webm"
               className="w-full object-cover lg:rounded-3xl"
             />
 
@@ -224,7 +224,7 @@ export default function Studio() {
           </div>
           <div style={{ flex: 343 / 609 }}>
             <VideoPlayer
-              src="/about/all4.mp4"
+              src="/about/all4-converted.webm"
               className="w-full object-cover lg:rounded-3xl"
             />
           </div>
