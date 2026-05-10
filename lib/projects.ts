@@ -38,6 +38,7 @@ export type Project = {
   vimeos: Vimeo[];
   credits?: Credits;
   images: string[];
+  videosOrigin?: string[];
   videos?: string[];
   texts: string[];
   layout?: LayoutItem[][];
@@ -93,10 +94,15 @@ export const projects: Project[] = [
       "/projects/trans-museum/image (26).png",
       "/projects/trans-museum/image (27).png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/trans-museum/MASTER 1920x480_12_1.mp4",
       "/projects/trans-museum/MASTER preview 15-04_6.mp4",
       "/projects/trans-museum/MASTER preview 15-04_7.mp4",
+    ],
+    videos: [
+      "/projects/trans-museum/MASTER 1920x480_12_1-converted.webm",
+      "/projects/trans-museum/MASTER preview 15-04_6-converted.webm",
+      "/projects/trans-museum/MASTER preview 15-04_7-converted.webm",
     ],
     texts: [
       "13-минутный mix-media фильм про то, как в гараже Мельникова в Москве появляется Музей транспорта — архивы, интервью, чертежи и идеи команды складываются в одну историю.",
@@ -182,9 +188,13 @@ export const projects: Project[] = [
       "/projects/love-generation/image.png",
       "/projects/love-generation/ban.png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/love-generation/PALETKA_backstage.mp4",
       "/projects/love-generation/GLOSS_backstage.mp4",
+    ],
+    videos: [
+      "/projects/love-generation/PALETKA_backstage-converted.webm",
+      "/projects/love-generation/GLOSS_backstage-converted.webm",
     ],
     texts: [
       "Бренду косметики **LOVE GENERATION** нужны были ролики для соцсетей. Клиент хотел привлечь топ-инфлюенсеров, но при этом сохранить фокус на самих продуктах.",
@@ -240,7 +250,8 @@ export const projects: Project[] = [
       "/projects/vk-neo/dragon.png",
       "/projects/vk-neo/ccc 1.png",
     ],
-    videos: ["/projects/vk-neo/neo_animatic.mp4"],
+    videosOrigin: ["/projects/vk-neo/neo_animatic.mp4"],
+    videos: ["/projects/vk-neo/neo_animatic-converted.webm"],
     texts: [
       "Бодрый хип-хоп трек стал мотором истории о детской колонке **Neo**.",
       "Умная колонка рассказывает фантастические сюжеты, и в кадре появляются единороги, роботы и дракон — символ Года Дракона.",
@@ -362,9 +373,13 @@ export const projects: Project[] = [
       "/projects/vtb-1/927D8C27-152B-4816-9E4E-C31A620354E4.jpeg",
       "/projects/vtb-1/Снимок экрана 2024-05-15 в 12.36.50.png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/vtb-1/vtb_AI textures.mp4",
       "/projects/vtb-1/vtb_layers_1.mp4",
+    ],
+    videos: [
+      "/projects/vtb-1/vtb_AI textures-converted.webm",
+      "/projects/vtb-1/vtb_layers_1-converted.webm",
     ],
     texts: [
       "Энергичный ролик, где наша графика плотно переплелась со съемочным материалом.",
@@ -826,11 +841,17 @@ export const projects: Project[] = [
       "/projects/mts/telegram-cloud-photo-size-2-5323689908914740862-y.jpg",
       "/projects/mts/комнаты.png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/mts/Snippet_FINAL.webm",
       "/projects/mts/Common_reel_MASTER_version.webm",
       "/projects/mts/Reel_Black_FINAL.webm",
       "/projects/mts/vocaloids_001_v001.webm",
+    ],
+    videos: [
+      "/projects/mts/Snippet_FINAL-converted.webm",
+      "/projects/mts/Common_reel_MASTER_version-converted.webm",
+      "/projects/mts/Reel_Black_FINAL-converted.webm",
+      "/projects/mts/vocaloids_001_v001-converted.webm",
     ],
     texts: [
       "Клип и серия рилсов для виртуальной группы **Neku-sai**, которую запустил **МТС Лэйбл**.",
@@ -951,11 +972,17 @@ export const projects: Project[] = [
       "/projects/mail-ru/photo_2026-03-09_13-27-15.jpg",
       "/projects/mail-ru/photo_2026-03-09_13-33-56.jpg",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/mail-ru/MAIL_anim_1_v07.mp4",
       "/projects/mail-ru/MAIL_anim_3_v02 (2).mp4",
       "/projects/mail-ru/MAIL_anim_1_v02.mp4",
       "/projects/mail-ru/MAIL_anim_fin_1_v02.mp4",
+    ],
+    videos: [
+      "/projects/mail-ru/MAIL_anim_1_v07-converted.webm",
+      "/projects/mail-ru/MAIL_anim_3_v02 (2)-converted.webm",
+      "/projects/mail-ru/MAIL_anim_1_v02-converted.webm",
+      "/projects/mail-ru/MAIL_anim_fin_1_v02-converted.webm",
     ],
     texts: [
       "Mail.ru провёл ребрендинг, выкатив новый дизайн и маскота — белую собаку по имени Байт.",
@@ -1095,10 +1122,15 @@ export const projects: Project[] = [
       // "/projects/eapteka/000000.png",
       // "/projects/eapteka/000000 (1).png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/eapteka/faces.webm",
       "/projects/eapteka/gif1.webm",
       "/projects/eapteka/gif2.webm",
+    ],
+    videos: [
+      "/projects/eapteka/faces-converted.webm",
+      "/projects/eapteka/gif1-converted.webm",
+      "/projects/eapteka/gif2-converted.webm",
     ],
     texts: [
       "Для EApteka мы придумали серию визуальных героев — таблетки со своим характером и портреты людей, которым они предназначены.",
@@ -1593,8 +1625,11 @@ export const projects: Project[] = [
       "/projects/i-want-to-know-everything/8cfb71123601575.618983a2ce96a.gif",
       "/projects/i-want-to-know-everything/6c4164123601575.61898484b1811.png",
     ],
-    videos: [
+    videosOrigin: [
       "/projects/i-want-to-know-everything/7ec1e4123601575.60f1a0a8c9a8a.webm",
+    ],
+    videos: [
+      "/projects/i-want-to-know-everything/7ec1e4123601575.60f1a0a8c9a8a-converted.webm",
     ],
     texts: [
       // "Текст"
@@ -1840,7 +1875,8 @@ export const projects: Project[] = [
       },
     ],
     images: [],
-    videos: ["/projects/bigcup/pear1.3.webm"],
+    videosOrigin: ["/projects/bigcup/pear1.3.webm"],
+    videos: ["/projects/bigcup/pear1.3-converted.webm"],
     texts: [
       "Рекламный ролик, где бутылки ряженки, чашки и фрукты не скрывают своих чувств.",
     ],
@@ -2067,7 +2103,8 @@ export const projects: Project[] = [
       "/projects/saint-spring-v3/image (32).png",
       "/projects/saint-spring-v3/image (33).png",
     ],
-    videos: ["/projects/saint-spring-v3/Si_animatic_11.mp4"],
+    videosOrigin: ["/projects/saint-spring-v3/Si_animatic_11.mp4"],
+    videos: ["/projects/saint-spring-v3/Si_animatic_11-converted.webm"],
     texts: [
       'Стопмоушен реклама воды "Святой источник" о бутылках разного размера.',
       "Три сцены и три бутылки для разных ситуаций: большая — для дома, средняя — для прогулок, а маленькая — для занятий спортом.",

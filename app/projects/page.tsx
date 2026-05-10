@@ -127,8 +127,8 @@ export default function Projects() {
           <Image
             src="/about-team.png"
             alt="Lastik team"
-            width={1656}
-            height={1090}
+            width={838}
+            height={551}
             className="mx-auto w-2/3"
           />
         </section>

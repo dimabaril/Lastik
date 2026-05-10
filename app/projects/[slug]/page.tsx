@@ -187,7 +187,7 @@ export default async function ProjectPage({
                           src={project.images[item.index]}
                           alt={`${project.title} — ${item.index + 1}`}
                           width={800}
-                          height={600}
+                          height={800}
                           className="w-full object-cover"
                           priority={rowIndex === 0}
                         />
@@ -210,27 +210,22 @@ export default async function ProjectPage({
               {renderText(text)}
             </p>
           ))}
-          {(project.images.length > 0 ||
-            (project.videos && project.videos.length > 0)) && (
-            <div className="grid grid-cols-2 items-start gap-6 max-md:gap-4">
-              {project.images.map((src, i) => (
-                <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
-                  <Image
-                    src={src}
-                    alt={`${project.title} — ${i + 1}`}
-                    width={800}
-                    height={600}
-                    className="w-full object-cover"
-                  />
-                </div>
-              ))}
-              {project.videos?.map((src, i) => (
-                <div key={`vid-${i}`} className="overflow-hidden lg:rounded-xl">
-                  <video src={src} controls className="w-full object-cover" />
-                </div>
-              ))}
+          {project.images.map((src, i) => (
+            <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
+              <Image
+                src={src}
+                alt={`${project.title} — ${i + 1}`}
+                width={800}
+                height={600}
+                className="w-full object-cover"
+              />
             </div>
-          )}
+          ))}
+          {project.videos?.map((src, i) => (
+            <div key={`vid-${i}`} className="overflow-hidden lg:rounded-xl">
+              <video src={src} controls className="w-full object-cover" />
+            </div>
+          ))}
         </div>
       )}
     </main>

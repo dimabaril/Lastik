@@ -66,7 +66,6 @@ export default function ProjectPreviewCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* {thumb.video ? ( */}
       <video
         ref={videoRef}
         src={thumb.video}
@@ -77,10 +76,6 @@ export default function ProjectPreviewCard({
         playsInline
         className="w-full rounded-lg"
       />
-      {/* ) : thumb.poster ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={thumb.poster} alt={title} className="w-full rounded-lg" />
-      ) : null} */}
 
       <div className="flex flex-wrap justify-between pt-2">
         <div className="font-unbounded shrink-0 gap-2 text-base font-light">
@@ -88,8 +83,9 @@ export default function ProjectPreviewCard({
           {/* size for debug */}
           {/* {size && <span className="absolute top-4 right-5">{size}</span>} */}
         </div>
-        <div className="font-unbounded flex divide-x text-base font-light text-(--fade-color) transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
-          {/* <div className="flex gap-1 font-unbounded font-light text-base text-(--fade-color) transition-all duration-300"> */}
+        <div
+          className={`font-unbounded flex divide-x text-base font-light text-(--fade-color) transition-all duration-300 ${!isTouch ? "opacity-0 group-hover:opacity-100" : ""}`}
+        >
           {tags.map((tag) => (
             <span key={tag} className="px-1.5 whitespace-nowrap">
               {tag}
