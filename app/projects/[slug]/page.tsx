@@ -57,7 +57,7 @@ export default async function ProjectPage({
       {/* Upper block */}
       <div className="flex flex-col gap-6 max-md:gap-4">
         <div
-          className={`flex gap-6 max-md:gap-4 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
+          className={`flex gap-6 max-lg:flex-col max-md:gap-4 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
         >
           {/* Main content */}
           <div className="flex flex-1 flex-col gap-6 max-md:gap-4">
@@ -78,7 +78,7 @@ export default async function ProjectPage({
             />
           </div>
           {/* ─── Right column ─── */}
-          <div className="hidden flex-col gap-6 self-end pt-2 lg:flex">
+          <div className="flex flex-col gap-6 self-end max-lg:items-end max-lg:gap-4 max-md:gap-1">
             {[
               { label: "Бренд", value: project.credits?.brand },
               { label: "Агентство", value: project.credits?.agency },
@@ -87,7 +87,10 @@ export default async function ProjectPage({
             ]
               .filter((item) => item.value)
               .map((item) => (
-                <div key={item.label}>
+                <div
+                  key={item.label}
+                  className="flex items-center max-lg:gap-2 lg:flex-col lg:items-start"
+                >
                   <p className="font-victor-mono text-lg text-(--fade-color) max-lg:text-base">
                     {item.label}
                   </p>
