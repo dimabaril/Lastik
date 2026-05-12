@@ -1099,9 +1099,9 @@ export const projects: Project[] = [
     slug: "eapteka",
     size: 3,
     thumb: {
-      origin: "/projects/eapteka/thumb/TAB_16_v02.webm",
-      video: "/projects/eapteka/thumb/TAB_16_v02-converted.webm",
-      poster: "/projects/eapteka/thumb/TAB_16_v02-poster.png",
+      origin: "/projects/eapteka/thumb/tab_thumb.webm",
+      video: "/projects/eapteka/thumb/tab_thumb-converted.webm",
+      poster: "/projects/eapteka/thumb/tab_thumb-poster.jpg",
       videoSize: { width: 288, height: 288 },
     },
     title: "СБЕР / Еаптека",
@@ -1116,21 +1116,16 @@ export const projects: Project[] = [
       brand: "ЕАПТЕКА",
       production: "Zebra Hero",
     },
-
-    images: [
-      // "/projects/eapteka/Screenshot 2026-03-18 at 14.30.24.png",
-      // "/projects/eapteka/000000.png",
-      // "/projects/eapteka/000000 (1).png",
-    ],
+    images: [],
     videosOrigin: [
       "/projects/eapteka/faces.webm",
-      "/projects/eapteka/gif1.webm",
-      "/projects/eapteka/gif2.webm",
+      "/projects/eapteka/eapteka_1.webm",
+      "/projects/eapteka/eapteka_2.webm",
     ],
     videos: [
       "/projects/eapteka/faces-converted.webm",
-      "/projects/eapteka/gif1-converted.webm",
-      "/projects/eapteka/gif2-converted.webm",
+      "/projects/eapteka/eapteka_1-converted.webm",
+      "/projects/eapteka/eapteka_2-converted.webm",
     ],
     texts: [
       "Для EApteka мы придумали серию визуальных героев — таблетки со своим характером и портреты людей, которым они предназначены.",
