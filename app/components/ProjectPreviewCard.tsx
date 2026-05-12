@@ -39,7 +39,7 @@ export default function ProjectPreviewCard({
           video.pause();
         }
       },
-      { threshold: 1 },
+      { threshold: 0.6 },
     );
 
     observer.observe(video);
@@ -75,6 +75,11 @@ export default function ProjectPreviewCard({
         muted
         playsInline
         className="w-full rounded-lg"
+        style={{
+          aspectRatio: thumb.videoSize
+            ? thumb.videoSize.width / thumb.videoSize.height
+            : "auto",
+        }}
       />
 
       <div className="flex flex-wrap justify-between pt-2">

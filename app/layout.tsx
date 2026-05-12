@@ -15,6 +15,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { TouchProvider } from "./components/TouchProvider";
+import MobileReloadHandler from "./components/MobileReloadHandler";
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -72,6 +73,7 @@ export default function RootLayout({
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
       <body className="flex min-h-screen flex-col bg-black">
+        <MobileReloadHandler />
         <TouchProvider>
           {/* Header place holder */}
           <div className="h-19"></div>
