@@ -6,7 +6,8 @@ export default function MobileReloadHandler() {
   useEffect(() => {
     const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
     // Определяем любой мобильный браузер
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
     if (isMobile) {
       const handler = () => {
         if (document.visibilityState === "visible") {

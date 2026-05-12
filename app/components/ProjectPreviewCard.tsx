@@ -74,7 +74,7 @@ export default function ProjectPreviewCard({
         loop
         muted
         playsInline
-        className="w-full rounded-lg"
+        className="block w-full rounded-lg"
         style={{
           aspectRatio: thumb.videoSize
             ? thumb.videoSize.width / thumb.videoSize.height
