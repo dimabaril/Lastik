@@ -1,38 +1,60 @@
 import Image from "next/image";
+import Buble from "./Buble";
+import VideoPlayer from "@/app/components/VideoPlayer";
+import Marquee from "react-fast-marquee";
 
 const WHO_CARDS = [
   {
     title: "Иллюстратор",
     desc: "и хочешь не только рисовать отдельные картинки, но и строить персонажей, миры и визуальную логику проекта.",
+    img: "/kurs/cube.png",
   },
   {
     title: "Дизайнер",
-    desc: "и хочешь мыслить шире одного стиля, лучше собирать концепции и сильнее влиять на проект целиком.",
+    desc: "и хочешь мыслить поверх границ стилей, свободнее собирать концепции и сильнее влиять на проект целиком.",
+    img: "/kurs/hurt.png",
   },
   {
     title: "Студент визуальной профессии",
-    desc: `и хочешь нащупать более профессиональное мышление: как идеи превращаются в систему, а не остаются на уровне “прикольной картинки”.`,
+    desc: "и ищешь формат стажировки, где сразу передают опыт и дают фидбек на твои идеи",
+    img: "/kurs/star.png",
   },
   {
-    title: "Автор, работающий с аудиторией",
-    desc: "если тебе хочется прокачать вкус, насмотренность, вариативность и научиться увереннее оформлять свои идеи.",
+    title: "Аниматор",
+    desc: "и думаешь как расширить свой набор инструментов, зайти на более креативную территорию.",
+    img: "/kurs/cloud.png",
   },
   {
-    title:
-      "Раскачать и поиграть, подтолкнуть творческие практики и застрявшие личные проекты",
-    desc: "и хочешь нащупать более профессиональное мышление: как идеи превращаются в систему, а не остаются на уровне “прикольной картинки”.",
+    title: "Автор, работающий с визуалом",
+    desc: "и хочешь мыслить поверх границ стилей, свободнее собирать концепции и сильнее влиять на проект целиком.",
+    img: "/kurs/glass.png",
   },
   {
     title: "AI-энтузиаст",
-    desc: "если тебе хочется прокачать вкус, насмотренность, вариативность и научиться увереннее оформлять свои идеи.",
+    desc: "и тебе интересно понять как устроен артдир процесс у студий и как применить этот пайплайн в соло-продакшене.",
+    img: "/kurs/flash.png",
   },
 ];
 
 const HOW_STEPS = [
-  { color: "bg-[#D4FF00]", label: "живые созвоны" },
-  { color: "bg-[#00FF9F]", label: "чат с поддержкой" },
-  { color: "bg-[#FF006E]", label: "небольшие домашние задания" },
-  { color: "bg-[#5BB4E5]", label: "постоянный фидбек" },
+  {
+    bgColor: "bg-[#E4C2E7]",
+    textColor: "text-black",
+    texts: ["живые созвоны", "чат с поддержкой"],
+    pic: "/kurs/60d9e61b9ceb0d52cb196508fc244cff1c085a74.png",
+  },
+  {
+    bgColor: "bg-[#314E22]",
+    textColor: "text-white",
+    texts: ["постоянный фидбек", "небольшие домашние задания"],
+    pic: "/kurs/a3445d9daf2c5ee1283734023d2247c61b42db79.png",
+  },
+  {
+    bgColor: "bg-[#F2FD83]",
+    textColor: "text-black",
+    texts: ["презентации с теорией и рефами на миро "],
+    pic: "/kurs/f8ae45ec6a2a12f8f971cdf9fc187a42d24c326e.png",
+  },
 ];
 
 const PROGRAM = [
@@ -59,28 +81,24 @@ const PROGRAM = [
   {
     n: "05",
     title: "Тритмент, питч – как презентовать концепт и что дальше",
-    desc: "Упаковка идей и презентация.",
+    desc: "Наш воркфлоу с нейронками, поделимся найденными приёмами – как миксуем классику и генерации.",
   },
 ];
 
 const COMMUNITY = [
   {
-    color: "#00b303",
     title: "Поддерживающее комьюнити",
-    desc: "Общайтесь с единомышленниками, которые понимают ваш творческий путь и вдохновляют стремиться к совершенству",
+    desc: "Общайтесь с единомышленниками, которые понимают ваш творческий путь и вдохновляют двигаться дальше",
   },
   {
-    color: "#aa26ff",
     title: "Регулярные критики",
     desc: "Получайте конструктивную обратную связь от опытных арт-директоров, чтобы совершенствовать работу",
   },
   {
-    color: "#0052c2",
-    title: "Дух сотрудничества",
-    desc: "Делитесь идеями, задавайте вопросы для друг друга и растите вместе в поддерживающей среде",
+    title: "Дух сотрудничества и обмена",
+    desc: "Делитесь идеями, задавайте вопросы для друг друга, делитесь рефами/инсайтами и растите вместе в поддерживающей среде",
   },
   {
-    color: "#fdda07",
     title: "Место для презентаций",
     desc: "Представляйте финишные проекты и развивайте навыки публичных выступлений",
   },
@@ -104,430 +122,455 @@ const CTA_FEATURES = [
 
 const REVIEWS = [
   {
-    name: "Анна Соколова",
-    desc: "Моушн-дизайнер",
-    text: "Мастерская трансформировала мой подход к анимации. Теперь я думаю как арт-директор, а не просто исполнитель.",
-    pic: "https://placecats.com/200/200",
+    name: "Валерия",
+    desc: "Дизайн-лид в сфере IGaming, веб-дизайнер на фрилансе в крипте.",
+    text: `Курс раскачивает застоявшуюся оптику и помогает посмотреть на проект с новой стороны.
+     Очень понравилось окунуться в ничем не ограниченную креативную среду, где ты делишься своими идеями, а тебе предлагают, как их развить и где добрать насмотренность`,
+    userPic: "/kurs/review_1.png",
+    background: "/kurs/buble-1.png",
+    size: {
+      width: 707,
+      height: 421,
+      padding: 40,
+    },
   },
   {
-    name: "Дмитрий Волков",
-    desc: "Иллюстратор",
-    text: "Я наконец-то научился переводить свой стиль в моушн. Проектный подход и живой фидбэк — это то, что работает.",
-    pic: "https://placecats.com/200/200",
+    name: "Анастасия",
+    desc: "Санкт-Петербург, аниматор и иллюстратор",
+    text: `Мне было очень полезно и интересно, я ни секунды не пожалела!
+     Самое полезное для меня было узнать, как вы работаете с нейро и когда мы развивали фантазию, придумывая сюжеты за 5 минут; как разрабатываете персонажа.`,
+    // userPic: "/kurs/review_2.png",
+    background: "/kurs/buble-2.png",
+    size: {
+      // width: 500,
+      width: 550,
+      // height: 298,
+      height: 350,
+      padding: 50,
+    },
   },
   {
-    name: "Елена Петрова",
-    desc: "ДКреативный директор",
-    text: "Культура фидбэка и креативное комьюнити сделали всю разницу. Связи, которые я построила здесь, бесценны.",
-    pic: "https://placecats.com/200/200",
+    name: "НАСТЯ",
+    desc: "Санкт-Петербург, аниматор и иллюстратор",
+    text: `впечатление супер! ожидания оправдались на сто процентов! очень полезно было увидеть внутрянку работы анимационной студии, ее будни и проблемы
+   очень продуктивно действует и питает творческая среда и фидбек от ребят довела до структурной, раскадровочной, сюжетной, сценарной, финальной точки оба проекта, с которыми заходила в курс`,
+    userPic: "/kurs/review_3.png",
+    background: "/kurs/buble-3.png",
+    size: {
+      width: 578,
+      height: 442,
+      padding: 32,
+    },
+  },
+  {
+    name: "София",
+    desc: "аниматор",
+    text: `Супер-полезные советы по докручиванию идеи для проектов.
+  Услышала много интересных подходов по разработке.`,
+    userPic: "/kurs/review_4.png",
+    background: "/kurs/buble-4.png",
+    size: {
+      width: 427,
+      height: 281,
+      padding: 32,
+    },
+  },
+  {
+    name: "Маша Родина",
+    desc: "Кёльн, художница, дизайнерка, фотографка",
+    text: `Курс был очень весёлым, радостным, зажигательным, ярким! Как допинг креатива. Теперь я понимаю, как работает анимационная студия полезно, что есть план, созвоны, домашние задания`,
+    userPic: "/kurs/review_5.png",
+    background: "/kurs/buble-5.png",
+    size: {
+      width: 574,
+      height: 429,
+      padding: 85,
+    },
+  },
+  {
+    name: "Ната",
+    desc: "иллюстратор, Литва",
+    text: `Много полезного: ToonSquid, создание видеореференсов, где в анимации пригодятся нейросети, а еще смотреть на работы и процесс других участников`,
+    userPic: "/kurs/review_6.png",
+    background: "/kurs/buble-6.png",
+    size: {
+      width: 487,
+      height: 328,
+      padding: 45,
+    },
   },
 ];
 
 export default function ArtCourse() {
   return (
-    <main className="mx-auto flex max-w-screen-xl flex-1 flex-col gap-20 bg-black p-6 text-white">
+    <main className="flex flex-1 flex-col">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="flex items-start">
-        <Image
-          src="/kurs-hero2.png"
-          alt="Hero Image"
-          width={200}
-          height={200}
-          className="rotate-19"
-        />
-        <div className="flex flex-col gap-12">
-          <h1 className="font-unbounded text-8xl font-bold">
-            Мастерская
-            <br />
-            <span className="text-[#D4FF00]">
-              арт-
+      <section className="py-32">
+        <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
+          <div className="relative flex flex-10 flex-col gap-5 p-10">
+            <h1 className="font-unbounded text-6xl font-bold">
+              мастерская
               <br />
-              дирекшена
-            </span>
-          </h1>
-          <div className="flex">
-            <div className="flex flex-col gap-8 pr-8">
-              <p className="font-onest text-lg font-medium text-[#99A1AF]">
-                Практический курс по арт-дирекшену в анимации и вокруг.
-                <br />
-                Для дизайнеров, иллюстраторов, аниматоров и всех, кто хочет
-                выходить за рамки своих профессий, собирать сильные визуальные
-                концепции, докручивать идеи и уверенно их упаковывать.
-              </p>
-              <p className="font-onest text-lg font-medium">
-                5 онлайн-встреч по выходным
-                <br />
-                Скоро стартует 2 поток
-              </p>
-              <button className="font-onest self-start rounded-full bg-[#D4FF00] px-8 py-4 text-lg font-medium text-black">
-                Подать заявку
-              </button>
-            </div>
-            <div className="flex max-w-lg -rotate-7 gap-6 rounded-3xl bg-[#141414] p-8">
-              <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#FEFE1F]" />
-              <div className="flex flex-col gap-3">
-                <p className="font-unbounded text-2xl font-bold">
-                  Настроить арт-дирекшн пайплайн
-                </p>
-                <p className="font-onest text-4xl text-[#99A1AF]">
-                  Это база, которая пригодится в любых визуальных проектах (в
-                  том числе AI)
-                </p>
-              </div>
-            </div>
+              арт-дирекшена
+            </h1>
+            <p className="font-onest text-xl font-bold">
+              Практический курс по арт-дирекшену от студии Ластик в анимации и
+              вокруг.
+            </p>
+            <p className="font-onest text-xl leading-tight font-medium">
+              Арт-лаборатория по поиску вашего уникального визуального голоса.
+              Мы препарируем реальные кейсы студии, учим внедрять AI в рабочий
+              процесс и помогаем превращать скучные брифы в „визуальный
+              мармелад“ через глубокую проработку персонажей и миров.
+            </p>
+            <p className="font-unbounded text-lg font-bold">
+              5 онлайн-встреч по выходным
+              <br />
+              31 мая -28 июня
+            </p>
+            <button className="font-unbounded self-start rounded-full bg-[#EBF400] px-10 py-4 text-3xl font-bold">
+              подать заявку
+            </button>
+            <Image
+              src="/kurs-hero2.png"
+              alt="Hero Image"
+              width={278}
+              height={347}
+              className="absolute right-13 -bottom-20 h-auto w-50 -rotate-20"
+            />
+          </div>
+          <div className="flex-9">
+            <Image
+              src="/kurs/yogagirl.png"
+              alt="yogagirl"
+              width={705}
+              height={705}
+              className="h-full w-auto rounded-r-3xl object-cover"
+            />
           </div>
         </div>
       </section>
 
       {/* ── WHO ──────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
-        <h2 className="font-unbounded self-center text-5xl font-bold">
-          Кому подойдёт курс
+      <section className="flex flex-col gap-12 py-6">
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-12 text-black">
+          <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
+            Кому подойдёт курс
+          </h2>
+          <div className="grid grid-cols-2 gap-6">
+            {WHO_CARDS.map((item) => (
+              <div
+                key={item.title}
+                className="flex items-center gap-6 rounded-3xl bg-[#E4CBDE] p-5"
+              >
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={100}
+                  height={100}
+                  style={{ width: "88px", height: "auto" }}
+                />
+                <div className="flex flex-col gap-3">
+                  <p className="font-unbounded text-xl font-bold">
+                    {item.title}
+                  </p>
+                  <p className="font-onest text-base leading-tight">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div
+          className="py-35"
+          style={{
+            background:
+              "linear-gradient(224.76deg, #DAACFF 40.57%, #FF8D8D 110.48%)",
+          }}
+        >
+          <p className="font-unbounded mx-auto max-w-142 text-center text-2xl font-bold text-black">
+            Любому, кто хочет раскачаться, подтолкнуть творческие практики и
+            застрявшие личные проекты
+          </p>
+        </div>
+      </section>
+
+      {/* ── INSTRUCTORS ──────────────────────────────────────────────────── */}
+      <section className="flex flex-col gap-12 py-6 text-white">
+        <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
+          Мы будем вести курс
         </h2>
-        <div className="grid grid-cols-2 gap-6">
-          {WHO_CARDS.map((c) => (
-            <div
-              key={c.title}
-              className="flex gap-6 rounded-2xl bg-[#141414] p-8"
-            >
-              <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#FF006E]" />
-              <div className="flex flex-col gap-3">
-                <p className="font-unbounded text-2xl font-bold">{c.title}</p>
-                <p className="font-onest text-lg text-[#99A1AF]">{c.desc}</p>
+
+        {/* <div className="grid grid-cols-1 justify-items-center md:grid-cols-2"> */}
+        <div className="mx-auto flex w-full max-w-screen-xl flex-wrap justify-around gap-12">
+          {[
+            {
+              name: "Лёша Платонов",
+              role: "Креативный директор",
+              desc: "15+ лет в анимации и арт-дирекшне, работала с крупными студиями над отмеченными наградами проектами",
+              img: "/kurs/lesha.png",
+            },
+            {
+              name: "Надя Степанова",
+              role: "арт-директор в Ластике",
+              desc: "Специализируется на экспериментальной анимации и визуальных эффектах со страстью к творческим экспериментам",
+              img: "/kurs/nadya.png",
+            },
+          ].map((person) => (
+            <div key={person.name} className="max-w-84">
+              <div className="relative">
+                <Image
+                  src={person.img}
+                  alt={person.name}
+                  width={336}
+                  height={533}
+                  className=""
+                />
+                <p className="font-unbounded absolute inset-x-0 bottom-6 text-center text-2xl font-bold">
+                  {person.name}
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 p-7">
+                <p className="foont-onest text-base font-semibold">
+                  {person.role}
+                </p>
+                <p className="font-onest text-base">{person.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
+      <div className="py-6">
+        <VideoPlayer src="/kurs/Comp 2_2.mp4" className="w-full" />
+      </div>
+
       {/* ── PRACTICE ─────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12 bg-[#141414]">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Не только лекции,
-          <br />а <span className="text-[#FF006E]">живая</span>
-          <br />
-          творческая <span className="text-[#D4FF00]">практика</span>
-        </h2>
-        <div className="flex gap-12">
-          <p className="font-onest text-lg text-[#99A1AF]">
-            Это не теоретический курс, где вы пассивно слушаете. Это творческая
-            мастерская, где вы с нуля создаёте собственный визуальный проект.
+      <section className="mx-auto flex max-w-screen-xl py-6 text-[#FFE6EB]">
+        <div className="flex flex-col gap-12">
+          <h2 className="font-unbounded text-5xl font-bold">
+            Не только лекции,
+            <br />а живая
+            <br />
+            творческая практика
+          </h2>
+          <p className="font-onest text-2xl font-semibold">
+            Мы рассказываем всё самое важное про арт-дирекшн, даём практические
+            советы и приёмы, а дальше – творческая мастерская, где все варят
+            свои визуальные проекты.
           </p>
-          <div className="flex flex-col gap-6">
-            <p className="font-onest text-lg text-[#99A1AF]">
-              Научитесь мыслить как арт-директор, создавать визуальные
-              концепции, собирать мудборды и рассказывать истории через образы и
-              композицию.
-            </p>
-            <p className="font-onest text-lg">
-              В конце мастерской у вас будет готовая портфолио-работа, которая
-              покажет ваши навыки арт-дирекшна.
-            </p>
-          </div>
+          <ul className="font-onest list-disc pl-6 text-2xl font-semibold">
+            <li>научитесь мыслить как арт-директор</li>
+            <li>создавать - визуальные концепции, собирать мудборды</li>
+            <li>работать с персонажами</li>
+            <li>рассказывать истории через образы и композицию.</li>
+          </ul>
+        </div>
+        <div className="">
+          <Buble {...REVIEWS[0]} />
         </div>
       </section>
 
       {/* ── HOW ──────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
-        <h2 className="font-unbounded self-center text-5xl font-bold">
+      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 pt-6 pb-72">
+        <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
           Как проходит курс
         </h2>
-        <div className="grid grid-cols-4 gap-6">
-          {HOW_STEPS.map((step, i) => (
+        <div className="flex gap-6">
+          {HOW_STEPS.map((step, idx) => (
             <div
-              key={i}
-              className="flex flex-col gap-6 rounded-3xl bg-[#141414] p-8"
+              key={idx}
+              className={`flex flex-1 flex-col justify-between gap-6 rounded-3xl p-8 ${step.bgColor} ${step.textColor}`}
             >
-              <div className={`h-3 w-3 rounded-full ${step.color}`} />
-
-              <p className="font-onest text-lg font-medium">{step.label}</p>
+              {step.texts.map((text, textIdx) => (
+                <p
+                  key={textIdx}
+                  className="font-unbounded text-2xl leading-tight font-bold"
+                >
+                  {text}
+                </p>
+              ))}
+              <Image
+                src={step.pic}
+                alt={`Step ${idx + 1}`}
+                width={250}
+                height={250}
+                className="-mb-13 w-2/3 self-end"
+              />
             </div>
           ))}
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className="font-onest text-lg">
-            <span className="text-[#99A1AF]">
-              Структура курса помогает не «послушать и забыть»,
-            </span>
-            <br />а довести проект до завершения
-          </p>
         </div>
       </section>
 
       {/* ── PROGRAM ──────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Программа{" "}
-          <span className="text-[#FF006E]">
-            5
-            <br />
-            встреч
-          </span>
-        </h2>
-        <div className="flex flex-col gap-3">
-          {PROGRAM.map((p, i) => (
-            <div key={p.n} className="flex gap-6 rounded-3xl bg-[#141414] p-8">
-              <span
-                className={`font-unbounded flex h-16 w-16 items-center justify-center rounded-2xl ${i % 2 === 0 ? "bg-[#D4FF00]" : "bg-[#FF006E]"} text-2xl font-bold text-black`}
-              >
-                {p.n}
-              </span>
-              <div className="flex flex-col gap-2">
-                <p className="font-unbounded text-2xl font-bold">{p.title}</p>
-                {p.desc && (
-                  <p className="mt-1 text-lg text-neutral-400">{p.desc}</p>
-                )}
+      <section className="bg-[#6754FE] px-16 pt-32 pb-16">
+        <div>
+          <Buble {...REVIEWS[1]} className="relative z-10 -mt-72 -mb-15" />
+        </div>
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-12 rounded-3xl bg-white px-28 py-15 text-black">
+          <h2 className="font-unbounded self-center text-5xl font-bold">
+            Программа 5 встреч
+          </h2>
+          <div className="flex flex-col gap-10">
+            {PROGRAM.map((item, i) => (
+              <div key={item.n} className="flex gap-6">
+                <div
+                  className={`font-unbounded flex h-18 w-18 shrink-0 items-center justify-center rounded-full bg-[#FF87CF] text-2xl font-bold`}
+                >
+                  {item.n}
+                </div>
+                <div className="flex flex-col">
+                  <p className="font-unbounded text-2xl font-bold">
+                    {item.title}
+                  </p>
+                  <p className="font-onest mt-1 text-xl font-medium">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── EXERCISES ────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12 bg-[#141414]">
-        <div className="flex gap-10">
-          {/* Shapes */}
-          <div className="relative h-64 w-64 shrink-0 rounded-2xl bg-[#1A1A1A]">
-            <div className="absolute top-8 left-8 h-32 w-32 rounded-full bg-[#00FF9F]" />
-            <div className="absolute top-16 left-32 h-25 w-25 rotate-29 rounded-xl bg-[#FF9F57]" />
-            <div className="absolute top-40 left-12 h-28 w-28 rounded-full bg-[#8B4A8F]" />
-          </div>
-          {/* Text */}
-          <div className="flex flex-col gap-12">
-            <h2 className="font-unbounded self-end text-5xl font-bold">
-              Креативные <span className="text-[#D4FF00]">упражнения</span>
-            </h2>
-            <p className="max-w-md text-[#99A1AF]">
-              Практические упражнения и инструменты визуального мышления,
-              которые помогает развить ваш уникальный творческий голос
-            </p>
-            <ul className="flex flex-col gap-3 text-lg text-[#D1D5DC]">
-              {EXERCISES.map((item) => (
-                <li
-                  key={item.label}
-                  className="flex items-center gap-3 rounded-2xl bg-[#0A0A0A] p-4"
-                >
-                  <div className={`h-2 w-2 rounded-full ${item.color}`} />
-                  {item.label}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <section className="bg-[#6754FE] py-32 pt-16 pb-32">
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-12 px-28">
+          <h2 className="font-unbounded text-5xl font-bold">
+            Креативные упражнения
+          </h2>
+          <ul className="font-unbounded flex flex-col gap-10 text-2xl font-bold">
+            {EXERCISES.map((item) => (
+              <li key={item.label} className="flex items-center gap-8">
+                <div className="h-4 w-4 rounded-full bg-white"></div>
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="">
+          <Buble {...REVIEWS[2]} />
         </div>
       </section>
 
       {/* ── PROJECT ──────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12 bg-[#141414]">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Работа с <span className="text-[#FF006E]">проектом</span>
+      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-12">
+        <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
+          Работа с проектом
         </h2>
-        <p className="font-onest text-lg text-[#99A1AF]">
-          Ты не просто слушаешь — ты делаешь
-        </p>
-        <div className="flex flex-col gap-4 md:flex-row">
-          <div className="relative flex-1 rounded-3xl border-2 border-[#01ff9e4d] bg-[#0A0A0A] p-10">
-            <p className="font-unbounded absolute -top-6 rounded-full bg-[#00FF9F] px-4 py-2.5 font-semibold text-black">
+
+        <div className="flex flex-col gap-6 text-black md:flex-row">
+          <div className="flex flex-col gap-6">
+            <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
               Есть проект
             </p>
-            <p className="font-onest mt-2 text-xl">
-              Получаешь фидбек по всем этапам:
-              <br />
-              <span className="text-[#99A1AF]">
+            <div className="flex-1 rounded-2xl bg-[#FFE6EB] px-10 py-5">
+              {/* <p className="font-onest mt-2 text-2xl font-medium whitespace-nowrap"> */}
+              <p className="font-onest mt-2 text-2xl font-medium">
+                Получаешь фидбек по всем этапам:
+                <br />
                 от идеи до реализации и питчинга
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
-          <div className="relative flex-1 rounded-3xl border-2 border-[#D4FF004d] bg-[#0A0A0A] p-10">
-            <p className="font-unbounded absolute -top-6 rounded-full bg-[#D4FF00] px-4 py-2.5 font-semibold text-black">
-              Нет поректа
+          <div className="flex flex-col gap-6">
+            <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
+              Нет проекта
             </p>
-            <p className="font-onest mt-2 text-xl">
-              Поможем придумать проект на 5 недель или мини-задачи на каждой
-              встрече
-            </p>
+            <div className="flex-1 rounded-2xl bg-[#FFE6EB] px-10 py-5">
+              <ul className="font-onest mt-2 list-disc pl-6 text-2xl font-medium">
+                <li>Поможем придумать проект на 5 недель</li>
+                <li>
+                  готовые брифы или можно двигаться с мини-задачами на каждой
+                  встрече
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── COMMUNITY ────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12 bg-[#141414]">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Творческое <span className="text-[#FF006E]">комьюнити</span>
+      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 border-t-2 border-[#EBF400]">
+        <div>
+          <Buble {...REVIEWS[3]} className="relative z-10 -mt-10 -mb-60" />
+        </div>
+        <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
+          Творческое комьюнити
         </h2>
 
-        <p className="font-onest text-lg text-[#99A1AF]">
+        <p className="font-onest mx-auto max-w-166 text-center text-lg text-[#99A1AF]">
           Поддерживающая среда, где все делятся прогрессом и смотрят какие
           вокруг творческие проекты у людей в работе.
         </p>
 
         <div className="grid grid-cols-2 gap-6">
           {COMMUNITY.map((item) => (
-            <div
-              key={item.title}
-              className="flex flex-col gap-3 bg-[#1A1A1A] p-8"
-            >
-              <div
-                className="h-12 w-12 rounded-full"
-                style={{ background: item.color }}
-              />
-              <p className="font-unbounded text-lg font-medium">{item.title}</p>
-              <p className="font-onest text-lg text-[#99A1AF]">{item.desc}</p>
+            <div key={item.title} className="flex flex-col gap-3 p-6">
+              <p className="font-unbounded text-xl font-bold">{item.title}</p>
+              <p className="font-onest text-base">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── INSTRUCTORS ──────────────────────────────────────────────────── */}
-      <section className="Быусешщт сдфыыТфьу=Эадуч адуч-сщд пфз-12 ип-х№141414ъЭЮ flex flex-col gap-12 bg-[#141414]">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Мы будем вести курс <br /> анимационных студий
-        </h2>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {[
-            {
-              name: "Лёша Платонов",
-              role: "Креативный директор",
-              desc: "15+ лет в анимации и арт-дирекшне, работала с крупными студиями над отмеченными наградами проектами",
-              img: null,
-            },
-            {
-              name: "Надя Степанова",
-              role: "Иарт-директор в Ластике",
-              desc: "Специализируется на экспериментальной анимации и визуальных эффектах со страстью к творческим экспериментам",
-              img: null,
-            },
-          ].map((person) => (
-            <div key={person.name} className="rounded-3xl bg-[#1A1A1A]">
-              <Image
-                src={person.img || "https://placecats.com/400/300"}
-                alt={person.name}
-                width={400}
-                height={300}
-                className="w-full rounded-t-3xl object-cover"
-              />
-              <div className="flex flex-col gap-3 p-8">
-                <p className="font-unbounded text-xl font-bold">
-                  {person.name}
-                </p>
-                <p className="foont-onest text-lg font-semibold text-[#FF006E]">
-                  {person.role}
-                </p>
-                <p className="font-onest text-lg text-[#99A1AF]">
-                  {person.desc}
-                </p>
-              </div>
-            </div>
-          ))}
+      <div className="flex">
+        <div>
+          <Buble {...REVIEWS[4]} />
         </div>
-      </section>
-
-      {/* ── MOCKUP / PLATFORM ────────────────────────────────────────────── */}
-      {/* <section className="flex flex-col gap-12">
-        <div className="relative overflow-hidden rounded-3xl bg-[#111] p-8">
-          <div className="flex h-64 items-center justify-center rounded-xl bg-neutral-800 text-neutral-600">
-            [скриншот платформы]
-          </div>
-
-          <div className="absolute top-6 right-8 max-w-45 rounded-2xl bg-[#ebf400] px-5 py-3 text-sm font-semibold text-black">
-            Всё в одном месте
-          </div>
-          <div className="absolute bottom-16 left-10 max-w-40 rounded-2xl bg-[#ff5599] px-5 py-3 text-sm font-semibold">
-            Удобно смотреть
-          </div>
+        <div>
+          <Buble {...REVIEWS[5]} />
         </div>
-      </section> */}
-
-      {/* ── REVIEWS ──────────────────────────────────────────────────────── */}
-      <section className="flex flex-col items-center gap-12 bg-[#0A0A0A]">
-        <h2 className="font-unbounded text-5xl font-bold">
-          Отзывы <span className="text-[#D4FF00]">участников</span>
-        </h2>
-        <div className="grid grid-cols-3 gap-5">
-          {REVIEWS.map((review) => (
-            <div
-              key={review.name}
-              className="flex flex-col gap-6 rounded-3xl bg-[#141414] p-8"
-            >
-              <div className="flex items-center gap-6">
-                <Image
-                  src={review.pic}
-                  alt={review.name}
-                  width={65}
-                  height={65}
-                  className="rounded-2xl"
-                />
-                <div>
-                  <p className="font-unbounded text-lg font-bold">
-                    {review.name}
-                  </p>
-                  <p className="font-onest text-lg text-[#6A7282]">
-                    {review.desc}
-                  </p>
-                </div>
-              </div>
-              <p className="font-onest text-lg text-[#99A1AF]">
-                &ldquo;{review.text}&ldquo;
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      </div>
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="bg-[#141414]">
-        <div className="flex flex-col items-center gap-8 text-center">
-          <div className="flex flex-col gap-4">
-            <h2 className="font-unbounded text-5xl font-bold">
-              Присоединяйтесь
-              <br />к <span className="text-[#D4FF00]">мастерской</span>
-            </h2>
-            <p className="font-onest text-lg text-[#99A1AF]">
-              Трансформируйте свою творческую практику за 4 недели
-              <br />
-              интенсивного обучения. Организованное количество мест.
-            </p>
-          </div>
+      <section>
+        {/* <section className="py-32"> */}
+        <Marquee className="font-unbounded bg-[#EBF400] p-4 text-4xl text-black">
+          мастерская стартует 31 мая
+        </Marquee>
 
-          <div className="rounded-3xl bg-[#1A1A1A] p-8">
-            <div className="flex flex-col gap-8">
-              <p className="font-unbounded text-6xl font-bold text-[#D4FF00]">
-                ? 000 ₽
+        <div className="bg-[#387BFE] px-16 pt-16 pb-25">
+          <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
+            <div className="flex flex-10 flex-col gap-5 p-10">
+              <h1 className="font-unbounded text-4xl font-bold">
+                Присоединяйтесь к мастерской
+              </h1>
+
+              <p className="font-onest text-base leading-tight font-semibold">
+                Трансформируйте свою творческую практику за 4 недели
+                интенсивного обучения. Мест немного, мы планиируем так, чтобы у
+                всех было время на обратную свзяь.
               </p>
-
-              <div className="flex flex-col gap-4">
-                <p className="font-onest text-lg text-[#99A1AF]">
-                  5-недельная интенсивная программа
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {CTA_FEATURES.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div
-                        className={`h-2 w-2 shrink-0 rounded-full ${feature.color}`}
-                      />
-                      <p className="font-onest text-lg text-[#D1D5DC]">
-                        {feature.label}
-                      </p>
-                    </div>
-                  ))}
+              <p className="font-unbounded text-lg font-bold">
+                5 онлайн-встреч по выходным
+                <br />
+                31 мая -28 июня
+              </p>
+              <div className="flex-1"></div>
+              <div>
+                <div className="font-unbounded flex gap-4 text-4xl font-bold">
+                  <p className="whitespace-nowrap text-black">18 000 ₽</p>
+                  <p className="whitespace-nowrap text-[#A6A6A6] line-through">
+                    25 000 ₽
+                  </p>
                 </div>
-              </div>
-
-              <a
-                href="#"
-                className="rounded-full bg-[#D4FF00] p-3 text-lg font-semibold text-black transition-opacity hover:opacity-80"
-              >
-                Подать заявку на мастеркую →
-              </a>
-              <div className="flex flex-col gap-2 text-base">
-                <p className="text-[#FF006E]">
-                  Организационное количество мест · Следующий поток стартует 1
-                  апреля 2026
-                </p>
-                <p className="text-[#4A5565]">
-                  Запись доступна · Закрытие в течение 30 дней
+                <p className="font-onest text-base text-[#B1B1B1]">
+                  низкая цена действует до 21 мая
                 </p>
               </div>
+              <button className="font-unbounded self-start rounded-2xl bg-black px-14 py-3 text-xl font-bold text-white">
+                подать заявку
+              </button>
+            </div>
+            <div className="flex-9">
+              <Image
+                src="/kurs/yogagirl.png"
+                alt="yogagirl"
+                width={705}
+                height={705}
+                className="h-full w-auto rounded-r-3xl object-cover"
+              />
             </div>
           </div>
         </div>
