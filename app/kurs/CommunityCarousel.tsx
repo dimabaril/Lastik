@@ -58,19 +58,19 @@ export default function CommunityCarousel() {
       </CarouselContent>
 
       <div className="mt-8 flex items-center justify-center gap-4">
-        <CarouselPrevious className="static size-16 translate-y-0" />
+        <CarouselPrevious className="static size-16 translate-y-0 cursor-pointer bg-[#ffffff66] text-white" />
         <div className="flex gap-2">
           {IMAGES.map((_, i) => (
             <button
               key={i}
               onClick={() => api?.scrollTo(i)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-6 bg-white/60" : "w-2.5 bg-white/30"
+                i === current ? "w-6 bg-white/50" : "w-2.5 bg-white/30"
               }`}
             />
           ))}
         </div>
-        <CarouselNext className="static size-16 translate-y-0" />
+        <CarouselNext className="static size-16 translate-y-0 cursor-pointer bg-[#ffffff66] text-white" />
       </div>
     </Carousel>
   );
