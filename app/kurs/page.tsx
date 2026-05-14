@@ -180,7 +180,7 @@ const REVIEWS = [
     desc: "Кёльн, художница, дизайнерка, фотографка",
     text: `Курс был очень весёлым, радостным, зажигательным, ярким! Как допинг креатива. Теперь я понимаю, как работает анимационная студия полезно, что есть план, созвоны, домашние задания`,
     userPic: "/kurs/review_5.png",
-    background: "/kurs/buble-5.png",
+    background: "/kurs/buble-5-flipped.png",
     size: {
       width: 574,
       height: 429,
@@ -367,7 +367,7 @@ export default function ArtCourse() {
             <li>рассказывать истории через образы и композицию.</li>
           </ul>
         </div>
-        <div className="">
+        <div className="-mr-15">
           <Buble {...REVIEWS[0]} />
         </div>
       </section>
@@ -436,21 +436,23 @@ export default function ArtCourse() {
 
       {/* ── EXERCISES ────────────────────────────────────────────────────── */}
       <section className="bg-[#6754FE] py-32 pt-16 pb-32">
-        <div className="mx-auto flex max-w-screen-xl flex-col gap-12 px-28">
-          <h2 className="font-unbounded text-5xl font-bold">
-            Креативные упражнения
-          </h2>
-          <ul className="font-unbounded flex flex-col gap-10 text-2xl font-bold">
-            {EXERCISES.map((item) => (
-              <li key={item.label} className="flex items-center gap-8">
-                <div className="h-4 w-4 rounded-full bg-white"></div>
-                {item.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="">
-          <Buble {...REVIEWS[2]} />
+        <div className="mx-auto flex max-w-screen-xl px-28">
+          <div className="flex flex-col gap-12">
+            <h2 className="font-unbounded text-5xl font-bold">
+              Креативные упражнения
+            </h2>
+            <ul className="font-unbounded flex flex-col gap-10 text-2xl font-bold">
+              {EXERCISES.map((item) => (
+                <li key={item.label} className="flex items-center gap-8">
+                  <div className="h-4 w-4 shrink-0 rounded-full bg-white"></div>
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="-mr-45 -mb-20 -ml-55 self-end">
+            <Buble {...REVIEWS[2]} />
+          </div>
         </div>
       </section>
 
@@ -496,11 +498,11 @@ export default function ArtCourse() {
         <div>
           <Buble {...REVIEWS[3]} className="relative z-10 -mt-10 -mb-60" />
         </div>
-        <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
+        <h2 className="font-unbounded self-end text-5xl font-bold text-[#FFE6EB]">
           Творческое комьюнити
         </h2>
 
-        <p className="font-onest mx-auto max-w-166 text-center text-lg text-[#99A1AF]">
+        <p className="font-onest max-w-166 self-end text-right text-lg text-[#99A1AF]">
           Поддерживающая среда, где все делятся прогрессом и смотрят какие
           вокруг творческие проекты у людей в работе.
         </p>
@@ -515,17 +517,16 @@ export default function ArtCourse() {
         </div>
       </section>
 
-      <div className="flex">
-        <div>
-          <Buble {...REVIEWS[4]} />
-        </div>
-        <div>
-          <Buble {...REVIEWS[5]} />
-        </div>
-      </div>
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section>
-        {/* <section className="py-32"> */}
+        <div className="flex justify-around">
+          <div>
+            <Buble {...REVIEWS[4]} />
+          </div>
+          <div>
+            <Buble {...REVIEWS[5]} />
+          </div>
+        </div>
         <Marquee className="font-unbounded bg-[#EBF400] p-4 text-4xl text-black">
           мастерская стартует 31 мая
         </Marquee>
