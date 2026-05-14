@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
-import {
-  Arimo,
-  Victor_Mono,
-  Unbounded,
-  Onest, Geist } from "next/font/google";
+import { Arimo, Victor_Mono, Unbounded, Onest, Geist } from "next/font/google";
 
 import localFont from "next/font/local";
 
@@ -15,7 +11,7 @@ import { TouchProvider } from "./components/TouchProvider";
 import MobileReloadHandler from "./components/MobileReloadHandler";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -67,12 +63,21 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("antialiased", arimo.variable, victorMono.variable, unbounded.variable, onest.variable, drukCyrBoldItalic.variable, "font-sans", geist.variable)}
+      className={cn(
+        "antialiased",
+        arimo.variable,
+        victorMono.variable,
+        unbounded.variable,
+        onest.variable,
+        drukCyrBoldItalic.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       {/* <head>
         <script src="https://player.vimeo.com/api/player.js" async />
       </head> */}
-      <body className="flex min-h-screen flex-col bg-black">
+      <body className="flex min-h-screen flex-col bg-black text-white">
         <MobileReloadHandler />
         <TouchProvider>
           {/* Header place holder */}

@@ -38,7 +38,7 @@ export default function Footer() {
           >
             {EMAIL}
           </a>
-          <div className="flex justify-between gap-6">
+          <div className="flex justify-between gap-6 text-white">
             {SOCIAL_LINKS.map(({ label, href, svg }) => (
               <a
                 key={label}
