@@ -2,6 +2,7 @@ import Image from "next/image";
 import Buble from "./Buble";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import Marquee from "react-fast-marquee";
+import CommunityCarousel from "./CommunityCarousel";
 
 const WHO_CARDS = [
   {
@@ -203,9 +204,9 @@ const REVIEWS = [
 
 export default function ArtCourse() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className="flex flex-1 flex-col gap-12">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="py-32">
+      <section className="py-20">
         <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
           <div className="relative flex flex-10 flex-col gap-5 p-10">
             <h1 className="font-unbounded text-6xl font-bold">
@@ -252,7 +253,7 @@ export default function ArtCourse() {
       </section>
 
       {/* ── WHO ──────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-12 py-6">
+      <section className="flex flex-col gap-24 py-6">
         <div className="mx-auto flex max-w-screen-xl flex-col gap-12 text-black">
           <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
             Кому подойдёт курс
@@ -373,7 +374,7 @@ export default function ArtCourse() {
       </section>
 
       {/* ── HOW ──────────────────────────────────────────────────────────── */}
-      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 pt-6 pb-72">
+      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 border-t-2 border-[#EBF400] pt-12 pb-18">
         <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
           Как проходит курс
         </h2>
@@ -404,7 +405,7 @@ export default function ArtCourse() {
       </section>
 
       {/* ── PROGRAM ──────────────────────────────────────────────────────── */}
-      <section className="bg-[#6754FE] px-16 pt-32 pb-16">
+      <section className="mt-50 bg-[#6754FE] px-16 pt-32 pb-16">
         <div>
           <Buble {...REVIEWS[1]} className="relative z-10 -mt-72 -mb-15" />
         </div>
@@ -435,7 +436,7 @@ export default function ArtCourse() {
       </section>
 
       {/* ── EXERCISES ────────────────────────────────────────────────────── */}
-      <section className="bg-[#6754FE] py-32 pt-16 pb-32">
+      <section className="-mt-12 bg-[#6754FE] py-32 pt-16 pb-32 text-white">
         <div className="mx-auto flex max-w-screen-xl px-28">
           <div className="flex flex-col gap-12">
             <h2 className="font-unbounded text-5xl font-bold">
@@ -494,31 +495,35 @@ export default function ArtCourse() {
       </section>
 
       {/* ── COMMUNITY ────────────────────────────────────────────────────── */}
-      <section className="mx-auto flex max-w-screen-xl flex-col gap-12 border-t-2 border-[#EBF400]">
-        <div>
-          <Buble {...REVIEWS[3]} className="relative z-10 -mt-10 -mb-60" />
+      <section className="mt-6 flex flex-col gap-12 border-t-2 border-[#EBF400]">
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-12">
+          <div>
+            <Buble {...REVIEWS[3]} className="relative z-10 -mt-10 -mb-60" />
+          </div>
+          <h2 className="font-unbounded self-end text-5xl font-bold text-[#FFE6EB]">
+            Творческое комьюнити
+          </h2>
+          <p className="font-onest max-w-166 self-end text-right text-lg text-[#99A1AF]">
+            Поддерживающая среда, где все делятся прогрессом и смотрят какие
+            вокруг творческие проекты у людей в работе.
+          </p>
+          <div className="grid grid-cols-2 gap-6 text-white">
+            {COMMUNITY.map((item) => (
+              <div key={item.title} className="flex flex-col gap-3 p-6">
+                <p className="font-unbounded text-xl font-bold">{item.title}</p>
+                <p className="font-onest text-base">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <h2 className="font-unbounded self-end text-5xl font-bold text-[#FFE6EB]">
-          Творческое комьюнити
-        </h2>
-
-        <p className="font-onest max-w-166 self-end text-right text-lg text-[#99A1AF]">
-          Поддерживающая среда, где все делятся прогрессом и смотрят какие
-          вокруг творческие проекты у людей в работе.
+        <p className="font-unbounded self-center text-xl font-bold text-white">
+          Очень разные работы и темы участников первого потока{" "}
         </p>
-
-        <div className="grid grid-cols-2 gap-6">
-          {COMMUNITY.map((item) => (
-            <div key={item.title} className="flex flex-col gap-3 p-6">
-              <p className="font-unbounded text-xl font-bold">{item.title}</p>
-              <p className="font-onest text-base">{item.desc}</p>
-            </div>
-          ))}
-        </div>
+        <CommunityCarousel />
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section>
+      <section className="py-12">
         <div className="flex justify-around">
           <div>
             <Buble {...REVIEWS[4]} />
