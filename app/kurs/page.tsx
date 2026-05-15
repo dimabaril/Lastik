@@ -356,7 +356,7 @@ export default function ArtCourse() {
         </section>
 
         <div className="py-6">
-          <VideoPlayer src="/kurs/Comp 2_2.mp4" className="w-full" />
+          <VideoPlayer src="/kurs/Comp 2_2-converted.webm" className="w-full" />
         </div>
 
         {/* ── PRACTICE ─────────────────────────────────────────────────────── */}

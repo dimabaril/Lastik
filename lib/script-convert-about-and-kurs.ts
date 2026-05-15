@@ -3,18 +3,22 @@ import { dirname, basename, join } from "path";
 import { readFileSync, writeFileSync } from "fs";
 
 const MAX_WIDTH_HORIZONTAL = 1000;
+// const MAX_WIDTH_HORIZONTAL = 2000;
 const MAX_WIDTH_VERTICAL = 750;
 
 const PAGE_PATH = "./app/about/page.tsx";
 
 const videoPaths: string[] = [
-  "/about/neo (1080p) 2.mp4",
-  "/about/Comp 2_3.mp4",
-  "/about/MASTER preview 15-04_1.mp4",
-  "/about/ya_shedevrium.mp4",
-  "/about/leto-luzi.mp4",
-  "/about/AI textures.mp4",
-  "/about/all4.mp4",
+  // "/about/neo (1080p) 2.mp4",
+  // "/about/Comp 2_3.mp4",
+  // "/about/MASTER preview 15-04_1.mp4",
+  // "/about/ya_shedevrium.mp4",
+  // "/about/leto-luzi.mp4",
+  // "/about/AI textures.mp4",
+  // "/about/all4.mp4",
+
+  // надо конвертить наверно на ширину 2000
+  "/kurs/Comp 2_2.mp4",
 ];
 
 let pageContent = readFileSync(PAGE_PATH, "utf-8");
