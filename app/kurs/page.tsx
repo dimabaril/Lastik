@@ -4,7 +4,7 @@ import styles from "./rotation.module.css";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import Marquee from "react-fast-marquee";
 import CommunityCarousel from "./CommunityCarousel";
-
+import GongClickWrapper from "./GongClickWrapper";
 import ExpandingBanner from "./ExpandingBanner";
 
 const WHO_CARDS = [
@@ -247,13 +247,15 @@ export default function ArtCourse() {
               />
             </div>
             <div className="flex-9">
-              <Image
-                src="/kurs/yogagirl.png"
-                alt="yogagirl"
-                width={705}
-                height={705}
-                className="h-full w-auto rounded-r-3xl object-cover"
-              />
+              <GongClickWrapper className="h-full">
+                <Image
+                  src="/kurs/yogagirl.png"
+                  alt="yogagirl"
+                  width={705}
+                  height={705}
+                  className="h-full w-auto rounded-r-3xl object-cover"
+                />
+              </GongClickWrapper>
             </div>
           </div>
         </section>
@@ -589,14 +591,16 @@ export default function ArtCourse() {
                   подать заявку
                 </button>
               </div>
-              <div className="flex-9">
-                <Image
-                  src="/kurs/yogagirl.png"
-                  alt="yogagirl"
-                  width={705}
-                  height={705}
-                  className="h-full w-auto rounded-r-3xl object-cover"
-                />
+              <div className="flex-8">
+                <GongClickWrapper className="h-full">
+                  <Image
+                    src="/kurs/yogagirl.png"
+                    alt="yogagirl"
+                    width={705}
+                    height={705}
+                    className="h-full w-auto rounded-r-3xl"
+                  />
+                </GongClickWrapper>
               </div>
             </div>
           </div>
