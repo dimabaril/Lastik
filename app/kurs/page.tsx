@@ -560,7 +560,7 @@ export default function ArtCourse() {
 
           <div className="bg-[#387BFE] px-16 pt-16 pb-25">
             <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
-              <div className="flex flex-10 flex-col gap-5 p-10">
+              <div className="flex flex-1 flex-col gap-5 p-10">
                 <h1 className="font-unbounded text-4xl font-bold">
                   Присоединяйтесь к мастерской
                 </h1>
@@ -591,14 +591,14 @@ export default function ArtCourse() {
                   подать заявку
                 </button>
               </div>
-              <div className="flex-8">
+              <div className="flex-1">
                 <GongClickWrapper className="h-full">
                   <Image
                     src="/kurs/yogagirl.png"
                     alt="yogagirl"
                     width={705}
                     height={705}
-                    className="h-full w-auto rounded-r-3xl"
+                    className="h-full min-h-151 w-auto rounded-r-3xl object-cover"
                   />
                 </GongClickWrapper>
               </div>
