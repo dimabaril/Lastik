@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React from "react";
+
+import styles from "./floating.module.css";
 
 interface BubleProps {
   name: string;
@@ -26,7 +27,7 @@ export default function Buble({
 }: BubleProps) {
   return (
     <div
-      className={`flex flex-col items-center gap-3 rounded-3xl p-10 ${className ? className : ""}`}
+      className={`flex flex-col items-center gap-3 rounded-3xl p-10 ${styles.floating} ${className ? className : ""}`}
       style={{
         ...(background && {
           backgroundImage: `url(${background})`,

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Buble from "./Buble";
+import styles from "./rotation.module.css";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import Marquee from "react-fast-marquee";
 import CommunityCarousel from "./CommunityCarousel";
+
+import ExpandingBanner from "./ExpandingBanner";
 
 const WHO_CARDS = [
   {
@@ -112,13 +115,6 @@ const EXERCISES = [
   { color: "bg-[#8B4A8F]", label: "Концептуальное мышление" },
   { color: "bg-[#00FF9F]", label: "Создание мудбордов" },
   { color: "bg-[#6B93D6]", label: "Исследование стилей" },
-];
-
-const CTA_FEATURES = [
-  { color: "bg-[#D4FF00]", label: "5 модулей интенсивного обучения" },
-  { color: "bg-[#D4FF00]", label: "Еженедельные живые сессии" },
-  { color: "bg-[#D4FF00]", label: "Личное менторство и фидбэк" },
-  { color: "bg-[#D4FF00]", label: "Доступ к материалам курса" },
 ];
 
 const REVIEWS = [
@@ -279,7 +275,13 @@ export default function ArtCourse() {
                     alt={item.title}
                     width={100}
                     height={100}
-                    style={{ width: "88px", height: "auto" }}
+                    style={{
+                      width: "88px",
+                      height: "auto",
+                      animationDuration: `${3.5 + WHO_CARDS.indexOf(item) * 0.7}s`,
+                      animationDelay: `${WHO_CARDS.indexOf(item) * -1.1}s`,
+                    }}
+                    className={styles.rotationImage}
                   />
                   <div className="flex flex-col gap-3">
                     <p className="font-unbounded text-xl font-bold">
@@ -293,7 +295,7 @@ export default function ArtCourse() {
               ))}
             </div>
           </div>
-          <div
+          <ExpandingBanner
             className="py-35"
             style={{
               background:
@@ -304,7 +306,7 @@ export default function ArtCourse() {
               Любому, кто хочет раскачаться, подтолкнуть творческие практики и
               застрявшие личные проекты
             </p>
-          </div>
+          </ExpandingBanner>
         </section>
 
         {/* ── INSTRUCTORS ──────────────────────────────────────────────────── */}
