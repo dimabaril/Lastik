@@ -38,11 +38,12 @@ export default function CommunityCarousel() {
     <Carousel
       opts={{ align: "center", loop: true }}
       className="w-full"
+      // className="w-full max-w-[12rem] sm:max-w-xs md:max-w-sm"
       setApi={onSetApi}
     >
-      <CarouselContent className="-ml-4">
+      <CarouselContent>
         {IMAGES.map((src, i) => (
-          <CarouselItem key={i} className="basis-auto pl-6">
+          <CarouselItem key={i} className="basis-auto">
             <div className="h-170 overflow-hidden rounded-2xl">
               <Image
                 src={src}
@@ -58,19 +59,21 @@ export default function CommunityCarousel() {
       </CarouselContent>
 
       <div className="mt-8 flex items-center justify-center gap-4">
-        <CarouselPrevious className="static size-16 translate-y-0 cursor-pointer bg-[#ffffff66] text-white" />
+        <CarouselPrevious className="static size-13 translate-y-0 cursor-pointer border-none bg-[rgba(255,255,255,0.5)] text-white" />
         <div className="flex gap-2">
           {IMAGES.map((_, i) => (
             <button
               key={i}
               onClick={() => api?.scrollTo(i)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-6 bg-white/50" : "w-2.5 bg-white/30"
+              className={`h-5 cursor-pointer rounded-full transition-all duration-300 hover:bg-white ${
+                i === current
+                  ? "w-10 bg-[rgba(255,255,255,0.5)]"
+                  : "w-5 bg-[rgba(255,255,255,0.3)]"
               }`}
             />
           ))}
         </div>
-        <CarouselNext className="static size-16 translate-y-0 cursor-pointer bg-[#ffffff66] text-white" />
+        <CarouselNext className="static size-13 translate-y-0 cursor-pointer border-none bg-[rgba(255,255,255,0.5)] text-white" />
       </div>
     </Carousel>
   );
