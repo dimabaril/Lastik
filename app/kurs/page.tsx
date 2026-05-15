@@ -546,8 +546,14 @@ export default function ArtCourse() {
               <Buble {...REVIEWS[5]} />
             </div>
           </div>
-          <Marquee className="font-unbounded bg-[#EBF400] p-4 text-4xl text-black">
-            мастерская стартует 31 мая
+          <Marquee
+            className="font-unbounded bg-[#EBF400] p-4 text-4xl text-black"
+            autoFill={true}
+            // speed={50}
+            // pauseOnHover={true}
+          >
+            мастерская стартует 31 мая!
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Marquee>
 
           <div className="bg-[#387BFE] px-16 pt-16 pb-25">
