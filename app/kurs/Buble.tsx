@@ -25,21 +25,8 @@ export default function Buble({
   size,
   className,
 }: BubleProps) {
-  return (
-    <div
-      className={`flex flex-col items-center gap-3 rounded-3xl p-10 ${styles.floating} ${className ? className : ""}`}
-      style={{
-        ...(background && {
-          backgroundImage: `url(${background})`,
-          backgroundSize: "100% 100%",
-        }),
-        ...(size && {
-          width: size.width,
-          height: size.height,
-          padding: size.padding,
-        }),
-      }}
-    >
+  const content = (
+    <>
       <div className="flex items-center gap-3">
         {userPic && (
           <Image
@@ -60,6 +47,47 @@ export default function Buble({
       <p className="font-onest text-base leading-tight font-semibold whitespace-pre-line text-[#56127F]">
         {text}
       </p>
-    </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile: CSS-bubble без фоновой картинки */}
+      <div
+        className={`relative flex max-w-[75vw] flex-col gap-3 self-end rounded-[50px] rounded-bl-none bg-[#ccf0ff] p-6 lg:hidden ${styles.floating} ${className ?? ""}`}
+      >
+        <div
+          style={{
+            position: "absolute",
+            bottom: -28,
+            left: 0,
+            width: 0,
+            height: 0,
+            borderLeft: "0px solid transparent",
+            borderRight: "30px solid transparent",
+            borderTop: "30px solid #ccf0ff",
+          }}
+        />
+        {content}
+      </div>
+
+      {/* Desktop: фиксированный размер */}
+      <div
+        className={`hidden flex-col items-center gap-3 rounded-3xl lg:flex ${styles.floating} ${className ? className : ""}`}
+        style={{
+          ...(background && {
+            backgroundImage: `url(${background})`,
+            backgroundSize: "100% 100%",
+          }),
+          ...(size && {
+            width: size.width,
+            height: size.height,
+            padding: size.padding,
+          }),
+        }}
+      >
+        {content}
+      </div>
+    </>
   );
 }
