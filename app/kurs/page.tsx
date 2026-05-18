@@ -201,20 +201,21 @@ const REVIEWS = [
 export default function ArtCourse() {
   return (
     <>
-      <main className="flex flex-1 flex-col items-center justify-center gap-6 p-8 text-center xl:hidden">
+      {/* <main className="flex flex-1 flex-col items-center justify-center gap-6 p-8 text-center xl:hidden">
         <p className="font-unbounded text-3xl font-bold text-[#FFE6EB]">
           В разработке, доступна на десктопе
         </p>
         <p className="font-onest text-lg text-[#99A1AF]">
           Минимальная ширина экрана 1280px
         </p>
-      </main>
+      </main> */}
 
-      <main className="hidden flex-1 flex-col gap-12 xl:flex">
+      {/* <main className="hidden flex-1 flex-col gap-12 xl:flex"> */}
+      <main className="flex flex-1 flex-col">
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
-        <section className="py-20">
-          <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
-            <div className="relative flex flex-10 flex-col gap-5 p-10">
+        <section className="py-15">
+          <div className="mx-auto flex max-w-screen-xl bg-[#FFF9EF] text-black max-md:flex-col-reverse md:rounded-3xl">
+            <div className="relative flex flex-1 flex-col gap-5 p-10 max-lg:p-6">
               <h1 className="font-unbounded text-6xl font-bold">
                 мастерская
                 <br />
@@ -246,14 +247,14 @@ export default function ArtCourse() {
                 className="absolute right-13 -bottom-20 h-auto w-50 -rotate-20"
               />
             </div>
-            <div className="flex-9">
+            <div className="flex-1">
               <GongClickWrapper className="h-full">
                 <Image
                   src="/kurs/yogagirl.png"
                   alt="yogagirl"
                   width={705}
                   height={705}
-                  className="h-full w-auto rounded-r-3xl object-cover"
+                  className="h-full w-full object-cover md:rounded-r-3xl"
                 />
               </GongClickWrapper>
             </div>
@@ -261,16 +262,16 @@ export default function ArtCourse() {
         </section>
 
         {/* ── WHO ──────────────────────────────────────────────────────────── */}
-        <section className="flex flex-col gap-24 py-6">
+        <section className="flex flex-col gap-15 py-15">
           <div className="mx-auto flex max-w-screen-xl flex-col gap-12 text-black">
             <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
               Кому подойдёт курс
             </h2>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid gap-3 lg:grid-cols-2 lg:gap-6">
               {WHO_CARDS.map((item) => (
                 <div
                   key={item.title}
-                  className="flex items-center gap-6 rounded-3xl bg-[#E4CBDE] p-5"
+                  className="flex items-center gap-6 bg-[#E4CBDE] p-5 lg:rounded-3xl"
                 >
                   <Image
                     src={item.img}
@@ -312,7 +313,7 @@ export default function ArtCourse() {
         </section>
 
         {/* ── INSTRUCTORS ──────────────────────────────────────────────────── */}
-        <section className="flex flex-col gap-12 py-6 text-white">
+        <section className="flex flex-col gap-12 py-15 text-white">
           <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
             Мы будем вести курс
           </h2>
@@ -357,12 +358,12 @@ export default function ArtCourse() {
           </div>
         </section>
 
-        <div className="py-6">
+        <div className="">
           <VideoPlayer src="/kurs/Comp 2_2-converted.webm" className="w-full" />
         </div>
 
         {/* ── PRACTICE ─────────────────────────────────────────────────────── */}
-        <section className="mx-auto flex max-w-screen-xl py-6 text-[#FFE6EB]">
+        <section className="mx-auto flex max-w-screen-xl py-15 text-[#FFE6EB] max-xl:flex-col max-xl:gap-12 max-xl:p-6 max-lg:gap-6">
           <div className="flex flex-col gap-12">
             <h2 className="font-unbounded text-5xl font-bold">
               Не только лекции,
@@ -382,36 +383,38 @@ export default function ArtCourse() {
               <li>рассказывать истории через образы и композицию.</li>
             </ul>
           </div>
-          <div className="-mr-15">
+          <div className="2xl:-mr-15">
             <Buble {...REVIEWS[0]} />
           </div>
         </section>
 
         {/* ── HOW ──────────────────────────────────────────────────────────── */}
-        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 border-t-2 border-[#EBF400] pt-12 pb-18">
+        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 border-t-2 border-[#EBF400] py-15">
           <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
             Как проходит курс
           </h2>
-          <div className="flex gap-6">
+          <div className="flex max-lg:flex-col lg:gap-6">
             {HOW_STEPS.map((step, idx) => (
               <div
                 key={idx}
-                className={`flex flex-1 flex-col justify-between gap-6 rounded-3xl p-8 ${step.bgColor} ${step.textColor}`}
+                className={`flex flex-1 justify-between gap-6 p-8 max-lg:p-6 lg:flex-col lg:rounded-3xl ${step.bgColor} ${step.textColor}`}
               >
-                {step.texts.map((text, textIdx) => (
-                  <p
-                    key={textIdx}
-                    className="font-unbounded text-2xl leading-tight font-bold"
-                  >
-                    {text}
-                  </p>
-                ))}
+                <div className="flex flex-col gap-6">
+                  {step.texts.map((text, textIdx) => (
+                    <p
+                      key={textIdx}
+                      className="font-unbounded text-2xl leading-tight font-bold"
+                    >
+                      {text}
+                    </p>
+                  ))}
+                </div>
                 <Image
                   src={step.pic}
                   alt={`Step ${idx + 1}`}
                   width={250}
                   height={250}
-                  className="-mb-13 w-2/3 self-end"
+                  className="w-2/3 self-end max-lg:w-30 lg:-mb-13"
                 />
               </div>
             ))}
@@ -419,11 +422,11 @@ export default function ArtCourse() {
         </section>
 
         {/* ── PROGRAM ──────────────────────────────────────────────────────── */}
-        <section className="mt-50 bg-[#6754FE] px-16 pt-32 pb-16">
+        <section className="mt-50 bg-[#6754FE] lg:px-15 lg:pt-25 lg:pb-15">
           <div>
             <Buble {...REVIEWS[1]} className="relative z-10 -mt-72 -mb-15" />
           </div>
-          <div className="mx-auto flex max-w-screen-xl flex-col gap-12 rounded-3xl bg-white px-28 py-15 text-black">
+          <div className="mx-auto flex max-w-screen-xl flex-col gap-12 bg-white px-28 py-15 text-black max-lg:p-6 lg:rounded-3xl">
             <h2 className="font-unbounded self-center text-5xl font-bold">
               Программа 5 встреч
             </h2>
@@ -450,8 +453,8 @@ export default function ArtCourse() {
         </section>
 
         {/* ── EXERCISES ────────────────────────────────────────────────────── */}
-        <section className="-mt-12 bg-[#6754FE] py-32 pt-16 pb-32 text-white">
-          <div className="mx-auto flex max-w-screen-xl px-28">
+        <section className="bg-[#6754FE] pb-25 text-white">
+          <div className="mx-auto flex max-w-screen-xl px-28 max-xl:flex-col max-lg:gap-12 max-lg:p-6">
             <div className="flex flex-col gap-12">
               <h2 className="font-unbounded text-5xl font-bold">
                 Креативные упражнения
@@ -465,14 +468,14 @@ export default function ArtCourse() {
                 ))}
               </ul>
             </div>
-            <div className="-mr-45 -mb-20 -ml-55 self-end">
+            <div className="self-end xl:-mr-45 xl:-mb-20 xl:-ml-55">
               <Buble {...REVIEWS[2]} />
             </div>
           </div>
         </section>
 
         {/* ── PROJECT ──────────────────────────────────────────────────────── */}
-        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-12">
+        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-15">
           <h2 className="font-unbounded self-center text-5xl font-bold text-[#FFE6EB]">
             Работа с проектом
           </h2>
@@ -482,7 +485,7 @@ export default function ArtCourse() {
               <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
                 Есть проект
               </p>
-              <div className="flex-1 rounded-2xl bg-[#FFE6EB] px-10 py-5">
+              <div className="flex-1 bg-[#FFE6EB] px-10 py-5 md:rounded-2xl">
                 {/* <p className="font-onest mt-2 text-2xl font-medium whitespace-nowrap"> */}
                 <p className="font-onest mt-2 text-2xl font-medium">
                   Получаешь фидбек по всем этапам:
@@ -495,7 +498,7 @@ export default function ArtCourse() {
               <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
                 Нет проекта
               </p>
-              <div className="flex-1 rounded-2xl bg-[#FFE6EB] px-10 py-5">
+              <div className="flex-1 bg-[#FFE6EB] px-10 py-5 md:rounded-2xl">
                 <ul className="font-onest mt-2 list-disc pl-6 text-2xl font-medium">
                   <li>Поможем придумать проект на 5 недель</li>
                   <li>
@@ -509,21 +512,24 @@ export default function ArtCourse() {
         </section>
 
         {/* ── COMMUNITY ────────────────────────────────────────────────────── */}
-        <section className="mt-6 flex flex-col gap-12 border-t-2 border-[#EBF400]">
-          <div className="mx-auto flex max-w-screen-xl flex-col gap-12">
+        <section className="mt-6 flex flex-col gap-12 border-[#EBF400] lg:border-t-2">
+          <div className="mx-auto flex max-w-screen-xl flex-col gap-12 p-6">
             <div>
-              <Buble {...REVIEWS[3]} className="relative z-10 -mt-10 -mb-60" />
+              <Buble
+                {...REVIEWS[3]}
+                className="relative z-10 min-[1180px]:-mt-10 min-[1180px]:-mb-60"
+              />
             </div>
-            <h2 className="font-unbounded self-end text-5xl font-bold text-[#FFE6EB]">
+            <h2 className="font-unbounded text-5xl font-bold text-[#FFE6EB] lg:self-end">
               Творческое комьюнити
             </h2>
-            <p className="font-onest max-w-166 self-end text-right text-lg text-[#99A1AF]">
+            <p className="font-onest max-w-166 text-lg text-[#99A1AF] lg:self-end lg:text-right">
               Поддерживающая среда, где все делятся прогрессом и смотрят какие
               вокруг творческие проекты у людей в работе.
             </p>
-            <div className="grid grid-cols-2 gap-6 text-white">
+            <div className="grid gap-12 text-white md:grid-cols-2">
               {COMMUNITY.map((item) => (
-                <div key={item.title} className="flex flex-col gap-3 p-6">
+                <div key={item.title} className="flex flex-col gap-3">
                   <p className="font-unbounded text-xl font-bold">
                     {item.title}
                   </p>
@@ -539,8 +545,8 @@ export default function ArtCourse() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
-        <section className="py-12">
-          <div className="flex justify-around">
+        <section className="py-15">
+          <div className="flex flex-wrap justify-around">
             <div>
               <Buble {...REVIEWS[4]} />
             </div>
@@ -558,8 +564,8 @@ export default function ArtCourse() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Marquee>
 
-          <div className="bg-[#387BFE] px-16 pt-16 pb-25">
-            <div className="mx-auto flex max-w-screen-xl rounded-3xl bg-[#FFF9EF] text-black">
+          <div className="bg-[#387BFE] md:px-15 md:pt-15 md:pb-25">
+            <div className="mx-auto flex max-w-screen-xl bg-[#FFF9EF] text-black max-md:flex-col-reverse md:rounded-3xl">
               <div className="flex flex-1 flex-col gap-5 p-10">
                 <h1 className="font-unbounded text-4xl font-bold">
                   Присоединяйтесь к мастерской
@@ -587,7 +593,7 @@ export default function ArtCourse() {
                     низкая цена действует до 21 мая
                   </p>
                 </div>
-                <button className="font-unbounded self-start rounded-2xl bg-black px-14 py-3 text-xl font-bold text-white">
+                <button className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-xl font-bold text-white">
                   подать заявку
                 </button>
               </div>
@@ -598,7 +604,7 @@ export default function ArtCourse() {
                     alt="yogagirl"
                     width={705}
                     height={705}
-                    className="h-full min-h-151 w-auto rounded-r-3xl object-cover"
+                    className="h-full w-full object-cover md:rounded-r-3xl"
                   />
                 </GongClickWrapper>
               </div>

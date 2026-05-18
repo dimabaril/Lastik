@@ -39,7 +39,7 @@ export default function ExpandingBanner({
   }, []);
 
   return (
-    <div ref={ref} className="overflow-hidden py-6">
+    <div ref={ref} className="">
       <div
         className={`mx-auto ${className ?? ""}`}
         style={{

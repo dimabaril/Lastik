@@ -44,13 +44,13 @@ export default function CommunityCarousel() {
       <CarouselContent>
         {IMAGES.map((src, i) => (
           <CarouselItem key={i} className="basis-auto">
-            <div className="h-170 overflow-hidden rounded-2xl">
+            <div className="h-170 overflow-hidden rounded-2xl max-md:h-100">
               <Image
                 src={src}
                 alt={`Работа участника ${i + 1}`}
                 width={0}
                 height={0}
-                sizes="33vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="h-full w-auto object-contain"
               />
             </div>
@@ -65,10 +65,10 @@ export default function CommunityCarousel() {
             <button
               key={i}
               onClick={() => api?.scrollTo(i)}
-              className={`h-5 cursor-pointer rounded-full transition-all duration-300 hover:bg-white ${
+              className={`h-4 cursor-pointer rounded-full transition-all duration-300 hover:bg-white ${
                 i === current
-                  ? "w-10 bg-[rgba(255,255,255,0.5)]"
-                  : "w-5 bg-[rgba(255,255,255,0.3)]"
+                  ? "w-8 bg-[rgba(255,255,255,0.5)]"
+                  : "w-4 bg-[rgba(255,255,255,0.3)]"
               }`}
             />
           ))}
