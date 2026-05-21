@@ -57,7 +57,7 @@ export default async function ProjectPage({
       {/* Upper block */}
       <div className="flex flex-col gap-6 max-md:gap-4">
         <div
-          className={`flex gap-6 max-lg:flex-col max-md:gap-4 ${project.vimeos[0].fullWidth ? "flex-col" : ""}`}
+          className={`flex gap-6 max-lg:flex-col max-md:gap-4 ${project.mainVimeo.fullWidth ? "flex-col" : ""}`}
         >
           {/* Main content */}
           <div className="flex flex-1 flex-col gap-6 max-md:gap-4">
@@ -72,9 +72,9 @@ export default async function ProjectPage({
 
             {/* Main video */}
             <VimeoPlayer
-              id={project.vimeos[0].id}
-              hash={project.vimeos[0].hash}
-              aspectRatio={project.vimeos[0].aspectRatio}
+              id={project.mainVimeo.id}
+              hash={project.mainVimeo.hash}
+              aspectRatio={project.mainVimeo.aspectRatio}
             />
           </div>
           {/* ─── Right column ─── */}
@@ -103,7 +103,7 @@ export default async function ProjectPage({
         </div>
 
         {/* description */}
-        {project.texts[0] && (
+        {project.description && (
           <div className="flex items-center gap-4">
             {/* svg */}
             <Image
@@ -115,16 +115,15 @@ export default async function ProjectPage({
               // className="self-start pt-3"
               className="max-md:w-5"
             />
-            {/* text index 0 */}
             <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-tight lg:max-w-1/2">
-              {renderText(project.texts[0])}
+              {renderText(project.description)}
             </p>
           </div>
         )}
       </div>
 
       {/* ─── Content grid ─── */}
-      {project.layout ? (
+      {project.layout && (
         <div className="flex flex-col gap-6 max-md:gap-4">
           {project.layout.map((row, rowIndex) => (
             <div
@@ -146,7 +145,7 @@ export default async function ProjectPage({
                         // className="font-onest 7 text-xl whitespace-pre-line"
                         className={`font-onest col-span-12 text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight ${item.cols ? `lg:col-span-${item.cols}` : ""} ${item.colStart ? `lg:col-start-${item.colStart}` : ""}`}
                       >
-                        {renderText(project.texts[item.index])}
+                        {renderText(item.content)}
                       </div>
                     );
                   case "video":
@@ -157,14 +156,12 @@ export default async function ProjectPage({
                         className="overflow-hidden lg:rounded-xl"
                       >
                         <VideoPlayer
-                          src={project.videos?.[item.index]}
+                          src={item.src}
                           className="w-full object-cover"
                         />
                       </div>
                     );
                   case "vimeo": {
-                    const vimeo = project.vimeos?.[item.index];
-                    if (!vimeo) return null;
                     return (
                       <div
                         key={i}
@@ -172,9 +169,9 @@ export default async function ProjectPage({
                         className="overflow-hidden lg:rounded-xl"
                       >
                         <VimeoPlayer
-                          id={vimeo.id}
-                          hash={vimeo.hash}
-                          aspectRatio={vimeo.aspectRatio}
+                          id={item.id}
+                          hash={item.hash}
+                          aspectRatio={item.aspectRatio}
                         />
                       </div>
                     );
@@ -187,8 +184,8 @@ export default async function ProjectPage({
                         className="overflow-hidden lg:rounded-xl"
                       >
                         <Image
-                          src={project.images[item.index]}
-                          alt={`${project.title} — ${item.index + 1}`}
+                          src={item.src}
+                          alt={`${project.title} — ${i + 1}`}
                           width={800}
                           height={800}
                           className="w-full object-cover"
@@ -200,33 +197,6 @@ export default async function ProjectPage({
                     return null;
                 }
               })}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="mt-6 flex flex-col gap-6 max-md:gap-4">
-          {project.texts.map((text, i) => (
-            <p
-              key={i}
-              className="font-onest text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight"
-            >
-              {renderText(text)}
-            </p>
-          ))}
-          {project.images.map((src, i) => (
-            <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
-              <Image
-                src={src}
-                alt={`${project.title} — ${i + 1}`}
-                width={800}
-                height={600}
-                className="w-full object-cover"
-              />
-            </div>
-          ))}
-          {project.videos?.map((src, i) => (
-            <div key={`vid-${i}`} className="overflow-hidden lg:rounded-xl">
-              <video src={src} controls className="w-full object-cover" />
             </div>
           ))}
         </div>
