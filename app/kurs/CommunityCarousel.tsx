@@ -16,7 +16,11 @@ const IMAGES = [
   "/kurs/carousel/254e3754f0c5b6e2535acb6b3496361cdb6fefb8.png",
   "/kurs/carousel/6d67669d46c14bcf12139a9d8afe04aeab775f3f.png",
   "/kurs/carousel/0ba81865b5c84cf85725f339bd7addb32acfd34d.png",
-  "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780.gif",
+
+  // "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780.gif",
+  // "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webp",
+  "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webm",
+
   "/kurs/carousel/a80ba7a74408420512aeb716449b9b87b373fb71.png",
   "/kurs/carousel/ea28985dd1e76de45941fb756685179fd5f02a26.jpg",
   "/kurs/carousel/a2dbc33d9bd164fb525b3b8e65db053701fd4cc7.png",
@@ -45,14 +49,26 @@ export default function CommunityCarousel() {
         {IMAGES.map((src, i) => (
           <CarouselItem key={i} className="basis-auto">
             <div className="h-170 overflow-hidden rounded-2xl max-md:h-100">
-              <Image
-                src={src}
-                alt={`Работа участника ${i + 1}`}
-                width={0}
-                height={0}
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="h-full w-auto object-contain"
-              />
+              {src.endsWith(".webm") || src.endsWith(".mp4") ? (
+                <video
+                  src={src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-auto object-contain"
+                  aria-label={`Работа участника ${i + 1}`}
+                />
+              ) : (
+                <Image
+                  src={src}
+                  alt={`Работа участника ${i + 1}`}
+                  width={0}
+                  height={0}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="h-full w-auto object-contain"
+                />
+              )}
             </div>
           </CarouselItem>
         ))}
