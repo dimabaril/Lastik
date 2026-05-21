@@ -104,9 +104,12 @@ export default function Aside() {
               key={i}
               src={src}
               alt={`aside-pic-${i}`}
-              width={128}
-              height={128}
+              width={0}
+              height={0}
+              sizes="128px"
+              // have to be for right calculating
               loading="eager"
+              style={{ width: 128, height: "auto" }}
             />
           ),
         )}
