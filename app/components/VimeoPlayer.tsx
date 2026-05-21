@@ -17,6 +17,7 @@ export default function VimeoPlayer({
     const iframe = iframeRef.current;
     if (!iframe) return;
 
+    let ready = false;
     let inView = false;
 
     const send = (method: string, value?: unknown) => {
@@ -31,30 +32,31 @@ export default function VimeoPlayer({
       try {
         const data = JSON.parse(e.data as string);
         if (data.event === "ready") {
+          ready = true;
           send("setVolume", 1);
           if (inView) send("play");
         }
       } catch {}
     };
 
-    window.addEventListener("message", handleMessage);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         inView = entry.isIntersecting;
-        send(inView ? "play" : "pause");
+        if (ready) send(inView ? "play" : "pause");
       },
       { threshold: 0.8 },
     );
 
+    window.addEventListener("message", handleMessage);
     observer.observe(iframe);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("message", handleMessage);
-    };
-  }, []);
 
-  const src = `https://player.vimeo.com/video/${id}?badge=0&autopause=0&autoplay=0&muted=1&loop=1&player_id=0&app_id=58479&api=1${hash ? `&h=${hash}` : ""}`;
+    return () => {
+      window.removeEventListener("message", handleMessage);
+      observer.disconnect();
+    };
+  }, [id, hash]);
+
+  const src = `https://player.vimeo.com/video/${id}?muted=1&loop=1&autopause=0&api=1${hash ? `&h=${hash}` : ""}`;
 
   return (
     <div
@@ -64,9 +66,7 @@ export default function VimeoPlayer({
       <iframe
         ref={iframeRef}
         src={src}
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
+        allow="autoplay; fullscreen; picture-in-picture"
         style={{
           position: "absolute",
           top: 0,
