@@ -42,9 +42,11 @@ export default function Studio() {
       <Image
         src="/about-team.png"
         alt="Lastik team"
-        width={822}
+        width={821}
         height={541}
         className="w-2/3"
+        loading="eager"
+        priority
       />
 
       <section className="flex flex-col gap-4">
