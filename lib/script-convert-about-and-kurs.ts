@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 const MAX_WIDTH_HORIZONTAL = 1000;
 // const MAX_WIDTH_HORIZONTAL = 2000;
-const MAX_WIDTH_VERTICAL = 750;
+const MAX_WIDTH_VERTICAL = 500;
 
 const PAGE_PATH = "./app/about/page.tsx";
 
@@ -16,9 +16,8 @@ const videoPaths: string[] = [
   // "/about/leto-luzi.mp4",
   // "/about/AI textures.mp4",
   // "/about/all4.mp4",
-
   // надо конвертить наверно на ширину 2000
-  "/kurs/Comp 2_2.mp4",
+  // "/kurs/Comp 2_2.mp4",
 ];
 
 let pageContent = readFileSync(PAGE_PATH, "utf-8");
