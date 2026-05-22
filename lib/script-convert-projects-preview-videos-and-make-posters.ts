@@ -69,9 +69,10 @@ for (const project of projects) {
   if (!videoPath) continue;
 
   const projectSize = project.size ?? 6;
-  // size 12 → 1256px -12px*2 padding -2px border * 1.3(так как зум)
+  // size 12 → 1256px -12px*2 padding -2px border * 1.3(так как зум) // уберём 1.3 для уменьшения размера видоса
   const targetWidth =
-    Math.round(((projectSize * (1256 / 12) - 24 - 2) * 1.3) / 2) * 2;
+    // Math.round(((projectSize * (1256 / 12) - 24 - 2) * 1.3) / 2) * 2;
+    Math.round((projectSize * (1256 / 12) - 24 - 2) / 2) * 2;
 
   const input = "./public" + videoPath;
   const dir = dirname(input);
