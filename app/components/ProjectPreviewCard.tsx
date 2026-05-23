@@ -24,6 +24,7 @@ export default function ProjectPreviewCard({
   const isTouch = useIsTouch();
 
   const videoRef = useRef<HTMLVideoElement>(null);
+  const posterRef = useRef<HTMLImageElement>(null);
 
   // Mobile: autoplay when visible
   useEffect(() => {
@@ -66,21 +67,34 @@ export default function ProjectPreviewCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <video
-        ref={videoRef}
-        src={thumb.video}
-        poster={thumb.poster}
-        preload="metadata"
-        loop
-        muted
-        playsInline
-        className="block w-full rounded-lg"
-        style={{
-          aspectRatio: thumb.videoSize
-            ? thumb.videoSize.width / thumb.videoSize.height
-            : "auto",
-        }}
-      />
+      <div className="relative">
+        <video
+          ref={videoRef}
+          src={thumb.video}
+          poster={thumb.poster}
+          preload="metadata"
+          loop
+          muted
+          playsInline
+          onPlaying={() => {
+            if (posterRef.current) posterRef.current.style.opacity = "0";
+          }}
+          className="block w-full rounded-lg"
+          style={{
+            aspectRatio: thumb.videoSize
+              ? thumb.videoSize.width / thumb.videoSize.height
+              : "auto",
+          }}
+        />
+        {thumb.poster && (
+          <img
+            ref={posterRef}
+            src={thumb.poster}
+            aria-hidden
+            className="pointer-events-none absolute inset-0 h-full w-full rounded-lg object-cover transition-opacity duration-150"
+          />
+        )}
+      </div>
 
       <div className="flex flex-wrap justify-between pt-2">
         <div className="font-unbounded shrink-0 gap-2 text-base font-light">
