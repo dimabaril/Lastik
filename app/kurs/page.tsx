@@ -30,7 +30,7 @@ const WHO_CARDS = [
   },
   {
     title: "Автор, работающий с визуалом",
-    desc: "и хочешь мыслить поверх границ стилей, свободнее собирать концепции и сильнее влиять на проект целиком.",
+    desc: "и хочешь прокачать вкус, насмотренность, вариативность и научиться увереннее оформлять свои идеи.",
     img: "/kurs/glass.png",
   },
   {
@@ -85,7 +85,7 @@ const PROGRAM = [
   {
     n: "05",
     title: "Тритмент, питч – как презентовать концепт и что дальше",
-    desc: "Наш воркфлоу с нейронками, поделимся найденными приёмами – как миксуем классику и генерации.",
+    desc: "Упаковка идей и презентация. И поделимся идеями – куда идти показывать свои проекты.",
   },
 ];
 
@@ -128,22 +128,22 @@ const REVIEWS = [
     size: {
       width: 707,
       height: 421,
-      padding: 40,
+      padding: "30px 20px 30px 60px",
     },
   },
   {
     name: "Анастасия",
-    desc: "Санкт-Петербург, аниматор и иллюстратор",
+    desc: "2D/3D аниматор",
     text: `Мне было очень полезно и интересно, я ни секунды не пожалела!
      Самое полезное для меня было узнать, как вы работаете с нейро и когда мы развивали фантазию, придумывая сюжеты за 5 минут; как разрабатываете персонажа.`,
-    // userPic: "/kurs/review_2.png",
+    userPic: "/kurs/review_2.png",
     background: "/kurs/buble-2.png",
     size: {
       // width: 500,
       width: 550,
       // height: 298,
       height: 350,
-      padding: 50,
+      padding: "30px 20px 30px 60px",
     },
   },
   {
@@ -156,7 +156,7 @@ const REVIEWS = [
     size: {
       width: 578,
       height: 442,
-      padding: 32,
+      padding: "30px 20px 30px 60px",
     },
   },
   {
@@ -169,7 +169,7 @@ const REVIEWS = [
     size: {
       width: 427,
       height: 281,
-      padding: 32,
+      padding: "30px 20px 30px 60px",
     },
   },
   {
@@ -181,7 +181,7 @@ const REVIEWS = [
     size: {
       width: 574,
       height: 429,
-      padding: 85,
+      padding: "90px 30px 30px 60px",
     },
   },
   {
@@ -193,7 +193,7 @@ const REVIEWS = [
     size: {
       width: 487,
       height: 328,
-      padding: 45,
+      padding: "30px 20px 30px 60px",
     },
   },
 ];
@@ -324,13 +324,13 @@ export default function ArtCourse() {
               {
                 name: "Лёша Платонов",
                 role: "Креативный директор",
-                desc: "15+ лет в анимации и арт-дирекшне, работал с крупными студиями над отмеченными наградами проектами",
+                desc: "Придумывает и режиссирует анимационные проекты с сильной визуальной идеей и авторским подходом",
                 img: "/kurs/lesha.png",
               },
               {
                 name: "Надя Степанова",
-                role: "арт-директор в Ластике",
-                desc: "Специализируется на экспериментальной анимации и визуальных эффектах со страстью к творческим экспериментам",
+                role: "Арт-директорка",
+                desc: "с фокусом на визуальные эксперименты, атмосферу и нестандартные художественные решения",
                 img: "/kurs/nadya.png",
               },
             ].map((person) => (
@@ -423,13 +423,10 @@ export default function ArtCourse() {
           </div>
         </section>
 
-        <div className="mx-6 block self-end lg:hidden">
-          <Buble {...REVIEWS[1]} className="" />
-        </div>
         {/* ── PROGRAM ──────────────────────────────────────────────────────── */}
-        <section className="mt-10 bg-[#6754FE] lg:mt-50 lg:px-15 lg:pt-25 lg:pb-15">
-          <div className="hidden lg:block">
-            <Buble {...REVIEWS[1]} className="relative z-10 -mt-72 -mb-15" />
+        <section className="bg-[#6754FE] max-lg:bg-[#FF87CF] lg:mt-50 lg:px-15 lg:pt-25 lg:pb-15">
+          <div className="">
+            <Buble {...REVIEWS[1]} className="m-8 lg:-mt-72 lg:-mb-15" />
           </div>
           <div className="mx-auto flex max-w-screen-xl flex-col gap-12 bg-white px-28 py-15 text-black max-lg:p-6 lg:rounded-3xl">
             <h2 className="font-unbounded self-center text-4xl font-bold md:text-5xl">
@@ -480,8 +477,8 @@ export default function ArtCourse() {
         </section>
 
         {/* ── PROJECT ──────────────────────────────────────────────────────── */}
-        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-15">
-          <h2 className="font-unbounded self-center text-4xl font-bold text-[#FFE6EB] md:text-5xl">
+        <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-15 max-md:bg-[#FFE6EB]">
+          <h2 className="font-unbounded self-center text-4xl font-bold text-[#FFE6EB] max-md:text-black md:text-5xl">
             Работа с проектом
           </h2>
 
@@ -490,20 +487,20 @@ export default function ArtCourse() {
               <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
                 Есть проект
               </p>
-              <div className="flex-1 bg-[#FFE6EB] px-10 py-5 md:rounded-2xl">
-                {/* <p className="font-onest mt-2 text-2xl font-medium whitespace-nowrap"> */}
-                <p className="font-onest mt-2 text-xl font-medium md:text-2xl">
-                  Получаешь фидбек по всем этапам:
-                  <br />
-                  от идеи до реализации и питчинга
-                </p>
+              <div className="flex-1 bg-[#FFE6EB] px-10 py-6 md:rounded-2xl">
+                <ul className="font-onest mt-2 list-disc pl-6 text-xl font-medium md:text-2xl">
+                  <li>
+                    Получаешь фидбек по всем этапам: от идеи до реализации и
+                    питчинга
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="flex flex-col gap-6">
               <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
                 Нет проекта
               </p>
-              <div className="flex-1 bg-[#FFE6EB] px-10 py-5 md:rounded-2xl">
+              <div className="flex-1 bg-[#FFE6EB] px-10 py-6 md:rounded-2xl">
                 <ul className="font-onest mt-2 list-disc pl-6 text-xl font-medium md:text-2xl">
                   <li>Поможем придумать проект на 5 недель</li>
                   <li>
@@ -522,7 +519,7 @@ export default function ArtCourse() {
             <div>
               <Buble
                 {...REVIEWS[3]}
-                className="relative z-10 min-[1180px]:-mt-10 min-[1180px]:-mb-60"
+                className="relative z-10 min-[1180px]:-mt-10 min-[1180px]:-mb-45"
               />
             </div>
             <h2 className="font-unbounded text-4xl font-bold text-[#FFE6EB] md:text-5xl lg:self-end">
@@ -595,7 +592,7 @@ export default function ArtCourse() {
                     </p>
                   </div>
                   <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
-                    низкая цена действует до 21 мая
+                    низкая цена действует до 9 июня
                   </p>
                 </div>
                 <button className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">

@@ -11,7 +11,7 @@ interface BubleProps {
   size: {
     width: number;
     height: number;
-    padding: number;
+    padding: string | number;
   };
   className?: string;
 }
