@@ -478,7 +478,7 @@ export default function ArtCourse() {
 
         {/* ── PROJECT ──────────────────────────────────────────────────────── */}
         <section className="mx-auto flex max-w-screen-xl flex-col gap-12 py-15 max-md:bg-[#FFE6EB]">
-          <h2 className="font-unbounded self-center text-4xl font-bold text-[#FFE6EB] max-md:text-black md:text-5xl">
+          <h2 className="font-unbounded self-center px-6 text-4xl font-bold text-[#FFE6EB] max-md:text-black md:text-5xl">
             Работа с проектом
           </h2>
 
