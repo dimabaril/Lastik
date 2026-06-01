@@ -211,7 +211,7 @@ export default function ArtCourse() {
       </main> */}
 
       {/* <main className="hidden flex-1 flex-col gap-12 xl:flex"> */}
-      <main className="flex flex-1 flex-col">
+      <main className="flex flex-1 flex-col overflow-x-hidden">
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="pb-15 md:pt-15">
           <div className="mx-auto flex max-w-screen-xl bg-[#FFF9EF] text-black max-md:flex-col-reverse md:rounded-3xl">

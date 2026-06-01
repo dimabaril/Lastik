@@ -4,7 +4,7 @@
     transform: translateY(0px) translateX(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(2px) translateX(5px) rotate(1deg);
+    transform: translateY(3px) translateX(5px) rotate(1deg);
   }
 }
 
