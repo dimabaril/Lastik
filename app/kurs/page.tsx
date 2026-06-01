@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import CommunityCarousel from "./CommunityCarousel";
 import GongClickWrapper from "./GongClickWrapper";
 import ExpandingBanner from "./ExpandingBanner";
+import PullInWrapper from "./PullInWrapper";
 
 const WHO_CARDS = [
   {
@@ -213,7 +214,7 @@ export default function ArtCourse() {
       {/* <main className="hidden flex-1 flex-col gap-12 xl:flex"> */}
       <main className="flex flex-1 flex-col overflow-x-hidden">
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
-        <section className="pb-15 md:pt-15">
+        <section className="flex flex-col pb-15 md:pt-15">
           <div className="mx-auto flex max-w-screen-xl bg-[#FFF9EF] text-black max-md:flex-col-reverse md:rounded-3xl">
             <div className="relative flex flex-1 flex-col gap-5 p-10 max-lg:p-6">
               <h1 className="font-unbounded text-4xl font-bold sm:text-5xl md:text-6xl">
@@ -244,7 +245,7 @@ export default function ArtCourse() {
                 alt="Hero Image"
                 width={278}
                 height={347}
-                className="absolute right-13 -bottom-20 h-auto w-50 -rotate-20"
+                className="absolute right-13 -bottom-20 hidden h-auto w-50 -rotate-20 xl:block"
               />
             </div>
             <div className="flex-1">
@@ -259,6 +260,18 @@ export default function ArtCourse() {
               </GongClickWrapper>
             </div>
           </div>
+          <PullInWrapper
+            className="hidden self-center max-xl:block"
+            pullOutDistance="70vw"
+          >
+            <Image
+              src="/kurs-hero2.png"
+              alt="Hero Image"
+              width={278}
+              height={347}
+              className="h-auto w-50 -rotate-20"
+            />
+          </PullInWrapper>
         </section>
 
         {/* ── WHO ──────────────────────────────────────────────────────────── */}

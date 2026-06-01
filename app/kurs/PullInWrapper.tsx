@@ -5,11 +5,13 @@ import { useEffect, useRef, useState, ReactNode } from "react";
 interface PullInWrapperProps {
   children: ReactNode;
   pullOutDistance?: string; // px, %, calc(), etc.
+  className?: string;
 }
 
 export default function PullInWrapper({
   children,
-  pullOutDistance = "150%",
+  pullOutDistance = "100vw",
+  className,
 }: PullInWrapperProps) {
   const triggerRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +45,7 @@ export default function PullInWrapper({
       {/* Контейнер, который задвигается */}
       <div
         ref={containerRef}
-        className="transition-transform duration-1500 ease-in-out"
+        className={`transition-transform duration-1500 ease-in-out ${className}`}
         style={{
           transform: !isVisible
             ? `translateX(${pullOutDistance})`
