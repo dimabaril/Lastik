@@ -45,19 +45,28 @@ const HOW_STEPS = [
   {
     bgColor: "bg-[#E4C2E7]",
     textColor: "text-black",
-    texts: ["живые созвоны", "чат с поддержкой"],
+    texts: [
+      "живые созвоны по 2 часа",
+      "лекция, разбор проектов, фидбек и упражнение",
+    ],
     pic: "/kurs/60d9e61b9ceb0d52cb196508fc244cff1c085a74.png",
   },
   {
     bgColor: "bg-[#314E22]",
     textColor: "text-white",
-    texts: ["постоянный фидбек", "небольшие домашние задания"],
+    texts: [
+      "поддержка в чате",
+      "вопросы, промежуточные версии и фидбек в течение недели",
+    ],
     pic: "/kurs/a3445d9daf2c5ee1283734023d2247c61b42db79.png",
   },
   {
     bgColor: "bg-[#F2FD83]",
     textColor: "text-black",
-    texts: ["презентации с теорией и рефами на миро "],
+    texts: [
+      "практика между встречами",
+      "материалы на неделю, работа над своим проектом, небольшая домашка",
+    ],
     pic: "/kurs/f8ae45ec6a2a12f8f971cdf9fc187a42d24c326e.png",
   },
 ];
@@ -65,13 +74,13 @@ const HOW_STEPS = [
 const PROGRAM = [
   {
     n: "01",
-    title: "Арт-дирекшн, как мы его понимаем",
+    title: "Арт‑дирекшн, как мы его понимаем",
     desc: "Как построен креативный процесс в студии Ластик – инсайсты и инсайды.",
   },
   {
     n: "02",
     title: "Персонажи и мир",
-    desc: "Как у нас рождаются персонажи и окружающий их мир.",
+    desc: "Как рождаются персонажи и окружающий их мир.",
   },
   {
     n: "03",
@@ -97,7 +106,7 @@ const COMMUNITY = [
   },
   {
     title: "Регулярные критики",
-    desc: "Получайте конструктивную обратную связь от опытных арт-директоров, чтобы совершенствовать работу",
+    desc: "Получайте конструктивную обратную связь от опытных арт‑директоров, чтобы совершенствовать работу",
   },
   {
     title: "Дух сотрудничества и обмена",
@@ -150,8 +159,9 @@ const REVIEWS = [
   {
     name: "НАСТЯ",
     desc: "Санкт-Петербург, аниматор и иллюстратор",
-    text: `впечатление супер! ожидания оправдались на сто процентов! очень полезно было увидеть внутрянку работы анимационной студии, ее будни и проблемы
-   очень продуктивно действует и питает творческая среда и фидбек от ребят довела до структурной, раскадровочной, сюжетной, сценарной, финальной точки оба проекта, с которыми заходила в курс`,
+    text: `Впечатление супер! Ожидания оправдались на сто процентов! Очень полезно было увидеть внутрянку работы анимационной студии, ее будни и проблемы.
+          Очень продуктивно действует и питает творческая среда и фидбек от ребят.
+          Довела до структурной, раскадровочной, сюжетной, сценарной, финальной точки оба проекта, с которыми заходила в курс.`,
     userPic: "/kurs/review_3.png",
     background: "/kurs/buble-3.png",
     size: {
@@ -223,29 +233,33 @@ export default function ArtCourse() {
                 арт-дирекшена
               </h1>
               <p className="font-onest text-lg font-bold md:text-xl">
-                Практический курс по арт-дирекшену от студии Ластик&nbsp;
-                <br className="hidden lg:block" />в анимации и вокруг.
+                Практика по арт‑дирекшену от&nbsp;студии&nbsp;Ластик
+                в&nbsp;анимации и&nbsp;вокруг.
               </p>
               <p className="font-onest text-lg leading-tight font-medium md:text-xl">
-                Арт-лаборатория по поиску вашего уникального визуального голоса.
-                Мы препарируем реальные кейсы студии, учим внедрять AI в рабочий
-                процесс и помогаем превращать скучные брифы в визуальный
-                мармелад через глубокую проработку персонажей и миров.
+                Для тех, кто хочет развить визуальное мышление и научиться
+                собирать выразительные миры – от персонажей и референсов до
+                идеи, питча и рабочего процесса. Будем много смотреть,
+                разбирать, придумывать и искать решения, так, чтобы они работали
+                – в рекламе, анимации, личных проектах и питчах.
               </p>
               <p className="font-unbounded text-base font-bold md:text-lg">
-                5 онлайн-встреч по выходным
+                5 онлайн-встреч по субботам
                 <br />
-                14 июня - 12 июля
+                20 июня - 18 июля
+              </p>
+              <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
+                Можно оставить заявку в лист ожидания на группу по средам
               </p>
               <button className="font-unbounded self-start rounded-full bg-[#EBF400] px-10 py-4 text-2xl font-bold md:text-3xl">
                 подать заявку
               </button>
               <Image
-                src="/kurs-hero2.png"
+                src="/kurs/kurs-hero2_new.png"
                 alt="Hero Image"
                 width={278}
                 height={347}
-                className="absolute right-13 -bottom-20 hidden h-auto w-50 -rotate-20 xl:block"
+                className="absolute -right-25 -bottom-20 hidden h-auto w-50 -rotate-20 xl:block"
               />
             </div>
             <div className="flex-1">
@@ -342,7 +356,7 @@ export default function ArtCourse() {
               },
               {
                 name: "Надя Степанова",
-                role: "Арт-директорка",
+                role: "Арт‑директорка",
                 desc: "с фокусом на визуальные эксперименты, атмосферу и нестандартные художественные решения",
                 img: "/kurs/nadya.png",
               },
@@ -387,12 +401,12 @@ export default function ArtCourse() {
               творческая практика
             </h2>
             <p className="font-onest text-xl font-semibold md:text-2xl">
-              Мы рассказываем всё самое важное про арт-дирекшн, даём
-              практические советы и приёмы, а дальше – творческая мастерская,
-              где все варят свои визуальные проекты.
+              Мы рассказываем всё самое важное про арт‑дирекшн, даём
+              практические советы и приёмы, а&nbsp;дальше – творческая
+              мастерская, где все варят свои&nbsp;визуальные проекты.
             </p>
             <ul className="font-onest list-disc pl-6 text-xl font-semibold md:text-2xl">
-              <li>научитесь мыслить как арт-директор</li>
+              <li>научитесь мыслить как арт‑директор</li>
               <li>создавать визуальные концепции, собирать мудборды</li>
               <li>работать с персонажами</li>
               <li>рассказывать истории через образы и композицию.</li>
@@ -418,7 +432,7 @@ export default function ArtCourse() {
                   {step.texts.map((text, textIdx) => (
                     <p
                       key={textIdx}
-                      className="font-unbounded text-xl leading-tight font-bold md:text-2xl"
+                      className={`font-unbounded text-xl leading-tight md:text-2xl ${textIdx === 0 ? "font-bold" : ""}`}
                     >
                       {text}
                     </p>
@@ -443,7 +457,7 @@ export default function ArtCourse() {
           </div>
           <div className="mx-auto flex max-w-screen-xl flex-col gap-12 bg-white px-28 py-15 text-black max-lg:p-6 lg:rounded-3xl">
             <h2 className="font-unbounded self-center text-4xl font-bold md:text-5xl">
-              Программа 5 встреч
+              Программа 5 недель
             </h2>
             <div className="flex flex-col gap-10">
               {PROGRAM.map((item, i) => (
@@ -497,7 +511,7 @@ export default function ArtCourse() {
 
           <div className="flex flex-col gap-6 text-black md:flex-row">
             <div className="flex flex-col gap-6">
-              <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
+              <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-8 py-3 text-xl font-semibold text-black">
                 Есть проект
               </p>
               <div className="flex-1 bg-[#FFE6EB] px-10 py-6 md:rounded-2xl">
@@ -510,7 +524,7 @@ export default function ArtCourse() {
               </div>
             </div>
             <div className="flex flex-col gap-6">
-              <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-4 py-2.5 text-sm font-semibold text-black">
+              <p className="font-unbounded self-center rounded-full bg-[#EBF400] px-8 py-3 text-xl font-semibold text-black">
                 Нет проекта
               </p>
               <div className="flex-1 bg-[#FFE6EB] px-10 py-6 md:rounded-2xl">
@@ -575,7 +589,7 @@ export default function ArtCourse() {
             // speed={50}
             // pauseOnHover={true}
           >
-            мастерская стартует 14 июня!
+            мастерская стартует 20 июня!
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Marquee>
 
@@ -587,25 +601,28 @@ export default function ArtCourse() {
                 </h1>
 
                 <p className="font-onest text-sm leading-tight font-semibold md:text-base">
-                  Трансформируйте свою творческую практику за 4 недели
-                  интенсивного обучения. Мест немного, мы планиируем так, чтобы
-                  у всех было время на обратную свзяь.
+                  Трансформируйте свою творческую практику за 5 недель. Мест
+                  немного, мы планиируем так, чтобы у всех было время на
+                  обратную свзяь.
                 </p>
                 <p className="font-unbounded text-base font-bold md:text-lg">
-                  5 онлайн-встреч по выходным
+                  5 онлайн-встреч по субботам
                   <br />
-                  14 июня - 12 июля
+                  20 июня - 18 июля
+                </p>
+                <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
+                  Можно оставить заявку в лист ожидания на группу по средам
                 </p>
                 <div className="flex-1"></div>
                 <div>
                   <div className="font-unbounded flex gap-4 text-2xl font-bold sm:text-3xl md:text-4xl">
-                    <p className="whitespace-nowrap text-black">18 000 ₽</p>
+                    <p className="whitespace-nowrap text-black">15 000 ₽</p>
                     <p className="whitespace-nowrap text-[#A6A6A6] line-through">
-                      25 000 ₽
+                      18 000 ₽
                     </p>
                   </div>
                   <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
-                    низкая цена действует до 9 июня
+                    низкая цена действует до 15 июня
                   </p>
                 </div>
                 <button className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">
