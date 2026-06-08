@@ -279,7 +279,7 @@ export default function ArtCourse() {
             pullOutDistance="70vw"
           >
             <Image
-              src="/kurs-hero2.png"
+              src="/kurs/kurs-hero2_new.png"
               alt="Hero Image"
               width={278}
               height={347}
