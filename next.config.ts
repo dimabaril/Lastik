@@ -6,12 +6,12 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/projects",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/kurs",
         destination: "/course",
-        permanent: false,
+        permanent: true,
       },
     ];
   },
