@@ -12,32 +12,32 @@ const WHO_CARDS = [
   {
     title: "Иллюстратор",
     desc: "и хочешь не только рисовать отдельные картинки, но и строить персонажей, миры и визуальную логику проекта.",
-    img: "/kurs/cube.png",
+    img: "/course/cube.png",
   },
   {
     title: "Дизайнер",
     desc: "и хочешь мыслить поверх границ стилей, свободнее собирать концепции и сильнее влиять на проект целиком.",
-    img: "/kurs/hurt.png",
+    img: "/course/hurt.png",
   },
   {
     title: "Студент визуальной профессии",
     desc: "и ищешь формат стажировки, где сразу передают опыт и дают фидбек на твои идеи.",
-    img: "/kurs/star.png",
+    img: "/course/star.png",
   },
   {
     title: "Аниматор",
     desc: "и думаешь как расширить свой набор инструментов, зайти на более креативную территорию.",
-    img: "/kurs/cloud.png",
+    img: "/course/cloud.png",
   },
   {
     title: "Автор, работающий с визуалом",
     desc: "и хочешь прокачать вкус, насмотренность, вариативность и научиться увереннее оформлять свои идеи.",
-    img: "/kurs/glass.png",
+    img: "/course/glass.png",
   },
   {
     title: "AI-энтузиаст",
     desc: "и тебе интересно понять как устроен артдир процесс у студий и как применить этот пайплайн в соло-продакшене.",
-    img: "/kurs/flash.png",
+    img: "/course/flash.png",
   },
 ];
 
@@ -49,7 +49,7 @@ const HOW_STEPS = [
       "живые созвоны по 2 часа",
       "лекция, разбор проектов, фидбек и упражнение",
     ],
-    pic: "/kurs/60d9e61b9ceb0d52cb196508fc244cff1c085a74.png",
+    pic: "/course/60d9e61b9ceb0d52cb196508fc244cff1c085a74.png",
   },
   {
     bgColor: "bg-[#314E22]",
@@ -58,7 +58,7 @@ const HOW_STEPS = [
       "поддержка в чате",
       "вопросы, промежуточные версии и фидбек в течение недели",
     ],
-    pic: "/kurs/a3445d9daf2c5ee1283734023d2247c61b42db79.png",
+    pic: "/course/a3445d9daf2c5ee1283734023d2247c61b42db79.png",
   },
   {
     bgColor: "bg-[#F2FD83]",
@@ -67,7 +67,7 @@ const HOW_STEPS = [
       "практика между встречами",
       "материалы на неделю, работа над своим проектом, небольшая домашка",
     ],
-    pic: "/kurs/f8ae45ec6a2a12f8f971cdf9fc187a42d24c326e.png",
+    pic: "/course/f8ae45ec6a2a12f8f971cdf9fc187a42d24c326e.png",
   },
 ];
 
@@ -133,8 +133,8 @@ const REVIEWS = [
     desc: "Дизайн-лид в сфере IGaming, веб-дизайнер на фрилансе в крипте.",
     text: `Курс раскачивает застоявшуюся оптику и помогает посмотреть на проект с новой стороны.
      Очень понравилось окунуться в ничем не ограниченную креативную среду, где ты делишься своими идеями, а тебе предлагают, как их развить и где добрать насмотренность`,
-    userPic: "/kurs/review_1.png",
-    background: "/kurs/buble-1.png",
+    userPic: "/course/review_1.png",
+    background: "/course/buble-1.png",
     size: {
       width: 707,
       height: 421,
@@ -146,8 +146,8 @@ const REVIEWS = [
     desc: "2D/3D аниматор",
     text: `Мне было очень полезно и интересно, я ни секунды не пожалела!
      Самое полезное для меня было узнать, как вы работаете с нейро и когда мы развивали фантазию, придумывая сюжеты за 5 минут; как разрабатываете персонажа.`,
-    userPic: "/kurs/review_2.png",
-    background: "/kurs/buble-2.png",
+    userPic: "/course/review_2.png",
+    background: "/course/buble-2.png",
     size: {
       // width: 500,
       width: 550,
@@ -162,8 +162,8 @@ const REVIEWS = [
     text: `Впечатление супер! Ожидания оправдались на сто процентов! Очень полезно было увидеть внутрянку работы анимационной студии, ее будни и проблемы.
           Очень продуктивно действует и питает творческая среда и фидбек от ребят.
           Довела до структурной, раскадровочной, сюжетной, сценарной, финальной точки оба проекта, с которыми заходила в курс.`,
-    userPic: "/kurs/review_3.png",
-    background: "/kurs/buble-3.png",
+    userPic: "/course/review_3.png",
+    background: "/course/buble-3.png",
     size: {
       width: 578,
       height: 442,
@@ -175,8 +175,8 @@ const REVIEWS = [
     desc: "аниматор",
     text: `Супер-полезные советы по докручиванию идеи для проектов.
   Услышала много интересных подходов по разработке.`,
-    userPic: "/kurs/review_4.png",
-    background: "/kurs/buble-4.png",
+    userPic: "/course/review_4.png",
+    background: "/course/buble-4.png",
     size: {
       width: 427,
       height: 281,
@@ -187,8 +187,8 @@ const REVIEWS = [
     name: "Маша Родина",
     desc: "Кёльн, художница, дизайнерка, фотографка",
     text: `Курс был очень весёлым, радостным, зажигательным, ярким! Как допинг креатива. Теперь я понимаю, как работает анимационная студия полезно, что есть план, созвоны, домашние задания`,
-    userPic: "/kurs/review_5.png",
-    background: "/kurs/buble-5-flipped.png",
+    userPic: "/course/review_5.png",
+    background: "/course/buble-5-flipped.png",
     size: {
       width: 574,
       height: 429,
@@ -199,8 +199,8 @@ const REVIEWS = [
     name: "Ната",
     desc: "иллюстратор, Литва",
     text: `Много полезного: ToonSquid, создание видеореференсов, где в анимации пригодятся нейросети, а еще смотреть на работы и процесс других участников`,
-    userPic: "/kurs/review_6.png",
-    background: "/kurs/buble-6.png",
+    userPic: "/course/review_6.png",
+    background: "/course/buble-6.png",
     size: {
       width: 487,
       height: 328,
@@ -255,7 +255,7 @@ export default function ArtCourse() {
                 подать заявку
               </button>
               <Image
-                src="/kurs/kurs-hero2_new.png"
+                src="/course/course-hero2_new.png"
                 alt="Hero Image"
                 width={278}
                 height={347}
@@ -265,7 +265,7 @@ export default function ArtCourse() {
             <div className="flex-1">
               <GongClickWrapper className="h-full">
                 <Image
-                  src="/kurs/yogagirl.png"
+                  src="/course/yogagirl.png"
                   alt="yogagirl"
                   width={705}
                   height={705}
@@ -279,7 +279,7 @@ export default function ArtCourse() {
             pullOutDistance="70vw"
           >
             <Image
-              src="/kurs/kurs-hero2_new.png"
+              src="/course/course-hero2_new.png"
               alt="Hero Image"
               width={278}
               height={347}
@@ -352,13 +352,13 @@ export default function ArtCourse() {
                 name: "Лёша Платонов",
                 role: "Креативный директор",
                 desc: "Придумывает и режиссирует анимационные проекты с сильной визуальной идеей и авторским подходом",
-                img: "/kurs/lesha.png",
+                img: "/course/lesha.png",
               },
               {
                 name: "Надя Степанова",
                 role: "Арт‑директорка",
                 desc: "с фокусом на визуальные эксперименты, атмосферу и нестандартные художественные решения",
-                img: "/kurs/nadya.png",
+                img: "/course/nadya.png",
               },
             ].map((person) => (
               <div key={person.name} className="max-w-84">
@@ -388,7 +388,10 @@ export default function ArtCourse() {
         </section>
 
         <div className="hidden lg:block">
-          <VideoPlayer src="/kurs/Comp 2_2-converted.webm" className="w-full" />
+          <VideoPlayer
+            src="/course/Comp 2_2-converted.webm"
+            className="w-full"
+          />
         </div>
 
         {/* ── PRACTICE ─────────────────────────────────────────────────────── */}
@@ -632,7 +635,7 @@ export default function ArtCourse() {
               <div className="flex-1">
                 <GongClickWrapper className="h-full">
                   <Image
-                    src="/kurs/yogagirl.png"
+                    src="/course/yogagirl.png"
                     alt="yogagirl"
                     width={705}
                     height={705}

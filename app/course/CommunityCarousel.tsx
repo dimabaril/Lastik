@@ -12,19 +12,19 @@ import {
 } from "@/components/ui/carousel";
 
 const IMAGES = [
-  "/kurs/carousel/f82c6970100db66e561ab5285875782c8c23a8b9.png",
-  "/kurs/carousel/254e3754f0c5b6e2535acb6b3496361cdb6fefb8.png",
-  "/kurs/carousel/6d67669d46c14bcf12139a9d8afe04aeab775f3f.png",
-  "/kurs/carousel/0ba81865b5c84cf85725f339bd7addb32acfd34d.png",
+  "/course/carousel/f82c6970100db66e561ab5285875782c8c23a8b9.png",
+  "/course/carousel/254e3754f0c5b6e2535acb6b3496361cdb6fefb8.png",
+  "/course/carousel/6d67669d46c14bcf12139a9d8afe04aeab775f3f.png",
+  "/course/carousel/0ba81865b5c84cf85725f339bd7addb32acfd34d.png",
 
-  // "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780.gif",
-  // "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webp",
-  "/kurs/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webm",
+  // "/course/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780.gif",
+  // "/course/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webp",
+  "/course/carousel/412772cf54339219cd6315fbcf1c5cbedf8e0780-converted.webm",
 
-  "/kurs/carousel/a80ba7a74408420512aeb716449b9b87b373fb71.png",
-  "/kurs/carousel/ea28985dd1e76de45941fb756685179fd5f02a26.jpg",
-  "/kurs/carousel/a2dbc33d9bd164fb525b3b8e65db053701fd4cc7.png",
-  "/kurs/carousel/59953051c5c565d084b7ccb0faee8d18f40a8f0f.jpg",
+  "/course/carousel/a80ba7a74408420512aeb716449b9b87b373fb71.png",
+  "/course/carousel/ea28985dd1e76de45941fb756685179fd5f02a26.jpg",
+  "/course/carousel/a2dbc33d9bd164fb525b3b8e65db053701fd4cc7.png",
+  "/course/carousel/59953051c5c565d084b7ccb0faee8d18f40a8f0f.jpg",
 ];
 
 export default function CommunityCarousel() {

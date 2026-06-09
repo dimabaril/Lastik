@@ -9,7 +9,7 @@ export default function GongClickWrapper({
   className?: string;
 }) {
   const playGong = () => {
-    const audio = new Audio("/kurs/gong.mp3");
+    const audio = new Audio("/course/gong.mp3");
     audio
       .play()
       .catch((err) => console.error("Ошибка при воспроизведении звука:", err));

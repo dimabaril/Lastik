@@ -17,7 +17,7 @@ const videoPaths: string[] = [
   // "/about/AI textures.mp4",
   // "/about/all4.mp4",
   // надо конвертить наверно на ширину 2000
-  // "/kurs/Comp 2_2.mp4",
+  // "/course/Comp 2_2.mp4",
 ];
 
 let pageContent = readFileSync(PAGE_PATH, "utf-8");
