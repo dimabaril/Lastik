@@ -7,6 +7,7 @@ import CommunityCarousel from "./CommunityCarousel";
 import GongClickWrapper from "./GongClickWrapper";
 import ExpandingBanner from "./ExpandingBanner";
 import PullInWrapper from "./PullInWrapper";
+import ApplyButton from "./ApplyButton";
 
 const WHO_CARDS = [
   {
@@ -251,9 +252,9 @@ export default function ArtCourse() {
               <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
                 Можно оставить заявку в лист ожидания на группу по средам
               </p>
-              <button className="font-unbounded self-start rounded-full bg-[#EBF400] px-10 py-4 text-2xl font-bold md:text-3xl">
+              <ApplyButton className="font-unbounded self-start rounded-full bg-[#EBF400] px-10 py-4 text-2xl font-bold md:text-3xl">
                 подать заявку
-              </button>
+              </ApplyButton>
               <Image
                 src="/course/course-hero2_new.png"
                 alt="Hero Image"
@@ -628,9 +629,9 @@ export default function ArtCourse() {
                     низкая цена действует до 15 июня
                   </p>
                 </div>
-                <button className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">
+                <ApplyButton className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">
                   подать заявку
-                </button>
+                </ApplyButton>
               </div>
               <div className="flex-1">
                 <GongClickWrapper className="h-full">
