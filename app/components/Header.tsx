@@ -11,7 +11,7 @@ import HamburgerButton from "./HamburgerButton";
 const navLinks = [
   { label: "проекты", href: "/projects" },
   { label: "о нас", href: "/about" },
-  // { label: "курс арт-дирекшен", href: "/course" },
+  { label: "курс арт-дирекшен", href: "/course" },
   { label: "REEL", href: "/reel" },
 ];
 
