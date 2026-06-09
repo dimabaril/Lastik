@@ -105,7 +105,8 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="rounded-2xl border border-[#D4D4D4] bg-white px-4 py-3 text-sm outline-none focus:border-black"
+                  autoFocus
+                  className="rounded-2xl border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-sm outline-none focus:border-black focus:bg-white"
                 />
               </div>
 
