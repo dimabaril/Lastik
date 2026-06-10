@@ -275,7 +275,7 @@ export default function ArtCourse() {
               </GongClickWrapper> */}
               <VideoPlayer
                 src="/course/Lastik_Loop_Comp_v00424-converted.webm"
-                className="h-full w-full object-cover md:rounded-r-3xl"
+                className="aspect-square h-full w-full object-cover md:rounded-r-3xl"
               />
             </div>
           </div>
