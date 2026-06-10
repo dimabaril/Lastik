@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ApplicationFormProps {
   onClose: () => void;
@@ -15,6 +15,21 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    document.documentElement.style.overflowX = "hidden";
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.documentElement.style.overflowX = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -46,16 +61,16 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
   return (
     /* backdrop */
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-lg rounded-3xl bg-[#FFF9EF] p-8 text-black shadow-2xl">
+      <div className="relative max-h-svh w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-4 text-black sm:p-8">
         {/* close */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-2xl leading-none text-black/40 hover:text-black"
+          className="absolute top-5 right-5 cursor-pointer text-2xl leading-none text-black/40 hover:text-black"
           aria-label="Закрыть"
         >
           ✕
@@ -71,23 +86,23 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
             </p>
             <button
               onClick={onClose}
-              className="font-unbounded rounded-2xl bg-black px-10 py-3 text-base font-bold text-white"
+              className="font-unbounded rounded-xl bg-black px-10 py-3 text-base font-bold text-white"
             >
               Закрыть
             </button>
           </div>
         ) : (
-          <>
-            <h2 className="font-unbounded mb-2 text-xl leading-tight font-bold sm:text-2xl">
+          <div className="flex flex-col gap-6">
+            <h2 className="font-unbounded text-xl leading-tight font-bold sm:text-2xl">
               Мастерская по арт-дирекшену
               <br />
               от студии анимации Ластик
             </h2>
 
             {/* schedule */}
-            <div className="mt-4 mb-6 rounded-2xl bg-[#EDE8F5] px-5 py-4">
+            <div className="rounded-lg bg-[#EDE8F5] px-5 py-4">
               <p className="font-unbounded text-sm font-bold">Расписание</p>
-              <p className="font-onest mt-1 text-sm">
+              <p className="font-onest text-sm">
                 5 онлайн-встреч по субботам в 12:00 мск
               </p>
               <p className="font-onest text-sm">
@@ -106,7 +121,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   onChange={(e) => setName(e.target.value)}
                   required
                   autoFocus
-                  className="rounded-2xl border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-sm outline-none focus:border-black focus:bg-white"
+                  className="rounded-lg border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-base outline-none focus:border-black focus:bg-white"
                 />
               </div>
 
@@ -120,7 +135,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   onChange={(e) => setTelegram(e.target.value)}
                   placeholder="Например: @username"
                   required
-                  className="rounded-2xl border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-sm outline-none focus:border-black focus:bg-white"
+                  className="rounded-lg border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-base outline-none focus:border-black focus:bg-white"
                 />
               </div>
 
@@ -129,7 +144,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   type="checkbox"
                   checked={waitingList}
                   onChange={(e) => setWaitingList(e.target.checked)}
-                  className="h-5 w-5 rounded"
+                  className="h-5 w-5 shrink-0 cursor-pointer"
                 />
                 <span className="font-onest">
                   Хочу в лист ожидания на группу в будний день
@@ -144,7 +159,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   rows={3}
-                  className="rounded-2xl border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-sm outline-none focus:border-black focus:bg-white"
+                  className="rounded-lg border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-base outline-none focus:border-black focus:bg-white"
                 />
               </div>
 
@@ -153,7 +168,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   type="checkbox"
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-0.5 h-5 w-5 shrink-0 rounded"
+                  className="h-5 w-5 shrink-0 cursor-pointer"
                 />
                 <span className="font-onest text-xs leading-tight text-[#555]">
                   <span className="font-semibold text-black">
@@ -172,12 +187,12 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
               <button
                 type="submit"
                 disabled={loading}
-                className="font-unbounded mt-2 w-full rounded-2xl bg-black py-4 text-base font-bold text-white disabled:opacity-50"
+                className="font-unbounded w-full rounded-xl bg-black py-4 text-base font-bold text-white disabled:opacity-50"
               >
                 {loading ? "Отправляем..." : "Отправить заявку"}
               </button>
             </form>
-          </>
+          </div>
         )}
       </div>
     </div>
