@@ -252,7 +252,7 @@ export default function ArtCourse() {
               <p className="font-onest text-sm text-[#B1B1B1] md:text-base">
                 Можно оставить заявку в лист ожидания на группу по средам
               </p>
-              <ApplyButton className="font-unbounded self-start rounded-full bg-[#EBF400] px-10 py-4 text-2xl font-bold md:text-3xl">
+              <ApplyButton className="font-unbounded cursor-pointer self-start rounded-full bg-[#EBF400] px-10 py-4 text-2xl font-bold md:text-3xl">
                 подать заявку
               </ApplyButton>
               <Image
@@ -633,7 +633,7 @@ export default function ArtCourse() {
                     низкая цена действует до 15 июня
                   </p>
                 </div>
-                <ApplyButton className="font-unbounded self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">
+                <ApplyButton className="font-unbounded cursor-pointer self-start rounded-2xl bg-black px-15 py-3 text-lg font-bold text-white md:text-xl">
                   подать заявку
                 </ApplyButton>
               </div>
