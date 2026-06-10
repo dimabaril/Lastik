@@ -5,9 +5,11 @@ import { useEffect, useRef } from "react";
 export default function VideoPlayer({
   src,
   className,
+  poster,
 }: {
   src: string | undefined;
   className?: string;
+  poster?: string;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -31,6 +33,14 @@ export default function VideoPlayer({
   }, []);
 
   return (
-    <video ref={ref} src={src} loop muted playsInline className={className} />
+    <video
+      ref={ref}
+      src={src}
+      poster={poster}
+      loop
+      muted
+      playsInline
+      className={className}
+    />
   );
 }

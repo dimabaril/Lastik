@@ -264,7 +264,7 @@ export default function ArtCourse() {
               />
             </div>
             <div className="flex-1">
-              <GongClickWrapper className="h-full">
+              {/* <GongClickWrapper className="h-full">
                 <Image
                   src="/course/yogagirl.png"
                   alt="yogagirl"
@@ -272,7 +272,11 @@ export default function ArtCourse() {
                   height={705}
                   className="h-full w-full object-cover md:rounded-r-3xl"
                 />
-              </GongClickWrapper>
+              </GongClickWrapper> */}
+              <VideoPlayer
+                src="/course/Lastik_Loop_Comp_v00424-converted.webm"
+                className="h-full w-full object-cover md:rounded-r-3xl"
+              />
             </div>
           </div>
           <PullInWrapper
