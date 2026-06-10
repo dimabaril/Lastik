@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useIsTouch } from "@/app/components/TouchProvider";
 
 interface ApplicationFormProps {
@@ -16,7 +16,6 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-  const nameRef = useRef<HTMLInputElement>(null);
   const isTouch = useIsTouch();
 
   useEffect(() => {
@@ -25,9 +24,6 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
     document.body.style.top = `-${scrollY}px`;
     document.body.style.width = "100%";
     document.documentElement.style.overflowX = "hidden";
-    if (!isTouch) {
-      nameRef.current?.focus();
-    }
     return () => {
       document.body.style.position = "";
       document.body.style.top = "";
@@ -122,11 +118,11 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   Как к тебе обращаться?
                 </label>
                 <input
-                  ref={nameRef}
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
+                  autoFocus={!isTouch}
                   className="rounded-lg border border-[#D4D4D4] bg-[#F5F5F5] px-4 py-3 text-base outline-none focus:border-black focus:bg-white"
                 />
               </div>
