@@ -33,7 +33,7 @@ export type Project = {
   size: number;
   thumb: Thumb;
   title: string;
-  titleEn?: string;
+  titleEn: string;
   description: string;
   tags: readonly Tag[];
   vimeos: Vimeo[];
@@ -42,7 +42,7 @@ export type Project = {
   videosOrigin?: string[];
   videos?: string[];
   texts: string[];
-  textsEn?: string[];
+  textsEn: string[];
   layout?: LayoutItem[][];
 };
 
@@ -1423,6 +1423,9 @@ export const projects: Project[] = [
     texts: [
       // "Текст"
     ],
+    textsEn: [
+      // "Text in English"
+    ],
 
     layout: [
       [{ type: "image", index: 0, cols: 12 }],
@@ -1479,6 +1482,9 @@ export const projects: Project[] = [
     ],
     texts: [
       // "Текст"
+    ],
+    textsEn: [
+      // "Text in English"
     ],
     layout: [
       [{ type: "image", index: 0, cols: 12 }],
@@ -1751,6 +1757,9 @@ export const projects: Project[] = [
     texts: [
       // "Текст"
     ],
+    textsEn: [
+      // "Text in English"
+    ],
 
     layout: [
       [{ type: "image", index: 0, cols: 12 }],
@@ -1905,6 +1914,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "Green Idea",
+    titleEn: "Green Idea",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     vimeos: [
@@ -1929,6 +1939,9 @@ export const projects: Project[] = [
     ],
     texts: [
       // "Текст"
+    ],
+    textsEn: [
+      // "Text in English"
     ],
     layout: [
       [{ type: "image", index: 5, cols: 12 }],
@@ -1974,6 +1987,9 @@ export const projects: Project[] = [
     ],
     texts: [
       // "Текст"
+    ],
+    textsEn: [
+      // "Text in English"
     ],
     layout: [
       [{ type: "image", index: 0, cols: 12 }],
@@ -2192,6 +2208,7 @@ export const projects: Project[] = [
       // "/projects/zvuk-2/1.jpg"
     ],
     texts: ["Текст"],
+    textsEn: ["Text in English"],
   },
 
   {
