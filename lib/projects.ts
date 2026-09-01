@@ -7,11 +7,23 @@ export type LayoutItem = {
   colStart?: number;
 };
 
+export type LocalizedText = string | { ru?: string; en?: string };
+
+export function getLocalizedText(
+  value: LocalizedText | undefined,
+  locale: string,
+): string | undefined {
+  if (typeof value === "string") return value;
+  if (!value) return undefined;
+
+  return locale === "en" ? (value.en ?? value.ru) : (value.ru ?? value.en);
+}
+
 export type Credits = {
-  brand?: string;
-  agency?: string;
-  production?: string;
-  client?: string;
+  brand?: LocalizedText;
+  agency?: LocalizedText;
+  production?: LocalizedText;
+  client?: LocalizedText;
 };
 
 export type Thumb = {
@@ -69,7 +81,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Музей Транспорта Москвы",
+      client: { ru: "Музей Транспорта Москвы", en: "Moscow Transport Museum" },
       agency: "Red Pepper Films",
     },
     images: [
@@ -315,7 +327,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "СБЕР",
+      brand: { ru: "СБЕР", en: "SBER" },
       agency: "MosAIc",
     },
     images: [
@@ -391,7 +403,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "ВТБ",
+      brand: { ru: "ВТБ", en: "VTB" },
       agency: "MosAIc",
     },
     images: [
@@ -750,7 +762,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "СБЕР Звук",
+      brand: { ru: "СБЕР Звук", en: "SBER Sound" },
     },
     images: [
       "/projects/zvuk/zvuk_1.png",
@@ -885,7 +897,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "МТС",
+      brand: { ru: "МТС", en: "MTS" },
       production: "Human",
     },
     images: [
@@ -975,7 +987,7 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Яндекс",
+      brand: { ru: "Яндекс", en: "Yandex" },
     },
 
     images: [
@@ -1193,7 +1205,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "ЕАПТЕКА",
+      brand: {
+        ru: "ЕАПТЕКА",
+        en: "EPHARMACY",
+      },
       production: "Zebra Hero",
     },
     images: [],
@@ -1256,7 +1271,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Делимобиль",
+      brand: {
+        ru: "Делимобиль",
+        en: "Delimobil",
+      },
     },
     images: [
       "/projects/delimobil/telegram-cloud-photo-size-2-5433936741535960381-y.jpg",
@@ -1305,7 +1323,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Осторожно, Собчак!",
+      client: {
+        ru: "Осторожно, Собчак!",
+        en: "Watch Out, Sobchak!",
+      },
     },
 
     images: [
@@ -1409,7 +1430,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Музей Москвы",
+      client: {
+        ru: "Музей Москвы",
+        en: "Moscow Museum",
+      },
     },
     images: [
       "/projects/mosmuseum/faa984142929675.6270fadb77c91.gif",
@@ -1457,7 +1481,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Волковская Пивоварня",
+      brand: {
+        ru: "Волковская Пивоварня",
+        en: "Volkovskaya Brewery",
+      },
     },
 
     images: [
@@ -1590,7 +1617,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "СБЕР",
+      brand: {
+        ru: "СБЕР",
+        en: "SBER",
+      },
       production: "Hype",
     },
 
@@ -1736,7 +1766,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Киностудия им. Горького",
+      client: {
+        ru: "Киностудия им. Горького",
+        en: "Gorky Film Studio",
+      },
     },
 
     images: [
@@ -1792,7 +1825,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Департамент туризма Москвы",
+      client: {
+        ru: "Департамент туризма Москвы",
+        en: "Moscow Department of Tourism",
+      },
     },
     textsEn: [
       "A large-scale project — an interactive installation for schoolchildren about choosing future careers. The goal: for a teenager to feel they've already grown up and stepped into their dream job. We drew comics and designed VR scenes to make that happen.",
@@ -1858,7 +1894,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Уралсиб",
+      brand: {
+        ru: "Уралсиб",
+        en: "Uralsib",
+      },
     },
     images: [
       "/projects/uralsib/pers1-1.jpg",
@@ -2051,7 +2090,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      client: "Департамент туризма Москвы",
+      client: {
+        ru: "Департамент туризма Москвы",
+        en: "Moscow Department of Tourism",
+      },
     },
 
     images: [
@@ -2100,8 +2142,14 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Яндекс",
-      production: "Рабочее название",
+      brand: {
+        ru: "Яндекс",
+        en: "Yandex",
+      },
+      production: {
+        ru: "Рабочее название",
+        en: "Working Title",
+      },
     },
 
     images: [
@@ -2202,7 +2250,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "СБЕР Звук",
+      brand: {
+        ru: "СБЕР Звук",
+        en: "SBER Sound",
+      },
     },
     images: [
       // "/projects/zvuk-2/1.jpg"
@@ -2267,7 +2318,10 @@ export const projects: Project[] = [
       },
     ],
     credits: {
-      brand: "Святой Источник",
+      brand: {
+        ru: "Святой Источник",
+        en: "Svyatoy Istochnik",
+      },
     },
 
     images: [
@@ -2325,7 +2379,10 @@ export const projects: Project[] = [
     ],
     credits: {
       client: "X5 Retail Group",
-      brand: "Перекрёсток",
+      brand: {
+        ru: "Перекрёсток",
+        en: "Perekryostok",
+      },
     },
 
     images: [

@@ -5,7 +5,11 @@ import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
 import VideoPlayer from "@/app/components/VideoPlayer";
-import { projects, type Project } from "@/lib/projects";
+import {
+  getLocalizedText,
+  projects,
+  type Project,
+} from "@/lib/projects";
 import type { Locale } from "@/i18n/routing";
 import BackButton from "@/app/components/BackButton";
 
@@ -90,10 +94,22 @@ export default async function ProjectPage({ params }: Props) {
           {/* ─── Right column ─── */}
           <div className="flex flex-col gap-6 self-end max-lg:items-end max-lg:gap-4 max-md:gap-1">
             {[
-              { label: t("brand"), value: project.credits?.brand },
-              { label: t("agency"), value: project.credits?.agency },
-              { label: t("production"), value: project.credits?.production },
-              { label: t("client"), value: project.credits?.client },
+              {
+                label: t("brand"),
+                value: getLocalizedText(project.credits?.brand, locale),
+              },
+              {
+                label: t("agency"),
+                value: getLocalizedText(project.credits?.agency, locale),
+              },
+              {
+                label: t("production"),
+                value: getLocalizedText(project.credits?.production, locale),
+              },
+              {
+                label: t("client"),
+                value: getLocalizedText(project.credits?.client, locale),
+              },
             ]
               .filter((item) => item.value)
               .map((item) => (
