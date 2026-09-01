@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-// import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import { projects, type Project } from "@/lib/projects";
@@ -20,35 +21,40 @@ function renderText(text: string) {
 }
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  const params: { locale: string; slug: string }[] = [];
+  for (const locale of ["ru", "en"]) {
+    for (const project of projects) {
+      params.push({ locale, slug: project.slug });
+    }
+  }
+  return params;
 }
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const project: Project | undefined = projects.find(
-    (project) => project.slug === slug,
-  );
+type Props = {
+  params: Promise<{ locale: string; slug: string }>;
+};
+
+export default async function ProjectPage({ params }: Props) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("projectPage");
+
+  const project: Project | undefined = projects.find((p) => p.slug === slug);
   if (!project) notFound();
+
+  const title =
+    locale === "en" && project.titleEn ? project.titleEn : project.title;
+  const texts =
+    locale === "en" && project.textsEn ? project.textsEn : project.texts;
 
   return (
     <main className="mx-auto flex w-full max-w-screen-xl flex-1 flex-col gap-6 bg-black p-3 text-white max-md:gap-4 lg:p-6">
       {/* ─── Project Header ─── */}
       <div className="flex items-center justify-between border-t-2 border-white bg-black pt-3">
-        {/* ─── Title ─── */}
         <h1 className="font-druk-cyr-bold-italic text-4xl font-bold italic sm:text-7xl lg:text-8xl">
-          {project.title}
+          {title}
         </h1>
-        {/* ─── Close button ─── */}
-        {/* <Link
-          href="/projects"
-          className="text-4xl text-white transition-opacity hover:opacity-60 sm:text-7xl lg:text-8xl"
-        >
-          ✕
-        </Link> */}
         <BackButton className="text-4xl text-white transition-opacity hover:opacity-60 sm:text-7xl lg:text-8xl">
           ✕
         </BackButton>
@@ -80,10 +86,10 @@ export default async function ProjectPage({
           {/* ─── Right column ─── */}
           <div className="flex flex-col gap-6 self-end max-lg:items-end max-lg:gap-4 max-md:gap-1">
             {[
-              { label: "Бренд", value: project.credits?.brand },
-              { label: "Агентство", value: project.credits?.agency },
-              { label: "Продакшн", value: project.credits?.production },
-              { label: "Клиент", value: project.credits?.client },
+              { label: t("brand"), value: project.credits?.brand },
+              { label: t("agency"), value: project.credits?.agency },
+              { label: t("production"), value: project.credits?.production },
+              { label: t("client"), value: project.credits?.client },
             ]
               .filter((item) => item.value)
               .map((item) => (
@@ -103,21 +109,17 @@ export default async function ProjectPage({
         </div>
 
         {/* description */}
-        {project.texts[0] && (
+        {texts[0] && (
           <div className="flex items-center gap-4">
-            {/* svg */}
             <Image
-              // src="/arrow.svg"
               src="/arrow.png"
               alt="arrow"
               width={29}
               height={40}
-              // className="self-start pt-3"
               className="max-md:w-5"
             />
-            {/* text index 0 */}
             <p className="font-arimo text-2xl font-semibold max-lg:text-xl max-lg:leading-tight lg:max-w-1/2">
-              {renderText(project.texts[0])}
+              {renderText(texts[0])}
             </p>
           </div>
         )}
@@ -142,11 +144,9 @@ export default async function ProjectPage({
                     return (
                       <div
                         key={i}
-                        // style={style}
-                        // className="font-onest 7 text-xl whitespace-pre-line"
                         className={`font-onest col-span-12 text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight ${item.cols ? `lg:col-span-${item.cols}` : ""} ${item.colStart ? `lg:col-start-${item.colStart}` : ""}`}
                       >
-                        {renderText(project.texts[item.index])}
+                        {renderText(texts[item.index])}
                       </div>
                     );
                   case "video":
@@ -188,7 +188,7 @@ export default async function ProjectPage({
                       >
                         <Image
                           src={project.images[item.index]}
-                          alt={`${project.title} — ${item.index + 1}`}
+                          alt={`${title} — ${item.index + 1}`}
                           width={800}
                           height={800}
                           className="w-full object-cover"
@@ -205,7 +205,7 @@ export default async function ProjectPage({
         </div>
       ) : (
         <div className="mt-6 flex flex-col gap-6 max-md:gap-4">
-          {project.texts.map((text, i) => (
+          {texts.map((text, i) => (
             <p
               key={i}
               className="font-onest text-xl whitespace-pre-line max-lg:text-lg max-lg:leading-tight"
@@ -217,7 +217,7 @@ export default async function ProjectPage({
             <div key={`img-${i}`} className="overflow-hidden lg:rounded-xl">
               <Image
                 src={src}
-                alt={`${project.title} — ${i + 1}`}
+                alt={`${title} — ${i + 1}`}
                 width={800}
                 height={600}
                 className="w-full object-cover"

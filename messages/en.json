@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "projects": "projects",
+    "about": "about us",
+    "reel": "REEL"
+  },
+  "projects": {
+    "heroTitle1": "Awesome",
+    "heroTitle2": "Animation",
+    "heroSubtitle": "We create visual happiness — from concept to final frame, in any technique and for brands around the world",
+    "ctaHeading": "get in touch!"
+  },
+  "about": {
+    "superPowers": "OUR SUPERPOWERS",
+    "superPowersList": [
+      "Strong art direction, we switch between styles with ease",
+      "Characters developed by the best illustrators",
+      "Deep respect for classic 2D animation",
+      "3D animation of any complexity",
+      "AI – proprietary know-how, locally trained neural networks for specific tasks",
+      "Trendy and contemporary motion"
+    ],
+    "notOnlyVisual": "beyond visuals",
+    "storytellingHeading": "Storytelling is Lastik's foundation",
+    "storytellingBody": "We know how to craft stories. We're brought in to make complex topics clear and alive.",
+    "aiSection": "AI in our pipeline",
+    "aiUsePrefix": "We use AI where it truly matters:",
+    "aiUseList": [
+      "fast previz and prototypes",
+      "creating what's otherwise impossible",
+      "delivering projects faster and cheaper"
+    ],
+    "aiSuffix": "+ final product with no AI aftertaste"
+  },
+  "projectPage": {
+    "brand": "Brand",
+    "agency": "Agency",
+    "production": "Production",
+    "client": "Client"
+  }
+}

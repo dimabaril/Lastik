@@ -1,16 +1,14 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/projects",
-        permanent: true,
-      },
-      {
         source: "/kurs",
-        destination: "/course",
+        destination: "/ru/course",
         permanent: true,
       },
     ];
@@ -32,4 +30,4 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.1.132", "192.168.8.207"],
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

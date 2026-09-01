@@ -1,14 +1,15 @@
-import type { Metadata, Viewport } from "next";
-
+import type { Metadata } from "next";
 import { Arimo, Victor_Mono, Unbounded, Onest, Geist } from "next/font/google";
-
 import localFont from "next/font/local";
-
-import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { TouchProvider } from "./components/TouchProvider";
-import MobileReloadHandler from "./components/MobileReloadHandler";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
+import "@/app/globals.css";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import { TouchProvider } from "@/app/components/TouchProvider";
+import MobileReloadHandler from "@/app/components/MobileReloadHandler";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -38,31 +39,39 @@ const drukCyrBoldItalic = localFont({
   display: "swap",
   src: [
     {
-      path: "../public/fonts/druk-cyr-bold-italic/druk-cyr-bold-italic.woff2",
+      path: "../../public/fonts/druk-cyr-bold-italic/druk-cyr-bold-italic.woff2",
       weight: "700",
       style: "italic",
     },
   ],
 });
 
-// TODO!!! проверить на челке
-// export const viewport: Viewport = {
-//   viewportFit: "cover",
-// };
-
 export const metadata: Metadata = {
   title: "Ластик — визуальное счастье",
   description: "Мы создаём анимационную графику для компаний по всему миру",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+type Props = {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={cn(
         "antialiased",
         arimo.variable,
@@ -74,22 +83,16 @@ export default function RootLayout({
         geist.variable,
       )}
     >
-      {/* <head>
-        <script src="https://player.vimeo.com/api/player.js" async />
-      </head> */}
       <body className="flex min-h-screen flex-col bg-black text-white">
         <MobileReloadHandler />
-        <TouchProvider>
-          {/* Header place holder */}
-          <div className="h-19"></div>
-
-          <Header />
-
-          {children}
-
-          {/* Footer */}
-          <Footer />
-        </TouchProvider>
+        <NextIntlClientProvider>
+          <TouchProvider>
+            <div className="h-19"></div>
+            <Header />
+            {children}
+            <Footer />
+          </TouchProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

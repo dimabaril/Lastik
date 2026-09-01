@@ -1,22 +1,7 @@
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import VideoPlayer from "@/app/components/VideoPlayer";
-
-const aiAdvantages = (
-  <>
-    <p className="font-unbounded text-2xl max-lg:text-xl max-lg:leading-tight">
-      Мы используем AI там, где он реально нужен:
-    </p>
-    <ul className="font-arimo list-disc pl-4 text-2xl opacity-90 max-lg:text-xl max-lg:leading-tight">
-      <li>быстрые превизы и прототипы</li>
-      <li>создать то, что иначе невозможно</li>
-      <li>сдать проект быстрее и дешевле</li>
-    </ul>
-    <p className="font-arimo text-2xl font-bold max-lg:text-xl max-lg:leading-tight">
-      + конечный продукт без привкуса нейронок
-    </p>
-  </>
-);
 
 interface SectionTitleProps {
   children: React.ReactNode;
@@ -34,7 +19,30 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   </h2>
 );
 
-export default function Studio() {
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function Studio({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("about");
+
+  const aiAdvantages = (
+    <>
+      <p className="font-unbounded text-2xl max-lg:text-xl max-lg:leading-tight">
+        {t("aiUsePrefix")}
+      </p>
+      <ul className="font-arimo list-disc pl-4 text-2xl opacity-90 max-lg:text-xl max-lg:leading-tight">
+        {(t.raw("aiUseList") as string[]).map((item: string, i: number) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+      <p className="font-arimo text-2xl font-bold max-lg:text-xl max-lg:leading-tight">
+        {t("aiSuffix")}
+      </p>
+    </>
+  );
+
   return (
     <div className="mx-auto flex max-w-screen-xl flex-1 flex-col items-center justify-center gap-15 bg-black p-3 text-white lg:p-6">
       {/* Hero */}
@@ -50,18 +58,14 @@ export default function Studio() {
       />
 
       <section className="flex flex-col gap-4">
-        <SectionTitle>НАШИ СУПЕРСИЛЫ</SectionTitle>
+        <SectionTitle>{t("superPowers")}</SectionTitle>
         <div className="flex gap-4 max-lg:flex-col-reverse">
           <ul className="font-arimo list-disc pl-6 text-2xl max-lg:text-xl max-lg:leading-tight">
-            <li>Крутой арт-дирекшн, легко переключаемся между стилями</li>
-            <li>Персонажей разрабатывают лучшие иллюстраторы</li>
-            <li>Уважаем классическую 2D-анимацию</li>
-            <li>3D-анимация любой сложности</li>
-            <li>
-              AI – собственные ноухау, локальные тренированные нейросети под
-              особые задачи
-            </li>
-            <li>Модный и актуальный моушн</li>
+            {(t.raw("superPowersList") as string[]).map(
+              (item: string, i: number) => (
+                <li key={i}>{item}</li>
+              ),
+            )}
           </ul>
 
           <div>
@@ -80,7 +84,7 @@ export default function Studio() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <SectionTitle>не только визуал</SectionTitle>
+        <SectionTitle>{t("notOnlyVisual")}</SectionTitle>
         <div className="flex justify-between gap-4 max-lg:flex-col">
           <div className="flex flex-col gap-4" style={{ flex: 702 / 993 }}>
             <Image
@@ -92,15 +96,11 @@ export default function Studio() {
               unoptimized
             />
             <div className="flex flex-1 flex-col gap-4">
-              {/* <h2 className="font-unbounded rounded-full bg-white px-6 py-4 text-xl font-bold text-black uppercase">
-                не только визуал
-              </h2> */}
               <p className="font-unbounded text-3xl max-lg:text-2xl">
-                Сторителлинг в Ластике – база
+                {t("storytellingHeading")}
               </p>
               <p className="font-arimo text-2xl max-lg:text-xl max-lg:leading-tight">
-                Мы умеем придумывать истории. Нас зовут, чтобы сделать сложную
-                тему понятной и живой.
+                {t("storytellingBody")}
               </p>
             </div>
             <Image
@@ -182,11 +182,10 @@ export default function Studio() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <SectionTitle>AI в нашем пайплайне</SectionTitle>
+        <SectionTitle>{t("aiSection")}</SectionTitle>
 
         <div className="flex gap-4">
           <div className="flex gap-4 max-lg:flex-col">
-            {/* Как это рассчитать:Коэффициент для flex — это отношение ширины к высоте ($Width / Height$).Первое видео: $1117 / 279 \approx \mathbf{4}$Второе видео: $626 / 279 \approx \mathbf{2.24}$ */}
             <div style={{ flex: 1117 / 279 }}>
               <VideoPlayer
                 src="/about/MASTER preview 15-04_1-converted.webm"

@@ -1,27 +1,35 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Header.module.css";
 import HamburgerButton from "./HamburgerButton";
 
-const navLinks = [
-  { label: "проекты", href: "/projects" },
-  { label: "о нас", href: "/about" },
-  { label: "курс арт-дирекшен", href: "/course" },
-  { label: "REEL", href: "/reel" },
-];
-
 const navColors = ["var(--nav-color-1)", "var(--nav-color-2)"];
-
 const navGlowStyles = [styles.navLink1, styles.navLink2];
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { key: "projects", href: "/projects" as const },
+    { key: "about", href: "/about" as const },
+    ...(locale === "ru" ? [{ key: "course", href: "/course" as const }] : []),
+    { key: "reel", href: "/reel" as const },
+  ];
+
+  const switchLocale = () => {
+    const nextLocale = locale === "ru" ? "en" : "ru";
+    router.replace(pathname, { locale: nextLocale });
+  };
 
   const links = navLinks.map((link, i) => (
     <Link
@@ -38,7 +46,7 @@ export default function Header() {
       }}
       className={`${navGlowStyles[i % 2]} font-unbounded rounded-full border-2 bg-black/70 px-8 pt-1.5 pb-2.5 text-2xl whitespace-nowrap transition-all duration-300`}
     >
-      {link.label}
+      {t(link.key as Parameters<typeof t>[0])}
     </Link>
   ));
 
@@ -70,8 +78,18 @@ export default function Header() {
         </div>
 
         {/* Nav links — row on desktop */}
-        <div className="hidden max-w-screen-xl flex-1 gap-2 p-6 lg:mx-auto lg:flex">
+        <div className="hidden max-w-screen-xl flex-1 items-center gap-2 p-6 lg:mx-auto lg:flex">
           {links}
+          <button
+            onClick={switchLocale}
+            style={{
+              color: navColors[navLinks.length % 2],
+              borderColor: navColors[navLinks.length % 2],
+            }}
+            className={`${navGlowStyles[navLinks.length % 2]} font-unbounded ml-auto rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+          >
+            {locale === "ru" ? "EN" : "RU"}
+          </button>
         </div>
 
         <div className="hidden w-36 lg:block" />
@@ -86,7 +104,22 @@ export default function Header() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden lg:hidden"
             >
-              <div className="flex flex-col items-end gap-2 p-4">{links}</div>
+              <div className="flex flex-col items-end gap-2 p-4">
+                {links}
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    switchLocale();
+                  }}
+                  style={{
+                    color: navColors[navLinks.length % 2],
+                    borderColor: navColors[navLinks.length % 2],
+                  }}
+                  className={`${navGlowStyles[navLinks.length % 2]} font-unbounded rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+                >
+                  {locale === "ru" ? "EN" : "RU"}
+                </button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

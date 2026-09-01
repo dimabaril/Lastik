@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Aside.module.css";
@@ -27,11 +28,13 @@ const asidePicksOriginal = [
   "/aside-pics/tab_new_128.webm",
 ];
 
-const asidePics = asidePicksOriginal.sort(() => Math.random() - 0.5);
-
 const SPEED = 42; // px/sec
 
 export default function Aside() {
+  const [asidePics] = useState(() =>
+    [...asidePicksOriginal].sort(() => Math.random() - 0.5)
+  );
+
   const images = [...asidePics, ...asidePics];
   const isVideo = (src: string) => /\.(webm|mp4|mov)$/i.test(src);
   const trackRef = useRef<HTMLDivElement>(null);

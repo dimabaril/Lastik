@@ -33,6 +33,7 @@ export type Project = {
   size: number;
   thumb: Thumb;
   title: string;
+  titleEn?: string;
   description: string;
   tags: readonly Tag[];
   vimeos: Vimeo[];
@@ -41,6 +42,7 @@ export type Project = {
   videosOrigin?: string[];
   videos?: string[];
   texts: string[];
+  textsEn?: string[];
   layout?: LayoutItem[][];
 };
 
@@ -55,6 +57,7 @@ export const projects: Project[] = [
       videoSize: { width: 1230, height: 308 },
     },
     title: "Музей Транспорта Москвы",
+    titleEn: "Moscow Transport Museum",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.AI, TAG.MUSEUM],
     vimeos: [
@@ -103,6 +106,14 @@ export const projects: Project[] = [
       "/projects/trans-museum/MASTER 1920x480_12_1-converted.webm",
       "/projects/trans-museum/MASTER preview 15-04_6-converted.webm",
       "/projects/trans-museum/MASTER preview 15-04_7-converted.webm",
+    ],
+    textsEn: [
+      "A 13-minute mix-media film about how the Moscow Transport Museum comes to life inside Melnikov's Garage — archives, interviews, blueprints, and the team's vision woven into a single story.",
+      "We filled the realistic interiors of Melnikov's Garage with cheerful hand-drawn visitors.",
+      "The characters bridged different eras and spaces. We wanted to show that years pass, transport changes, but the act of movement stays the same.",
+      "We really wanted more crafted, hand-made elements. The story of a museum employee tracking down an exhibit piece by piece was a perfect fit for stop-motion animation.",
+      "The episode about the children's section in the exhibition was, naturally, drawn like children's art — and also called for stop-motion. These parts balanced the 3D and AI material beautifully.",
+      "We used neural networks where we simply couldn't have managed otherwise — taking real museum exhibits and doing something unexpected with them: showing restoration stages or assembling hundreds of objects into one giant display case.",
     ],
     texts: [
       "13-минутный mix-media фильм про то, как в гараже Мельникова в Москве появляется Музей транспорта — архивы, интервью, чертежи и идеи команды складываются в одну историю.",
@@ -174,6 +185,7 @@ export const projects: Project[] = [
       videoSize: { width: 392, height: 220 },
     },
     title: "Love Generation",
+    titleEn: "Love Generation",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -195,6 +207,11 @@ export const projects: Project[] = [
     videos: [
       "/projects/love-generation/PALETKA_backstage-converted.webm",
       "/projects/love-generation/GLOSS_backstage-converted.webm",
+    ],
+    textsEn: [
+      "The cosmetics brand **LOVE GENERATION** needed social media spots. The client wanted to feature top influencers while keeping the focus on the products themselves.",
+      `**Characters**\n\n      We brought a shadow palette, nail polish, and foundation to life, making them the stars of three short clips.`,
+      `**Voices**\n\n      Each character got its own personality — inspired by the personas of Insta-celebs Mashmilash and Roman Kagramanov, who also voiced the characters.`,
     ],
     texts: [
       "Бренду косметики **LOVE GENERATION** нужны были ролики для соцсетей. Клиент хотел привлечь топ-инфлюенсеров, но при этом сохранить фокус на самих продуктах.",
@@ -231,6 +248,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "VK / Маруся x NEO",
+    titleEn: "VK / Marusia x NEO",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -252,6 +270,11 @@ export const projects: Project[] = [
     ],
     videosOrigin: ["/projects/vk-neo/neo_animatic.mp4"],
     videos: ["/projects/vk-neo/neo_animatic-converted.webm"],
+    textsEn: [
+      "An upbeat hip-hop track became the engine of a story about a children's smart speaker **Neo**.",
+      "The smart speaker narrates fantastical stories, and in the frame appear unicorns, robots, and a dragon — a symbol of the Year of the Dragon.",
+      "The spot started as a frame-by-frame animatic to build the rhythm, then evolved into detailed 3D animation.",
+    ],
     texts: [
       "Бодрый хип-хоп трек стал мотором истории о детской колонке **Neo**.",
       "Умная колонка рассказывает фантастические сюжеты, и в кадре появляются единороги, роботы и дракон — символ Года Дракона.",
@@ -283,6 +306,7 @@ export const projects: Project[] = [
       videoSize: { width: 306, height: 306 },
     },
     title: "СБЕР / Оплата улыбкой",
+    titleEn: "SBER / Pay by Smile",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -306,6 +330,11 @@ export const projects: Project[] = [
       "/projects/sber-terminal/photo_2026-03-09_15-05-25.jpg",
       "/projects/sber-terminal/photo_2026-03-09_15-05-27.jpg",
       "/projects/sber-terminal/photo_2026-03-09_15-08-25.jpg",
+    ],
+    textsEn: [
+      "For **Sber** we made a short 3D spot about a facial payment terminal.",
+      `**Character**\n\n      The client wanted to bring the terminal to life and turn it into an expressive character: after all, payment — with a smile :)\n\n      We conveyed personality through movement, precise rhythm (synced to an existing track), and light.\n\n      We added a nod to the iconic lamp from a famous intro (hard to resist).`,
+      "The project was completed in just two weeks — from storyboard to final render.",
     ],
     texts: [
       "Для **Сбера** мы сделали короткий 3D-ролик про терминал оплаты улыбкой.",
@@ -352,6 +381,7 @@ export const projects: Project[] = [
       videoSize: { width: 706, height: 398 },
     },
     title: "ВТБ / Переводы",
+    titleEn: "VTB / Transfers",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     vimeos: [
@@ -380,6 +410,12 @@ export const projects: Project[] = [
     videos: [
       "/projects/vtb-1/vtb_AI textures-converted.webm",
       "/projects/vtb-1/vtb_layers_1-converted.webm",
+    ],
+    textsEn: [
+      "An energetic spot where our graphics are tightly interwoven with live-action footage.",
+      "On this VTB project we first tested an AI-texturing pipeline that now lets us move significantly faster and achieve results that would otherwise be very hard to pull off.",
+      "We mixed 3D animation, AI textures, 2D comic-style effects and titles.",
+      "In mood, we were initially closely inspired by Spider-Verse, but gradually the style was tuned to match VTB's visual identity.",
     ],
     texts: [
       "Энергичный ролик, где наша графика плотно переплелась со съемочным материалом.",
@@ -419,6 +455,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 414 },
     },
     title: "VK / Mini Apps",
+    titleEn: "VK / Mini Apps",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     vimeos: [
@@ -474,6 +511,14 @@ export const projects: Project[] = [
       "/projects/vk-mini-app/backstage3.gif",
     ],
 
+    textsEn: [
+      "Promo for VK Mini Apps.",
+      `**Scenes**\n\n      To make the project dynamic and fresh, we decided to combine 3D with live frame-by-frame 2D animation.`,
+      `**Characters**\n\n      We designed characters to embody the essence of the mini apps — weather forecast, fitness/step tracker, dating app.\n\n      Our favourite character is the unpredictable cloud that changes the weather along with its mood.`,
+      `**Backgrounds and effects**\n\n      We started the 3D scenes by drawing, searching for great combinations of shapes and patterns. It resulted in a cool curved space.\n\n      For each scene we drew and animated 2D effects to add extra energy!`,
+      `**Animation**\n\n      Before moving to the final graphics, we made a frame-by-frame animatic to nail the rhythm and movements for the 3D animation.\n\n      For the dance scenes we used video references — and of course our beloved video animatics with ourselves in the starring roles.`,
+      "The result is a vivid, punchy spot we're genuinely proud of.",
+    ],
     texts: [
       "Промо для мини-приложений VK.",
 
@@ -592,6 +637,7 @@ export const projects: Project[] = [
       videoSize: { width: 184, height: 184 },
     },
     title: "R.O.C.S.",
+    titleEn: "R.O.C.S.",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -628,6 +674,10 @@ export const projects: Project[] = [
       "/projects/rocs/8 (3).png",
       "/projects/rocs/9 (3).png",
       "/projects/rocs/10 (3).png",
+    ],
+    textsEn: [
+      "Abstract 3D exploring how toothpaste works at the micro level.",
+      "The task was to visualise the paste's benefits through active compounds — we created a series of 'substances': translucent, fluid forms and particles that inhabit the frame, interacting with enamel and each other.",
     ],
     texts: [
       "Абстрактное 3D про то как зубная паста действует на микро-уровне.",
@@ -691,6 +741,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "СБЕР / Звук",
+    titleEn: "SBER / Zvuk",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.ADVERTISING, TAG.CLIP],
     vimeos: [
@@ -743,6 +794,10 @@ export const projects: Project[] = [
       "/projects/zvuk/25.png",
       "/projects/zvuk/26.png",
       "/projects/zvuk/27.png",
+    ],
+    textsEn: [
+      "We had a tight deadline to produce a 40-second spot for the Zvuk streaming platform.",
+      "The campaign theme 'Respect Your Ears' inspired a collab format featuring different artists, each offering their own take on the subject.",
     ],
     texts: [
       "Перед нами стояла задача в сжатые сроки создать 40-секундный ролик для онлайн-платформы стриминга Звук.",
@@ -821,6 +876,7 @@ export const projects: Project[] = [
       videoSize: { width: 392, height: 220 },
     },
     title: "МТС / Neku-sai",
+    titleEn: "MTS / Neku-sai",
     description: "Description",
     tags: [TAG["2D"], TAG.CLIP],
     vimeos: [
@@ -852,6 +908,12 @@ export const projects: Project[] = [
       "/projects/mts/Common_reel_MASTER_version-converted.webm",
       "/projects/mts/Reel_Black_FINAL-converted.webm",
       "/projects/mts/vocaloids_001_v001-converted.webm",
+    ],
+    textsEn: [
+      "A music video and series of reels for the virtual band **Neku-sai**, launched by **MTS Label**.",
+      "Our task wasn't just to create animation — it was to build convincing characters. We worked out every detail: tattoos, accessories, nail art, little habits — the kind of specifics that make a character feel alive.",
+      "The visual energy was drawn from the frontgirls of the Russian group 'Ranetki', and the song 'About You' became the starting point for the whole story.",
+      "The video and short clips are built on TikTok aesthetics — as if filmed on an iPhone in a bedroom shared with a younger brother, edited right on the phone. This 'homemade' language helped make the virtual group feel closer and more relatable to the audience.",
     ],
     texts: [
       "Клип и серия рилсов для виртуальной группы **Neku-sai**, которую запустил **МТС Лэйбл**.",
@@ -899,6 +961,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "Яндекс / Инклюзия",
+    titleEn: "Yandex / Inclusion",
     description:
       "Технологичный проект поисковой системы с абстрактными элементами",
     tags: [TAG["2D"], TAG.IMAGE],
@@ -924,6 +987,12 @@ export const projects: Project[] = [
     ],
     // videos: ["https://vimeo.com/1054472284/1e4e3262aa"],
 
+    textsEn: [
+      "An inclusion campaign for Yandex. Each story follows a person with a disability and how technology helps them live an ordinary life in a big city.",
+      "The first spot is about a taxi service for people with limited mobility.",
+      "The main character is a young woman in a wheelchair on her way to basketball, having selected a special option in the app.",
+      "The second story is about a grandfather who can barely see anymore but loves cooking. He's about to bake a pie for his grandchildren but can't read the labels on the packaging himself.",
+    ],
     texts: [
       "Про инклюзию для Яндекса. Каждая история — о человеке с инвалидностью и том, как технологии помогают жить обычной жизнью в большом городе.",
       "Первый ролик — о сервисе такси для людей с ограниченными возможностями.",
@@ -956,6 +1025,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 280 },
     },
     title: "MAIL.RU / Ребрендинг ",
+    titleEn: "MAIL.RU / Rebrand",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -983,6 +1053,11 @@ export const projects: Project[] = [
       "/projects/mail-ru/MAIL_anim_3_v02 (2)-converted.webm",
       "/projects/mail-ru/MAIL_anim_1_v02-converted.webm",
       "/projects/mail-ru/MAIL_anim_fin_1_v02-converted.webm",
+    ],
+    textsEn: [
+      "Mail.ru rebranded, launching a new design and a mascot — a white dog named Byte.",
+      "We were asked to create an intro showcasing the updated interface.",
+      "To complement the light, transparent design, we wanted smooth motion and as many organic match-cuts in the edit as possible.",
     ],
     texts: [
       "Mail.ru провёл ребрендинг, выкатив новый дизайн и маскота — белую собаку по имени Байт.",
@@ -1023,6 +1098,7 @@ export const projects: Project[] = [
       videoSize: { width: 812, height: 284 },
     },
     title: "Фестиваль Дух огня / Мифы Манси",
+    titleEn: "Spirit of Fire Festival / Mansi Myths",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.FILM],
     // vimeoId: 779626942,
@@ -1057,6 +1133,9 @@ export const projects: Project[] = [
       "/projects/mansi/IMAGE 2022-11-14 15_51_22.jpg",
       "/projects/mansi/photo_2022-11-16 00.39.14.jpeg",
       "/projects/mansi/IMAGE 2022-11-14 15_51_07.jpg",
+    ],
+    textsEn: [
+      "A film about the creation of the world based on the legends of the Siberian Mansi people. Created for the opening ceremony of the Spirit of Fire festival.",
     ],
     texts: [
       'Фильм про сотворение мира по легендам сибирского народа Манси. Создан для церемонии открытия фестиваля "Дух огня".',
@@ -1105,6 +1184,7 @@ export const projects: Project[] = [
       videoSize: { width: 288, height: 288 },
     },
     title: "СБЕР / Еаптека",
+    titleEn: "SBER / Eapteka",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -1126,6 +1206,12 @@ export const projects: Project[] = [
       "/projects/eapteka/faces-converted.webm",
       "/projects/eapteka/eapteka_1-converted.webm",
       "/projects/eapteka/eapteka_2-converted.webm",
+    ],
+    textsEn: [
+      "For EApteka we created a series of visual characters — pills with their own personality and portraits of the people they're meant for.",
+      `**Faces**\n      We art-directed the shoot, casting expressive faces — a great experience connecting with so many different kinds of people.`,
+      `**Pills**\n      Each pill was developed as a character: we searched for its shape, mood, and rhythm, so it would land exactly right with 'its' person.`,
+      `A separate layer was sound design. We added ASMR audio — crunching, clicking, soft touches — so the visuals could literally be felt on the skin.\n\n      The result is a spot that speaks the language of pharma but sounds and looks completely different.`,
     ],
     texts: [
       "Для EApteka мы придумали серию визуальных героев — таблетки со своим характером и портреты людей, которым они предназначены.",
@@ -1161,6 +1247,7 @@ export const projects: Project[] = [
       videoSize: { width: 288, height: 312 },
     },
     title: "Делимобиль",
+    titleEn: "Delimobil",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -1175,6 +1262,11 @@ export const projects: Project[] = [
       "/projects/delimobil/telegram-cloud-photo-size-2-5433936741535960381-y.jpg",
       "/projects/delimobil/telegram-cloud-photo-size-2-5436281162319385226-y.jpg",
       "/projects/delimobil/5E7C4467-0BC4-4E17-A590-7AC6A5511C87.jpeg",
+    ],
+    textsEn: [
+      "Delimobil usually sticks to a strict, refined style, but this partnership campaign needed to be more playful.",
+      "We were asked to create a cute, charming look for a more experimental and punchy spot.",
+      "Fun fact: the music was composed by our creative director Lyosha.",
     ],
     texts: [
       "Обычно Делимобиль придерживается строгого и выверенного стиля, но эта партнерская кампания должна была быть более игривой.",
@@ -1204,6 +1296,7 @@ export const projects: Project[] = [
       videoSize: { width: 446, height: 250 },
     },
     title: "Осторожно, Собчак!",
+    titleEn: "Watch Out, Sobchak!",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
     vimeos: [
@@ -1231,6 +1324,14 @@ export const projects: Project[] = [
       "/projects/sobchak/9 pic4.jpeg",
       "/projects/sobchak/11 pic10.jpg",
       "/projects/sobchak/12 gif4.gif",
+    ],
+    textsEn: [
+      `Opening titles for the YouTube show "Watch Out, Sobchak"`,
+      `**Story**\n\n      We picked up the ironic wordplay in the show's title and proposed a dog as the main character of the titles. The result is a surrealist trip of a woman-dog alter-ego through her own subconscious.`,
+      `**The Dog**\n\n      To find the perfect dog, we sketched a lot. Everyone in the studio had to come up with their own version, resulting in a pile of drawings.\n\n      The character was found — a woman-dog, an anxious stray, a pooch who, tongue hanging out, jumps and dashes off to nowhere in particular.`,
+      `**Inspirations**\n\n      The walk and pose were borrowed from our favourite Norwegian equestrian Ayla Kirsten. The furniture was suggested by a Zuckerberg interview — those chairs simply conquered us.`,
+      `**Characters**\n\n      The whole story is permeated by a group of strange characters. These monsters, devils, goblins — the mad companions of an unprincipled journalist in a world of scandals and exposés.`,
+      `**Backgrounds**\n\n      The surrealist locations reference the symbolic layers of Ksenia's personality. She only asked for a bit of recklessness. Despite her initial objections, we couldn't resist and added more psychedelic design. The colour palette was toned down several times to achieve the desired level of otherworldliness and gloom.`,
     ],
     texts: [
       `Заставка для Youtube-шоу "Осторожно, Собчак"`,
@@ -1299,6 +1400,7 @@ export const projects: Project[] = [
       videoSize: { width: 446, height: 250 },
     },
     title: "Музей Москвы",
+    titleEn: "Moscow Museum",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.MUSEUM],
     vimeos: [
@@ -1343,6 +1445,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 280 },
     },
     title: "Волковская Пивоварня",
+    titleEn: "Volkovskaya Brewery",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     vimeos: [
@@ -1417,6 +1520,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "Агрегатор",
+    titleEn: "The Aggregator",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -1434,6 +1538,12 @@ export const projects: Project[] = [
       "/projects/rambler/b16c76124306657.6273f52378c47.png",
       "/projects/rambler/9f7009124306657.6273fd163d1a4.jpeg",
       "/projects/rambler/47ce99124306657.6273f5237a017.png",
+    ],
+    textsEn: [
+      "Cheerful algorithms on a conveyor belt of spam and clickbait.",
+      "A major media platform was launching an updated news feed with its own spam-filtering system. The task was to explain a complex algorithm visually — without tech overload or boring diagrams.",
+      "Marshmallow figures of different shapes and sizes sort things on the feed. We tried to make them both expressive and minimalist.",
+      "We represented news content as different objects — something for every taste.",
     ],
     texts: [
       "Веселые алгоритмы на конвейере спама и кликбейта.",
@@ -1465,6 +1575,7 @@ export const projects: Project[] = [
       videoSize: { width: 706, height: 398 },
     },
     title: "СБЕР / Кредит 5%",
+    titleEn: "SBER / 5% Credit",
     description: "Description",
     tags: [TAG["2D"], TAG.MOTION, TAG.ADVERTISING],
     vimeos: [
@@ -1500,6 +1611,16 @@ export const projects: Project[] = [
       "/projects/sber-high-res/20.gif",
       "/projects/sber-high-res/21.gif",
       "/projects/sber-high-res/22.gif",
+    ],
+    textsEn: [
+      `Animated scenes for a Sber live-action spot about an education loan.\n\n      The main characters are students from different fields who feel out of place. The animation shows their transition from boring studies to their real passions.`,
+      `**STYLE RESEARCH**\n\n      We were excited to try a new graphic style, experimenting with angular shapes — and it fit the indie format of the video perfectly.\n      \n      **GIRL CHARACTER**\n\n      The stylised animated character needed to clearly resemble the actress in the video.`,
+      `**ENVIRONMENT STILLS AND FRAMES**\n\n      We preserved the geometry of the lecture hall but transformed it into an abstract, fantastical environment.`,
+      "The storyline has the girl breaking through her 'ceiling of possibilities' and the monotonous reality, flying towards her dream — of becoming an animator :)",
+      `**ANIMATION**\n      Animation combines several layers and techniques. Frame-by-frame character animation on a 3D background, with objects and effects animated frame by frame, plus motion.`,
+      "The scene included several spaces and a room that had to be disassembled, which was easier to realise in 3D.",
+      `**'UNDERWATER GUY' CHARACTER**\n      This character, like Franz Kafka, wallows in apathy in the world of law and jurisprudence, feeling at the very bottom.`,
+      `**ANIMATION**\n      For this episode all the elements were drawn by hand. We tried various versions of the character's final transformation — our favourite is the one with the giant jacket :)`,
     ],
     texts: [
       `Анимационные сцены для съемочного ролика Сбера про кредит на учёбу.
@@ -1600,6 +1721,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 280 },
     },
     title: "Хочу всё знать!",
+    titleEn: "I Want to Know Everything!",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
     vimeos: [
@@ -1651,6 +1773,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 338 },
     },
     title: "Город открытий",
+    titleEn: "City of Discoveries",
     description: "Description",
     tags: [TAG["2D"], TAG["3D_VR"], TAG.CODING, TAG.INSTALLATION],
     vimeos: [
@@ -1662,6 +1785,10 @@ export const projects: Project[] = [
     credits: {
       client: "Департамент туризма Москвы",
     },
+    textsEn: [
+      "A large-scale project — an interactive installation for schoolchildren about choosing future careers. The goal: for a teenager to feel they've already grown up and stepped into their dream job. We drew comics and designed VR scenes to make that happen.",
+      "From script and visual style to programming — everything was done in-house. The client scaled the installation and actively uses it across Russia.",
+    ],
     texts: [
       "Большой проект – интерактивная инсталляция для школьников про выбор будущих профессий. Задача – чтобы подросток ощутил, что он уже вырос и оказался на работе своей мечты. Для этого рисовали комиксы и придумывали VR-сцены.",
       "От сценария и стиля до программирования – всё сделано внутри студии. Клиент масштабировал инсталляцию и активно использует её по всей России.",
@@ -1713,6 +1840,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 280 },
     },
     title: "Уралсиб / HR",
+    titleEn: "Uralsib / HR",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     vimeos: [
@@ -1735,6 +1863,10 @@ export const projects: Project[] = [
       "/projects/uralsib/pers3-3.jpg",
       "/projects/uralsib/pers4.jpg",
       "/projects/uralsib/image.png",
+    ],
+    textsEn: [
+      "A promo for Uralsib's HR department targeting young professionals.",
+      "We used traditional 2D frame-by-frame animation to transform actors into metaphorical embodiments of their career aspirations.",
     ],
     texts: [
       "Промо HR-отдела Уралсиба для молодых специалистов.",
@@ -1822,6 +1954,7 @@ export const projects: Project[] = [
       videoSize: { width: 602, height: 256 },
     },
     title: "Беспринципные / Титры",
+    titleEn: "The Unprincipled / Titles",
     description: "Description",
     tags: [TAG["2D"], TAG["3D"], TAG.BUMPER],
     vimeos: [
@@ -1862,6 +1995,7 @@ export const projects: Project[] = [
       videoSize: { width: 392, height: 220 },
     },
     title: "Большая кружка",
+    titleEn: "Big Cup",
     description: "Description",
     tags: [TAG["3D"], TAG.EFFECTS_2D, TAG.ADVERTISING],
     vimeos: [
@@ -1872,6 +2006,9 @@ export const projects: Project[] = [
     images: [],
     videosOrigin: ["/projects/bigcup/pear1.3.webm"],
     videos: ["/projects/bigcup/pear1.3-converted.webm"],
+    textsEn: [
+      "An ad spot where bottles of kefir, cups, and fruit don't hide their feelings.",
+    ],
     texts: [
       "Рекламный ролик, где бутылки ряженки, чашки и фрукты не скрывают своих чувств.",
     ],
@@ -1889,6 +2026,7 @@ export const projects: Project[] = [
       videoSize: { width: 288, height: 162 },
     },
     title: "Мостуризм / 6 историй",
+    titleEn: "Moscow Tourism / 6 Stories",
     description: "Description",
     tags: [TAG["2D"], TAG.FILM],
     vimeos: [
@@ -1906,6 +2044,10 @@ export const projects: Project[] = [
       "/projects/hospitality/scene04902.png",
       "/projects/hospitality/IMAGE 2021-08-21 22_25_31.jpg",
       "/projects/hospitality/scene06758.png",
+    ],
+    textsEn: [
+      "6 episodes about hospitality — stories of tourists and Moscow residents coming together. These tales of adventure and mutual aid are now shown to schoolchildren (which we're very happy about).",
+      "We love this project for its scripts and characters.",
     ],
     texts: [
       "6 эпизодов о гостеприимстве — про то как сближаются туристы и жители Москвы. Эти истории о приключениях и взаимопомощи показывают школьникам (чему мы очень рады).",
@@ -1932,6 +2074,7 @@ export const projects: Project[] = [
       videoSize: { width: 498, height: 280 },
     },
     title: "Яндекс / Шедеврум",
+    titleEn: "Yandex / Shedevrum",
     description: "Description",
     tags: [TAG.AI, TAG.CLIP],
     vimeos: [
@@ -1953,6 +2096,11 @@ export const projects: Project[] = [
       "/projects/shedevrum/5.png",
       "/projects/shedevrum/6.png",
       "/projects/shedevrum/7.png",
+    ],
+    textsEn: [
+      "Generative Christmas ornaments fly onto a tree to an upbeat track — a New Year's teaser for Yandex's Shedevrum.",
+      "The brief: put together a fun New Year's clip in a week, featuring Christmas ornaments generated by Yandex's Shedevrum neural network. The ornaments were dazzling...",
+      "The Christmas trees didn't go unnoticed either — underwater, icy, birch, made of plates, felt...",
     ],
     texts: [
       "Генеративные ёлочные игрушки летят на ёлку под заводной трек — новогодний тизер «Шедевриум» для Яндекса.",
@@ -1986,6 +2134,7 @@ export const projects: Project[] = [
       videoSize: { width: 392, height: 220 },
     },
     title: "VK / Фестиваль подарков",
+    titleEn: "VK / Gift Festival",
     description: "Description",
     tags: [TAG["3D"], TAG.ADVERTISING],
     vimeos: [
@@ -2001,6 +2150,10 @@ export const projects: Project[] = [
     images: [
       "/projects/presents-fest-2024/image.png",
       "/projects/presents-fest-2024/telegram-cloud-photo-size-2-5451940346792631033-y.jpg",
+    ],
+    textsEn: [
+      "A short 3D promo about a gift drifting through the vastness of space.",
+      "Interesting how many options we went through before landing on the perfect character.",
     ],
     texts: [
       "Небольшое 3D-промо про полет подарка в космических просторах.",
@@ -2024,6 +2177,7 @@ export const projects: Project[] = [
       videoSize: { width: 340, height: 192 },
     },
     title: "Звук 2",
+    titleEn: "Zvuk 2",
     description: "Description",
     tags: [TAG["2D"], TAG.ADVERTISING],
     vimeos: [
@@ -2050,6 +2204,7 @@ export const projects: Project[] = [
       videoSize: { width: 340, height: 192 },
     },
     title: "Такси под прикрытием / Титры",
+    titleEn: "Undercover Taxi / Titles",
     description: "Description",
     tags: [TAG["2D"], TAG.BUMPER],
     vimeos: [
@@ -2058,6 +2213,11 @@ export const projects: Project[] = [
       },
     ],
     images: [],
+    textsEn: [
+      'Opening titles for the series "Undercover Taxi".',
+      "Vector animation. We wanted simple characters but with great dynamics.",
+      "Lots of fights and action!",
+    ],
     texts: [
       'Открывающие титры для сериала "Такси под прикрытием".',
       "Векторная анимация. Хотелось сделать персонажей простых, но с классной динамикой.",
@@ -2081,6 +2241,7 @@ export const projects: Project[] = [
       videoSize: { width: 340, height: 192 },
     },
     title: "Святой Источник",
+    titleEn: "Svyatoy Istochnik",
     description: "Description",
     tags: [TAG.STOPMOTION, TAG.ADVERTISING],
     vimeos: [
@@ -2100,6 +2261,11 @@ export const projects: Project[] = [
     ],
     videosOrigin: ["/projects/saint-spring-v3/Si_animatic_11.mp4"],
     videos: ["/projects/saint-spring-v3/Si_animatic_11-converted.webm"],
+    textsEn: [
+      "Stop-motion ad for Svyatoy Istochnik water, featuring bottles of different sizes.",
+      "Three scenes, three bottles for different situations: the large one for home, the medium for walks, the small one for sport.",
+      "We made each bottle a character in its own environment with its own set. The bed is made from a stack of T-shirts; the running track is made of pencils. The visuals were tuned using the brand's signature style: clean, fresh, gentle. We also added tiny 2D effects to bring everything to life.",
+    ],
     texts: [
       'Стопмоушен реклама воды "Святой источник" о бутылках разного размера.',
       "Три сцены и три бутылки для разных ситуаций: большая — для дома, средняя — для прогулок, а маленькая — для занятий спортом.",
@@ -2132,6 +2298,7 @@ export const projects: Project[] = [
       videoSize: { width: 340, height: 192 },
     },
     title: "Перекрёсток / Тележкин сон",
+    titleEn: "Perekryostok / Trolley's Dream",
     description: "Description",
     tags: [TAG.INSTALLATION],
     vimeos: [
@@ -2154,6 +2321,11 @@ export const projects: Project[] = [
       "/projects/supermarket-trollys-dream-v1/image 91.png",
       "/projects/supermarket-trollys-dream-v1/image 90.png",
       "/projects/supermarket-trollys-dream-v1/image 96.png",
+    ],
+    textsEn: [
+      `A 62-metre object made from recycled plastic, installed in the window of the flagship Perekryostok supermarket on Bolshaya Polyanka in Moscow.\n      Lastik Studio x Sergey "POGA" Pogosyan.`,
+      `Before assembly began, around four tonnes of cleaned waste were sorted.\n      The final work used 340 kg of plastic: food packaging, ready-meal trays, children's toys and other everyday items. Every fragment was placed by hand and fixed with hot glue; the background was coated with rubberised paint.`,
+      "The project won the award for best design at the Russian POSM and in-store communications competition POPAI-2021.",
     ],
     texts: [
       `62-метровый объект из переработанного пластика, установленный в витрине флагманского супермаркета «Перекрёсток» на Большой Полянке в Москве.
@@ -2195,6 +2367,7 @@ export const projects: Project[] = [
       videoSize: { width: 392, height: 220 },
     },
     title: "ТЦ Ривьера / Шкура",
+    titleEn: "Riviera Mall / The Skin",
     description: "Description",
     tags: [TAG.INSTALLATION],
     vimeos: [
@@ -2222,6 +2395,14 @@ export const projects: Project[] = [
       "/projects/the-skin-v1/thumb/959fb8130993239.618bd967e8f3c.png",
       "/projects/the-skin-v1/thumb/1298e4130993239.618bd966cc410.png",
       "/projects/the-skin-v1/thumb/f8c3e7130993239.618bd967ea617.png",
+    ],
+    textsEn: [
+      "A recycled-materials installation for an eco-festival dedicated to waste processing and conscious consumption.",
+      "Among ten invited art groups, we presented 'The Skin' — a 15×5-metre installation in the shape of a tiger skin, assembled entirely from plastic waste.",
+      "The project was realised together with a team led by Sergey 'Póga' Pogosyan.",
+      "Cleaned recycled materials were used for the mosaic: yoghurt cups, ice-cream tubs, household-chemical bottles, and more. Colour and texture were dictated by the materials themselves.",
+      "A separate challenge was mounting the 300-kilogram structure in the shopping centre window. The installation had to be conceived not only as an art object but as an engineering system.",
+      "Without moralising, signalling the scale of plastic waste and the potential of recycling, the work became iconic in the urban space and remained in the mall for a couple of years after the festival ended.",
     ],
     texts: [
       "Инсталляция из вторсырья для экофестиваля, посвящённого переработке отходов и осознанному потреблению.",
