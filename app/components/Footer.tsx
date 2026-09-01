@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useLocale } from "next-intl";
 
 const EMAIL = "hello@lastik.studio";
 
@@ -26,6 +27,10 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+  const locale = useLocale();
+  const footerLogoSrc =
+    locale === "en" ? "/footer-lastik_en.svg" : "/footer-lastik.svg";
+
   return (
     <footer className="bg-black">
       {/* <div className="grid grid-cols-3 max-w-screen-xl mx-auto py-12 px-6"> */}
@@ -67,7 +72,7 @@ export default function Footer() {
 
         {/* Big name */}
         <Image
-          src="/footer-lastik.svg"
+          src={footerLogoSrc}
           alt="lastik"
           // width={399}
           // height={156}
