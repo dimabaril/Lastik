@@ -82,11 +82,12 @@ export default function Header() {
           {links}
           <button
             onClick={switchLocale}
-            style={{
-              color: navColors[navLinks.length % 2],
-              borderColor: navColors[navLinks.length % 2],
-            }}
-            className={`${navGlowStyles[navLinks.length % 2]} font-unbounded ml-auto rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+            // style={{
+            //   color: navColors[navLinks.length % 2],
+            //   borderColor: navColors[navLinks.length % 2],
+            // }}
+            // className={`${navGlowStyles[navLinks.length % 2]} font-unbounded ml-auto rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+            className="font-unbounded ml-auto cursor-pointer px-6 py-3 text-xl [text-shadow:0_0_12px_black]"
           >
             {locale === "ru" ? "EN" : "RU"}
           </button>
@@ -111,11 +112,12 @@ export default function Header() {
                     setIsOpen(false);
                     switchLocale();
                   }}
-                  style={{
-                    color: navColors[navLinks.length % 2],
-                    borderColor: navColors[navLinks.length % 2],
-                  }}
-                  className={`${navGlowStyles[navLinks.length % 2]} font-unbounded rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+                  // style={{
+                  //   color: navColors[navLinks.length % 2],
+                  //   borderColor: navColors[navLinks.length % 2],
+                  // }}
+                  // className={`${navGlowStyles[navLinks.length % 2]} font-unbounded rounded-full border-2 bg-black/70 px-6 pt-1.5 pb-2.5 text-xl whitespace-nowrap transition-all duration-300`}
+                  className="font-unbounded ml-auto cursor-pointer px-6 py-3 text-xl [text-shadow:0_0_12px_black]"
                 >
                   {locale === "ru" ? "EN" : "RU"}
                 </button>
