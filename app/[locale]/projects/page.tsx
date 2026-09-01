@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import ProjectsGridFlex from "@/app/components/ProjectsGridFlex";
 import Aside from "@/app/components/AsideNoSSR";
 import { projects } from "@/lib/projects";
+import type { Locale } from "@/i18n/routing";
 import styles from "./projects.module.css";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -18,7 +19,7 @@ export default async function Projects({ params }: Props) {
     title: locale === "en" && project.titleEn ? project.titleEn : project.title,
     thumb: project.thumb,
     slug: project.slug,
-    tags: project.tags,
+    tags: project.tags.map((tag) => tag[locale as Locale] ?? tag.en),
     size: project.size,
   }));
 

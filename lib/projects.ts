@@ -964,7 +964,7 @@ export const projects: Project[] = [
     titleEn: "Yandex / Inclusion",
     description:
       "Технологичный проект поисковой системы с абстрактными элементами",
-    tags: [TAG["2D"], TAG.IMAGE],
+    tags: [TAG["2D"], TAG.CAMPAIGN],
     vimeos: [
       {
         id: 1054472202,

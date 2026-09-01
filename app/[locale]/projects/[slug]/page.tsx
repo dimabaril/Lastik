@@ -6,6 +6,7 @@ import { setRequestLocale } from "next-intl/server";
 import VimeoPlayer from "@/app/components/VimeoPlayer";
 import VideoPlayer from "@/app/components/VideoPlayer";
 import { projects, type Project } from "@/lib/projects";
+import type { Locale } from "@/i18n/routing";
 import BackButton from "@/app/components/BackButton";
 
 function renderText(text: string) {
@@ -70,8 +71,11 @@ export default async function ProjectPage({ params }: Props) {
             {/* ─── Tags ─── */}
             <div className="font-victor-mono flex divide-x self-end text-xl max-lg:text-lg">
               {project.tags.map((tag) => (
-                <span key={tag} className="px-3 py-0.5 whitespace-nowrap">
-                  {tag}
+                <span
+                  key={tag[locale as Locale] ?? tag.en}
+                  className="px-3 py-0.5 whitespace-nowrap"
+                >
+                  {tag[locale as Locale] ?? tag.en}
                 </span>
               ))}
             </div>
