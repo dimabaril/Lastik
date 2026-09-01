@@ -2231,36 +2231,36 @@ export const projects: Project[] = [
     ],
   },
 
-  {
-    slug: "zvuk-2",
-    size: 3.5,
-    thumb: {
-      origin: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
-      video: "/projects/zvuk-2/thumb/zvuk-2-thumb-converted.webm",
-      poster: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
-      videoSize: { width: 340, height: 192 },
-    },
-    title: "Звук 2",
-    titleEn: "Zvuk 2",
-    description: "Description",
-    tags: [TAG["2D"], TAG.ADVERTISING],
-    vimeos: [
-      {
-        id: 926255997,
-      },
-    ],
-    credits: {
-      brand: {
-        ru: "СБЕР Звук",
-        en: "SBER Sound",
-      },
-    },
-    images: [
-      // "/projects/zvuk-2/1.jpg"
-    ],
-    texts: ["Текст"],
-    textsEn: ["Text in English"],
-  },
+  // {
+  //   slug: "zvuk-2",
+  //   size: 3.5,
+  //   thumb: {
+  //     origin: "/projects/zvuk-2/thumb/zvuk-2-thumb.webm",
+  //     video: "/projects/zvuk-2/thumb/zvuk-2-thumb-converted.webm",
+  //     poster: "/projects/zvuk-2/thumb/zvuk-2-thumb-poster.jpg",
+  //     videoSize: { width: 340, height: 192 },
+  //   },
+  //   title: "Звук 2",
+  //   titleEn: "Zvuk 2",
+  //   description: "Description",
+  //   tags: [TAG["2D"], TAG.ADVERTISING],
+  //   vimeos: [
+  //     {
+  //       id: 926255997,
+  //     },
+  //   ],
+  //   credits: {
+  //     brand: {
+  //       ru: "СБЕР Звук",
+  //       en: "SBER Sound",
+  //     },
+  //   },
+  //   images: [
+  //     // "/projects/zvuk-2/1.jpg"
+  //   ],
+  //   texts: ["Текст"],
+  //   textsEn: ["Text in English"],
+  // },
 
   {
     slug: "taxi-v2",
@@ -2358,7 +2358,8 @@ export const projects: Project[] = [
 
   {
     slug: "supermarket-trollys-dream-v1",
-    size: 3.5,
+    // size: 3.5,
+    size: 5,
     thumb: {
       origin:
         "/projects/supermarket-trollys-dream-v1/thumb/supermarket-trollys-dream-v1-thumb.webm",
@@ -2433,7 +2434,8 @@ export const projects: Project[] = [
   },
   {
     slug: "the-skin-v1",
-    size: 4,
+    // size: 4,
+    size: 6,
     thumb: {
       origin: "/projects/the-skin-v1/thumb/the-skin-v1-thumb.webm",
       video: "/projects/the-skin-v1/thumb/the-skin-v1-thumb-converted.webm",
