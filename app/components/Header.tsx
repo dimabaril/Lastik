@@ -19,6 +19,11 @@ export default function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
+  const logoSrc =
+    locale === "ru"
+      ? "/red-Logo_print_mm_cmyk.svg"
+      : "/red-Logo_latin rgb-01-01.png";
+
   const navLinks = [
     { key: "projects", href: "/projects" as const },
     { key: "about", href: "/about" as const },
@@ -55,7 +60,7 @@ export default function Header() {
       {/* Logo */}
       <Link href="/projects">
         <Image
-          src="/red-Logo_print_mm_cmyk.svg"
+          src={logoSrc}
           alt="Logo"
           width={120}
           height={120}
