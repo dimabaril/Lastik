@@ -4,15 +4,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/kurs",
-        destination: "/ru/course",
-        permanent: true,
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
